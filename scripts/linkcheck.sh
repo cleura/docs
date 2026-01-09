@@ -22,6 +22,9 @@ DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*www.terraform.io.*"
 # Remove this whenever kubernetes.io becomes reliable again
 DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*kubernetes.io.*"
 
+# Remove this whenever docs.openstack.org becomes reliable again
+DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*docs.openstack.org.*"
+
 if test `basename $0` = "linkcheck-local.sh"; then
     DOCS_SITE_URL="http://localhost:8000"
 elif test `basename $0` = "linkcheck-production.sh"; then
