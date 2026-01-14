@@ -1,34 +1,6 @@
 # Kubernetes service limitations
 
 
-## OpenStack Magnum
-
-### Container Orchestration Engines
-
-In {{brand}}, Magnum only supports the `kubernetes` Container Orchestration Engine (COE).
-The legacy `swarm` and `mesos` COEs are not supported.
-
-### Kubernetes version
-
-The latest Kubernetes version you can install in {{brand}} with OpenStack Magnum is 1.27.
-
-### IP version
-
-In {{brand}}, you can use OpenStack Magnum to deploy Kubernetes clusters that use either IPv4 or IPv6.
-Dual-stack clusters or services are not supported.
-
-### Cluster networking
-
-The only supported Magnum network driver in {{brand}} is `calico`.
-We do not support the `flannel` network driver.
-
-### Persistent volumes (PVs)
-
-In Magnum-managed Kubernetes clusters in {{brand}}, the only supported PV [access mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) is `ReadWriteOnce` (`RWO`).
-Note that this still enables multiple Pods to access the same volume, as long as they are [configured to run on the same node](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/).
-
-You cannot use `ReadWriteOncePod` (`RWOP`), `ReadWriteMany` (`RWX`), or `ReadOnlyMany` (`ROX`) PVs.
-
 ## {{k8s_management_service}}
 
 ### Kubernetes version

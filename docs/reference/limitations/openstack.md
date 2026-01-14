@@ -77,3 +77,9 @@ The [OpenStack Designate](../../howto/openstack/designate/index.md) DNS-as-a-ser
 
 The [OpenStack Manila](https://docs.openstack.org/manila/) filesystem-as-a-service (FSaaS) facility is currently not available in {{brand}}.
 If you require multiple servers to be able to access the same files, [create a server](../../howto/openstack/nova/new-server.md) that exposes an internal NFS or CIFS service, backed by a Cinder volume.
+
+## Magnum
+
+The [OpenStack Magnum](https://docs.openstack.org/magnum/) container orchestration service facility, previously available in {{brand}}, is no longer supported.
+
+To manage Kubernetes clusters, you can use [{{brand_container_orchestration}}](../../howto/kubernetes/gardener/index.md) instead.

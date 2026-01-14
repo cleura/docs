@@ -9,7 +9,6 @@
 | Glance (image management)      | Epoxy | Epoxy | Epoxy |
 | Heat (orchestration)           | Epoxy | Epoxy | Epoxy |
 | Keystone (identity management) | Epoxy | Epoxy | Epoxy |
-| Magnum (container management)  | Epoxy | Epoxy | Epoxy |
 | Neutron (networking)           | Epoxy | Epoxy | Epoxy |
 | Nova (server virtualization)   | Epoxy | Epoxy | Epoxy |
 | Octavia (load balancing)       | Epoxy | Epoxy | Epoxy |
