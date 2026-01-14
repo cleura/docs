@@ -1,5 +1,0 @@
-title: "Kubernetes management (Magnum)"
-nav:
-  - index.md
-  - new-k8s-cluster.md
-  - kubectl.md

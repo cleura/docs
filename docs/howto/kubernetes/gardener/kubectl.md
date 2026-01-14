@@ -117,7 +117,7 @@ shoot--pqrxyz--myshoot-cwncz1-z1-7656c-nvgmc   Ready    <none>   23h   v1.30.5
 shoot--pqrxyz--myshoot-cwncz1-z1-7656c-rrkmz   Ready    <none>   23h   v1.30.5
 ```
 
-> Please note that in contrast to an [OpenStack Magnum-managed Kubernetes cluster](../../openstack/magnum/new-k8s-cluster.md), where the output of `kubectl get nodes` includes control plane *and* worker nodes, in a {{k8s_management_service}} cluster the same command *only* lists the worker nodes.
+> Please note that in contrast to other Kubernetes platforms, where the output of `kubectl get nodes` includes control plane *and* worker nodes, in a {{k8s_management_service}} cluster the same command *only* lists the worker nodes.
 
 ## Deploying an application
 

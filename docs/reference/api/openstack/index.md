@@ -28,7 +28,6 @@ The {{brand}} {{api_region}} region exposes the following OpenStack API endpoint
 | designate    | dns             | <https://{{api_region|lower}}.{{api_domain}}:9001/>             |
 | nova         | compute         | <https://{{api_region|lower}}.{{api_domain}}:8774/>             |
 | glance       | image           | <https://{{api_region|lower}}.{{api_domain}}:9292/>             |
-| magnum       | container-infra | <https://{{api_region|lower}}.{{api_domain}}:9511/>             |
 
 ## OpenStack SDKs
 
