@@ -7,6 +7,5 @@ nav:
   - octavia
   - cinder
   - glance
-  - magnum
   - keystone
   - barbican
