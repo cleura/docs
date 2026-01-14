@@ -2,578 +2,578 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.cleura.cloud/main/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/disaster-recovery/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/gui-vs-api/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/marketplace/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/object-storage/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/project-deletion/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/kubernetes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/kubernetes/gardener/autoscaling/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/kubernetes/gardener/autoupgrades/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/kubernetes/gardener/garden-linux/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/background/kubernetes/gardener/hibernation/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/contrib/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/contrib/issues/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/contrib/modifications/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/contrib/quality/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/change-account-data/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/change-credit-card/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/delete-account/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/e-invoice/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/forgot-your-password/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/manage-invoices/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/account-billing/rest-invoice-data/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/getting-started/accessing-cc-rest-api/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/getting-started/create-account/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/getting-started/enable-openstack-cli/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/create-shoot-cluster/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/hibernate-shoot-cluster/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/high-avail/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/kubectl/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/gardener/rolling-upgrades/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/kubernetes/magnum/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/bareos/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/bareos/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/clavister/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/clavister/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/grafana/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/grafana/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/harbor/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/harbor/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/keycloak/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/keycloak/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/langfuse/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/langfuse/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/matomo/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/matomo/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/openwebui/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/openwebui/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/prometheus/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/prometheus/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/taiga/delete/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/taiga/deploy/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/credentials/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/expiry/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/object-lock/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/presign/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/public-bucket/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/sse-c/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/utilization/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/s3/versioning/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/expiry/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/private-container/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/public-container/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/tempurl/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/utilization/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/object-storage/swift/versioning/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/barbican/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/barbican/generic-secret/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/barbican/share-secret/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/cinder/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/cinder/encrypted-volumes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/cinder/resize-volumes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/cinder/retype-volumes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/cinder/sync-volumes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/designate/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/designate/recordsets/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/designate/zones/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/glance/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/glance/custom/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/glance/examine/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/glance/filter/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/keystone/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/keystone/api-user-passwd/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/keystone/app-creds/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/kubectl/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/new-k8s-cluster/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/create-security-groups/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/delete-network/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/multiple-public-ips/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/new-network/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/neutron/vpnaas/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/boot-image-volume/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/config-drive/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/move-server-between-regions/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/new-server-cnw/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/new-server/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/rescue-server/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/resize-server/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/restore-srv-to-snap/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/nova/server-group/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/octavia/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/octavia/lbaas-l7pol/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/octavia/lbaas-tcp/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/octavia/metrics/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/octavia/tls-lb/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/support/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/support/raise-issues/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/api/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/api/cc/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/api/openstack/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/dns/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/features/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/features/compliant/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/features/public/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/flavors/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/images/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/legal/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/limitations/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/limitations/kubernetes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/limitations/object-storage/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/limitations/openstack/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/quotas/openstack/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/versions/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/versions/compliant/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/versions/public/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/reference/volumes/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/tutorials/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/tutorials/ansible/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/tutorials/containers/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/tutorials/heat/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/tutorials/tf/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-14</lastmod>
     </url>
 </urlset>
