@@ -180,7 +180,7 @@ No matter how you choose to list or view application credentials, secrets are ne
 
 By default, application credentials are created as being *restricted*.
 That is why, in the `openstack application credential show` output above, the `unrestricted` parameter is set to `False`.
-You cannot use restricted application credentials for Heat or Magnum, or for managing other application credentials or [trusts](https://docs.openstack.org/keystone/latest/user/trusts.html).
+You cannot use restricted application credentials for Heat, or for managing other application credentials or [trusts](https://docs.openstack.org/keystone/latest/user/trusts.html).
 This restricted-by-default policy acts as a safeguard, so compromised application credentials cannot be used for creating other sets of application credentials.
 If your application **has** to be able to perform such actions, and you accept the risks involved, you may create *unrestricted* application credentials like this:
 

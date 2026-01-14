@@ -9,8 +9,6 @@ Thus, most {{brand}} components correspond to OpenStack services:
 * [Load balancing (Octavia)](octavia/index.md) is for managing load balancers supporting the TCP and HTTP(S) protocols.
 * [Block storage (Cinder)](cinder/index.md) provides persistent block storage for virtual servers.
 * [Image management (Glance)](glance/index.md) provides ready-to-launch, preconfigured operating system images for virtual servers.
-* [Kubernetes management (Magnum)](magnum/index.md) enables you to launch and manage Kubernetes clusters.
-  This is one of two ways you can manage Kubernetes clusters in {{brand}}; the other is [Gardener](../kubernetes/gardener/index.md).
 * [Identity (Keystone)](keystone/index.md) is for managing credentials and authentication.
 * [Secret storage (Barbican)](barbican/index.md) provides key and secret management.
 
