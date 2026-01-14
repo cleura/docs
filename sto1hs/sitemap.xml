@@ -141,10 +141,6 @@
          <lastmod>2026-01-14</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/main/howto/kubernetes/magnum/</loc>
-         <lastmod>2026-01-14</lastmod>
-    </url>
-    <url>
          <loc>https://docs.cleura.cloud/main/howto/marketplace/</loc>
          <lastmod>2026-01-14</lastmod>
     </url>
@@ -370,18 +366,6 @@
     </url>
     <url>
          <loc>https://docs.cleura.cloud/main/howto/openstack/keystone/app-creds/</loc>
-         <lastmod>2026-01-14</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/</loc>
-         <lastmod>2026-01-14</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/kubectl/</loc>
-         <lastmod>2026-01-14</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/main/howto/openstack/magnum/new-k8s-cluster/</loc>
          <lastmod>2026-01-14</lastmod>
     </url>
     <url>
