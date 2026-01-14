@@ -69,10 +69,11 @@ To expose a service via IPv4 *and* IPv6, you must set up two separate load balan
 
 ## Designate
 
-The [OpenStack Designate](https://docs.openstack.org/designate/) DNS-as-a-service (DNSaaS) facility is currently not available in {{brand}}.
-You must manage your own DNS records for public IP addresses.
+### PTR Records
+
+The [OpenStack Designate](../../howto/openstack/designate/index.md) DNS-as-a-service (DNSaaS) facility in {{brand}} currently does not support managing [PTR records](https://en.wikipedia.org/wiki/PTR_record).
 
 ## Manila
 
-The [OpenStack Manila](https://docs.openstack.org/designate/) filesystem-as-a-service (FSaaS) facility is currently not available in {{brand}}.
+The [OpenStack Manila](https://docs.openstack.org/manila/) filesystem-as-a-service (FSaaS) facility is currently not available in {{brand}}.
 If you require multiple servers to be able to access the same files, [create a server](../../howto/openstack/nova/new-server.md) that exposes an internal NFS or CIFS service, backed by a Cinder volume.
