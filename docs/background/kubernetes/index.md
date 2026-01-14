@@ -1,6 +1,10 @@
 # Kubernetes in Cleura Cloud
 
-[{{brand_container_orchestration}}](../../howto/kubernetes/gardener/index.md) is used for managing Kubernetes clusters.
+{{brand}} has a management facility for Kubernetes clusters, based on [{{k8s_management_service}}](../../howto/kubernetes/gardener/index.md).
+
+{{k8s_management_service}} supports recent Kubernetes versions and offers you a great degree of "hands-off" management.
+
+For more details on the merits of {{k8s_management_service}}, refer to the sections below.
 
 ## General characteristics
 |                                                                 | {{k8s_management_service}}   |
@@ -8,6 +12,7 @@
 | Kubernetes Cloud Provider                                       | OpenStack                    |
 | Base operating system for nodes                                 | Garden Linux                 |
 | Latest installable Kubernetes minor release                     | 1.33                         |
+
 
 ## API and CLI support
 |                                                                 | {{k8s_management_service}}   |
@@ -21,7 +26,7 @@
 | -------------                                                   | ----------------             |
 | Automatic update to new Kubernetes patch release                | :material-check:             |
 | Rolling upgrade to new Kubernetes minor release                 | :material-check:             |
-| Automatic upgrade to new Kubernetes minor release               | :material-close:             |
+| Automatic upgrade to new Kubernetes minor release               | :material-check:             |
 | Rolling upgrade to new base operating system release            | :material-check:             |
 | Automatic upgrade to new base operating system release          | :material-check:             |
 
