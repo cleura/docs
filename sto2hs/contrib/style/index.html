@@ -3,35 +3,31 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Reference documentation for the OpenStack API is available from the OpenStack website.">
       
       
-      
-        <link rel="canonical" href="https://docs.cleura.cloud/main/reference/api/openstack/">
-      
-      
-        <link rel="prev" href="../cc/">
+        <link rel="canonical" href="https://docs.cleura.cloud/main/contrib/style/">
       
       
-        <link rel="next" href="../../legal/">
+        <link rel="prev" href="../quality/">
+      
       
       
         
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>OpenStack API reference documentation - Cleura&nbsp;Docs</title>
+        <title>Style guide - Cleura&nbsp;Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,22 +41,22 @@
         
         
         
-        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/cleura-palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/cleura-palette.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/banner.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/banner.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
 
 
-  <script defer data-domain="docs.cleura.cloud" src="../../../assets/external/plausible.io/js/plausible.js"></script>
+  <script defer data-domain="docs.cleura.cloud" src="../../assets/external/plausible.io/js/plausible.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -69,18 +65,16 @@
     
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="OpenStack API reference documentation - Cleura&nbsp;Docs">
-<meta property="og:description" content="Reference documentation for the OpenStack API is available from the OpenStack website.">
-<meta property="og:image" content="https://docs.cleura.cloud/main/assets/images/social/reference/api/openstack/index.png">
+<meta property="og:title" content="Style guide - Cleura&nbsp;Docs">
+<meta property="og:image" content="https://docs.cleura.cloud/main/assets/images/social/contrib/style.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://docs.cleura.cloud/main/reference/api/openstack/">
+<meta property="og:url" content="https://docs.cleura.cloud/main/contrib/style/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="OpenStack API reference documentation - Cleura&nbsp;Docs">
-<meta property="twitter:description" content="Reference documentation for the OpenStack API is available from the OpenStack website.">
-<meta property="twitter:image" content="https://docs.cleura.cloud/main/assets/images/social/reference/api/openstack/index.png">
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+<meta property="twitter:title" content="Style guide - Cleura&nbsp;Docs">
+<meta property="twitter:image" content="https://docs.cleura.cloud/main/assets/images/social/contrib/style.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -109,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openstack-api-reference-documentation" class="md-skip">
+        <a href="#style-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +120,7 @@
   You are viewing documentation for the <strong>Sto2HS</strong> region.
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -138,9 +132,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -157,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenStack API reference documentation
+              Style guide
             
           </span>
         </div>
@@ -273,9 +267,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Cleura&nbsp;Docs
@@ -302,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -361,7 +355,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -460,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/getting-started/create-account/" class="md-nav__link">
+      <a href="../../howto/getting-started/create-account/" class="md-nav__link">
         
   
   
@@ -488,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/getting-started/enable-openstack-cli/" class="md-nav__link">
+      <a href="../../howto/getting-started/enable-openstack-cli/" class="md-nav__link">
         
   
   
@@ -516,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/getting-started/accessing-cc-rest-api/" class="md-nav__link">
+      <a href="../../howto/getting-started/accessing-cc-rest-api/" class="md-nav__link">
         
   
   
@@ -586,7 +580,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/" class="md-nav__link ">
+            <a href="../../howto/openstack/" class="md-nav__link ">
               
   
   
@@ -666,7 +660,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/nova/" class="md-nav__link ">
+            <a href="../../howto/openstack/nova/" class="md-nav__link ">
               
   
   
@@ -710,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/new-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server/" class="md-nav__link">
         
   
   
@@ -738,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/new-server-cnw/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server-cnw/" class="md-nav__link">
         
   
   
@@ -766,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/server-group/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/server-group/" class="md-nav__link">
         
   
   
@@ -794,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/config-drive/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/config-drive/" class="md-nav__link">
         
   
   
@@ -822,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/resize-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/resize-server/" class="md-nav__link">
         
   
   
@@ -850,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/move-server-between-regions/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/move-server-between-regions/" class="md-nav__link">
         
   
   
@@ -878,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/boot-image-volume/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/boot-image-volume/" class="md-nav__link">
         
   
   
@@ -906,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/restore-srv-to-snap/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/restore-srv-to-snap/" class="md-nav__link">
         
   
   
@@ -934,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/nova/rescue-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/rescue-server/" class="md-nav__link">
         
   
   
@@ -998,7 +992,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/neutron/" class="md-nav__link ">
+            <a href="../../howto/openstack/neutron/" class="md-nav__link ">
               
   
   
@@ -1042,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/neutron/new-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/new-network/" class="md-nav__link">
         
   
   
@@ -1070,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/neutron/create-security-groups/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/create-security-groups/" class="md-nav__link">
         
   
   
@@ -1098,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/neutron/multiple-public-ips/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/multiple-public-ips/" class="md-nav__link">
         
   
   
@@ -1126,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/neutron/vpnaas/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/vpnaas/" class="md-nav__link">
         
   
   
@@ -1154,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/neutron/delete-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/delete-network/" class="md-nav__link">
         
   
   
@@ -1212,7 +1206,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/designate/" class="md-nav__link ">
+            <a href="../../howto/openstack/designate/" class="md-nav__link ">
               
   
   
@@ -1256,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/designate/zones/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/zones/" class="md-nav__link">
         
   
   
@@ -1284,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/designate/recordsets/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/recordsets/" class="md-nav__link">
         
   
   
@@ -1346,7 +1340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/octavia/" class="md-nav__link ">
+            <a href="../../howto/openstack/octavia/" class="md-nav__link ">
               
   
   
@@ -1390,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/octavia/lbaas-tcp/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-tcp/" class="md-nav__link">
         
   
   
@@ -1418,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/octavia/tls-lb/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/tls-lb/" class="md-nav__link">
         
   
   
@@ -1446,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/octavia/lbaas-l7pol/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-l7pol/" class="md-nav__link">
         
   
   
@@ -1474,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/octavia/metrics/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/metrics/" class="md-nav__link">
         
   
   
@@ -1536,7 +1530,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/cinder/" class="md-nav__link ">
+            <a href="../../howto/openstack/cinder/" class="md-nav__link ">
               
   
   
@@ -1580,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/cinder/resize-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/resize-volumes/" class="md-nav__link">
         
   
   
@@ -1608,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/cinder/encrypted-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/encrypted-volumes/" class="md-nav__link">
         
   
   
@@ -1636,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/cinder/retype-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/retype-volumes/" class="md-nav__link">
         
   
   
@@ -1664,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/cinder/sync-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/sync-volumes/" class="md-nav__link">
         
   
   
@@ -1724,7 +1718,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/glance/" class="md-nav__link ">
+            <a href="../../howto/openstack/glance/" class="md-nav__link ">
               
   
   
@@ -1768,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/glance/examine/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/examine/" class="md-nav__link">
         
   
   
@@ -1796,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/glance/filter/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/filter/" class="md-nav__link">
         
   
   
@@ -1824,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/glance/custom/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/custom/" class="md-nav__link">
         
   
   
@@ -1882,7 +1876,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/keystone/" class="md-nav__link ">
+            <a href="../../howto/openstack/keystone/" class="md-nav__link ">
               
   
   
@@ -1926,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/keystone/app-creds/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/app-creds/" class="md-nav__link">
         
   
   
@@ -1954,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/keystone/api-user-passwd/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/api-user-passwd/" class="md-nav__link">
         
   
   
@@ -2012,7 +2006,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/openstack/barbican/" class="md-nav__link ">
+            <a href="../../howto/openstack/barbican/" class="md-nav__link ">
               
   
   
@@ -2056,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/barbican/generic-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/generic-secret/" class="md-nav__link">
         
   
   
@@ -2084,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/openstack/barbican/share-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/share-secret/" class="md-nav__link">
         
   
   
@@ -2150,7 +2144,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/object-storage/" class="md-nav__link ">
+            <a href="../../howto/object-storage/" class="md-nav__link ">
               
   
   
@@ -2228,7 +2222,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/object-storage/s3/" class="md-nav__link ">
+            <a href="../../howto/object-storage/s3/" class="md-nav__link ">
               
   
   
@@ -2272,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/credentials/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/credentials/" class="md-nav__link">
         
   
   
@@ -2300,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/public-bucket/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/public-bucket/" class="md-nav__link">
         
   
   
@@ -2328,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/presign/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/presign/" class="md-nav__link">
         
   
   
@@ -2356,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/expiry/" class="md-nav__link">
         
   
   
@@ -2384,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/object-lock/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/object-lock/" class="md-nav__link">
         
   
   
@@ -2412,7 +2406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/versioning/" class="md-nav__link">
         
   
   
@@ -2440,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/sse-c/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/sse-c/" class="md-nav__link">
         
   
   
@@ -2468,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/s3/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/utilization/" class="md-nav__link">
         
   
   
@@ -2534,7 +2528,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/object-storage/swift/" class="md-nav__link ">
+            <a href="../../howto/object-storage/swift/" class="md-nav__link ">
               
   
   
@@ -2578,7 +2572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/private-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/private-container/" class="md-nav__link">
         
   
   
@@ -2606,7 +2600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/public-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/public-container/" class="md-nav__link">
         
   
   
@@ -2634,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/tempurl/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/tempurl/" class="md-nav__link">
         
   
   
@@ -2662,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/expiry/" class="md-nav__link">
         
   
   
@@ -2690,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/versioning/" class="md-nav__link">
         
   
   
@@ -2718,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/object-storage/swift/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/utilization/" class="md-nav__link">
         
   
   
@@ -2782,7 +2776,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/kubernetes/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/" class="md-nav__link ">
               
   
   
@@ -2854,7 +2848,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/kubernetes/gardener/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/gardener/" class="md-nav__link ">
               
   
   
@@ -2898,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -2926,7 +2920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/kubernetes/gardener/kubectl/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/kubectl/" class="md-nav__link">
         
   
   
@@ -2954,7 +2948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/kubernetes/gardener/high-avail/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/high-avail/" class="md-nav__link">
         
   
   
@@ -2982,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -3010,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
         
   
   
@@ -3092,7 +3086,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/marketplace/" class="md-nav__link ">
+            <a href="../../howto/marketplace/" class="md-nav__link ">
               
   
   
@@ -3189,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/bareos/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/deploy/" class="md-nav__link">
         
   
   
@@ -3217,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/bareos/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/delete/" class="md-nav__link">
         
   
   
@@ -3306,7 +3300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/clavister/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/deploy/" class="md-nav__link">
         
   
   
@@ -3334,7 +3328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/clavister/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/delete/" class="md-nav__link">
         
   
   
@@ -3423,7 +3417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/grafana/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/deploy/" class="md-nav__link">
         
   
   
@@ -3451,7 +3445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/grafana/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/delete/" class="md-nav__link">
         
   
   
@@ -3540,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/harbor/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/deploy/" class="md-nav__link">
         
   
   
@@ -3568,7 +3562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/harbor/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/delete/" class="md-nav__link">
         
   
   
@@ -3657,7 +3651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/keycloak/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/deploy/" class="md-nav__link">
         
   
   
@@ -3685,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/keycloak/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/delete/" class="md-nav__link">
         
   
   
@@ -3774,7 +3768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/langfuse/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/deploy/" class="md-nav__link">
         
   
   
@@ -3802,7 +3796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/langfuse/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/delete/" class="md-nav__link">
         
   
   
@@ -3891,7 +3885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/matomo/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/deploy/" class="md-nav__link">
         
   
   
@@ -3919,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/matomo/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/delete/" class="md-nav__link">
         
   
   
@@ -4008,7 +4002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/openwebui/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/deploy/" class="md-nav__link">
         
   
   
@@ -4036,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/openwebui/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/delete/" class="md-nav__link">
         
   
   
@@ -4125,7 +4119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/prometheus/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/deploy/" class="md-nav__link">
         
   
   
@@ -4153,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/prometheus/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/delete/" class="md-nav__link">
         
   
   
@@ -4242,7 +4236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/taiga/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/deploy/" class="md-nav__link">
         
   
   
@@ -4270,7 +4264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/marketplace/taiga/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/delete/" class="md-nav__link">
         
   
   
@@ -4346,7 +4340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/account-billing/" class="md-nav__link ">
+            <a href="../../howto/account-billing/" class="md-nav__link ">
               
   
   
@@ -4390,7 +4384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/forgot-your-password/" class="md-nav__link">
+      <a href="../../howto/account-billing/forgot-your-password/" class="md-nav__link">
         
   
   
@@ -4418,7 +4412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/change-account-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-account-data/" class="md-nav__link">
         
   
   
@@ -4446,7 +4440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/change-credit-card/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-credit-card/" class="md-nav__link">
         
   
   
@@ -4474,7 +4468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/manage-invoices/" class="md-nav__link">
+      <a href="../../howto/account-billing/manage-invoices/" class="md-nav__link">
         
   
   
@@ -4502,7 +4496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/e-invoice/" class="md-nav__link">
+      <a href="../../howto/account-billing/e-invoice/" class="md-nav__link">
         
   
   
@@ -4530,7 +4524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/rest-invoice-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/rest-invoice-data/" class="md-nav__link">
         
   
   
@@ -4558,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/account-billing/delete-account/" class="md-nav__link">
+      <a href="../../howto/account-billing/delete-account/" class="md-nav__link">
         
   
   
@@ -4614,7 +4608,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../howto/support/" class="md-nav__link ">
+            <a href="../../howto/support/" class="md-nav__link ">
               
   
   
@@ -4658,7 +4652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../howto/support/raise-issues/" class="md-nav__link">
+      <a href="../../howto/support/raise-issues/" class="md-nav__link">
         
   
   
@@ -4727,7 +4721,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../tutorials/" class="md-nav__link ">
+            <a href="../../tutorials/" class="md-nav__link ">
               
   
   
@@ -4771,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/ansible/" class="md-nav__link">
+      <a href="../../tutorials/ansible/" class="md-nav__link">
         
   
   
@@ -4799,7 +4793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/containers/" class="md-nav__link">
+      <a href="../../tutorials/containers/" class="md-nav__link">
         
   
   
@@ -4827,7 +4821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/heat/" class="md-nav__link">
+      <a href="../../tutorials/heat/" class="md-nav__link">
         
   
   
@@ -4855,7 +4849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/tf/" class="md-nav__link">
+      <a href="../../tutorials/tf/" class="md-nav__link">
         
   
   
@@ -4920,7 +4914,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../background/" class="md-nav__link ">
+            <a href="../../background/" class="md-nav__link ">
               
   
   
@@ -4964,7 +4958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/gui-vs-api/" class="md-nav__link">
+      <a href="../../background/gui-vs-api/" class="md-nav__link">
         
   
   
@@ -4992,7 +4986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/project-deletion/" class="md-nav__link">
+      <a href="../../background/project-deletion/" class="md-nav__link">
         
   
   
@@ -5020,7 +5014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/object-storage/" class="md-nav__link">
+      <a href="../../background/object-storage/" class="md-nav__link">
         
   
   
@@ -5048,7 +5042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/disaster-recovery/" class="md-nav__link">
+      <a href="../../background/disaster-recovery/" class="md-nav__link">
         
   
   
@@ -5096,7 +5090,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../background/kubernetes/" class="md-nav__link ">
+            <a href="../../background/kubernetes/" class="md-nav__link ">
               
   
   
@@ -5197,7 +5191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
         
   
   
@@ -5225,7 +5219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
         
   
   
@@ -5253,7 +5247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
         
   
   
@@ -5281,7 +5275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
         
   
   
@@ -5325,7 +5319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/marketplace/" class="md-nav__link">
+      <a href="../../background/marketplace/" class="md-nav__link">
         
   
   
@@ -5357,8 +5351,6 @@
       
   
   
-    
-  
   
   
     
@@ -5392,15 +5384,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -5424,7 +5416,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5466,7 +5458,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../features/" class="md-nav__link ">
+            <a href="../../reference/features/" class="md-nav__link ">
               
   
   
@@ -5510,7 +5502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/public/" class="md-nav__link">
+      <a href="../../reference/features/public/" class="md-nav__link">
         
   
   
@@ -5538,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/compliant/" class="md-nav__link">
+      <a href="../../reference/features/compliant/" class="md-nav__link">
         
   
   
@@ -5598,7 +5590,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../limitations/" class="md-nav__link ">
+            <a href="../../reference/limitations/" class="md-nav__link ">
               
   
   
@@ -5642,7 +5634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../limitations/openstack/" class="md-nav__link">
+      <a href="../../reference/limitations/openstack/" class="md-nav__link">
         
   
   
@@ -5670,7 +5662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../limitations/object-storage/" class="md-nav__link">
+      <a href="../../reference/limitations/object-storage/" class="md-nav__link">
         
   
   
@@ -5698,7 +5690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../limitations/kubernetes/" class="md-nav__link">
+      <a href="../../reference/limitations/kubernetes/" class="md-nav__link">
         
   
   
@@ -5752,7 +5744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../flavors/" class="md-nav__link ">
+            <a href="../../reference/flavors/" class="md-nav__link ">
               
   
   
@@ -5817,7 +5809,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../volumes/" class="md-nav__link ">
+            <a href="../../reference/volumes/" class="md-nav__link ">
               
   
   
@@ -5882,7 +5874,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../images/" class="md-nav__link ">
+            <a href="../../reference/images/" class="md-nav__link ">
               
   
   
@@ -5947,7 +5939,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dns/" class="md-nav__link ">
+            <a href="../../reference/dns/" class="md-nav__link ">
               
   
   
@@ -6045,7 +6037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quotas/openstack/" class="md-nav__link">
+      <a href="../../reference/quotas/openstack/" class="md-nav__link">
         
   
   
@@ -6103,7 +6095,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../versions/" class="md-nav__link ">
+            <a href="../../reference/versions/" class="md-nav__link ">
               
   
   
@@ -6147,7 +6139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../versions/public/" class="md-nav__link">
+      <a href="../../reference/versions/public/" class="md-nav__link">
         
   
   
@@ -6175,7 +6167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../versions/compliant/" class="md-nav__link">
+      <a href="../../reference/versions/compliant/" class="md-nav__link">
         
   
   
@@ -6208,8 +6200,6 @@
                 
   
   
-    
-  
   
   
     
@@ -6227,15 +6217,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../reference/api/" class="md-nav__link ">
               
   
   
@@ -6259,7 +6249,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6297,7 +6287,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cc/" class="md-nav__link ">
+            <a href="../../reference/api/cc/" class="md-nav__link ">
               
   
   
@@ -6341,8 +6331,6 @@
                 
   
   
-    
-  
   
   
     
@@ -6356,15 +6344,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_3">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../reference/api/openstack/" class="md-nav__link ">
               
   
   
@@ -6383,7 +6371,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_10_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_10_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_10_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6437,7 +6425,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../legal/" class="md-nav__link ">
+            <a href="../../reference/legal/" class="md-nav__link ">
               
   
   
@@ -6488,6 +6476,8 @@
       
   
   
+    
+  
   
   
     
@@ -6509,15 +6499,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../contrib/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -6541,7 +6531,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6561,7 +6551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/issues/" class="md-nav__link">
+      <a href="../issues/" class="md-nav__link">
         
   
   
@@ -6589,7 +6579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/modifications/" class="md-nav__link">
+      <a href="../modifications/" class="md-nav__link">
         
   
   
@@ -6617,7 +6607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/quality/" class="md-nav__link">
+      <a href="../quality/" class="md-nav__link">
         
   
   
@@ -6642,10 +6632,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../contrib/style/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -6661,6 +6678,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-sentence-per-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One Sentence per Line
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-screen-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI screen dumps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fenced-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fenced code blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamed-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6700,10 +6836,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#openstack-api-endpoints" class="md-nav__link">
+  <a href="#sections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenStack API endpoints
+        Sections
       
     </span>
   </a>
@@ -6711,10 +6847,87 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#openstack-sdks" class="md-nav__link">
+  <a href="#headings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenStack SDKs
+        Headings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-sentence-per-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One Sentence per Line
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-screen-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI screen dumps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fenced-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fenced code blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamed-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed sources
       
     </span>
   </a>
@@ -6738,7 +6951,7 @@
 
 
   
-    <a href="https://github.com/cleura/docs/edit/main/docs/reference/api/openstack/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/cleura/docs/edit/main/docs/contrib/style.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -6746,95 +6959,66 @@
   
 
 
-<h1 id="openstack-api-reference-documentation">OpenStack API reference documentation</h1>
-<p>For a starting point on reference information about the OpenStack APIs in Cleura&nbsp;Cloud, and how to use them with a tool like <code>curl</code>, refer to the OpenStack <a href="https://docs.openstack.org/api-quick-start/">API documentation landing page</a>.
-Individual service APIs have their own detailed API reference documentation pages, such as those for the <a href="https://docs.openstack.org/api-ref/compute/">Compute (Nova) API</a> or the <a href="https://docs.openstack.org/api-ref/network/v2/">Networking (Neutron) API</a>.</p>
-<p>You may also be interested in the <a href="https://docs.openstack.org/api-quick-start/api-quick-start.html">API Quick Start Guide</a> for information about how to authenticate against the OpenStack API, and send API requests.</p>
-<blockquote>
-<p>To access the OpenStack API in Cleura&nbsp;Cloud, you need to have an <a href="../../../howto/getting-started/create-account/">account</a>, and also download a valid credentials file, as you would for <a href="../../../howto/getting-started/enable-openstack-cli/">enabling the OpenStack CLI</a>.
-All actions exposed via the OpenStack CLI are also available by calling the API directly.</p>
-</blockquote>
-<h2 id="openstack-api-endpoints">OpenStack API endpoints</h2>
-<p>The Cleura&nbsp;Cloud Sto2HS region exposes the following OpenStack API endpoints:</p>
-<table>
-<thead>
-<tr>
-<th>Service Name</th>
-<th>Service Type</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>barbican</td>
-<td>key-manager</td>
-<td><a href="https://sto2hs.citycloud.com:9311/">https://sto2hs.citycloud.com:9311/</a></td>
-</tr>
-<tr>
-<td>cinderv3</td>
-<td>volumev3</td>
-<td><a href="https://sto2hs.citycloud.com:8776/">https://sto2hs.citycloud.com:8776/</a></td>
-</tr>
-<tr>
-<td>octavia</td>
-<td>load-balancer</td>
-<td><a href="https://sto2hs.citycloud.com:9876/">https://sto2hs.citycloud.com:9876/</a></td>
-</tr>
-<tr>
-<td>keystone</td>
-<td>identity</td>
-<td><a href="https://sto2hs.citycloud.com:5000/">https://sto2hs.citycloud.com:5000/</a></td>
-</tr>
-<tr>
-<td>radosgw</td>
-<td>object-store</td>
-<td><a href="https://swift-sto2hs.citycloud.com/swift/">https://swift-sto2hs.citycloud.com/swift/</a></td>
-</tr>
-<tr>
-<td>placement</td>
-<td>placement</td>
-<td><a href="https://sto2hs.citycloud.com:8780/">https://sto2hs.citycloud.com:8780/</a></td>
-</tr>
-<tr>
-<td>heat</td>
-<td>orchestration</td>
-<td><a href="https://sto2hs.citycloud.com:8004/">https://sto2hs.citycloud.com:8004/</a></td>
-</tr>
-<tr>
-<td>neutron</td>
-<td>network</td>
-<td><a href="https://sto2hs.citycloud.com:9696/">https://sto2hs.citycloud.com:9696/</a></td>
-</tr>
-<tr>
-<td>designate</td>
-<td>dns</td>
-<td><a href="https://sto2hs.citycloud.com:9001/">https://sto2hs.citycloud.com:9001/</a></td>
-</tr>
-<tr>
-<td>nova</td>
-<td>compute</td>
-<td><a href="https://sto2hs.citycloud.com:8774/">https://sto2hs.citycloud.com:8774/</a></td>
-</tr>
-<tr>
-<td>glance</td>
-<td>image</td>
-<td><a href="https://sto2hs.citycloud.com:9292/">https://sto2hs.citycloud.com:9292/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="openstack-sdks">OpenStack SDKs</h2>
-<p>Although the OpenStack API is perfectly usable via direct HTTP/HTTPS requests to the API endpoints, <em>most</em> developers prefer to use one of the Software Development Kits (SDKs) that wrap the OpenStack API.
-These SDKs are available for many languages:</p>
-<ul>
-<li>Python: <a href="https://docs.openstack.org/openstacksdk/latest/">openstacksdk</a></li>
-<li>Go: <a href="http://gophercloud.io/">Gophercloud</a> (see also its <a href="https://pkg.go.dev/github.com/gophercloud/gophercloud">reference documentation</a>)</li>
-<li>.NET: <a href="https://www.openstacknetsdk.org/">OpenStack.NET</a></li>
-<li>PHP: <a href="https://php-openstack-sdk.readthedocs.io/en/latest/">php-opencloud</a></li>
-<li>Ruby: <a href="https://fog.github.io/">fog</a> (see also its <a href="https://github.com/fog/fog-openstack/blob/master/docs/getting_started.md">OpenStack provider documentation</a>)</li>
-<li>Java: <a href="https://openstack4j.github.io/">OpenStack4j</a></li>
-<li>JavaScript/Node.js: <a href="https://github.com/pkgcloud/pkgcloud">pkgcloud</a></li>
-</ul>
-<p>If your target language has a supported SDK, it may be advisable to use one of them rather than work with hand-crafted HTTP/HTTPS requests.</p>
+<h1 id="style-guide">Style guide</h1>
+<p>We try to follow a handful of style rules when maintaining this documentation.</p>
+<h2 id="sections">Sections</h2>
+<p>Generally, content additions should fit somewhere within the existing top-level and second-level sections (like <a href="../../background/"><em>Background</em></a>, or <a href="../../howto/kubernetes/"><em>Kubernetes</em></a>).
+Try not to introduce a new top-level or second-level section.</p>
+<h2 id="headings">Headings</h2>
+<p>Keep headings concise, under 80 characters.</p>
+<h2 id="one-sentence-per-line">One Sentence per Line</h2>
+<p>We keep our Markdown to <a href="https://sive.rs/1s">one sentence per line</a>, rather than forcing arbitrary line breaks by mandating a maximum line length.
+This facilitates change review, and it also helps notice long run-on sentences.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p>If you are contributing a change that contains screenshots from Cleura&nbsp;Cloud Management&nbsp;Panel, they should have a resolution of 1920×1080 pixels (1080p).
+If your screen has a larger resolution, use <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/">Firefox Responsive Design Mode</a> or <a href="https://developer.chrome.com/docs/devtools/device-mode/">Chrome/Chromium Device Mode</a> to configure your browser with 1080p.</p>
+<p>Screenshots should be added to a directory named <code>assets</code>, located in the same directory as the Markdown file you are adding or editing.</p>
+<h2 id="cli-screen-dumps">CLI screen dumps</h2>
+<p>If you are contributing a change that contains a screen dump from the <code>openstack</code> command-line client, please limit its width to 100 characters.
+You can do this by setting the following environment variable in your terminal, before you start working on your change.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CLIFF_MAX_TERM_WIDTH</span><span class="o">=</span><span class="m">100</span>
+</code></pre></div>
+<h2 id="fenced-code-blocks">Fenced code blocks</h2>
+<p>Use explicitly named, fenced <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#usage">code blocks</a> to ensure correct syntax highlighting.</p>
+<p>Specifically, use <code>bash</code> for shell scripts, <code>json</code> and <code>yaml</code> for JSON and YAML snippets, and <code>console</code> for mixed terminal input and output.</p>
+<h2 id="macros">Macros</h2>
+<p>Whenever an <a href="https://www.mkdocs.org/user-guide/configuration/#extra"><code>extra</code> variable</a> is defined in <code>mkdocs.yml</code>, use a <a href="https://mkdocs-macros-plugin.readthedocs.io/">macro</a> reference, rather than the plain text.</p>
+<p>For example, write:</p>
+<div class="highlight"><pre><span></span><code>This is supported in {{brand}}.
+</code></pre></div>
+<p>… rather than</p>
+<div class="highlight"><pre><span></span><code>This is supported in Cleura&nbsp;Cloud.
+</code></pre></div>
+<h2 id="admonitions">Admonitions</h2>
+<p>We use only three types of <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">admonitions</a>:
+Note, Warning, and Danger.</p>
+<details class="note">
+<summary>Note</summary>
+<p>Notes are additional bits of information that do not belong in the main text of a page.
+As such, we always make them collapsible:</p>
+<div class="highlight"><pre><span></span><code>??? note
+    This is a collapsible note.
+</code></pre></div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Warnings highlight potentially unintended side effects of otherwise supported functionality.
+We always render them extended:</p>
+<div class="highlight"><pre><span></span><code>!!! warning
+    This is a warning.
+</code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Danger admonitions highlight dangerous actions, such as ones that might cause data loss.
+As with warnings, we always render them extended:</p>
+<div class="highlight"><pre><span></span><code>!!! danger
+    This is a danger admonition.
+</code></pre></div>
+</div>
+<h2 id="renamed-sources">Renamed sources</h2>
+<p>If you rename an existing Markdown source, the path of the rendered page’s <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a> will change.
+In this case, be sure to define a <a href="https://github.com/mkdocs/mkdocs-redirects">redirect</a> from the old URI to the new one, by adding an entry to the <code>plugins.redirect.redirect_maps</code> dictionary in the <code>mkdocs.yml</code> configuration file.</p>
 
 
 
@@ -6857,7 +7041,7 @@ These SDKs are available for many languages:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 7, 2026 15:15:50 UTC">2026-01-07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 21, 2026 12:50:27 UTC">2026-01-21</span>
   </span>
 
     
@@ -6867,7 +7051,7 @@ These SDKs are available for many languages:</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 11, 2023 09:52:05 UTC">2023-01-11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 21, 2026 11:47:55 UTC">2026-01-21</span>
   </span>
 
     
@@ -6877,11 +7061,11 @@ These SDKs are available for many languages:</p>
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
       
     </span>
     <nav>
-      Christos Varelas, Florian Haas
+      Florian Haas
     </nav>
   </span>
 
@@ -6912,7 +7096,7 @@ These SDKs are available for many languages:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
 
     </div>
   
@@ -6937,10 +7121,10 @@ These SDKs are available for many languages:</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
