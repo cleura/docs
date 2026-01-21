@@ -2,30 +2,9 @@
 
 You have two options for editing content: directly in your browser using GitHub, or from your local work environment using a Git-based workflow.
 
-## Notes on content additions
+## Style Guide
 
-**Sections:** Generally, content additions should fit somewhere within the existing top-level and second-level sections (like [_Background_](../background/index.md), or [_Kubernetes_](../howto/kubernetes/index.md)).
-Try not to introduce a new top-level or second-level section.
-
-**Text:** Write your Markdown text in such a way that each sentence in a paragraph has its own line, and is followed immediately by a newline character with no spaces in between.
-This facilitates the review of your change, and it also helps you notice long run-on sentences as you write.
-
-**Headings:** Keep headings concise, under 80 characters.
-
-**Screenshots:** If you are contributing a change that contains screenshots from {{gui}}, they should have a resolution of 1920×1080 pixels (1080p).
-If your screen has a larger resolution, use [Firefox Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/) or [Chrome/Chromium Device Mode](https://developer.chrome.com/docs/devtools/device-mode/) to configure your browser with 1080p.
-
-Screenshots should be added to a directory named `assets`, located in the same directory as the Markdown file you are adding or editing.
-
-**CLI screen dumps:** If you are contributing a change that contains a screen dump from the `openstack` command-line client, please limit its width to 100 characters.
-You can do this by setting the following environment variable in your terminal, before you start working on your change.
-
-``` bash
-export CLIFF_MAX_TERM_WIDTH=100
-```
-
-**Renamed sources:** If you rename an existing Markdown source, the path of the rendered page's [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) will change.
-In this case, be sure to define a [redirect](https://github.com/mkdocs/mkdocs-redirects) from the old URI to the new one, by adding an entry to the `plugins.redirect.redirect_maps` dictionary in the `mkdocs.yml` configuration file.
+When you submit a patch or a content addition, please follow [the style guide](style.md).
 
 ## Modifying content from your browser
 
