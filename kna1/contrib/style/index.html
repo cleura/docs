@@ -3,35 +3,31 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.">
       
       
-      
-        <link rel="canonical" href="https://docs.cleura.cloud/main/howto/openstack/cinder/resize-volumes/">
-      
-      
-        <link rel="prev" href="../">
+        <link rel="canonical" href="https://docs.cleura.cloud/main/contrib/style/">
       
       
-        <link rel="next" href="../encrypted-volumes/">
+        <link rel="prev" href="../quality/">
+      
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/favicon.ico">
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Resizing a volume - Cleura&nbsp;Docs</title>
+        <title>Style guide - Cleura&nbsp;Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,22 +41,22 @@
         
         
         
-        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/cleura-palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/cleura-palette.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/banner.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/banner.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
 
 
-  <script defer data-domain="docs.cleura.cloud" src="../../../../assets/external/plausible.io/js/plausible.js"></script>
+  <script defer data-domain="docs.cleura.cloud" src="../../assets/external/plausible.io/js/plausible.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -69,18 +65,16 @@
     
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="Resizing a volume - Cleura&nbsp;Docs">
-<meta property="og:description" content="A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.">
-<meta property="og:image" content="https://docs.cleura.cloud/main/assets/images/social/howto/openstack/cinder/resize-volumes.png">
+<meta property="og:title" content="Style guide - Cleura&nbsp;Docs">
+<meta property="og:image" content="https://docs.cleura.cloud/main/assets/images/social/contrib/style.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://docs.cleura.cloud/main/howto/openstack/cinder/resize-volumes/">
+<meta property="og:url" content="https://docs.cleura.cloud/main/contrib/style/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Resizing a volume - Cleura&nbsp;Docs">
-<meta property="twitter:description" content="A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.">
-<meta property="twitter:image" content="https://docs.cleura.cloud/main/assets/images/social/howto/openstack/cinder/resize-volumes.png">
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+<meta property="twitter:title" content="Style guide - Cleura&nbsp;Docs">
+<meta property="twitter:image" content="https://docs.cleura.cloud/main/assets/images/social/contrib/style.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -109,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resizing-a-volume" class="md-skip">
+        <a href="#style-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +120,7 @@
   You are viewing documentation for the <strong>Kna1</strong> region.
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../../../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -138,9 +132,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -157,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Resizing a volume
+              Style guide
             
           </span>
         </div>
@@ -273,9 +267,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Cleura&nbsp;Docs
@@ -302,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -326,8 +320,6 @@
       
   
   
-    
-  
   
   
     
@@ -355,15 +347,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -387,7 +379,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -462,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/create-account/" class="md-nav__link">
+      <a href="../../howto/getting-started/create-account/" class="md-nav__link">
         
   
   
@@ -490,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/enable-openstack-cli/" class="md-nav__link">
+      <a href="../../howto/getting-started/enable-openstack-cli/" class="md-nav__link">
         
   
   
@@ -518,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/accessing-cc-rest-api/" class="md-nav__link">
+      <a href="../../howto/getting-started/accessing-cc-rest-api/" class="md-nav__link">
         
   
   
@@ -551,8 +543,6 @@
                 
   
   
-    
-  
   
   
     
@@ -582,15 +572,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../howto/openstack/" class="md-nav__link ">
               
   
   
@@ -614,7 +604,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -670,7 +660,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../nova/" class="md-nav__link ">
+            <a href="../../howto/openstack/nova/" class="md-nav__link ">
               
   
   
@@ -714,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/new-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server/" class="md-nav__link">
         
   
   
@@ -742,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/new-server-cnw/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server-cnw/" class="md-nav__link">
         
   
   
@@ -770,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/server-group/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/server-group/" class="md-nav__link">
         
   
   
@@ -798,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/config-drive/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/config-drive/" class="md-nav__link">
         
   
   
@@ -826,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/resize-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/resize-server/" class="md-nav__link">
         
   
   
@@ -854,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/move-server-between-regions/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/move-server-between-regions/" class="md-nav__link">
         
   
   
@@ -882,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/boot-image-volume/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/boot-image-volume/" class="md-nav__link">
         
   
   
@@ -910,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/restore-srv-to-snap/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/restore-srv-to-snap/" class="md-nav__link">
         
   
   
@@ -938,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nova/rescue-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/rescue-server/" class="md-nav__link">
         
   
   
@@ -1002,7 +992,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../neutron/" class="md-nav__link ">
+            <a href="../../howto/openstack/neutron/" class="md-nav__link ">
               
   
   
@@ -1046,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neutron/new-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/new-network/" class="md-nav__link">
         
   
   
@@ -1074,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neutron/create-security-groups/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/create-security-groups/" class="md-nav__link">
         
   
   
@@ -1102,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neutron/multiple-public-ips/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/multiple-public-ips/" class="md-nav__link">
         
   
   
@@ -1130,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neutron/vpnaas/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/vpnaas/" class="md-nav__link">
         
   
   
@@ -1158,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neutron/delete-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/delete-network/" class="md-nav__link">
         
   
   
@@ -1216,7 +1206,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../designate/" class="md-nav__link ">
+            <a href="../../howto/openstack/designate/" class="md-nav__link ">
               
   
   
@@ -1260,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designate/zones/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/zones/" class="md-nav__link">
         
   
   
@@ -1288,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designate/recordsets/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/recordsets/" class="md-nav__link">
         
   
   
@@ -1350,7 +1340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../octavia/" class="md-nav__link ">
+            <a href="../../howto/openstack/octavia/" class="md-nav__link ">
               
   
   
@@ -1394,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../octavia/lbaas-tcp/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-tcp/" class="md-nav__link">
         
   
   
@@ -1422,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../octavia/tls-lb/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/tls-lb/" class="md-nav__link">
         
   
   
@@ -1450,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../octavia/lbaas-l7pol/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-l7pol/" class="md-nav__link">
         
   
   
@@ -1478,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../octavia/metrics/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/metrics/" class="md-nav__link">
         
   
   
@@ -1511,8 +1501,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1534,15 +1522,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../howto/openstack/cinder/" class="md-nav__link ">
               
   
   
@@ -1566,7 +1554,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1583,37 +1571,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Resizing a volume
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../howto/openstack/cinder/resize-volumes/" class="md-nav__link">
         
   
   
@@ -1629,70 +1590,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#checking-the-volumes-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Checking the volume’s state
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expanding-the-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expanding the volume
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-resized-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using the resized volume
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1705,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../encrypted-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/encrypted-volumes/" class="md-nav__link">
         
   
   
@@ -1733,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../retype-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/retype-volumes/" class="md-nav__link">
         
   
   
@@ -1761,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sync-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/sync-volumes/" class="md-nav__link">
         
   
   
@@ -1821,7 +1718,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../glance/" class="md-nav__link ">
+            <a href="../../howto/openstack/glance/" class="md-nav__link ">
               
   
   
@@ -1865,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glance/examine/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/examine/" class="md-nav__link">
         
   
   
@@ -1893,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glance/filter/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/filter/" class="md-nav__link">
         
   
   
@@ -1921,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glance/custom/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/custom/" class="md-nav__link">
         
   
   
@@ -1979,7 +1876,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../keystone/" class="md-nav__link ">
+            <a href="../../howto/openstack/keystone/" class="md-nav__link ">
               
   
   
@@ -2023,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../keystone/app-creds/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/app-creds/" class="md-nav__link">
         
   
   
@@ -2051,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../keystone/api-user-passwd/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/api-user-passwd/" class="md-nav__link">
         
   
   
@@ -2109,7 +2006,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../barbican/" class="md-nav__link ">
+            <a href="../../howto/openstack/barbican/" class="md-nav__link ">
               
   
   
@@ -2153,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../barbican/generic-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/generic-secret/" class="md-nav__link">
         
   
   
@@ -2181,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../barbican/share-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/share-secret/" class="md-nav__link">
         
   
   
@@ -2247,7 +2144,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../object-storage/" class="md-nav__link ">
+            <a href="../../howto/object-storage/" class="md-nav__link ">
               
   
   
@@ -2325,7 +2222,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../object-storage/s3/" class="md-nav__link ">
+            <a href="../../howto/object-storage/s3/" class="md-nav__link ">
               
   
   
@@ -2369,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/credentials/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/credentials/" class="md-nav__link">
         
   
   
@@ -2397,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/public-bucket/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/public-bucket/" class="md-nav__link">
         
   
   
@@ -2425,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/presign/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/presign/" class="md-nav__link">
         
   
   
@@ -2453,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/expiry/" class="md-nav__link">
         
   
   
@@ -2481,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/object-lock/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/object-lock/" class="md-nav__link">
         
   
   
@@ -2509,7 +2406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/versioning/" class="md-nav__link">
         
   
   
@@ -2537,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/sse-c/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/sse-c/" class="md-nav__link">
         
   
   
@@ -2565,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/s3/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/utilization/" class="md-nav__link">
         
   
   
@@ -2631,7 +2528,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../object-storage/swift/" class="md-nav__link ">
+            <a href="../../howto/object-storage/swift/" class="md-nav__link ">
               
   
   
@@ -2675,7 +2572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/private-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/private-container/" class="md-nav__link">
         
   
   
@@ -2703,7 +2600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/public-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/public-container/" class="md-nav__link">
         
   
   
@@ -2731,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/tempurl/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/tempurl/" class="md-nav__link">
         
   
   
@@ -2759,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/expiry/" class="md-nav__link">
         
   
   
@@ -2787,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/versioning/" class="md-nav__link">
         
   
   
@@ -2815,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../object-storage/swift/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/utilization/" class="md-nav__link">
         
   
   
@@ -2879,7 +2776,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../kubernetes/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/" class="md-nav__link ">
               
   
   
@@ -2951,7 +2848,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../kubernetes/gardener/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/gardener/" class="md-nav__link ">
               
   
   
@@ -2995,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -3023,7 +2920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubernetes/gardener/kubectl/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/kubectl/" class="md-nav__link">
         
   
   
@@ -3051,7 +2948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubernetes/gardener/high-avail/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/high-avail/" class="md-nav__link">
         
   
   
@@ -3079,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -3107,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
         
   
   
@@ -3189,7 +3086,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../marketplace/" class="md-nav__link ">
+            <a href="../../howto/marketplace/" class="md-nav__link ">
               
   
   
@@ -3286,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/bareos/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/deploy/" class="md-nav__link">
         
   
   
@@ -3314,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/bareos/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/delete/" class="md-nav__link">
         
   
   
@@ -3403,7 +3300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/clavister/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/deploy/" class="md-nav__link">
         
   
   
@@ -3431,7 +3328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/clavister/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/delete/" class="md-nav__link">
         
   
   
@@ -3520,7 +3417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/grafana/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/deploy/" class="md-nav__link">
         
   
   
@@ -3548,7 +3445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/grafana/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/delete/" class="md-nav__link">
         
   
   
@@ -3637,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/harbor/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/deploy/" class="md-nav__link">
         
   
   
@@ -3665,7 +3562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/harbor/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/delete/" class="md-nav__link">
         
   
   
@@ -3754,7 +3651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/keycloak/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/deploy/" class="md-nav__link">
         
   
   
@@ -3782,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/keycloak/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/delete/" class="md-nav__link">
         
   
   
@@ -3871,7 +3768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/langfuse/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/deploy/" class="md-nav__link">
         
   
   
@@ -3899,7 +3796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/langfuse/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/delete/" class="md-nav__link">
         
   
   
@@ -3988,7 +3885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/matomo/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/deploy/" class="md-nav__link">
         
   
   
@@ -4016,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/matomo/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/delete/" class="md-nav__link">
         
   
   
@@ -4105,7 +4002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/openwebui/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/deploy/" class="md-nav__link">
         
   
   
@@ -4133,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/openwebui/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/delete/" class="md-nav__link">
         
   
   
@@ -4222,7 +4119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/prometheus/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/deploy/" class="md-nav__link">
         
   
   
@@ -4250,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/prometheus/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/delete/" class="md-nav__link">
         
   
   
@@ -4339,7 +4236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/taiga/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/deploy/" class="md-nav__link">
         
   
   
@@ -4367,7 +4264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../marketplace/taiga/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/delete/" class="md-nav__link">
         
   
   
@@ -4443,7 +4340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../account-billing/" class="md-nav__link ">
+            <a href="../../howto/account-billing/" class="md-nav__link ">
               
   
   
@@ -4487,7 +4384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/forgot-your-password/" class="md-nav__link">
+      <a href="../../howto/account-billing/forgot-your-password/" class="md-nav__link">
         
   
   
@@ -4515,7 +4412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/change-account-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-account-data/" class="md-nav__link">
         
   
   
@@ -4543,7 +4440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/change-credit-card/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-credit-card/" class="md-nav__link">
         
   
   
@@ -4571,7 +4468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/manage-invoices/" class="md-nav__link">
+      <a href="../../howto/account-billing/manage-invoices/" class="md-nav__link">
         
   
   
@@ -4599,7 +4496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/e-invoice/" class="md-nav__link">
+      <a href="../../howto/account-billing/e-invoice/" class="md-nav__link">
         
   
   
@@ -4627,7 +4524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/rest-invoice-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/rest-invoice-data/" class="md-nav__link">
         
   
   
@@ -4655,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account-billing/delete-account/" class="md-nav__link">
+      <a href="../../howto/account-billing/delete-account/" class="md-nav__link">
         
   
   
@@ -4711,7 +4608,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../support/" class="md-nav__link ">
+            <a href="../../howto/support/" class="md-nav__link ">
               
   
   
@@ -4755,7 +4652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../support/raise-issues/" class="md-nav__link">
+      <a href="../../howto/support/raise-issues/" class="md-nav__link">
         
   
   
@@ -4824,7 +4721,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../tutorials/" class="md-nav__link ">
+            <a href="../../tutorials/" class="md-nav__link ">
               
   
   
@@ -4868,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/ansible/" class="md-nav__link">
+      <a href="../../tutorials/ansible/" class="md-nav__link">
         
   
   
@@ -4896,7 +4793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/containers/" class="md-nav__link">
+      <a href="../../tutorials/containers/" class="md-nav__link">
         
   
   
@@ -4924,7 +4821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/heat/" class="md-nav__link">
+      <a href="../../tutorials/heat/" class="md-nav__link">
         
   
   
@@ -4952,7 +4849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/tf/" class="md-nav__link">
+      <a href="../../tutorials/tf/" class="md-nav__link">
         
   
   
@@ -5017,7 +4914,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../background/" class="md-nav__link ">
+            <a href="../../background/" class="md-nav__link ">
               
   
   
@@ -5061,7 +4958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/gui-vs-api/" class="md-nav__link">
+      <a href="../../background/gui-vs-api/" class="md-nav__link">
         
   
   
@@ -5089,7 +4986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/project-deletion/" class="md-nav__link">
+      <a href="../../background/project-deletion/" class="md-nav__link">
         
   
   
@@ -5117,7 +5014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/object-storage/" class="md-nav__link">
+      <a href="../../background/object-storage/" class="md-nav__link">
         
   
   
@@ -5145,7 +5042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/disaster-recovery/" class="md-nav__link">
+      <a href="../../background/disaster-recovery/" class="md-nav__link">
         
   
   
@@ -5193,7 +5090,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../background/kubernetes/" class="md-nav__link ">
+            <a href="../../background/kubernetes/" class="md-nav__link ">
               
   
   
@@ -5294,7 +5191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
         
   
   
@@ -5322,7 +5219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
         
   
   
@@ -5350,7 +5247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
         
   
   
@@ -5378,7 +5275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
         
   
   
@@ -5422,7 +5319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../background/marketplace/" class="md-nav__link">
+      <a href="../../background/marketplace/" class="md-nav__link">
         
   
   
@@ -5495,7 +5392,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -5561,7 +5458,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/features/" class="md-nav__link ">
+            <a href="../../reference/features/" class="md-nav__link ">
               
   
   
@@ -5605,7 +5502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/features/public/" class="md-nav__link">
+      <a href="../../reference/features/public/" class="md-nav__link">
         
   
   
@@ -5633,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/features/compliant/" class="md-nav__link">
+      <a href="../../reference/features/compliant/" class="md-nav__link">
         
   
   
@@ -5693,7 +5590,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/limitations/" class="md-nav__link ">
+            <a href="../../reference/limitations/" class="md-nav__link ">
               
   
   
@@ -5737,7 +5634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/limitations/openstack/" class="md-nav__link">
+      <a href="../../reference/limitations/openstack/" class="md-nav__link">
         
   
   
@@ -5765,7 +5662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/limitations/object-storage/" class="md-nav__link">
+      <a href="../../reference/limitations/object-storage/" class="md-nav__link">
         
   
   
@@ -5793,7 +5690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/limitations/kubernetes/" class="md-nav__link">
+      <a href="../../reference/limitations/kubernetes/" class="md-nav__link">
         
   
   
@@ -5847,7 +5744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/flavors/" class="md-nav__link ">
+            <a href="../../reference/flavors/" class="md-nav__link ">
               
   
   
@@ -5912,7 +5809,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/volumes/" class="md-nav__link ">
+            <a href="../../reference/volumes/" class="md-nav__link ">
               
   
   
@@ -5977,7 +5874,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/images/" class="md-nav__link ">
+            <a href="../../reference/images/" class="md-nav__link ">
               
   
   
@@ -6042,7 +5939,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/dns/" class="md-nav__link ">
+            <a href="../../reference/dns/" class="md-nav__link ">
               
   
   
@@ -6140,7 +6037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/quotas/openstack/" class="md-nav__link">
+      <a href="../../reference/quotas/openstack/" class="md-nav__link">
         
   
   
@@ -6198,7 +6095,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/versions/" class="md-nav__link ">
+            <a href="../../reference/versions/" class="md-nav__link ">
               
   
   
@@ -6242,7 +6139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/versions/public/" class="md-nav__link">
+      <a href="../../reference/versions/public/" class="md-nav__link">
         
   
   
@@ -6270,7 +6167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/versions/compliant/" class="md-nav__link">
+      <a href="../../reference/versions/compliant/" class="md-nav__link">
         
   
   
@@ -6328,7 +6225,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/api/" class="md-nav__link ">
+            <a href="../../reference/api/" class="md-nav__link ">
               
   
   
@@ -6390,7 +6287,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/api/cc/" class="md-nav__link ">
+            <a href="../../reference/api/cc/" class="md-nav__link ">
               
   
   
@@ -6455,7 +6352,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/api/openstack/" class="md-nav__link ">
+            <a href="../../reference/api/openstack/" class="md-nav__link ">
               
   
   
@@ -6528,7 +6425,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/legal/" class="md-nav__link ">
+            <a href="../../reference/legal/" class="md-nav__link ">
               
   
   
@@ -6579,6 +6476,8 @@
       
   
   
+    
+  
   
   
     
@@ -6600,15 +6499,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../contrib/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -6632,7 +6531,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6652,7 +6551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contrib/issues/" class="md-nav__link">
+      <a href="../issues/" class="md-nav__link">
         
   
   
@@ -6680,7 +6579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contrib/modifications/" class="md-nav__link">
+      <a href="../modifications/" class="md-nav__link">
         
   
   
@@ -6708,7 +6607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contrib/quality/" class="md-nav__link">
+      <a href="../quality/" class="md-nav__link">
         
   
   
@@ -6733,10 +6632,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../contrib/style/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -6752,6 +6678,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-sentence-per-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One Sentence per Line
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-screen-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI screen dumps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fenced-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fenced code blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamed-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6791,10 +6836,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#sections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Sections
       
     </span>
   </a>
@@ -6802,10 +6847,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checking-the-volumes-state" class="md-nav__link">
+  <a href="#headings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Checking the volume’s state
+        Headings
       
     </span>
   </a>
@@ -6813,10 +6858,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#expanding-the-volume" class="md-nav__link">
+  <a href="#one-sentence-per-line" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Expanding the volume
+        One Sentence per Line
       
     </span>
   </a>
@@ -6824,10 +6869,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-resized-volume" class="md-nav__link">
+  <a href="#screenshots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the resized volume
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-screen-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI screen dumps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fenced-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fenced code blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamed-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renamed sources
       
     </span>
   </a>
@@ -6851,7 +6951,7 @@
 
 
   
-    <a href="https://github.com/cleura/docs/edit/main/docs/howto/openstack/cinder/resize-volumes.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/cleura/docs/edit/main/docs/contrib/style.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -6859,68 +6959,66 @@
   
 
 
-<h1 id="resizing-a-volume">Resizing a volume</h1>
-<p>A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to expand a volume online (that is, without detaching it from its server), you must use the OpenStack CLI.
-Make sure you have <a href="../../../getting-started/enable-openstack-cli/">enabled it</a>.</p>
-<h2 id="checking-the-volumes-state">Checking the volume’s state</h2>
-<p>Assume you have a volume named <code>testvol</code> that is currently attached to a server named <code>testsrv</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>list
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
-<span class="go">| ID                                | Name    | Status | Size | Attached to                      |</span>
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
-<span class="go">| 357e1022-4156-4383-a49d-729f86e84 | testvol | in-use |    2 | Attached to testsrv on /dev/vdb  |</span>
-<span class="go">| 347                               |         |        |      |                                  |</span>
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
+<h1 id="style-guide">Style guide</h1>
+<p>We try to follow a handful of style rules when maintaining this documentation.</p>
+<h2 id="sections">Sections</h2>
+<p>Generally, content additions should fit somewhere within the existing top-level and second-level sections (like <a href="../../background/"><em>Background</em></a>, or <a href="../../howto/kubernetes/"><em>Kubernetes</em></a>).
+Try not to introduce a new top-level or second-level section.</p>
+<h2 id="headings">Headings</h2>
+<p>Keep headings concise, under 80 characters.</p>
+<h2 id="one-sentence-per-line">One Sentence per Line</h2>
+<p>We keep our Markdown to <a href="https://sive.rs/1s">one sentence per line</a>, rather than forcing arbitrary line breaks by mandating a maximum line length.
+This facilitates change review, and it also helps notice long run-on sentences.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p>If you are contributing a change that contains screenshots from Cleura&nbsp;Cloud Management&nbsp;Panel, they should have a resolution of 1920×1080 pixels (1080p).
+If your screen has a larger resolution, use <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/">Firefox Responsive Design Mode</a> or <a href="https://developer.chrome.com/docs/devtools/device-mode/">Chrome/Chromium Device Mode</a> to configure your browser with 1080p.</p>
+<p>Screenshots should be added to a directory named <code>assets</code>, located in the same directory as the Markdown file you are adding or editing.</p>
+<h2 id="cli-screen-dumps">CLI screen dumps</h2>
+<p>If you are contributing a change that contains a screen dump from the <code>openstack</code> command-line client, please limit its width to 100 characters.
+You can do this by setting the following environment variable in your terminal, before you start working on your change.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CLIFF_MAX_TERM_WIDTH</span><span class="o">=</span><span class="m">100</span>
 </code></pre></div>
-<p>As you can see, this volume’s status is <code>in-use</code>, meaning it is currently attached to a server, and the volume’s size is 2&nbsp;GiB.</p>
-<p>You can also use <code>openstack&nbsp;server&nbsp;ssh</code> to verify the current state of the block device.
-In this example, the virtual block device <code>/dev/vdb</code> contains an XFS file system and is mounted to <code>/srv</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"mount | grep /dev/vdb"</span>
-<span class="go">/dev/vdb on /srv type xfs (rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota)</span>
+<h2 id="fenced-code-blocks">Fenced code blocks</h2>
+<p>Use explicitly named, fenced <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#usage">code blocks</a> to ensure correct syntax highlighting.</p>
+<p>Specifically, use <code>bash</code> for shell scripts, <code>json</code> and <code>yaml</code> for JSON and YAML snippets, and <code>console</code> for mixed terminal input and output.</p>
+<h2 id="macros">Macros</h2>
+<p>Whenever an <a href="https://www.mkdocs.org/user-guide/configuration/#extra"><code>extra</code> variable</a> is defined in <code>mkdocs.yml</code>, use a <a href="https://mkdocs-macros-plugin.readthedocs.io/">macro</a> reference, rather than the plain text.</p>
+<p>For example, write:</p>
+<div class="highlight"><pre><span></span><code>This is supported in {{brand}}.
 </code></pre></div>
-<h2 id="expanding-the-volume">Expanding the volume</h2>
-<p>You can now change the volume’s size (in this example, we’ll use a new size of 5&nbsp;GiB).
-Note that in order to be able to do this while the volume is attached to a server, you must invoke the <code>openstack</code> command with the <code>--os-volume-api-version</code> flag:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>--os-volume-api-version<span class="w"> </span><span class="m">3</span>.42<span class="w"> </span>volume<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--size<span class="w"> </span><span class="m">5</span><span class="w"> </span>testvol
-
-<span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>list<span class="w"> </span>
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
-<span class="go">| ID                                | Name    | Status | Size | Attached to                      |</span>
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
-<span class="go">| 357e1022-4156-4383-a49d-729f86e84 | testvol | in-use |    5 | Attached to testsrv on /dev/vdb  |</span>
-<span class="go">| 347                               |         |        |      |                                  |</span>
-<span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
+<p>… rather than</p>
+<div class="highlight"><pre><span></span><code>This is supported in Cleura&nbsp;Cloud.
 </code></pre></div>
-<p>When using <a href="https://www.qemu.org/2021/01/19/virtio-blk-scsi-configuration/">one of the VirtIO storage drivers</a>,
-the operating system on the server immediately becomes aware of the new device size.
-There is no need to rescan the block devices from within the guest operating system.</p>
-<p>You can verify this by using the <code>blockdev</code> command in a shell session, querying the block device size in bytes:
-</p><div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"sudo blockdev --getsize64 /dev/vdb"</span>
-<span class="go">5368709120</span>
-</code></pre></div><p></p>
-<h2 id="using-the-resized-volume">Using the resized volume</h2>
-<p>Resizing a volume only resizes the block device, but does not touch any data structures using that block device.
-In our example, this means that in order to use the block device’s expanded capacity, you must also resize its filesystem:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"sudo xfs_growfs /dev/vdb"</span>
-<span class="go">meta-data=/dev/vdb               isize=512    agcount=4, agsize=131072 blks</span>
-<span class="go">         =                       sectsz=512   attr=2, projid32bit=1</span>
-<span class="go">         =                       crc=1        finobt=1, sparse=1, rmapbt=0</span>
-<span class="go">         =                       reflink=1</span>
-<span class="go">data     =                       bsize=4096   blocks=524288, imaxpct=25</span>
-<span class="go">         =                       sunit=0      swidth=0 blks</span>
-<span class="go">naming   =version 2              bsize=4096   ascii-ci=0, ftype=1</span>
-<span class="go">log      =internal log           bsize=4096   blocks=2560, version=2</span>
-<span class="go">         =                       sectsz=512   sunit=0 blks, lazy-count=1</span>
-<span class="go">realtime =none                   extsz=4096   blocks=0, rtextents=0</span>
-<span class="go">data blocks changed from 524288 to 1310720</span>
+<h2 id="admonitions">Admonitions</h2>
+<p>We use only three types of <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">admonitions</a>:
+Note, Warning, and Danger.</p>
+<details class="note">
+<summary>Note</summary>
+<p>Notes are additional bits of information that do not belong in the main text of a page.
+As such, we always make them collapsible:</p>
+<div class="highlight"><pre><span></span><code>??? note
+    This is a collapsible note.
 </code></pre></div>
-<p>Once this is complete, you can verify that the filesystem is now available at the desired (expanded) capacity:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"df -h /srv"</span>
-<span class="go">Filesystem      Size  Used Avail Use% Mounted on</span>
-<span class="go">/dev/vdb        5.0G   69M  5.0G   2% /srv</span>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Warnings highlight potentially unintended side effects of otherwise supported functionality.
+We always render them extended:</p>
+<div class="highlight"><pre><span></span><code>!!! warning
+    This is a warning.
 </code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Danger admonitions highlight dangerous actions, such as ones that might cause data loss.
+As with warnings, we always render them extended:</p>
+<div class="highlight"><pre><span></span><code>!!! danger
+    This is a danger admonition.
+</code></pre></div>
+</div>
+<h2 id="renamed-sources">Renamed sources</h2>
+<p>If you rename an existing Markdown source, the path of the rendered page’s <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a> will change.
+In this case, be sure to define a <a href="https://github.com/mkdocs/mkdocs-redirects">redirect</a> from the old URI to the new one, by adding an entry to the <code>plugins.redirect.redirect_maps</code> dictionary in the <code>mkdocs.yml</code> configuration file.</p>
 
 
 
@@ -6943,7 +7041,7 @@ In our example, this means that in order to use the block device’s expanded ca
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 3, 2023 18:39:57 UTC">2023-01-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 21, 2026 12:50:27 UTC">2026-01-21</span>
   </span>
 
     
@@ -6953,7 +7051,7 @@ In our example, this means that in order to use the block device’s expanded ca
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 3, 2023 18:39:57 UTC">2023-01-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 21, 2026 11:47:55 UTC">2026-01-21</span>
   </span>
 
     
@@ -6998,7 +7096,7 @@ In our example, this means that in order to use the block device’s expanded ca
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
 
     </div>
   
@@ -7023,10 +7121,10 @@ In our example, this means that in order to use the block device’s expanded ca
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
