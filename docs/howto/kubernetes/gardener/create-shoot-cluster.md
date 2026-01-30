@@ -28,7 +28,7 @@ In the example below, we have chosen version 1.32.7, which, at the time of writi
 Please note the *Load balancer provider* parameter, which is already set.
 By turning on the setting below, which is by default disabled, you may enable high availability for the **control plane** of the new cluster.
 
-!["Create {{k8s_management_service}} Shoot Cluster" panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane](assets/create-shoot-02.png)
+![Create {{k8s_management_service}} Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane](assets/create-shoot-02.png)
 
 You should keep in mind that once you enable high availability for the control plane, you cannot disable it for that particular cluster.
 
@@ -47,11 +47,11 @@ Be sure to select one that has an assigned subnet and is connected to a router.
 Then, define a new subnet for the worker nodes by typing in a CIDR network address.
 If the new subnet overlaps with one of the subnets of the network you just selected, you will see an error message in red.
 
-![Select a pre-existing network](assets/create-shoot-06.png)
+![Try selecting a pre-existing CIDR for the worker nodes](assets/create-shoot-06.png)
 
 Instead, you should define a subnet that does not overlap with any of the subnets of your selected network.
 
-![New, valid subnet for the worker nodes](assets/create-shoot-07.png)
+![Set a new, valid subnet for the worker nodes](assets/create-shoot-07.png)
 
 Now, scroll down a bit until you bring the *Worker Groups* section into full view.
 Make sure there is at least one defined.
@@ -66,19 +66,37 @@ this determines the number of CPU cores and the amount of RAM allocated to them.
 * *Autoscaler Max:* The maximum number of worker nodes the cluster automatically scales to, in case the current number of nodes cannot handle the deployed workload.
 * *Max Surge:* The maximum number of additional nodes to deploy in an autoscaling event.
 
-!["Create {{k8s_management_service}} Shoot Cluster" panel](assets/create-shoot-08.png)
+![Worker Group settings](assets/create-shoot-08.png)
 
 For a test cluster, feel free to leave each parameter at its default value.
 When you scroll a bit further down, you see that for each Worker Group you may add [*Labels*](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels), [*Annotations*](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations), or [*Taints*](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration).
 
-!["Define Labels, Annotations, or Taints"](assets/create-shoot-09.png)
+![Define Labels, Annotations, or Taints](assets/create-shoot-09.png)
 
 Each shoot cluster in {{brand}} has a maintenance window.
 Additionally, the operating system of the worker nodes can be automatically updated, and so can Kubernetes itself.
 Do not change anything regarding the maintenance window or the [updates](rolling-upgrades.md), for everything is already set for you.
-Instead, at the bottom of the pane, click the green *Create* button.
 
-!["Create {{k8s_management_service}} Shoot Cluster" panel](assets/create-shoot-10.png)
+![Maintenance window and auto-updates](assets/create-shoot-09.01.png)
+
+By default, you can access your shoot clusters from anywhere on the internet.
+Still, you may choose to restrict cluster access, permitting it *only* from certain networks.
+The allowed networks are described in [CIDR&nbsp;notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation), and you can define one or more by clicking on the green *Set CIDRs...* button.
+
+![You may optionally define networks to allow cluster access from](assets/create-shoot-09.02.png)
+
+In the example below, we only allow access from one Class C network, expressed in CIDR notation.
+
+![Define a Class C network, from which access to the cluster is allowed](assets/create-shoot-09.03.png)
+
+You can define more networks from which cluster access is allowed.
+
+![You can define more than one networks, from which access to the cluster is allowed](assets/create-shoot-09.04.png)
+
+Besides new shoot clusters, you can add or remove "allow networks" from existing clusters.
+When you are ready, click the green *Create* button at the bottom of the page.
+
+![About to create a new {{k8s_management_service}} Shoot Cluster](assets/create-shoot-10.png)
 
 In the list of clusters, you will see your new {{k8s_management_service}} shoot bootstrapping.
 The animated icon on the left-hand side of the cluster row marks the progress.
