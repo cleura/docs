@@ -6894,7 +6894,7 @@
 
 
 <h1 id="creating-a-kubernetes-cluster">Creating a Kubernetes cluster</h1>
-<p>To create a Kubernetes cluster, you may use the Cleura&nbsp;Cloud Management&nbsp;Panel and the Gardener service in particular.</p>
+<p>To create a Kubernetes cluster, you may use the Cleura&nbsp;Cloud Management&nbsp;Panel and, in particular, the Gardener service.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>If this is your first time using Gardener in Cleura&nbsp;Cloud, you need to <a href="../">activate the service</a> from the Cleura&nbsp;Cloud Management&nbsp;Panel.</li>
@@ -6904,13 +6904,13 @@
 <p>To get started, navigate to <a href="https://compliant.cleura.cloud">https://compliant.cleura.cloud</a> and, in the left-hand side panel, choose <em>Containers&nbsp;→&nbsp;<a href="https://compliant.cleura.cloud/containers/gardener">Gardener</a></em>.
 A central pane named <em>Gardener / Shoot Clusters</em> appears.
 There, you can create and manage your Gardener-based clusters.
-In Gardener terminology, a Kubernetes cluster is referred to as a <strong>shoot</strong> (as in, <a href="https://en.wikipedia.org/wiki/Shoot">new plant growth</a>).</p>
-<p>At the top right-hand side of the central pane, click on <em>Create&nbsp;Kubernetes&nbsp;cluster</em>.</p>
+In Gardener terminology, a Kubernetes cluster is called a <strong>shoot</strong> (as in <a href="https://en.wikipedia.org/wiki/Shoot">new plant growth</a>).</p>
+<p>At the top right-hand side of the central pane, click <em>Create&nbsp;Kubernetes&nbsp;cluster</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Gardener page in Cleura&nbsp;Cloud Management&nbsp;Panel" src="../assets/create-shoot-01.png"></a></p>
 <p>A new pane named <em>Create Gardener Shoot Cluster</em> slides over from the right-hand side of the browser.
 Type in a name for the new shoot cluster, and select a region.
 Also, select the version of Kubernetes the new cluster will be running.
-In the example below, we have chosen version 1.32.7, which, at the time of writing, was the latest supported in Cleura&nbsp;Cloud.
+In the example below, we have chosen version 1.33.7.
 Please note the <em>Load balancer provider</em> parameter, which is already set.
 By turning on the setting below, which is by default disabled, you may enable high availability for the <strong>control plane</strong> of the new cluster.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Gardener Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane" src="../assets/create-shoot-02.png"></a></p>
@@ -6918,7 +6918,7 @@ By turning on the setting below, which is by default disabled, you may enable hi
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Once you enable high availability for the control plane, you cannot disable it" src="../assets/create-shoot-03.png"></a></p>
 <p>Next, you may accept the proposed network address (in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR notation</a>) for the worker nodes, or type in the one you prefer.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer" src="../assets/create-shoot-04.png"></a></p>
-<p>Alternatively, click on the drop-down menu at the right-hand side of <em>Network for worker nodes</em>.
+<p>Alternatively, reveal the drop-down menu at the right-hand side of <em>Network for worker nodes</em>.
 From the available menu items, choose a pre-existing network.
 Be sure to select one that has an assigned subnet and is connected to a router.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a pre-existing network" src="../assets/create-shoot-05.png"></a></p>
@@ -6934,19 +6934,20 @@ Pay attention to the values you may set for the following parameters, and keep i
 If you create another Worker Group, you’ll have another set of parameters for it.</p>
 <ul>
 <li><em>Flavor:</em> The <a href="../../../../reference/flavors/">flavor</a> your worker nodes will use;
-this determines the number of CPU cores and the amount of RAM allocated to them.</li>
+this determines the number of CPU cores and the amount of RAM allocated to each node.</li>
 <li><em>Volume Size:</em> The amount of local storage allocated to each worker node.</li>
 <li><em>Autoscaler Min:</em> The minimum number of worker nodes to run at any time.</li>
 <li><em>Autoscaler Max:</em> The maximum number of worker nodes the cluster automatically scales to, in case the current number of nodes cannot handle the deployed workload.</li>
 <li><em>Max Surge:</em> The maximum number of additional nodes to deploy in an autoscaling event.</li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Worker Group settings" src="../assets/create-shoot-08.png"></a></p>
-<p>For a test cluster, feel free to leave each parameter at its default value.
-When you scroll a bit further down, you see that for each Worker Group you may add <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels"><em>Labels</em></a>, <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations"><em>Annotations</em></a>, or <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration"><em>Taints</em></a>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Labels, Annotations, or Taints" src="../assets/create-shoot-09.png"></a></p>
+<p>For a test cluster, feel free to leave each parameter at its default value.</p>
+<p>Scrolling a bit further down, you see that for each Worker Group you may add <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels"><em>Labels</em></a>, <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations"><em>Annotations</em></a>, or <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration"><em>Taints</em></a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Labels, Annotations, or Taints" src="../assets/create-shoot-09.00.png"></a></p>
 <p>Each shoot cluster in Cleura&nbsp;Cloud has a maintenance window.
 Additionally, the operating system of the worker nodes can be automatically updated, and so can Kubernetes itself.
-Do not change anything regarding the maintenance window or the <a href="../rolling-upgrades/">updates</a>, for everything is already set for you.</p>
+Do not change anything regarding the maintenance window or the <a href="../rolling-upgrades/">updates</a>, for everything is already set for you.
+Also, do not bother with the <em><a href="../hibernate-shoot-cluster/">Hibernation</a> Schedule</em> for now.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Maintenance window and auto-updates" src="../assets/create-shoot-09.01.png"></a></p>
 <p>By default, you can access your shoot clusters from anywhere on the internet.
 Still, you may choose to restrict cluster access, permitting it <em>only</em> from certain networks.
@@ -6954,10 +6955,11 @@ The allowed networks are described in <a href="https://en.wikipedia.org/wiki/Cla
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may optionally define networks to allow cluster access from" src="../assets/create-shoot-09.02.png"></a></p>
 <p>In the example below, we only allow access from one Class C network, expressed in CIDR notation.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define a Class C network, from which access to the cluster is allowed" src="../assets/create-shoot-09.03.png"></a></p>
-<p>You can define more networks from which cluster access is allowed.</p>
+<p>You can define more networks from which cluster access is allowed.
+Please keep in mind that, besides new shoot clusters, you can add or remove “allow networks” to or from existing clusters.</p>
+<p>When populating the list of allowed networks, include the Cleura&nbsp;Cloud&nbsp;Management&nbsp;System source IP address (<code>185.103.48.75/32</code>) to preserve <a href="#viewing-details-and-monitoring">monitoring</a> functionality.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You can define more than one networks, from which access to the cluster is allowed" src="../assets/create-shoot-09.04.png"></a></p>
-<p>Besides new shoot clusters, you can add or remove “allow networks” from existing clusters.
-When you are ready, click the green <em>Create</em> button at the bottom of the page.</p>
+<p>When you are ready, click the green <em>Create</em> button at the bottom of the pane.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to create a new Gardener Shoot Cluster" src="../assets/create-shoot-10.png"></a></p>
 <p>In the list of clusters, you will see your new Gardener shoot bootstrapping.
 The animated icon on the left-hand side of the cluster row marks the progress.
@@ -6972,15 +6974,16 @@ It would be best if you kept that in mind when selecting the worker node <a href
 A 4th node would push your total memory allocation to 64&nbsp;GiB, violating your quota.</p>
 <p>If necessary, be sure to request a quota increase via our <a href="https://servicecenter.cleura.cloud/servicedesk">Service&nbsp;Center</a>.</p>
 <h2 id="viewing-details-and-monitoring">Viewing details and monitoring</h2>
-<p>After the new shoot cluster finishes bootstrapping, you may click on its row to bring all relevant details into view.
+<p>After the new shoot cluster finishes bootstrapping, you may click its row to bring all relevant details into view.
 For instance, click the <em>Details</em> tab to get networking information about the worker nodes.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Details regarding the new cluster" src="../assets/create-shoot-13.png"></a></p>
 <p>Next, go to the <em>Monitoring</em> tab.
-There, you will notice two orange buttons: one for launching <a href="https://prometheus.io">Prometheus</a>, and one for launching <a href="https://github.com/credativ/plutono">Plutono</a>.</p>
+There, you will notice two orange buttons:
+one for launching <a href="https://prometheus.io">Prometheus</a>, and one for launching <a href="https://github.com/credativ/plutono">Plutono</a>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Monitoring tab for launching Prometheus or Plutono" src="../assets/create-shoot-14.png"></a></p>
 <p>As an example, we have clicked the button for Plutono.
 Before launching the dashboard, a pop-up window appears.
-This shows the default username (<code>admin</code>), and the masked generated password.
+This shows the default username (<code>admin</code>), and the automatically generated <em>masked</em> password.
 You get this pop-up every time you click on either of the orange buttons.
 In any case, to copy the password into the clipboard, click the related button shown below.
 Then, click the orange button labeled <em>Open Dashboard</em>.</p>
@@ -7012,7 +7015,7 @@ In the example below, we have the Plutono dashboard displaying graphical informa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 27, 2026 14:16:33 UTC">2026-01-27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 13, 2026 13:43:47 UTC">2026-02-13</span>
   </span>
 
     
