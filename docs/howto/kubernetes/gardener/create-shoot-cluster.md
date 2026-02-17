@@ -3,7 +3,7 @@ description: How to spin up a Kubernetes cluster with Gardener
 ---
 # Creating a Kubernetes cluster
 
-To create a Kubernetes cluster, you may use the {{gui}} and the {{k8s_management_service}} service in particular.
+To create a Kubernetes cluster, you may use the {{gui}} and, in particular, the {{k8s_management_service}} service.
 
 ## Prerequisites
 
@@ -15,16 +15,16 @@ To create a Kubernetes cluster, you may use the {{gui}} and the {{k8s_management
 To get started, navigate to <https://{{gui_domain}}> and, in the left-hand side panel, choose *Containers → [{{k8s_management_service}}](https://{{gui_domain}}/containers/gardener)*.
 A central pane named *{{k8s_management_service}} / Shoot Clusters* appears.
 There, you can create and manage your {{k8s_management_service}}-based clusters.
-In {{k8s_management_service}} terminology, a Kubernetes cluster is referred to as a **shoot** (as in, [new plant growth](https://en.wikipedia.org/wiki/Shoot)).
+In {{k8s_management_service}} terminology, a Kubernetes cluster is called a **shoot** (as in [new plant growth](https://en.wikipedia.org/wiki/Shoot)).
 
-At the top right-hand side of the central pane, click on *Create Kubernetes cluster*.
+At the top right-hand side of the central pane, click *Create Kubernetes cluster*.
 
 ![{{k8s_management_service}} page in {{gui}}](assets/create-shoot-01.png)
 
 A new pane named *Create {{k8s_management_service}} Shoot Cluster* slides over from the right-hand side of the browser.
 Type in a name for the new shoot cluster, and select a region.
 Also, select the version of Kubernetes the new cluster will be running.
-In the example below, we have chosen version 1.32.7, which, at the time of writing, was the latest supported in {{brand}}.
+In the example below, we have chosen version 1.33.7.
 Please note the *Load balancer provider* parameter, which is already set.
 By turning on the setting below, which is by default disabled, you may enable high availability for the **control plane** of the new cluster.
 
@@ -38,7 +38,7 @@ Next, you may accept the proposed network address (in [CIDR notation](https://en
 
 ![Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer](assets/create-shoot-04.png)
 
-Alternatively, click on the drop-down menu at the right-hand side of *Network for worker nodes*.
+Alternatively, reveal the drop-down menu at the right-hand side of *Network for worker nodes*.
 From the available menu items, choose a pre-existing network.
 Be sure to select one that has an assigned subnet and is connected to a router.
 
@@ -60,7 +60,7 @@ Pay attention to the values you may set for the following parameters, and keep i
 If you create another Worker Group, you'll have another set of parameters for it.
 
 * *Flavor:* The [flavor](../../../reference/flavors/index.md) your worker nodes will use;
-this determines the number of CPU cores and the amount of RAM allocated to them.
+this determines the number of CPU cores and the amount of RAM allocated to each node.
 * *Volume Size:* The amount of local storage allocated to each worker node.
 * *Autoscaler Min:* The minimum number of worker nodes to run at any time.
 * *Autoscaler Max:* The maximum number of worker nodes the cluster automatically scales to, in case the current number of nodes cannot handle the deployed workload.
@@ -69,13 +69,15 @@ this determines the number of CPU cores and the amount of RAM allocated to them.
 ![Worker Group settings](assets/create-shoot-08.png)
 
 For a test cluster, feel free to leave each parameter at its default value.
-When you scroll a bit further down, you see that for each Worker Group you may add [*Labels*](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels), [*Annotations*](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations), or [*Taints*](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration).
 
-![Define Labels, Annotations, or Taints](assets/create-shoot-09.png)
+Scrolling a bit further down, you see that for each Worker Group you may add [*Labels*](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels), [*Annotations*](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations), or [*Taints*](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration).
+
+![Define Labels, Annotations, or Taints](assets/create-shoot-09.00.png)
 
 Each shoot cluster in {{brand}} has a maintenance window.
 Additionally, the operating system of the worker nodes can be automatically updated, and so can Kubernetes itself.
 Do not change anything regarding the maintenance window or the [updates](rolling-upgrades.md), for everything is already set for you.
+Also, do not bother with the *[Hibernation](hibernate-shoot-cluster.md) Schedule* for now.
 
 ![Maintenance window and auto-updates](assets/create-shoot-09.01.png)
 
@@ -90,11 +92,13 @@ In the example below, we only allow access from one Class C network, expressed i
 ![Define a Class C network, from which access to the cluster is allowed](assets/create-shoot-09.03.png)
 
 You can define more networks from which cluster access is allowed.
+Please keep in mind that, besides new shoot clusters, you can add or remove "allow networks" to or from existing clusters.
+
+When populating the list of allowed networks, include the {{ gui_management_service }} source IP address (`{{gui_management_service_ip}}/32`) to preserve [monitoring](#viewing-details-and-monitoring) functionality.
 
 ![You can define more than one networks, from which access to the cluster is allowed](assets/create-shoot-09.04.png)
 
-Besides new shoot clusters, you can add or remove "allow networks" from existing clusters.
-When you are ready, click the green *Create* button at the bottom of the page.
+When you are ready, click the green *Create* button at the bottom of the pane.
 
 ![About to create a new {{k8s_management_service}} Shoot Cluster](assets/create-shoot-10.png)
 
@@ -120,19 +124,20 @@ If necessary, be sure to request a quota increase via our [{{support}}](https://
 
 ## Viewing details and monitoring
 
-After the new shoot cluster finishes bootstrapping, you may click on its row to bring all relevant details into view.
+After the new shoot cluster finishes bootstrapping, you may click its row to bring all relevant details into view.
 For instance, click the *Details* tab to get networking information about the worker nodes.
 
 ![Details regarding the new cluster](assets/create-shoot-13.png)
 
 Next, go to the *Monitoring* tab.
-There, you will notice two orange buttons: one for launching [Prometheus](https://prometheus.io), and one for launching [Plutono](https://github.com/credativ/plutono).
+There, you will notice two orange buttons:
+one for launching [Prometheus](https://prometheus.io), and one for launching [Plutono](https://github.com/credativ/plutono).
 
 ![Monitoring tab for launching Prometheus or Plutono](assets/create-shoot-14.png)
 
 As an example, we have clicked the button for Plutono.
 Before launching the dashboard, a pop-up window appears.
-This shows the default username (`admin`), and the masked generated password.
+This shows the default username (`admin`), and the automatically generated *masked* password.
 You get this pop-up every time you click on either of the orange buttons.
 In any case, to copy the password into the clipboard, click the related button shown below.
 Then, click the orange button labeled *Open Dashboard*.
@@ -147,3 +152,4 @@ In the example below, we have the Plutono dashboard displaying graphical informa
 ## Interacting with your cluster
 
 Once your new shoot cluster is operational, you can [start interacting with it](kubectl.md).
+

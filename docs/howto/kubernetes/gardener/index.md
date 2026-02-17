@@ -1,9 +1,11 @@
 # Gardener
 
 {{brand_container_orchestration}} is a Kubernetes-native system that provides automated management and operation of Kubernetes clusters as a service.
-It allows you to create clusters and automatically handle their lifecycle operations, including configurable maintenance windows, hibernation schedules, and automatic updates to Kubernetes control plane and worker nodes.
 
-You can read more about {{k8s_management_service}} and its capabilities on its [documentation website](https://gardener.cloud/docs/gardener/).
+First off, it allows you to create clusters and define their high-availability characteristics.
+Then, you can automatically handle their lifecycle operations, including configurable maintenance windows, hibernation schedules, and automatic updates to Kubernetes control plane and worker nodes.
+
+You may read more about {{k8s_management_service}} and its capabilities on its [documentation website](https://gardener.cloud/docs/gardener/).
 
 ## Activating the {{k8s_management_service}} service
 
