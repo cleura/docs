@@ -69,26 +69,32 @@ apiVersion: v1
 clusters:
 - cluster:
     certificate-authority-data: DATA+OMITTED
-    server: https://api.myshoot.pqrxyz.k8s.cleura.cloud
-  name: garden-pqrxyz--myshoot-external
+    server: https://api.ismaning.pqrxyz.k8s.cleura.cloud
+  name: garden-pqrxyz--ismaning-external
 - cluster:
     certificate-authority-data: DATA+OMITTED
-    server: https://api.myshoot.pqrxyz.internal.k8s.cleura.cloud
-  name: garden-pqrxyz--myshoot-internal
+    server: https://api.ismaning.pqrxyz.internal.k8s.cleura.cloud
+  name: garden-pqrxyz--ismaning-internal
+- cluster:
+    server: https://api-pqrxyz--ismaning.ingress.fra1-1.garden.k8s.cleura.cloud
+  name: garden-pqrxyz--ismaning-wildcard-tls-seed-bound
 contexts:
 - context:
-    cluster: garden-pqrxyz--myshoot-external
-    user: garden-pqrxyz--myshoot-external
-  name: garden-pqrxyz--myshoot-external
+    cluster: garden-pqrxyz--ismaning-external
+    user: garden-pqrxyz--ismaning-external
+  name: garden-pqrxyz--ismaning-external
 - context:
-    cluster: garden-pqrxyz--myshoot-internal
-    user: garden-pqrxyz--myshoot-external
-  name: garden-pqrxyz--myshoot-internal
-current-context: garden-pqrxyz--myshoot-external
+    cluster: garden-pqrxyz--ismaning-internal
+    user: garden-pqrxyz--ismaning-external
+  name: garden-pqrxyz--ismaning-internal
+- context:
+    cluster: garden-pqrxyz--ismaning-wildcard-tls-seed-bound
+    user: garden-pqrxyz--ismaning-external
+  name: garden-pqrxyz--ismaning-wildcard-tls-seed-bound
+current-context: garden-pqrxyz--ismaning-external
 kind: Config
-preferences: {}
 users:
-- name: garden-pqrxyz--myshoot-external
+- name: garden-pqrxyz--ismaning-external
   user:
     client-certificate-data: DATA+OMITTED
     client-key-data: DATA+OMITTED
@@ -111,24 +117,24 @@ kubectl get nodes
 Assuming you used the default options when creating the cluster, you should now see the three {{k8s_management_service}} worker nodes that are initially available:
 
 ```console
-NAME                                           STATUS   ROLES    AGE   VERSION
-shoot--pqrxyz--myshoot-cwncz1-z1-7656c-cx8zn   Ready    <none>   23h   v1.30.5
-shoot--pqrxyz--myshoot-cwncz1-z1-7656c-nvgmc   Ready    <none>   23h   v1.30.5
-shoot--pqrxyz--myshoot-cwncz1-z1-7656c-rrkmz   Ready    <none>   23h   v1.30.5
+NAME                                            STATUS   ROLES    AGE   VERSION
+shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-2hndf   Ready    worker   11m   v1.33.7
+shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-5mj77   Ready    worker   11m   v1.33.7
+shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-kthv6   Ready    worker   11m   v1.33.7
 ```
 
 > Please note that in contrast to other Kubernetes platforms, where the output of `kubectl get nodes` includes control plane *and* worker nodes, in a {{k8s_management_service}} cluster the same command *only* lists the worker nodes.
 
 ## Deploying an application
 
-Create a sample deployment with a Hello World application:
+Create a sample deployment with an `echo-server` application:
 
 ```console
-$ kubectl create deployment hello-node --image=registry.k8s.io/echoserver:1.4
-deployment.apps/hello-node created
+$ kubectl create deployment echo-server --image=k8s.gcr.io/echoserver:1.10
+deployment.apps/echo-server created
 
-$ kubectl expose deployment hello-node --type=LoadBalancer --port=8080
-service/hello-node exposed
+$ kubectl expose deployment echo-server --type=LoadBalancer --port=80 --target-port=8080
+service/echo-server exposed
 ```
 
 To access the created app, list the available services:
@@ -137,18 +143,19 @@ To access the created app, list the available services:
 kubectl get services
 ```
 
-After a minute or so, you should get the load balancer service *with* its external IP and port number:
+After a couple of minutes or so, you should get the load balancer service *with* its external IP and port number:
 
 ```console
-NAME         TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)          AGE
-hello-node   LoadBalancer   100.70.213.140   198.51.100.42  8080:32421/TCP   2m50s
-kubernetes   ClusterIP      100.64.0.1       <none>         443/TCP          23h
+$ kubectl get services
+NAME          TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+echo-server   LoadBalancer   100.64.59.27   198.51.100.42 80:31511/TCP   26s
+kubernetes    ClusterIP      100.64.0.1     <none>        443/TCP        49m
 ```
 
-Open a browser and navigate to `http://198.51.100.42:8080` (substituting the correct `EXTERNAL-IP` listed for your service).
-You should see the page of the Hello World app.
+Open a browser and navigate to `http://198.51.100.42` (substituting the correct `EXTERNAL-IP` listed for your service).
+You should see the page of the `echo-server` application.
 
-![Trying out the new Kubernetes cluster with the Hello World app](assets/hello_world_app.png)
+![Trying out the new Kubernetes cluster with the echo-server application](assets/echo_server_app.png)
 
 ## Rotating kubeconfig
 

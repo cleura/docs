@@ -26,9 +26,9 @@ Before the auto-upgrade kicks in, the version of the new image is displayed in t
 ## Kubernetes upgrades
 
 Due to the Kubernetes versioning scheme, which does not follow the [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning) logic, only patch-level release upgrades and jumps are performed automatically.
-For instance, an upgrade from 1.24.9 to 1.24.10 is allowed, and so is an upgrade from 1.24.9 to 1.24.11.
+For instance, an upgrade from 1.32.8 to 1.32.9 is allowed, and so is an upgrade from 1.32.9 to 1.32.11.
 
-Minor release upgrades, such as from 1.24 to 1.25, do not happen automatically.
+Minor release upgrades, such as from 1.32 to 1.33, do not happen automatically.
 You must always initiate them from the {{gui}}.
 
 ## Hibernated clusters
@@ -62,24 +62,52 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
       "kubernetes": {
         "versions": [
           {
-            "version": "1.30.14",
+            "version": "1.31.13",
+            "expirationDate": "2025-12-29T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.31.14",
+            "expirationDate": "2026-02-16T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.32.9",
+            "expirationDate": "2026-01-02T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.32.10",
+            "expirationDate": "2026-02-16T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.32.11",
             "classification": "supported"
           },
           {
-            "version": "1.31.11",
-            "expirationDate": "2025-09-24T00:00:00Z",
+            "version": "1.33.5",
+            "expirationDate": "2026-01-02T00:00:00Z",
             "classification": "deprecated"
           },
-
-      [...]
-
+          {
+            "version": "1.33.6",
+            "expirationDate": "2026-02-16T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.33.7",
+            "classification": "supported"
+          }
+        ]
+      },
       "machineImages": [
         {
           "name": "gardenlinux",
           "versions": [
             {
-              "version": "1592.9.0",
-              "expirationDate": "2025-09-02T00:00:00Z",
+              "version": "1877.4.0",
+              "expirationDate": "2025-12-10T00:00:00Z",
               "classification": "deprecated",
               "cri": [
                 {
@@ -91,8 +119,9 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
               ]
             },
             {
-              "version": "1592.14.0",
-              "classification": "supported",
+              "version": "1877.5.0",
+              "expirationDate": "2026-01-02T00:00:00Z",
+              "classification": "deprecated",
               "cri": [
                 {
                   "name": "containerd"
@@ -102,6 +131,35 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
                 "amd64"
               ]
             },
+            {
+              "version": "1877.7.0",
+              "expirationDate": "2026-02-23T00:00:00Z",
+              "classification": "deprecated",
+              "cri": [
+                {
+                  "name": "containerd"
+                }
+              ],
+              "architectures": [
+                "amd64"
+              ]
+            },
+            {
+              "version": "1877.9.0",
+              "classification": "supported",
+              "cri": [
+                {
+                  "name": "containerd"
+                }
+              ],
+              "architectures": [
+                "amd64"
+              ]
+            }
+          ],
+          "updateStrategy": "major"
+        }
+      ],
 
-            [...]
+[...]
 ```
