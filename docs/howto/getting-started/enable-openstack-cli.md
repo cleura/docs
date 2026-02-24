@@ -1,11 +1,9 @@
-# Enabling the OpenStack CLI
+# Accessing the OpenStack API
 
-The OpenStack Command Line Interface (CLI) tool, also known as OpenStack Client (OSC) or simply `openstack`, conveniently provides access to various OpenStack APIs.
-Using the OpenStack CLI tool, you can remotely create and manage the lifecycle of objects related, for example, to Compute, Networking, or Storage.
+By accessing various OpenStack APIs using tools like [OpenTofu](../../tutorials/tf.md) or platforms like [Ansible](../../tutorials/ansible.md), you can conveniently create and manage the lifecycle of resources related, for example, to Compute, Networking, or Storage.
 
-Before installing `openstack` to your local laptop or workstation, you first need to have an OpenStack user in your {{brand}} account.
-Next, you create and download a special RC file onto your computer, modify it to reflect your OpenStack user's credentials, and source it.
-Only then will you be able to use any installed `openstack` client.
+Before accessing any OpenStack API, you first need to have an OpenStack user in your {{brand}} account.
+You also have to create and download a special RC file onto your computer, modify it to reflect your OpenStack user's credentials, and source it.
 
 ## Creating an OpenStack user
 
@@ -15,7 +13,7 @@ Please make sure the left-hand side pane on the {{gui}} is fully visible, click 
 
 ![Add a new OpenStack user](assets/ostack-cli/shot-01.png)
 
-Then, at the top right-hand side of the {{gui}}, click once more the _Add new Openstack user_ option.
+Then, at the top right-hand side of the {{gui}}, click once more on the _Add new Openstack user_ option.
 A new pane will slide into view, titled _Create Openstack User_.
 
 ![Create new OpenStack user](assets/ostack-cli/shot-02.png)
@@ -69,7 +67,7 @@ The general naming for RC files goes like this:
 your_username--region_name--project_name--rc
 ```
 
-So, assuming your username is `olafsdottir`, and the RC file has been created for the `{{api_region}}` region and the `katla` project, your RC file name should be this:
+So, assuming your username is `olafsdottir`, and the RC file has been created for the `{{api_region}}` region, and the `katla` project, your RC file name should be this:
 
 ```plain
 olafsdottir--{{api_region|lower}}--katla--rc
@@ -91,7 +89,7 @@ export OS_IDENTITY_API_VERSION=3
 ```
 
 Before you source the RC file, and thus initialize all relevant environment variables, make sure to edit the file and put your OpenStack user password in place of `<your password goes here>`.
-Also, change the permissions of the file, so it is readable and writable by your local user only:
+Also, change the permissions of the file so it is readable and writable by your local user only:
 
 ```bash
 chmod 600 olafsdottir--{{api_region|lower}}--katla--rc
@@ -103,7 +101,11 @@ Then, go ahead and source it:
 source olafsdottir--{{api_region|lower}}--katla--rc
 ```
 
-## Installing the OpenStack CLI
+## Using the OpenStack CLI
+
+One way of accessing various OpenStack APIs is via the OpenStack Command Line Interface (CLI) tool, also known as OpenStack Client (OSC) or simply `openstack`.
+
+### Installing the OpenStack CLI
 
 If you do not have the OpenStack CLI tool readily available, use your operating system's package manager or `pip` to install it.
 Some examples follow.
@@ -121,7 +123,7 @@ Some examples follow.
     pip install python-openstackclient
     ```
 
-## Testing access
+### Testing access
 
 Provided you have already sourced your RC file, you can now use the `openstack` command line tool to access various OpenStack APIs on the {{brand}}.
 
@@ -142,9 +144,9 @@ openstack --help
 When you need help on a specific command, type something like `openstack help command`.
 
 
-## Auto-adjusting the CLI output to your terminal size
+### Auto-adjusting the CLI output to your terminal size
 
-Many of the subcommands available in the `openstack` CLI produce tabular about by default.
+Many of the subcommands available in the `openstack` CLI produce tabular output by default.
 To ensure that this output always fits neatly into your terminal window, you may add the following line either to OpenStack RC file(s), or to your shell initialization file (like `.profile` or `.bashrc`):
 
 ```bash
