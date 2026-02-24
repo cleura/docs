@@ -1,36 +1,16 @@
-# Start Here
+# {{config.site_name}}
 
-This is the {{company}} documentation web site.
+This is the {{brand}} documentation web site.
 The content you find here constitutes authoritative documentation for {{company}} products and services, including {{brand}} and the {{gui}}.
+
+## New to {{brand}}?
+
+* [Create an account](howto/getting-started/create-account.md),
+* optionally [enable the OpenStack CLI](howto/getting-started/enable-openstack-cli.md),
+* [start building](howto/getting-started/launching-resources.md)!
 
 ## Per-region documentation
 
 You are currently browsing the documentation for the **{{api_region}} region** in {{brand}}.
 
 If you are looking for information about another region, please select the correct region name in the drop-down in the title bar.
-
-## Open source
-
-All content on this site is licensed under the [{{legal_docs.cc_by_sa.short_name}}]({{legal_docs.cc_by_sa.url}}) license.
-
-We host our site content [on GitHub]({{config.repo_url}}), and if you would like to help by contributing a patch, [here’s how you do that](contrib/index.md)!
-
-## Reporting issues
-
-If you notice an error on this site or would like to report that something is missing from the documentation, please [report an issue](contrib/issues.md).
-
-## Searching this site
-
-This site comes with a complete, privacy-preserving, searchable full-text index.
-
-To search for a word or phrase, use the Search box in the top bar.
-On a mobile device, tap the :material-magnify: icon in the top-right corner.
-
-## Light and dark mode
-
-You can switch between light and dark mode by tapping the :material-lightbulb:/:material-lightbulb-outline: icons in the top bar.
-
-## Site analytics and cookies
-
-This site does not set cookies, which is why we also don't need to annoy you with a cookie consent banner.
-We use [cookie-free](https://plausible.io/data-policy#how-we-count-unique-users-without-cookies) site analytics from [Plausible](https://plausible.io).
