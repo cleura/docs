@@ -3,6 +3,7 @@ extends: default
 ignore: |
   .tox/
   .gitlab-ci.yml
+  submodules/
 rules:
   braces:
     max-spaces-inside: 1
