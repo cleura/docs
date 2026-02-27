@@ -16,11 +16,11 @@ DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*/swift/.*"
 # www.terraform.io links to developer.hashicorp.com, which is rate-limited
 DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*www.terraform.io.*"
 
-# Remove this whenever kubernetes.io becomes reliable again
+# kubernetes.io is also rate-limited
 DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*kubernetes.io.*"
 
-# Remove this whenever docs.openstack.org becomes reliable again
-DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*docs.openstack.org.*"
+# *.openstack.org is also rate-limited
+DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*.openstack.org.*"
 
 if test `basename $0` = "linkcheck-local.sh"; then
     DOCS_SITE_URL="http://localhost:8000"
