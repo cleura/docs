@@ -2,23 +2,26 @@
 description: An action-list on launching your first resources in Cleura Cloud
 ---
 
-# Launching your first resources
+# Deploying your first resources
 
 {{brand}} is built around the [OpenStack](https://www.openstack.org/) Infrastructure-as-a-Service (IaaS) platform.
 
 OpenStack enables organizations build and manage their own infrastructure in the cloud.
 For that, it offers a readily available array of services such as Nova (compute), Neutron (networking), and Designate (DNS).
 
-As a new user of {{brand}}, we suggest you start building by taking the following steps.
+As a new {{brand}} customer, start building by taking the following steps.
 
 * [Getting started with networks, subnets, and routers](#getting-started-with-networks-subnets-and-routers)
 * [Creating a security group](#creating-a-security-group)
-* [Launching a Bastion host](#launching-a-bastion-host)
+* [Launching a virtual machine](#launching-a-virtual-machine)
 * [Connecting via SSH](#connecting-via-ssh)
 
-Keep in mind that the above tasks can be fully automated by employing either the [OpenStack Heat](https://docs.openstack.org/heat/latest/) orchestration service, the [OpenTofu](https://opentofu.org/) infrastructure-as-code tool, or the [Ansible](https://docs.ansible.com/) automation platform.
+!!! note "Build a Launch Pad!"
 
-Additionally, take your time to get acquainted with load balancers, DNS, and Kubernetes in {{brand}}:
+    A quick way to get started deploying resources in {{brand}} is to build a **Launch Pad**.
+    Follow the [step-by-step guides](launch-pad/index.md) for the supported orchestration frameworks.
+
+Once you have built your Launch Pad, you might also consider:
 
 * [Creating a load balancer](#creating-a-load-balancer)
 * [Creating and managing a DNS zone](#creating-and-managing-a-dns-zone)
@@ -47,7 +50,7 @@ A security group has one or more rules, filtering outgoing (egress) and incoming
 A typical setup for a security group is to allow all outgoing traffic, but allow only incoming SSH traffic to port `22/TCP`.
 [Follow this guide](../openstack/neutron/create-security-groups.md) and create a new security group configured like the one we just described.
 
-## Launching a Bastion host
+## Launching a virtual machine
 
 By now, you should have a network with a subnet, connected to a virtual router with an internet-facing public interface.
 You should also have a security group in place, ready to be used as a firewall for your virtual machines.

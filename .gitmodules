@@ -1,0 +1,3 @@
+[submodule "submodules/launch-pad"]
+	path = submodules/launch-pad
+	url = ../launch-pad
