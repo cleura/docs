@@ -12,6 +12,8 @@ jobs:
           # Checkout a pull request's HEAD commit instead of the merge
           # commit, so that gitlint lints the correct commit message.
           ref: ${{ github.event.pull_request.head.sha }}
+          # Recursively check out submodules
+          submodules: true
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
