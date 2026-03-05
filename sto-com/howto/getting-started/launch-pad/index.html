@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -6848,6 +6848,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-in-a-launch-pad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What’s in a Launch Pad?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-launch-pad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building your Launch Pad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building your Launch Pad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-from-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go from here
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6873,13 +6953,16 @@
 
 <h1 id="cleura-cloud-launch-pad">Cleura Cloud Launch Pad</h1>
 <p>The <a href="https://github.com/cleura/launch-pad">Cleura&nbsp;Cloud&nbsp;Launch&nbsp;Pad</a> repository contains a set of essential orchestration configurations you can use to bootstrap a virtual environment on Cleura Cloud.</p>
+<h2 id="supported-frameworks">Supported frameworks</h2>
 <p>We support these orchestration frameworks:</p>
 <ul>
 <li><a href="https://docs.openstack.org/heat/">OpenStack&nbsp;Heat</a></li>
 <li><a href="https://docs.ansible.com/">Ansible</a> (with the <a href="https://docs.ansible.com/projects/ansible/latest/collections/openstack/cloud/"><code>openstack.cloud</code></a> collection)</li>
 <li><a href="https://opentofu.org/docs/">OpenTofu</a> (with the <a href="https://search.opentofu.org/provider/terraform-provider-openstack/openstack/"><code>openstack</code></a> provider)</li>
 </ul>
+<h2 id="prerequisites">Prerequisites</h2>
 <p>Building a Launch Pad requires a <a href="https://docs.cleura.cloud/kna1/howto/getting-started/create-account/">Cleura Cloud account</a>, and a valid <a href="https://docs.cleura.cloud/kna1/howto/getting-started/enable-openstack-cli/">set of OpenStack API credentials</a>.</p>
+<h2 id="whats-in-a-launch-pad">What’s in a Launch Pad?</h2>
 <p>Building a Launch Pad results in the creation of these resources:</p>
 <ul>
 <li>A Secure Shell keypair (created from a public key you specify).</li>
@@ -6890,7 +6973,115 @@
 <p>To check out the Launch Pad repository, run this command:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/cleura/launch-pad
 </code></pre></div>
+<h2 id="building-your-launch-pad">Building your Launch Pad</h2>
 <p>For specifics building a Launch Pad using the orchestration platform of your choice, see the additional notes on <a href="heat/">Heat</a>, <a href="ansible/">Ansible</a>, and <a href="tf/">OpenTofu</a>.</p>
+<h3 id="configuration-options">Configuration options</h3>
+<p>You can tweak a Launch Pad’s configuration by setting options.
+Depending on your selected configuration framework, these options are either <em>parameters</em> (OpenStack&nbsp;Heat) or <em>variables</em> (Ansible, OpenTofu).</p>
+<p>Every Launch Pad requires that you specify one option:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ssh_public_key</code></td>
+<td>String</td>
+<td>Your Secure Shell (SSH) public key.</td>
+</tr>
+</tbody>
+</table>
+<p>All others come with reasonable defaults:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_ipv6</code></td>
+<td>Boolean</td>
+<td>Whether to enable IPv6 in your Launch Pad.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>String</td>
+<td>The base operating system image to use for your Pad Ramp.</td>
+<td><code>Ubuntu 24.04 Noble Numbat x86_64</code></td>
+</tr>
+<tr>
+<td><code>ipv4_allow_access</code></td>
+<td>String</td>
+<td>An IPv4 address or network from which to allow SSH access to your Pad Ramp.</td>
+<td><code>0.0.0.0/0</code> (allow from anywhere)</td>
+</tr>
+<tr>
+<td><code>ipv4_subnet_cidr</code></td>
+<td>String</td>
+<td>The network address for your new private network, in CIDR notation. This can be any RFC&nbsp;1918 private network.</td>
+<td><code>192.168.101.0/24</code></td>
+</tr>
+<tr>
+<td><code>ipv6_allow_access</code></td>
+<td>String</td>
+<td>An IPv6 address or network from which to allow SSH access to your Pad Ramp.</td>
+<td><code>::/0</code> (allow from anywhere)</td>
+</tr>
+</tbody>
+</table>
+<p>Additional options are available, but you should normally set them only if advised by Cleura’s Service Center:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Purpose</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flavor</code></td>
+<td>String</td>
+<td>Your Pad Ramp’s instance flavor (a measure of its CPU core and RAM allocation).</td>
+<td><code>b.2c2gb</code></td>
+</tr>
+<tr>
+<td><code>ipv6_mode</code></td>
+<td>String</td>
+<td>The IPv6 address assignment and router advertisement mode for your network.</td>
+<td><code>slaac</code></td>
+</tr>
+<tr>
+<td><code>ipv6_subnetpool</code></td>
+<td>String</td>
+<td>The IPv6 subnetpool from which your IPv6 subnet is created.</td>
+<td><code>ipv6_tenant_pool</code></td>
+</tr>
+<tr>
+<td><code>public_net</code></td>
+<td>String</td>
+<td>The network name from which your Pad Ramp gets a public IPv4 address.</td>
+<td><code>ext-net</code></td>
+</tr>
+<tr>
+<td><code>volume_size</code></td>
+<td>Integer</td>
+<td>The size of your Pad Ramp’s boot device (in GiB).</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="where-to-go-from-here">Where to go from here</h2>
 <p>Once you have built your Launch Pad, you can <a href="https://docs.cleura.cloud/kna1/howto/getting-started/launching-resources/">launch further resources from it</a>.</p>
 
 
@@ -6914,7 +7105,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 27, 2026 09:38:56 UTC">2026-02-27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 5, 2026 07:54:11 UTC">2026-03-05</span>
   </span>
 
     
