@@ -276,9 +276,9 @@ In the following, we show how to perform the conversion using the {{gui}} or the
 
     ![Choosing a flavor](assets/bfi-to-bfv/shot12.png)
 
-    Consider leaving the [*Disaster recovery*](../../../background/disaster-recovery.md) option enabled, and see if you want an external IP address for the server.
+    Consider leaving the [*Recovery service*](../../../background/recovery-service.md) option enabled, and see if you want an external IP address for the server.
 
-    ![Enabling disaster recovery and asking for external IP](assets/bfi-to-bfv/shot13.png)
+    ![Enabling the recovery service and asking for external IP](assets/bfi-to-bfv/shot13.png)
 
     Select the *default* security group and choose a *keypair* for the server.
 
