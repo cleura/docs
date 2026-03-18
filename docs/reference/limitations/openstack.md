@@ -26,7 +26,7 @@ It also means that you cannot use the following `openstack` CLI commands; they a
 
 {{brand}} does not support the OpenStack volume backup service (`cinder-backup`).
 
-For automated, scheduled volume *snapshots,* consider configuring your servers for [Disaster Recovery (DR)](../../background/disaster-recovery.md) via the {{gui}}.
+For automated, scheduled volume *snapshots,* consider enabling the [recovery service](../../background/recovery-service.md) for your servers.
 
 ## Glance
 

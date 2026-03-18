@@ -5,7 +5,6 @@ description: How to create a new virtual server in Cleura Cloud
 
 Once you have an [account in
 {{brand}}](../../getting-started/create-account.md), you can create virtual machines --- henceforth simply _servers_ --- using either the {{gui}} or the OpenStack CLI.
-Let us demonstrate the creation of a new server, following both approaches.
 
 ## Prerequisites
 
@@ -25,7 +24,7 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
 
     Notice all these rounded boxes on that pane, each for defining, configuring, and instantiating a different {{brand}} object.
     Go ahead and click the _Server_ box.
-    
+
     Another pane, titled _Create a Server_, slides over.
     At the top, type in a name for the new server and select one of the available regions.
 
@@ -39,11 +38,11 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
     If that network is dual-stack or has one IPv4-based subnet, you may want the server to be publicly accessible via an IPv4 address.
     In that case, make sure to activate the _Connect&nbsp;a&nbsp;floating&nbsp;IP&nbsp;to&nbsp;the&nbsp;server_ switch.
     Then, use the dropdown menu below to set the _Create&nbsp;External&nbsp;IP&nbsp;on_ parameter to the network you have already attached the server to.
-    
+
     Now, pay attention to the _Server profile_ parameter.
-    
+
     ![Select server profile](assets/new-server/shot-04.png)
-        
+
     From the corresponding dropdown menu, you must select a profile.
     Currently, the following profiles are available:
 
@@ -57,13 +56,13 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
 
     * the _Generic_ profile is for general-purpose cloud servers,
     * the _High CPU_ profile is for servers designed to host CPU-intensive applications, and
-    * the _Low Latency Disk_ profile is for servers that use a local low-latency disk.
+    * the _Low Latency Disk_ profile is for servers created over a local low-latency disk.
 
     We should point out that some profiles may not be available in all regions.
     Choose the _Generic_ profile for now, which is available in any of the regions.
 
     In the _Boot source_ section below, click the dropdown menu on the left and make sure you select _Image_, so you can choose one of the readily available OS images to boot the new server off of.
-    
+
     ![Select boot source and image](assets/new-server/shot-05.png)
 
     To pick a specific image, click on the dropdown menu on the right.
@@ -90,29 +89,37 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
     You may leave the root device size unchanged, or modify it to be a bit higher than the default.
 
     When, at a later time, you decide to delete the server, you can do so but **keep** its boot volume (you may want, for example, to attach that volume to a new server).
-    Just disable the _Delete&nbsp;on&nbsp;termination_ option if you want this kind of flexibility.
+    Disable the _Delete&nbsp;on&nbsp;termination_ option if you want this kind of flexibility.
     On the other hand, if you want your root volume to be automatically deleted when the server is deleted, the _Delete&nbsp;on&nbsp;termination_ option is already enabled for you.
     In any case, use this option with caution.
-    
+
     ![Boot target, volume, and volume size](assets/new-server/shot-07.png)
-    
+
     Also, notice the _Storage classes (types)_ parameter, which actually deals with [volume types](../../../reference/volumes/index.md).
     By default, this parameter is set to _cbs_.
 
-    You may want to leave the _Disaster&nbsp;recovery_ option enabled.
+    Next, you may choose to leave the _Recovery&nbsp;service_ option enabled.
     If you do, then daily server snapshots will be created, and you will have the option for easy and fast roll-ups to previous snapshots.
-    Please be aware that leaving this option enabled increases the server's monthly estimated cost (again, it is displayed in the green rectangular area at the top).
 
-    ![Disaster recovery option](assets/new-server/shot-08.png)
+    Take note of the _Retention Days_ parameter, which by default is set to 10 days;
+    that means that each snapshot will be kept for 10 days, and only then deleted automatically.
+
+    You also have the option to enable the _Immutable_ switch.
+    By doing so, you will not be able to manually delete snapshots before the retention period is over.
+    Also, you will not be able to delete the server volume until all immutable snapshots are deleted.
+
+    Please be aware that enabling the recovery service increases the server's monthly estimated cost (again, it is displayed in the green rectangular area at the top).
+
+    ![Recovery service option](assets/new-server/shot-08.png)
 
     To control network access to the server, use the dropdown menu to the right of [_Security Groups_](../neutron/create-security-groups.md) and choose one.
 
     ![Choose a security group](assets/new-server/shot-09.png)
 
     If you already have one or more key pairs in your {{brand}} account, you can now select a public key to be included in the `~/.ssh/authorized_keys` file of the server's default user.
-    (For the image you have selected, that user would be `ubuntu`.)
+    (For the image you have selected, that would be the `ubuntu` user.)
     That way, you can securely log into the remote user's account via SSH without typing a password.
-    
+
     ![Indicate an existing keypair](assets/new-server/shot-10.png)
 
     In case there are no key pairs to choose from, activate the _Set&nbsp;password_ option and set a password for the default user account (`ubuntu`).
@@ -122,12 +129,13 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
     A configuration script is automatically prepared based on the choices you have already made.
     That script runs during system boot and performs housekeeping tasks like user account creation, enabling acceptable authentication methods, and configuring remote package repositories.
     Click on _Advanced Options_ to see the default script.
+    Also, optionally enable the _Upgrade packages_ option, so any available package upgrades are applied during system boot.
 
     ![Default server configuration script and user data propagation method](assets/new-server/shot-12.png)
 
     Regarding the _User-data propagation method_ above, notice that the _Use&nbsp;metadata&nbsp;service_ is pre-selected for you.
     For more on what this is and why you might want to select the _Use&nbsp;configuration&nbsp;drive_ method, please read our guide on [launching a server with a configuration drive](config-drive.md).
-    
+
     It is now time to create your {{brand}} server.
     Click the green _Create_ button, and the new server will be readily available in a few seconds.
 
@@ -314,7 +322,7 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
 ## Viewing information about the newly created server
 === "{{gui}}"
     At any time, from the {{gui}} you may see all servers, and get detailed information regarding each one of them.
-    Expand the left-hand side vertical pane, click _Compute_, then _Servers_, and, in the central pane, select the region you want.
+    Expand the left-hand side vertical pane, click _Compute_, then _Servers_, and, in the central pane, select the region and the server you want.
 
     ![View server details](assets/new-server/shot-14.png)
 === "OpenStack CLI"
@@ -333,7 +341,7 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
 === "{{gui}}"
     While viewing information regarding your server, you may get its IPv6 or public IPv4 address (e.g., from the _Addresses_ tab), and connect to it remotely via SSH.
     Alternatively, you may launch a web console and log in.
-    Click on the three-dot icon on the right of the server header, and from the pop-up menu that appears, select _Remote Console_.
+    Click the orange :material-dots-horizontal-circle: icon on the right of the server row, and from the pop-up menu that appears, select _Remote Console_.
 
     ![Launch remote console](assets/new-server/shot-15.png)
 
@@ -348,5 +356,5 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
     openstack console url show zug
     ```
 
-    Usage of the web console is discouraged, though.
-    Instead, securely connect to your server via SSH.
+Usage of the web console is discouraged, though.
+Instead, securely connect to your server via SSH.
