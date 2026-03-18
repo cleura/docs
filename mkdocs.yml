@@ -94,6 +94,7 @@ plugins:
       cards: !ENV [DOCS_ENABLE_SOCIAL_CARDS, True]
   - redirects:
       redirect_maps:
+        'background/disaster-recovery.md': 'background/recovery-service.md'
         'howto/account-billing/change-billing-data.md': 'howto/account-billing/change-account-data.md'
 repo_url: https://github.com/cleura/docs
 site_name: "Cleura Docs"
