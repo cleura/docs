@@ -25,12 +25,9 @@ DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*.openstack.org.*"
 if test `basename $0` = "linkcheck-local.sh"; then
     DOCS_SITE_URL="http://localhost:8000"
 elif test `basename $0` = "linkcheck-production.sh"; then
-    DOCS_SITE_URL="https://docs.cleura.cloud"
     DOCS_LINKCHECK_IGNORE="$DOCS_LINKCHECK_IGNORE .*localhost.*"
 fi
 
-# If invoked as just linkcheck.sh, must pass in DOCS_SITE_URL from the
-# environment.
 if test -z "$DOCS_SITE_URL"; then
     echo "Must set DOCS_SITE_URL!" >&2
     exit 1
@@ -43,7 +40,7 @@ for regex in $DOCS_LINKCHECK_IGNORE; do
   linkchecker_ignore_options="$linkchecker_ignore_options --ignore $regex"
 done
 
-if test DOCS_SITE_URL="http://localhost:8000"; then
+if test $DOCS_SITE_URL = "http://localhost:8000"; then
   # Build the docs, then launch a local Python server in the background.
   # This ought to be functionally equivalent to running "mkdocs serve",
   # but it isn't: "mkdocs serve" does not rebuild the sitemap.

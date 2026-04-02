@@ -4,17 +4,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: "Set up Python 3.14"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.14'
       - name: Install Python dependencies
         run: |
           pip install tox
-      - name: Test with tox
+      - env:
+          DOCS_SITE_URL: "https://docs.cleura.cloud/${{ matrix.region }}"
+        name: "Check docs for ${{ matrix.region }}"
         run: |
           tox -e check-prod
+    strategy:
+      fail-fast: false
+      matrix:
+        region:
+          - 'kna1'
+          - 'sto2'
+          - 'fra1'
 
 name: check
 
