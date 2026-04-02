@@ -114,12 +114,12 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/lightbulb-outline
+        icon: fontawesome/solid/moon
         name: "Switch to dark mode"
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/lightbulb
+        icon: fontawesome/solid/sun
         name: "Switch to light mode"
 validation:
   absolute_links: warn
