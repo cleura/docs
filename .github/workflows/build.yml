@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # Retrieve the full commit history, so that
           # mkdocs-git-authors-plugin can do its job.
@@ -15,7 +15,7 @@ jobs:
           # Recursively check out submodules
           submodules: true
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Python dependencies
@@ -27,7 +27,7 @@ jobs:
           tox
           tox -e check
       - name: Upload build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-${{ matrix.python-version }}-${{ github.sha }}
           path: site/
@@ -35,7 +35,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version:
-          - '3.10'
+          - '3.12'
           - '3.14'
 
 name: build
