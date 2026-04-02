@@ -85,7 +85,7 @@ plugins:
       on_undefined: strict
   - mike:
       alias_type: symlink
-      canonical_version: main
+      canonical_version: sto2hs
       version_selector: true
   - privacy
   - search
