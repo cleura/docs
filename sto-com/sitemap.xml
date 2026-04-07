@@ -33,6 +33,14 @@
          <lastmod>2026-04-07</lastmod>
     </url>
     <url>
+         <loc>https://docs.cleura.cloud/sto-com/background/ai/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/background/ai/tokens/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://docs.cleura.cloud/sto-com/background/kubernetes/</loc>
          <lastmod>2026-04-07</lastmod>
     </url>
@@ -106,6 +114,34 @@
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto-com/howto/account-billing/rest-invoice-data/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/api-keys/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/models/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/openwebui/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/playground/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/stt/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/howto/ai/token-usage/</loc>
          <lastmod>2026-04-07</lastmod>
     </url>
     <url>
@@ -482,6 +518,14 @@
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto-com/reference/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/reference/ai/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto-com/reference/ai/llms/</loc>
          <lastmod>2026-04-07</lastmod>
     </url>
     <url>
