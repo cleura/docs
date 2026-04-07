@@ -16,6 +16,7 @@ extra:
   api_domain: "citycloud.com"
   api_region: "Sto2"
   brand: "Cleura Cloud"
+  brand_ai: "Cleura AI"
   brand_compliant: "Cleura Compliant Cloud"
   brand_container_orchestration: "Gardener in Cleura Cloud"
   brand_domain: "citycloud.com"

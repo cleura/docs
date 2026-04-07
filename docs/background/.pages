@@ -5,5 +5,6 @@ nav:
   - "Deleting projects": project-deletion.md
   - "Object storage": object-storage.md
   - "Recovery service": recovery-service.md
+  - AI: ai
   - kubernetes
   - Marketplace: marketplace.md
