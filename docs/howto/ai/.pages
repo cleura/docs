@@ -1,0 +1,8 @@
+title: "AI"
+nav:
+  - index.md
+  - "Reviewing models": models.md
+  - playground.md
+  - api-keys.md
+  - openwebui.md
+  - stt.md
