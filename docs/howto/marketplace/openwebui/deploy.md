@@ -68,6 +68,6 @@ type in a *Name*, an *Email*, and a *Password*, then click on the *Create Admin 
 ![Create a new admin user](assets/new-openwebui/openwebui-dashboard-04.png)
 
 The Open WebUI dashboard appears.
-Visit the [official tutorials page](https://docs.openwebui.com/category/-tutorials) to start learning how you can use your new self-hosted AI interface.
+Visit the [official tutorials page](https://docs.openwebui.com/tutorials/) to start learning how you can use your new self-hosted AI interface.
 
 ![The Open WebUI dashboard](assets/new-openwebui/openwebui-dashboard-05.png)
