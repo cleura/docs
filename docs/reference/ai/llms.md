@@ -1,9 +1,9 @@
 ---
-description: The four on-demand models currently offered by Cleura AI
+description: On-demand LLMs currently offered by Cleura AI
 ---
 # On-demand models
 
-{{brand_ai}} currently offers four on-demand models.
+{{brand_ai}} currently offers five on-demand models.
 Refer to the table below for information about each model's origin, and their relative strengths.
 
 | Model                   | Developed by  | Designed for                        |
