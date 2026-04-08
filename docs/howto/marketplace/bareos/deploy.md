@@ -12,13 +12,13 @@ To proceed, make sure you have an [account in {{brand}}](../../getting-started/c
 
 In the left vertical pane of the {{gui}}, expand the *Marketplace* category and click on *Discover Apps and Services*.
 In the central pane, you will see all available applications and services.
-Locate the *Bareos* box and click the green *View* button.
+Locate the *Bareos* box and click the *View* button.
 
 ![Select the Bareos application](assets/new-bareos/bareos-01_light.png#only-light)
 ![Select the Bareos application](assets/new-bareos/bareos-01_dark.png#only-dark)
 
 You will see the *Bareos* information page, where you can learn more about its features, and obtain pricing information.
-Click the orange *Deploy this App* button to start the deployment process.
+Click the *Deploy this App* button to start the deployment process.
 
 ![Start the Bareos deployment process](assets/new-bareos/bareos-02_light.png#only-light)
 ![Start the Bareos deployment process](assets/new-bareos/bareos-02_dark.png#only-dark)
@@ -30,7 +30,7 @@ Regarding the security group, [make sure it includes a rule](../../openstack/neu
 ![Specify the characteristics of the particular Bareos deployment](assets/new-bareos/bareos-03_dark.png#only-dark)
 
 Read and agree to the *Terms and Conditions.*
-When you are ready, click the green *Create* button.
+When you are ready, click the *Create* button.
 
 ![Read and agree to the terms and conditions before deploying](assets/new-bareos/bareos-04_light.png#only-light)
 ![Read and agree to the terms and conditions before deploying](assets/new-bareos/bareos-04_dark.png#only-dark)
@@ -43,7 +43,7 @@ The animated icon at the left marks the deployment progress.
 ![Check the deployment progress](assets/new-bareos/bareos-05_light.png#only-light)
 ![Check the deployment progress](assets/new-bareos/bareos-05_dark.png#only-dark)
 
-When the deployment is complete, you will see a white check mark in a green circle.
+When the deployment is complete, you will see a check mark in a circle.
 
 ![Bareos is deployed](assets/new-bareos/bareos-06_light.png#only-light)
 ![Bareos is deployed](assets/new-bareos/bareos-06_dark.png#only-dark)
@@ -58,7 +58,7 @@ Click on the Bareos row to expand it, and select the *Stack Output* tab.
 ![Get the URL and the administrator user password](assets/new-bareos/bareos-dashboard-01_dark.png#only-dark)
 
 Get a pop-up window revealing the URL of the particular Bareos deployment.
-Click the icon in the *Action* column of the *harbor_webui_url* row, then click the blue *Copy Output!* button.
+Click the icon in the *Action* column of the *harbor_webui_url* row, then click the *Copy Output!* button.
 Paste that into a new text editor window, but don't save it in a new file.
 Instead, we recommend you create a new entry in your password manager of choice and use the URL there.
 Close the pop-up window by clicking on the *Back* button.
@@ -68,7 +68,7 @@ Close the pop-up window by clicking on the *Back* button.
 
 In the *webui_credentials* row, click the icon in the *Action* column.
 A pop-up window appears.
-Click the blue *Copy Output!* button to copy the content of the *Output* box to the clipboard.
+Click the *Copy Output!* button to copy the content of the *Output* box to the clipboard.
 Paste that into a new text editor window.
 Move the user name (`administrator`) and the password into the password manager entry you just created.
 Again, the pop-up window by clicking on the *Back* button.

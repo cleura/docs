@@ -16,7 +16,7 @@ Click on it, and from the drop-down menu that appears, select *Delete Provisione
 
 A new window named *About to delete a Provisioned App* appears.
 Make sure it refers to the Bareos deployment you wish to delete.
-When you are ready, click on the red *Yes, Delete* button.
+When you are ready, click on the *Yes, Delete* button.
 
 ![Make sure you are about to delete Bareos](assets/delete-bareos/bareos-delete-02_light.png#only-light)
 ![Make sure you are about to delete Bareos](assets/delete-bareos/bareos-delete-02_dark.png#only-dark)
