@@ -19,7 +19,7 @@ At the same time, you maintain full control over data residency and compliance r
 It eliminates the operational overhead of model deployment, version management, and infrastructure scaling.
 At the same time, {{brand_ai}} is compliant with data sovereignty requirements, ensuring all inference processing occurs within EU data centres.
 
-{{brand_ai}} operates on a flexible resource allocation architecture, distinguishing between **shared and on-demand capacity**, and **customer-dedicated instances.**
+{{brand_ai}} operates on a flexible resource allocation architecture, built around **shared and on-demand capacity.**
 
 ## Shared and on-demand capacity
 
@@ -39,19 +39,6 @@ No crosstalk between concurrent requests is possible, and no data containing the
 
 Models are pre-loaded onto pool GPUs based on usage *patterns*, to minimise cold-start latency.
 
-## Customer dedicated instances
-
-Dedicated AI instances follow a controlled provisioning workflow, ensuring exclusive model instance allocation on *shared* GPU infrastructure.
-
-* You initiate a request for a dedicated instance, via the {{gui}},
-* the system places a lock on a GPU pool,
-* the GPU pool availability is verified for the requested model and context requirements,
-* a database entry is created linking your customer ID, the model instance you requested, and the GPU resources assigned to you,
-* the model instance is loaded and tagged as dedicated to your customer account,
-* the model is deployed onto your allocated resources
-
-A dedicated model instance remains loaded until you explicitly deallocate it via the {{gui}} or the API.
-
 ## API access and authentication
 
 {{brand_ai}} provides an [OpenAI](https://en.wikipedia.org/wiki/OpenAI)-compatible API, accessible through standard HTTPS endpoints.
@@ -70,16 +57,9 @@ Please find here all the details regarding the available OpenAI-compatible API p
 
 ## Supported models
 
-For on-demand models, {{company}} maintains a curated selection of open-source models, optimised for a shared GPU pool.
+{{company}} maintains a curated selection of open-source models, optimised for a shared GPU pool.
 Those models are selected based on community adoption, performance characteristics, and enterprise suitability.
-The model catalogue updates regularly as new versions are released.
-
-Regarding dedicated models, you may deploy any GPT-Generated Unified Format ([GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md)) model available in the [Hugging&nbsp;Face repository](https://huggingface.co/models).
-Such a deployment may utilise multiple GPUs of the same type, and is initiated via the {{gui}} by specifying...
-
-* the model identifier,
-* configuration and settings,
-* resource allocation preferences.
+The [model catalogue](../../reference/ai/llms.md) updates regularly as new versions are released.
 
 ## Data privacy and compliance
 
