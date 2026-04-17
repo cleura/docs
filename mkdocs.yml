@@ -10,7 +10,7 @@ edit_uri: ./edit/main/docs
 extra:
   academy: "Cleura Cloud Academy"
   academy_domain: "academy.cleura.cloud"
-  ai_api_domain: "ai.cleura.cloud"
+  ai_api_domain: "ai.compliant.cleura.cloud"
   analytics:
     domain: docs.cleura.cloud
     provider: plausible
