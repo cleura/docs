@@ -25,7 +25,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="<your-bearer-token>",
-    base_url="https://ai.cleura.cloud/v1"
+    base_url="https://{{ai_api_domain}}/v1"
 )
 
 with open("/path/to/the-audio-file.mp3", "rb") as audio_file:
