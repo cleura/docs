@@ -21,13 +21,13 @@ A window labeled _Add Connection_ pops up.
 ![Add new API connection](assets/openwebui-add-connection.png)
 
 * Set _Connection Type_ to _External_.
-* Set _URL_ to `https://ai.cleura.cloud/v1`.
+* Set _URL_ to `https://{{ai_api_domain}}/v1`.
 * Set _Auth_ to _Bearer_.
 
 In the text field right of _Bearer_, paste your API key's bearer token.
 Then, click the _Save_ button.
 
-The _Add Connection_ window closes, and below the _Manage OpenAI API Connections_ list you see that `https://ai.cleura.cloud/v1` is included.
+The _Add Connection_ window closes, and below the _Manage OpenAI API Connections_ list you see that `https://{{ai_api_domain}}/v1` is included.
 
 ![Add new API connection](assets/openwebui-connection-added.png)
 
