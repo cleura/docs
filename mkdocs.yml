@@ -91,9 +91,6 @@ plugins:
       version_selector: true
   - privacy
   - search
-  - social:
-      # yamllint disable-line rule:truthy
-      cards: !ENV [DOCS_ENABLE_SOCIAL_CARDS, True]
   - redirects:
       redirect_maps:
         'background/disaster-recovery.md': 'background/recovery-service.md'
