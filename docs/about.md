@@ -19,7 +19,7 @@ On a mobile device, tap the :material-magnify: icon in the top-right corner.
 
 ## Light and dark mode
 
-You can switch between light and dark mode by tapping the :material-lightbulb:/:material-lightbulb-outline: icons in the top bar.
+You can switch between light and dark mode by tapping the :fontawesome-solid-sun:/:fontawesome-solid-moon: icons in the top bar.
 
 ## Site analytics and cookies
 
