@@ -5,31 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.cleura.cloud/fra1/howto/openstack/keystone/">
+        <link rel="canonical" href="https://docs.cleura.cloud/fra1/contrib/ai/">
       
       
-        <link rel="prev" href="../glance/custom/">
+        <link rel="prev" href="../style/">
       
       
-        <link rel="next" href="app-creds/">
+        <link rel="next" href="../../about/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Identity (Keystone) - Cleura&nbsp;Docs</title>
+        <title>AI-assisted contributions - Cleura&nbsp;Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -43,29 +43,29 @@
         
         
         
-        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/cleura-palette.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/cleura-palette.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/banner.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/banner.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
 
 
-  <script defer="" data-domain="docs.cleura.cloud" src="../../../assets/external/plausible.io/js/plausible.js"></script>
+  <script defer="" data-domain="docs.cleura.cloud" src="../../assets/external/plausible.io/js/plausible.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#identity-keystone" class="md-skip">
+        <a href="#ai-assisted-contributions" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
   You are viewing documentation for the <strong>Fra1</strong> region.
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -123,9 +123,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-header__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Identity (Keystone)
+              AI-assisted contributions
             
           </span>
         </div>
@@ -258,9 +258,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
+    <a href="../.." title="Cleura&nbsp;Docs" class="md-nav__button md-logo" aria-label="Cleura&nbsp;Docs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Cleura&nbsp;Docs
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -311,8 +311,6 @@
       
   
   
-    
-  
   
   
     
@@ -342,15 +340,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -374,7 +372,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -453,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/create-account/" class="md-nav__link">
+      <a href="../../howto/getting-started/create-account/" class="md-nav__link">
         
   
   
@@ -481,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/enable-openstack-cli/" class="md-nav__link">
+      <a href="../../howto/getting-started/enable-openstack-cli/" class="md-nav__link">
         
   
   
@@ -509,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/accessing-cc-rest-api/" class="md-nav__link">
+      <a href="../../howto/getting-started/accessing-cc-rest-api/" class="md-nav__link">
         
   
   
@@ -537,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/launching-resources/" class="md-nav__link">
+      <a href="../../howto/getting-started/launching-resources/" class="md-nav__link">
         
   
   
@@ -589,7 +587,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../getting-started/launch-pad/" class="md-nav__link ">
+            <a href="../../howto/getting-started/launch-pad/" class="md-nav__link ">
               
   
   
@@ -633,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/launch-pad/ansible/" class="md-nav__link">
+      <a href="../../howto/getting-started/launch-pad/ansible/" class="md-nav__link">
         
   
   
@@ -661,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/launch-pad/heat/" class="md-nav__link">
+      <a href="../../howto/getting-started/launch-pad/heat/" class="md-nav__link">
         
   
   
@@ -689,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/launch-pad/tf/" class="md-nav__link">
+      <a href="../../howto/getting-started/launch-pad/tf/" class="md-nav__link">
         
   
   
@@ -730,8 +728,6 @@
                 
   
   
-    
-  
   
   
     
@@ -761,15 +757,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../howto/openstack/" class="md-nav__link ">
               
   
   
@@ -793,7 +789,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -849,7 +845,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../nova/" class="md-nav__link ">
+            <a href="../../howto/openstack/nova/" class="md-nav__link ">
               
   
   
@@ -893,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/new-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server/" class="md-nav__link">
         
   
   
@@ -921,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/new-server-cnw/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/new-server-cnw/" class="md-nav__link">
         
   
   
@@ -949,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/server-group/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/server-group/" class="md-nav__link">
         
   
   
@@ -977,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/config-drive/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/config-drive/" class="md-nav__link">
         
   
   
@@ -1005,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/resize-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/resize-server/" class="md-nav__link">
         
   
   
@@ -1033,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/move-server-between-regions/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/move-server-between-regions/" class="md-nav__link">
         
   
   
@@ -1061,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/boot-image-volume/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/boot-image-volume/" class="md-nav__link">
         
   
   
@@ -1089,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/restore-srv-to-snap/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/restore-srv-to-snap/" class="md-nav__link">
         
   
   
@@ -1117,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nova/rescue-server/" class="md-nav__link">
+      <a href="../../howto/openstack/nova/rescue-server/" class="md-nav__link">
         
   
   
@@ -1181,7 +1177,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../neutron/" class="md-nav__link ">
+            <a href="../../howto/openstack/neutron/" class="md-nav__link ">
               
   
   
@@ -1225,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neutron/new-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/new-network/" class="md-nav__link">
         
   
   
@@ -1253,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neutron/create-security-groups/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/create-security-groups/" class="md-nav__link">
         
   
   
@@ -1281,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neutron/multiple-public-ips/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/multiple-public-ips/" class="md-nav__link">
         
   
   
@@ -1309,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neutron/vpnaas/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/vpnaas/" class="md-nav__link">
         
   
   
@@ -1337,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neutron/delete-network/" class="md-nav__link">
+      <a href="../../howto/openstack/neutron/delete-network/" class="md-nav__link">
         
   
   
@@ -1395,7 +1391,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../designate/" class="md-nav__link ">
+            <a href="../../howto/openstack/designate/" class="md-nav__link ">
               
   
   
@@ -1439,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../designate/zones/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/zones/" class="md-nav__link">
         
   
   
@@ -1467,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../designate/recordsets/" class="md-nav__link">
+      <a href="../../howto/openstack/designate/recordsets/" class="md-nav__link">
         
   
   
@@ -1529,7 +1525,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../octavia/" class="md-nav__link ">
+            <a href="../../howto/openstack/octavia/" class="md-nav__link ">
               
   
   
@@ -1573,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../octavia/lbaas-tcp/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-tcp/" class="md-nav__link">
         
   
   
@@ -1601,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../octavia/tls-lb/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/tls-lb/" class="md-nav__link">
         
   
   
@@ -1629,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../octavia/lbaas-l7pol/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/lbaas-l7pol/" class="md-nav__link">
         
   
   
@@ -1657,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../octavia/metrics/" class="md-nav__link">
+      <a href="../../howto/openstack/octavia/metrics/" class="md-nav__link">
         
   
   
@@ -1719,7 +1715,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cinder/" class="md-nav__link ">
+            <a href="../../howto/openstack/cinder/" class="md-nav__link ">
               
   
   
@@ -1763,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cinder/resize-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/resize-volumes/" class="md-nav__link">
         
   
   
@@ -1791,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cinder/encrypted-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/encrypted-volumes/" class="md-nav__link">
         
   
   
@@ -1819,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cinder/retype-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/retype-volumes/" class="md-nav__link">
         
   
   
@@ -1847,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cinder/sync-volumes/" class="md-nav__link">
+      <a href="../../howto/openstack/cinder/sync-volumes/" class="md-nav__link">
         
   
   
@@ -1907,7 +1903,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../glance/" class="md-nav__link ">
+            <a href="../../howto/openstack/glance/" class="md-nav__link ">
               
   
   
@@ -1951,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glance/examine/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/examine/" class="md-nav__link">
         
   
   
@@ -1979,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glance/filter/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/filter/" class="md-nav__link">
         
   
   
@@ -2007,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glance/custom/" class="md-nav__link">
+      <a href="../../howto/openstack/glance/custom/" class="md-nav__link">
         
   
   
@@ -2040,8 +2036,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2059,15 +2053,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../howto/openstack/keystone/" class="md-nav__link ">
               
   
   
@@ -2085,13 +2079,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2111,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="app-creds/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/app-creds/" class="md-nav__link">
         
   
   
@@ -2139,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api-user-passwd/" class="md-nav__link">
+      <a href="../../howto/openstack/keystone/api-user-passwd/" class="md-nav__link">
         
   
   
@@ -2197,7 +2191,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../barbican/" class="md-nav__link ">
+            <a href="../../howto/openstack/barbican/" class="md-nav__link ">
               
   
   
@@ -2241,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../barbican/generic-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/generic-secret/" class="md-nav__link">
         
   
   
@@ -2269,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../barbican/share-secret/" class="md-nav__link">
+      <a href="../../howto/openstack/barbican/share-secret/" class="md-nav__link">
         
   
   
@@ -2335,7 +2329,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../object-storage/" class="md-nav__link ">
+            <a href="../../howto/object-storage/" class="md-nav__link ">
               
   
   
@@ -2413,7 +2407,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../object-storage/s3/" class="md-nav__link ">
+            <a href="../../howto/object-storage/s3/" class="md-nav__link ">
               
   
   
@@ -2457,7 +2451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/credentials/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/credentials/" class="md-nav__link">
         
   
   
@@ -2485,7 +2479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/public-bucket/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/public-bucket/" class="md-nav__link">
         
   
   
@@ -2513,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/presign/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/presign/" class="md-nav__link">
         
   
   
@@ -2541,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/expiry/" class="md-nav__link">
         
   
   
@@ -2569,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/object-lock/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/object-lock/" class="md-nav__link">
         
   
   
@@ -2597,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/versioning/" class="md-nav__link">
         
   
   
@@ -2625,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/sse-c/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/sse-c/" class="md-nav__link">
         
   
   
@@ -2653,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/s3/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/s3/utilization/" class="md-nav__link">
         
   
   
@@ -2719,7 +2713,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../object-storage/swift/" class="md-nav__link ">
+            <a href="../../howto/object-storage/swift/" class="md-nav__link ">
               
   
   
@@ -2763,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/private-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/private-container/" class="md-nav__link">
         
   
   
@@ -2791,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/public-container/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/public-container/" class="md-nav__link">
         
   
   
@@ -2819,7 +2813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/tempurl/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/tempurl/" class="md-nav__link">
         
   
   
@@ -2847,7 +2841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/expiry/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/expiry/" class="md-nav__link">
         
   
   
@@ -2875,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/versioning/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/versioning/" class="md-nav__link">
         
   
   
@@ -2903,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../object-storage/swift/utilization/" class="md-nav__link">
+      <a href="../../howto/object-storage/swift/utilization/" class="md-nav__link">
         
   
   
@@ -2967,7 +2961,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../kubernetes/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/" class="md-nav__link ">
               
   
   
@@ -3039,7 +3033,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../kubernetes/gardener/" class="md-nav__link ">
+            <a href="../../howto/kubernetes/gardener/" class="md-nav__link ">
               
   
   
@@ -3083,7 +3077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/create-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -3111,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gardener/kubectl/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/kubectl/" class="md-nav__link">
         
   
   
@@ -3139,7 +3133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gardener/high-avail/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/high-avail/" class="md-nav__link">
         
   
   
@@ -3167,7 +3161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/hibernate-shoot-cluster/" class="md-nav__link">
         
   
   
@@ -3195,7 +3189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
+      <a href="../../howto/kubernetes/gardener/rolling-upgrades/" class="md-nav__link">
         
   
   
@@ -3267,7 +3261,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ai/" class="md-nav__link ">
+            <a href="../../howto/ai/" class="md-nav__link ">
               
   
   
@@ -3311,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/models/" class="md-nav__link">
+      <a href="../../howto/ai/models/" class="md-nav__link">
         
   
   
@@ -3339,7 +3333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/playground/" class="md-nav__link">
+      <a href="../../howto/ai/playground/" class="md-nav__link">
         
   
   
@@ -3367,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/api-keys/" class="md-nav__link">
+      <a href="../../howto/ai/api-keys/" class="md-nav__link">
         
   
   
@@ -3395,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/openwebui/" class="md-nav__link">
+      <a href="../../howto/ai/openwebui/" class="md-nav__link">
         
   
   
@@ -3423,7 +3417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/stt/" class="md-nav__link">
+      <a href="../../howto/ai/stt/" class="md-nav__link">
         
   
   
@@ -3497,7 +3491,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../marketplace/" class="md-nav__link ">
+            <a href="../../howto/marketplace/" class="md-nav__link ">
               
   
   
@@ -3594,7 +3588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/bareos/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/deploy/" class="md-nav__link">
         
   
   
@@ -3622,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/bareos/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/bareos/delete/" class="md-nav__link">
         
   
   
@@ -3711,7 +3705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/clavister/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/deploy/" class="md-nav__link">
         
   
   
@@ -3739,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/clavister/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/clavister/delete/" class="md-nav__link">
         
   
   
@@ -3828,7 +3822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/grafana/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/deploy/" class="md-nav__link">
         
   
   
@@ -3856,7 +3850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/grafana/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/grafana/delete/" class="md-nav__link">
         
   
   
@@ -3945,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/harbor/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/deploy/" class="md-nav__link">
         
   
   
@@ -3973,7 +3967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/harbor/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/harbor/delete/" class="md-nav__link">
         
   
   
@@ -4062,7 +4056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/keycloak/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/deploy/" class="md-nav__link">
         
   
   
@@ -4090,7 +4084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/keycloak/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/keycloak/delete/" class="md-nav__link">
         
   
   
@@ -4179,7 +4173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/langfuse/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/deploy/" class="md-nav__link">
         
   
   
@@ -4207,7 +4201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/langfuse/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/langfuse/delete/" class="md-nav__link">
         
   
   
@@ -4296,7 +4290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/matomo/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/deploy/" class="md-nav__link">
         
   
   
@@ -4324,7 +4318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/matomo/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/matomo/delete/" class="md-nav__link">
         
   
   
@@ -4413,7 +4407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/openwebui/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/deploy/" class="md-nav__link">
         
   
   
@@ -4441,7 +4435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/openwebui/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/openwebui/delete/" class="md-nav__link">
         
   
   
@@ -4530,7 +4524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/prometheus/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/deploy/" class="md-nav__link">
         
   
   
@@ -4558,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/prometheus/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/prometheus/delete/" class="md-nav__link">
         
   
   
@@ -4647,7 +4641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/taiga/deploy/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/deploy/" class="md-nav__link">
         
   
   
@@ -4675,7 +4669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../marketplace/taiga/delete/" class="md-nav__link">
+      <a href="../../howto/marketplace/taiga/delete/" class="md-nav__link">
         
   
   
@@ -4751,7 +4745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../account-billing/" class="md-nav__link ">
+            <a href="../../howto/account-billing/" class="md-nav__link ">
               
   
   
@@ -4795,7 +4789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/forgot-your-password/" class="md-nav__link">
+      <a href="../../howto/account-billing/forgot-your-password/" class="md-nav__link">
         
   
   
@@ -4823,7 +4817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/change-account-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-account-data/" class="md-nav__link">
         
   
   
@@ -4851,7 +4845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/change-credit-card/" class="md-nav__link">
+      <a href="../../howto/account-billing/change-credit-card/" class="md-nav__link">
         
   
   
@@ -4879,7 +4873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/manage-invoices/" class="md-nav__link">
+      <a href="../../howto/account-billing/manage-invoices/" class="md-nav__link">
         
   
   
@@ -4907,7 +4901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/e-invoice/" class="md-nav__link">
+      <a href="../../howto/account-billing/e-invoice/" class="md-nav__link">
         
   
   
@@ -4935,7 +4929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/rest-invoice-data/" class="md-nav__link">
+      <a href="../../howto/account-billing/rest-invoice-data/" class="md-nav__link">
         
   
   
@@ -4963,7 +4957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account-billing/delete-account/" class="md-nav__link">
+      <a href="../../howto/account-billing/delete-account/" class="md-nav__link">
         
   
   
@@ -5019,7 +5013,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../support/" class="md-nav__link ">
+            <a href="../../howto/support/" class="md-nav__link ">
               
   
   
@@ -5063,7 +5057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/raise-issues/" class="md-nav__link">
+      <a href="../../howto/support/raise-issues/" class="md-nav__link">
         
   
   
@@ -5132,7 +5126,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../tutorials/" class="md-nav__link ">
+            <a href="../../tutorials/" class="md-nav__link ">
               
   
   
@@ -5176,7 +5170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/ansible/" class="md-nav__link">
+      <a href="../../tutorials/ansible/" class="md-nav__link">
         
   
   
@@ -5204,7 +5198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/containers/" class="md-nav__link">
+      <a href="../../tutorials/containers/" class="md-nav__link">
         
   
   
@@ -5232,7 +5226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/heat/" class="md-nav__link">
+      <a href="../../tutorials/heat/" class="md-nav__link">
         
   
   
@@ -5260,7 +5254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/tf/" class="md-nav__link">
+      <a href="../../tutorials/tf/" class="md-nav__link">
         
   
   
@@ -5327,7 +5321,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../background/" class="md-nav__link ">
+            <a href="../../background/" class="md-nav__link ">
               
   
   
@@ -5371,7 +5365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/gui-vs-api/" class="md-nav__link">
+      <a href="../../background/gui-vs-api/" class="md-nav__link">
         
   
   
@@ -5399,7 +5393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/project-deletion/" class="md-nav__link">
+      <a href="../../background/project-deletion/" class="md-nav__link">
         
   
   
@@ -5427,7 +5421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/object-storage/" class="md-nav__link">
+      <a href="../../background/object-storage/" class="md-nav__link">
         
   
   
@@ -5455,7 +5449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/recovery-service/" class="md-nav__link">
+      <a href="../../background/recovery-service/" class="md-nav__link">
         
   
   
@@ -5503,7 +5497,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../background/ai/" class="md-nav__link ">
+            <a href="../../background/ai/" class="md-nav__link ">
               
   
   
@@ -5547,7 +5541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/ai/tokens/" class="md-nav__link">
+      <a href="../../background/ai/tokens/" class="md-nav__link">
         
   
   
@@ -5603,7 +5597,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../background/kubernetes/" class="md-nav__link ">
+            <a href="../../background/kubernetes/" class="md-nav__link ">
               
   
   
@@ -5704,7 +5698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoscaling/" class="md-nav__link">
         
   
   
@@ -5732,7 +5726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/autoupgrades/" class="md-nav__link">
         
   
   
@@ -5760,7 +5754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/garden-linux/" class="md-nav__link">
         
   
   
@@ -5788,7 +5782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
+      <a href="../../background/kubernetes/gardener/hibernation/" class="md-nav__link">
         
   
   
@@ -5832,7 +5826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../background/marketplace/" class="md-nav__link">
+      <a href="../../background/marketplace/" class="md-nav__link">
         
   
   
@@ -5907,7 +5901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/" class="md-nav__link ">
+            <a href="../../reference/" class="md-nav__link ">
               
   
   
@@ -5973,7 +5967,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/features/" class="md-nav__link ">
+            <a href="../../reference/features/" class="md-nav__link ">
               
   
   
@@ -6017,7 +6011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/features/public/" class="md-nav__link">
+      <a href="../../reference/features/public/" class="md-nav__link">
         
   
   
@@ -6045,7 +6039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/features/compliant/" class="md-nav__link">
+      <a href="../../reference/features/compliant/" class="md-nav__link">
         
   
   
@@ -6105,7 +6099,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/limitations/" class="md-nav__link ">
+            <a href="../../reference/limitations/" class="md-nav__link ">
               
   
   
@@ -6149,7 +6143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/limitations/openstack/" class="md-nav__link">
+      <a href="../../reference/limitations/openstack/" class="md-nav__link">
         
   
   
@@ -6177,7 +6171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/limitations/object-storage/" class="md-nav__link">
+      <a href="../../reference/limitations/object-storage/" class="md-nav__link">
         
   
   
@@ -6205,7 +6199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/limitations/kubernetes/" class="md-nav__link">
+      <a href="../../reference/limitations/kubernetes/" class="md-nav__link">
         
   
   
@@ -6259,7 +6253,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/flavors/" class="md-nav__link ">
+            <a href="../../reference/flavors/" class="md-nav__link ">
               
   
   
@@ -6324,7 +6318,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/volumes/" class="md-nav__link ">
+            <a href="../../reference/volumes/" class="md-nav__link ">
               
   
   
@@ -6389,7 +6383,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/images/" class="md-nav__link ">
+            <a href="../../reference/images/" class="md-nav__link ">
               
   
   
@@ -6456,7 +6450,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/ai/" class="md-nav__link ">
+            <a href="../../reference/ai/" class="md-nav__link ">
               
   
   
@@ -6500,7 +6494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/ai/llms/" class="md-nav__link">
+      <a href="../../reference/ai/llms/" class="md-nav__link">
         
   
   
@@ -6554,7 +6548,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/dns/" class="md-nav__link ">
+            <a href="../../reference/dns/" class="md-nav__link ">
               
   
   
@@ -6652,7 +6646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/quotas/openstack/" class="md-nav__link">
+      <a href="../../reference/quotas/openstack/" class="md-nav__link">
         
   
   
@@ -6710,7 +6704,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/versions/" class="md-nav__link ">
+            <a href="../../reference/versions/" class="md-nav__link ">
               
   
   
@@ -6754,7 +6748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/versions/public/" class="md-nav__link">
+      <a href="../../reference/versions/public/" class="md-nav__link">
         
   
   
@@ -6782,7 +6776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/versions/compliant/" class="md-nav__link">
+      <a href="../../reference/versions/compliant/" class="md-nav__link">
         
   
   
@@ -6840,7 +6834,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/api/" class="md-nav__link ">
+            <a href="../../reference/api/" class="md-nav__link ">
               
   
   
@@ -6902,7 +6896,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/api/cc/" class="md-nav__link ">
+            <a href="../../reference/api/cc/" class="md-nav__link ">
               
   
   
@@ -6967,7 +6961,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/api/openstack/" class="md-nav__link ">
+            <a href="../../reference/api/openstack/" class="md-nav__link ">
               
   
   
@@ -7040,7 +7034,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/legal/" class="md-nav__link ">
+            <a href="../../reference/legal/" class="md-nav__link ">
               
   
   
@@ -7091,8 +7085,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -7110,11 +7106,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -7135,7 +7131,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -7153,7 +7149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/issues/" class="md-nav__link">
+      <a href="../issues/" class="md-nav__link">
         
   
   
@@ -7181,7 +7177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/modifications/" class="md-nav__link">
+      <a href="../modifications/" class="md-nav__link">
         
   
   
@@ -7209,7 +7205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/quality/" class="md-nav__link">
+      <a href="../quality/" class="md-nav__link">
         
   
   
@@ -7237,7 +7233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contrib/style/" class="md-nav__link">
+      <a href="../style/" class="md-nav__link">
         
   
   
@@ -7262,10 +7258,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../contrib/ai/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-assisted contributions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -7281,6 +7304,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#your-personal-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your personal responsibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaration required
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7300,7 +7376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -7340,6 +7416,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#your-personal-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your personal responsibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaration required
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7355,7 +7472,7 @@
 
 
   
-    <a href="https://github.com/cleura/docs/edit/main/docs/howto/openstack/keystone/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/cleura/docs/edit/main/docs/contrib/ai.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -7363,9 +7480,23 @@
   
 
 
-<h1 id="identity-keystone">Identity (Keystone)</h1>
-<p><strong><a href="https://docs.openstack.org/keystone/">Keystone</a></strong> is OpenStack’s identity management and authentication facility.</p>
-<p>Keystone authentication is required for any interactions with Cleura&nbsp;Cloud via the <a href="../../getting-started/enable-openstack-cli/">OpenStack&nbsp;CLI</a> or API, using either a <a href="api-user-passwd/">username&nbsp;and&nbsp;password</a> or <a href="app-creds/">application&nbsp;credentials</a>.</p>
+<h1 id="ai-assisted-contributions">AI-assisted contributions</h1>
+<p>When making a contribution to this repository, you may use coding agents that assist you with generative artificial intelligence (GenAI), provided you adhere to the following guidelines for their use.</p>
+<h2 id="your-personal-responsibility">Your personal responsibility</h2>
+<p>You bear all responsibility for your AI-assisted contributions.</p>
+<h2 id="agent-instructions">Agent instructions</h2>
+<p>You must configure your coding assistant to read and follow the <code>AGENTS.md</code> file that is included in <a href="https://github.com/cleura/docs">the repository’s</a> base directory.</p>
+<p>Most coding assistants do this automatically.
+If yours does not, create appropriate symlinks (such as <code>CLAUDE.md</code>).</p>
+<h2 id="declaration-required">Declaration required</h2>
+<p>When you submit an AI-assisted contribution, you must declare the tool you used, and the model your tool employed, in an <code>Assisted-by:</code> line in your commit message.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>feat: Cover superfrobnication
+
+Document the new superfrobnication facility in Cleura AI.
+
+Assisted-by: coding-assistant/blerg3.6-coder
+</code></pre></div>
 
 
 
@@ -7388,7 +7519,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2025 14:11:17 UTC">2025-09-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 20, 2026 13:06:47 UTC">2026-04-20</span>
   </span>
 
     
@@ -7398,7 +7529,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2025 14:11:17 UTC">2025-09-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 20, 2026 13:06:47 UTC">2026-04-20</span>
   </span>
 
     
@@ -7443,7 +7574,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/"> <img src="../../assets/external/mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg"> </a>
 
     </div>
   
@@ -7468,10 +7599,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
