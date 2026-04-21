@@ -1,1 +1,7 @@
 title: "You can help!"
+nav:
+  - issues.md
+  - modifications.md
+  - quality.md
+  - style.md
+  - ai.md
