@@ -17,11 +17,13 @@ Also, version jumps are allowed over minor release upgrades.
 
 Whenever there is a new machine image available, this is indicated in the {{gui}}:
 
-![New machine image indicator](assets/gard_new_img_sign.png)
+![New machine image indicator](assets/gard_new_img_sign_light.png#only-light)
+![New machine image indicator](assets/gard_new_img_sign_dark.png#only-dark)
 
 Before the auto-upgrade kicks in, the version of the new image is displayed in the expanded view of the cluster, in the *Worker Groups* tab.
 
-![New machine image available](assets/gard_new_img_avail.png)
+![New machine image available](assets/gard_new_img_avail_light.png#only-light)
+![New machine image available](assets/gard_new_img_avail_dark.png#only-dark)
 
 ## Kubernetes upgrades
 
@@ -42,7 +44,8 @@ That is to say that, rather than recreating them with the old versions and waiti
 
 For a {{k8s_management_service}} cluster, it is possible to disable automatic upgrades both for Garden Linux *and* Kubernetes.
 
-![Disable automatic upgrades](assets/disable_automatic_upgrades.png)
+![Disable automatic upgrades](assets/disable_automatic_upgrades_light.png#only-light)
+![Disable automatic upgrades](assets/disable_automatic_upgrades_dark.png#only-dark)
 
 Even so, you may find out that, from time to time, your cluster gets upgraded.
 These seemingly unscheduled upgrades happen when either the cluster's Kubernetes or Garden Linux release _expires_.
