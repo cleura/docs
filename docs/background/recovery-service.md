@@ -5,11 +5,13 @@ description: What is the recovery service feature and why you want it
 
 When you [create a new server](../howto/openstack/nova/new-server.md) in {{brand}} you will notice an option named **Recovery service**, which is enabled by default.
 
-![Recovery service is enabled by default for new servers](assets/disaster-recovery-option-on-by-default.png)
+![Recovery service is enabled by default for new servers](assets/disaster-recovery-option-on-by-default_light.png#only-light)
+![Recovery service is enabled by default for new servers](assets/disaster-recovery-option-on-by-default_dark.png#only-dark)
 
 Even if you choose to disable it for a particular server, keep in mind that you have the option to enable it at a later time.
 
-![The recovery service feature can be manually activated for any server](assets/disaster-recovery-option-manual-activation.png)
+![The recovery service feature can be manually activated for any server](assets/disaster-recovery-option-manual-activation_light.png#only-light)
+![The recovery service feature can be manually activated for any server](assets/disaster-recovery-option-manual-activation_dark.png#only-dark)
 
 In the following, we explain what this option does, how it works in the background, and why you should consider enabling it.
 
@@ -35,7 +37,8 @@ So, as an example, if you have chosen a retention period of 30 days and also ena
 
 At any time, you may disable the recovery service, modify the retention period, or disable immutability for snapshots.
 
-![Recovery service, retention period, and immutability controls](assets/recovery-service-controls.png)
+![Recovery service, retention period, and immutability controls](assets/recovery-service-controls_light.png#only-light)
+![Recovery service, retention period, and immutability controls](assets/recovery-service-controls_dark.png#only-dark)
 
 Let's say, for instance, that you have enabled the recovery service and also the immutability feature for snapshots.
 At some point, you want to change the retention period or disable immutability altogether;
