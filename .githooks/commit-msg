@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec tox -e gitlint -- --staged --msg-filename "$1" run-hook
