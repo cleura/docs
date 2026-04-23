@@ -7106,6 +7106,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -7126,8 +7130,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../contrib/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -7141,8 +7146,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
@@ -7154,6 +7165,8 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
             
               
                 
@@ -7407,8 +7420,9 @@
 <h2 id="creating-an-api-key">Creating an API key</h2>
 <p>Expand the <em>AI</em> section and select <em>API Keys</em>.
 On the main pane, all existing API keys appear.
-To create a new one, click the orange <em>Create API Key</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new API key for a set of LLMs" src="../assets/create-api-key-01.png"></a></p>
+To create a new one, click the <em>Create API Key</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new API key for a set of LLMs" src="../assets/create-api-key-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new API key for a set of LLMs" src="../assets/create-api-key-01_dark.png#only-dark"></a></p>
 <p>A new pane slides over.
 There, enter a <em>Name</em> for the new API key.
 Using the <em>Model Access Selection</em> drop-down menu, you may have the new key pertain to all available Cleura AI models (<em>All</em>), to specific models only (<em>Inclusive</em>), or to all but a few models (<em>Exclusive</em>).</p>
@@ -7417,10 +7431,12 @@ Please note that restricting the use of an API key to an IPv4 source network or 
 Also, restricting API key access to an IPv6 source network is not possible.</p>
 <p>Finally, you can set an expiration date for the API key;
 beyond that date, access to any model using that key will not be possible.</p>
-<p>When you are ready, click the green <em>Create</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set key properties and create the key" src="../assets/create-api-key-02.png"></a></p>
+<p>When you are ready, click the <em>Create</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set key properties and create the key" src="../assets/create-api-key-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set key properties and create the key" src="../assets/create-api-key-02_dark.png#only-dark"></a></p>
 <p>A new window titled <em>API Key Created Successfully</em> pops up.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get a copy of the API URL and the bearer token" src="../assets/create-api-key-03.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get a copy of the API URL and the bearer token" src="../assets/create-api-key-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get a copy of the API URL and the bearer token" src="../assets/create-api-key-03_dark.png#only-dark"></a></p>
 <p>There are two pieces of information on that window that you need to jot down or, better yet, copy to a suitable password manager entry:</p>
 <ul>
 <li>The <em>OpenAI Compatible URL,</em> and</li>
@@ -7429,17 +7445,21 @@ beyond that date, access to any model using that key will not be possible.</p>
 <p>The bearer token is only displayed once, and as soon as you close the pop-up window you do not get to see the token again.</p>
 <p>When you have secured the bearer token, click anywhere on the Cleura&nbsp;Cloud Management&nbsp;Panel but on the pop-up window to close it.
 You will then see all the API keys, including the one you just created, listed on the main pane.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A list of all API keys, including the new one" src="../assets/create-api-key-04.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A list of all API keys, including the new one" src="../assets/create-api-key-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A list of all API keys, including the new one" src="../assets/create-api-key-04_dark.png#only-dark"></a></p>
 <h2 id="deleting-api-keys">Deleting API keys</h2>
 <p>To delete an API key, first go to the <em>API Keys</em> pane of the Cleura&nbsp;Cloud Management&nbsp;Panel.
-Locate the key you wish to delete, click the orange <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of its row, and select <em>Delete</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Locate the API key you wish to delete" src="../assets/delete-api-key-01.png"></a></p>
+Locate the key you wish to delete, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of its row, and select <em>Delete</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Locate the API key you wish to delete" src="../assets/delete-api-key-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Locate the API key you wish to delete" src="../assets/delete-api-key-01_dark.png#only-dark"></a></p>
 <p>A popup window appears at the top of the page, asking if you really want to delete the key.
 If you are sure you do not need the key anymore, click the <em>OK</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm API key deletion" src="../assets/delete-api-key-02.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm API key deletion" src="../assets/delete-api-key-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm API key deletion" src="../assets/delete-api-key-02_dark.png#only-dark"></a></p>
 <p>This deletes the API key.
-The list of keys is now shortened by one, and you get a confirmation on a green bubble at the bottom of the page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The API key has been deleted" src="../assets/delete-api-key-03.png"></a></p>
+The list of keys is now shortened by one, and you get a confirmation on a bubble at the bottom of the page.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The API key has been deleted" src="../assets/delete-api-key-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The API key has been deleted" src="../assets/delete-api-key-03_dark.png#only-dark"></a></p>
 
 
 
@@ -7462,7 +7482,7 @@ The list of keys is now shortened by one, and you get a confirmation on a green 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 19, 2026 13:31:38 UTC">2026-03-19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 23, 2026 11:41:47 UTC">2026-04-23</span>
   </span>
 
     
