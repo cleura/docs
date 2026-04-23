@@ -1,4 +1,4 @@
-title: Gardener
+---
 nav:
   - index.md
   - create-shoot-cluster.md
@@ -6,3 +6,4 @@ nav:
   - high-avail.md
   - hibernate-shoot-cluster.md
   - rolling-upgrades.md
+title: Gardener

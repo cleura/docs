@@ -1,7 +1,8 @@
-title: Load balancing (Octavia)
+---
 nav:
   - index.md
   - lbaas-tcp.md
   - tls-lb.md
   - lbaas-l7pol.md
   - metrics.md
+title: Load balancing (Octavia)

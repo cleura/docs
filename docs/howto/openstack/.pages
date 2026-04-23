@@ -1,4 +1,4 @@
-title: OpenStack
+---
 nav:
   - index.md
   - nova
@@ -9,3 +9,4 @@ nav:
   - glance
   - keystone
   - barbican
+title: OpenStack

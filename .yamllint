@@ -19,3 +19,8 @@ rules:
     max: 90
   truthy:
     level: error
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+  - '.pages'

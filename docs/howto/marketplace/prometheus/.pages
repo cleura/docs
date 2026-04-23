@@ -1,4 +1,5 @@
-title: Prometheus
+---
 nav:
   - deploy.md
   - delete.md
+title: Prometheus
