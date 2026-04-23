@@ -1,4 +1,4 @@
-title: "Reference"
+---
 nav:
   - index.md
   - features
@@ -12,3 +12,4 @@ nav:
   - versions
   - api
   - legal
+title: "Reference"

@@ -1,5 +1,6 @@
-title: "DNS (Designate)"
+---
 nav:
   - index.md
   - zones.md
   - recordsets.md
+title: "DNS (Designate)"

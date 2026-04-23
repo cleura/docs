@@ -1,4 +1,4 @@
-title: S3 API
+---
 nav:
   - index.md
   - credentials.md
@@ -9,3 +9,4 @@ nav:
   - versioning.md
   - "Object encryption (SSE-C)": sse-c.md
   - utilization.md
+title: S3 API

@@ -5,29 +5,33 @@ description: How to use the Cleura AI playground
 
 In the {{gui}}, expand the vertical navigation bar at the left, click on _AI_, and then choose _On-Demand Models_.
 
-![All available on-demand LLMs](assets/on-demand-models.png)
+![All available on-demand LLMs](assets/on-demand-models_light.png#only-light)
+![All available on-demand LLMs](assets/on-demand-models_dark.png#only-dark)
 
 All available LLMs are on the main pane.
 
 ## Interacting with a model
 
-To start interacting with a specific model, click the orange :material-dots-horizontal-circle: icon at the right of its row and select _Playground_.
+To start interacting with a specific model, click the :material-dots-horizontal-circle: icon at the right of its row and select _Playground_.
 
-![Select a model and go to the interactive playground](assets/model-playground.png)
+![Select a model and go to the interactive playground](assets/model-playground_light.png#only-light)
+![Select a model and go to the interactive playground](assets/model-playground_dark.png#only-dark)
 
 The first time you select a model, a pop-up window titled _Playground Terms_ appears.
 
-![Accept terms and create playground API key](assets/playground-terms.png)
+![Accept terms and create playground API key](assets/playground-terms_light.png#only-light)
+![Accept terms and create playground API key](assets/playground-terms_dark.png#only-dark)
 
 Read the two short paragraphs regarding the terms.
 Optionally, toggle the _Remember my choice on this browser_ option.
-Provided you agree with the terms, click the orange _Accept & Create Playground [API Key](api-keys.md)_ button to proceed.
+Provided you agree with the terms, click the _Accept & Create Playground [API Key](api-keys.md)_ button to proceed.
 
 ## Interacting with a model
 
 In the _Chat Playground_ main pane, you can freely interact with any of the available models by asking questions.
 
-![Chatting with LLMs](assets/model-chat.png)
+![Chatting with LLMs](assets/model-chat_light.png#only-light)
+![Chatting with LLMs](assets/model-chat_dark.png#only-dark)
 
 Below the text box where you type-in your questions, you will notice the _Message Type_ parameter.
 This can be either _User_ (the default) or _System_:

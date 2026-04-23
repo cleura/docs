@@ -1,4 +1,4 @@
-title: Swift API
+---
 nav:
   - index.md
   - private-container.md
@@ -7,3 +7,4 @@ nav:
   - expiry.md
   - versioning.md
   - utilization.md
+title: Swift API

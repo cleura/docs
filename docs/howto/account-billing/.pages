@@ -1,4 +1,4 @@
-title: Account & Billing
+---
 nav:
   - index.md
   - forgot-your-password.md
@@ -8,3 +8,4 @@ nav:
   - e-invoice.md
   - rest-invoice-data.md
   - delete-account.md
+title: Account & Billing
