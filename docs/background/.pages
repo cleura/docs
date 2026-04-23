@@ -1,4 +1,4 @@
-title: "Background"
+---
 nav:
   - index.md
   - "CCMP vs. OpenStack API": gui-vs-api.md
@@ -8,3 +8,4 @@ nav:
   - AI: ai
   - kubernetes
   - Marketplace: marketplace.md
+title: "Background"

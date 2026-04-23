@@ -1,4 +1,4 @@
-title: "How-To Guides"
+---
 nav:
   - index.md
   - getting-started
@@ -9,3 +9,4 @@ nav:
   - marketplace
   - account-billing
   - support
+title: "How-To Guides"

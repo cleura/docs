@@ -13,12 +13,14 @@ To proceed, make sure you have an [API key](api-keys.md) readily available.
 
 As soon as your Open WebUI instance is ready and you are logged in, click on _Select a model_, and then on the _Manage Connections_ button.
 
-![Manage API connections](assets/openwebui-manage-connections.png)
+![Manage API connections](assets/openwebui-manage-connections_light.png#only-light)
+![Manage API connections](assets/openwebui-manage-connections_dark.png#only-dark)
 
 On the upper right-hand side of the new page that appears, click the :material-plus: icon.
 A window labeled _Add Connection_ pops up.
 
-![Add new API connection](assets/openwebui-add-connection.png)
+![Add new API connection](assets/openwebui-add-connection_light.png#only-light)
+![Add new API connection](assets/openwebui-add-connection_dark.png#only-dark)
 
 * Set _Connection Type_ to _External_.
 * Set _URL_ to `https://{{ai_api_domain}}/v1`.
@@ -29,12 +31,14 @@ Then, click the _Save_ button.
 
 The _Add Connection_ window closes, and below the _Manage OpenAI API Connections_ list you see that `https://{{ai_api_domain}}/v1` is included.
 
-![Add new API connection](assets/openwebui-connection-added.png)
+![Add new API connection](assets/openwebui-connection-added_light.png#only-light)
+![Add new API connection](assets/openwebui-connection-added_dark.png#only-dark)
 
 Since you are here, use the toggles to switch off the OpenAI and Ollama API connections.
 That way, you know you'll be connecting to the {{brand_ai}} LLMs only.
 
-![Switch off OpenAI and Ollama API connections](assets/openwebui-cleura-only.png)
+![Switch off OpenAI and Ollama API connections](assets/openwebui-cleura-only_light.png#only-light)
+![Switch off OpenAI and Ollama API connections](assets/openwebui-cleura-only_dark.png#only-dark)
 
 ## Interacting with {{brand_ai}} models
 
@@ -42,8 +46,10 @@ Expand the left sidebar and, at the top of it, click on the name of your Open We
 Right next of the instance name, click the :material-chevron-down: icon and select one of the available {{brand_ai}} models.
 Then, type in a question and click the :material-arrow-up-circle: icon to query the selected model.
 
-![Select a Cleura AI model and ask a question0](assets/openwebui-example-question.png)
+![Select a Cleura AI model and ask a question0](assets/openwebui-example-question_light.png#only-light)
+![Select a Cleura AI model and ask a question0](assets/openwebui-example-question_dark.png#only-dark)
 
 In a bit, you will get an answer back.
 
-![Get back an answer to your question](assets/openwebui-example-answer.png)
+![Get back an answer to your question](assets/openwebui-example-answer_light.png#only-light)
+![Get back an answer to your question](assets/openwebui-example-answer_dark.png#only-dark)

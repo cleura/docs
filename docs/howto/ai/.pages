@@ -1,4 +1,4 @@
-title: "AI"
+---
 nav:
   - index.md
   - "Reviewing models": models.md
@@ -6,3 +6,4 @@ nav:
   - api-keys.md
   - openwebui.md
   - stt.md
+title: "AI"
