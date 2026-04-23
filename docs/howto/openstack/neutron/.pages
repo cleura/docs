@@ -1,4 +1,4 @@
-title: "Networking (Neutron)"
+---
 nav:
   - index.md
   - new-network.md
@@ -6,3 +6,4 @@ nav:
   - multiple-public-ips.md
   - vpnaas.md
   - delete-network.md
+title: "Networking (Neutron)"
