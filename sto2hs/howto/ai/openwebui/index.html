@@ -7166,6 +7166,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -7186,8 +7190,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../contrib/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -7201,8 +7206,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
@@ -7214,6 +7225,8 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
             
               
                 
@@ -7468,10 +7481,12 @@
 <p>To proceed, make sure you have an <a href="../api-keys/">API key</a> readily available.</p>
 <h2 id="adding-cleura-ai-models">Adding Cleura AI models</h2>
 <p>As soon as your Open WebUI instance is ready and you are logged in, click on <em>Select a model</em>, and then on the <em>Manage Connections</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manage API connections" src="../assets/openwebui-manage-connections.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manage API connections" src="../assets/openwebui-manage-connections_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manage API connections" src="../assets/openwebui-manage-connections_dark.png#only-dark"></a></p>
 <p>On the upper right-hand side of the new page that appears, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"></path></svg></span> icon.
 A window labeled <em>Add Connection</em> pops up.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-add-connection.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-add-connection_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-add-connection_dark.png#only-dark"></a></p>
 <ul>
 <li>Set <em>Connection Type</em> to <em>External</em>.</li>
 <li>Set <em>URL</em> to <code>https://ai.compliant.cleura.cloud/v1</code>.</li>
@@ -7480,17 +7495,21 @@ A window labeled <em>Add Connection</em> pops up.</p>
 <p>In the text field right of <em>Bearer</em>, paste your API key’s bearer token.
 Then, click the <em>Save</em> button.</p>
 <p>The <em>Add Connection</em> window closes, and below the <em>Manage OpenAI API Connections</em> list you see that <code>https://ai.compliant.cleura.cloud/v1</code> is included.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-connection-added.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-connection-added_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add new API connection" src="../assets/openwebui-connection-added_dark.png#only-dark"></a></p>
 <p>Since you are here, use the toggles to switch off the OpenAI and Ollama API connections.
 That way, you know you’ll be connecting to the Cleura AI LLMs only.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Switch off OpenAI and Ollama API connections" src="../assets/openwebui-cleura-only.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Switch off OpenAI and Ollama API connections" src="../assets/openwebui-cleura-only_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Switch off OpenAI and Ollama API connections" src="../assets/openwebui-cleura-only_dark.png#only-dark"></a></p>
 <h2 id="interacting-with-cleura-ai-models">Interacting with Cleura AI models</h2>
 <p>Expand the left sidebar and, at the top of it, click on the name of your Open WebUI instance.
 Right next of the instance name, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.58 12 13.17l4.59-4.59L18 10l-6 6-6-6z"></path></svg></span> icon and select one of the available Cleura AI models.
 Then, type in a question and click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18v-8l3.5 3.5 1.42-1.42L12 6.16l-5.92 5.92L7.5 13.5 11 10v8zM12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2"></path></svg></span> icon to query the selected model.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a Cleura AI model and ask a question0" src="../assets/openwebui-example-question.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a Cleura AI model and ask a question0" src="../assets/openwebui-example-question_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a Cleura AI model and ask a question0" src="../assets/openwebui-example-question_dark.png#only-dark"></a></p>
 <p>In a bit, you will get an answer back.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get back an answer to your question" src="../assets/openwebui-example-answer.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get back an answer to your question" src="../assets/openwebui-example-answer_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get back an answer to your question" src="../assets/openwebui-example-answer_dark.png#only-dark"></a></p>
 
 
 
@@ -7513,7 +7532,7 @@ Then, type in a question and click the <span class="twemoji"><svg xmlns="http://
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 17, 2026 06:25:22 UTC">2026-04-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 23, 2026 13:52:59 UTC">2026-04-23</span>
   </span>
 
     
