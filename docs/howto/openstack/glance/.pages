@@ -1,6 +1,7 @@
-title: Image management (Glance)
+---
 nav:
   - index.md
   - examine.md
   - filter.md
   - custom.md
+title: Image management (Glance)

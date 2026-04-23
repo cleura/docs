@@ -1,4 +1,4 @@
-title: Compute (Nova)
+---
 nav:
   - index.md
   - new-server.md
@@ -10,3 +10,4 @@ nav:
   - boot-image-volume.md
   - restore-srv-to-snap.md
   - rescue-server.md
+title: Compute (Nova)

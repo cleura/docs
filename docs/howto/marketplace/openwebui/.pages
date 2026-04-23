@@ -1,4 +1,5 @@
-title: Open WebUI
+---
 nav:
   - deploy.md
   - delete.md
+title: Open WebUI
