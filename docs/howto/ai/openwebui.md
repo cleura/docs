@@ -3,6 +3,9 @@ description: How to access Cleura AI LLMs via an Open WebUI instance
 ---
 # Accessing via Open WebUI
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 Open WebUI is an open source web dashboard for interacting with LLMs via an OpenAI‑compatible API.
 
 You can have an Open WebUI instance up and running in minutes, by [deploying it from the Marketplace](../marketplace/openwebui/deploy.md).
