@@ -3,6 +3,9 @@ description: How to manage Cleura AI API keys via the dashboard
 ---
 # Managing API keys
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 Whether you want to integrate a specific set of {{brand_ai}} LLMs into your application or web site, or access the models via a third party application you prefer, you first have to create an API key.
 
 ## Creating an API key
