@@ -1,5 +1,5 @@
 mike<=2.1.4
-mkdocs-awesome-pages-plugin
+mkdocs-awesome-nav
 mkdocs-git-authors-plugin>=0.6.5
 mkdocs-git-revision-date-localized-plugin
 mkdocs-glightbox
