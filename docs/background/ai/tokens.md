@@ -1,5 +1,8 @@
 # Tokens
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 Tokens are the basic units of text that an LLM processes.
 You can think of them as the fundamental building blocks LLMs use to process input and produce output.
 

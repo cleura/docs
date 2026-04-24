@@ -3,6 +3,9 @@ description: How to monitor Cleura AI token usage
 ---
 # Monitoring token usage
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 In the {{gui}}, expand the vertical pane at the left and click on _AI_.
 To monitor your token usage, select _Dashboard_.
 On the main page, also called _Dashboard_, you have a graphical view of your token usage broken down by LLM.

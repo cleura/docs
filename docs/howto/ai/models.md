@@ -3,6 +3,9 @@ description: Learn about each LLM Cleura AI supports
 ---
 # Reviewing available models
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 To see all available {{brand_ai}} LLMs, first navigate to the [{{gui}}](https://{{gui_domain}}) start page, and log into your {{brand}} account.
 Then, expand the vertical navigation bar at the left, click on _AI_ and select _On-Demand Models_.
 

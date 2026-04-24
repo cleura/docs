@@ -3,6 +3,9 @@ description: How to use the AI API via Python, for speech-to-text
 ---
 # Using audio transcription
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 Of the [on-demand models](../../reference/ai/llms.md) we provide, `faster-whisper-large-v3` is optimized for speech-to-text (STT) applications, also known as _audio transcription_.
 
 More specifically, you may use {{brand}}'s OpenAI-compatible API to programmatically upload audio files and get back transcribed texts.
