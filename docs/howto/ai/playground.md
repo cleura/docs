@@ -3,6 +3,9 @@ description: How to use the Cleura AI playground
 ---
 # Using the playground
 
+??? note "Invite-only access"
+    Access to {{brand_ai}} services is currently invite-only.
+
 In the {{gui}}, expand the vertical navigation bar at the left, click on _AI_, and then choose _On-Demand Models_.
 
 ![All available on-demand LLMs](assets/on-demand-models_light.png#only-light)
