@@ -69,7 +69,7 @@ markdown_extensions:
   - smarty
   - tables
 plugins:
-  - awesome-pages
+  - awesome-nav
   - git-authors:
       enabled: true
       show_email_address: false
