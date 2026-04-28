@@ -221,14 +221,6 @@
          <lastmod>2026-04-28</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/sto-com/howto/marketplace/clavister/delete/</loc>
-         <lastmod>2026-04-28</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto-com/howto/marketplace/clavister/deploy/</loc>
-         <lastmod>2026-04-28</lastmod>
-    </url>
-    <url>
          <loc>https://docs.cleura.cloud/sto-com/howto/marketplace/grafana/delete/</loc>
          <lastmod>2026-04-28</lastmod>
     </url>
@@ -466,10 +458,6 @@
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto-com/howto/openstack/nova/move-server-between-regions/</loc>
-         <lastmod>2026-04-28</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto-com/howto/openstack/nova/new-server-cnw/</loc>
          <lastmod>2026-04-28</lastmod>
     </url>
     <url>
