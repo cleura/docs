@@ -6,7 +6,8 @@ description: In Cleura Cloud, there is a Marketplace where you can find readily 
 
 {{page.meta.description}}
 
-![{{brand}} Marketplace](marketplace.png)
+![{{brand}} Marketplace](marketplace_light.png#only-light)
+![{{brand}} Marketplace](marketplace_dark.png#only-dark)
 
 You may deploy any of these with a few clicks and start using them right away.
 
