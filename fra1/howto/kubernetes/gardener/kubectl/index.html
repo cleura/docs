@@ -7607,14 +7607,18 @@ Such a kubeconfig is valid for a predefined amount of time, during which it can 
 The credentials associated with this type of kubeconfig are client certificates with time-limited validity.</p>
 <p>To get a kubeconfig file for a shoot cluster, in the Cleura&nbsp;Cloud Management&nbsp;Panel click on the cluster row to bring its properties into full view and go to the <em>KubeConfig</em> tab.</p>
 <p>Notice that you may set the duration of the kubeconfig file validity.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="KubeConfig tab in Gardener Shoot view" src="../assets/shoot_kubeconfig_cert_01.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="KubeConfig tab in Gardener Shoot view" src="../assets/shoot_kubeconfig_cert_01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="KubeConfig tab in Gardener Shoot view" src="../assets/shoot_kubeconfig_cert_01_dark.png#only-dark"></a></p>
 <p>The default validity period is one hour, but you may use the drop-down menu to select a different duration.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a validity period for kubeconfig" src="../assets/shoot_kubeconfig_cert_02.png"></a></p>
-<p>When satisfied with the duration, click the green button labeled <em>Generate config</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate a certificate-based kubeconfig" src="../assets/shoot_kubeconfig_cert_03.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a validity period for kubeconfig" src="../assets/shoot_kubeconfig_cert_02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a validity period for kubeconfig" src="../assets/shoot_kubeconfig_cert_02_dark.png#only-dark"></a></p>
+<p>When satisfied with the duration, click the button labeled <em>Generate config</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate a certificate-based kubeconfig" src="../assets/shoot_kubeconfig_cert_03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate a certificate-based kubeconfig" src="../assets/shoot_kubeconfig_cert_03_dark.png#only-dark"></a></p>
 <p>Right below, you will see the contents of your dynamically generated kubeconfig.
-To get the file, click the blue button labeled <em>Download KubeConfig</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download the newly generated kubeconfig" src="../assets/shoot_kubeconfig_cert_04.png"></a></p>
+To get the file, click the button labeled <em>Download KubeConfig</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download the newly generated kubeconfig" src="../assets/shoot_kubeconfig_cert_04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download the newly generated kubeconfig" src="../assets/shoot_kubeconfig_cert_04_dark.png#only-dark"></a></p>
 <p>In the default download folder of your local user account, you will get a configuration file named like so:</p>
 <div class="highlight"><pre><span></span><code>kubeconfig--&lt;cluster_name&gt;--&lt;region_name&gt;--&lt;project_id&gt;.yaml
 </code></pre></div>
@@ -7674,14 +7678,16 @@ They <em>also</em> disappear when you <a href="../hibernate-shoot-cluster/">hibe
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
 </code></pre></div>
 <p>Assuming you used the default options when creating the cluster, you should now see the three Gardener worker nodes that are initially available:</p>
-<div class="highlight"><pre><span></span><code><span class="go">NAME                                            STATUS   ROLES    AGE   VERSION</span>
-<span class="go">shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-2hndf   Ready    worker   11m   v1.33.7</span>
-<span class="go">shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-5mj77   Ready    worker   11m   v1.33.7</span>
-<span class="go">shoot--pqrxyz--ismaning-1bc4ef-z1-798d7-kthv6   Ready    worker   11m   v1.33.7</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
+<span class="go">NAME                                            STATUS   ROLES    AGE     VERSION</span>
+<span class="go">shoot--pqrxyz--ismaning-nuehdj-z1-96978-6fthj   Ready    worker   3d12h   v1.34.7</span>
+<span class="go">shoot--pqrxyz--ismaning-nuehdj-z1-96978-j9hk6   Ready    worker   3d12h   v1.34.7</span>
+<span class="go">shoot--pqrxyz--ismaning-nuehdj-z1-96978-n4nz9   Ready    worker   3d12h   v1.34.7</span>
 </code></pre></div>
-<blockquote>
-<p>Please note that in contrast to other Kubernetes platforms, where the output of <code>kubectl&nbsp;get&nbsp;nodes</code> includes control plane <em>and</em> worker nodes, in a Gardener cluster the same command <em>only</em> lists the worker nodes.</p>
-</blockquote>
+<details class="note">
+<summary>Output differences compared to other Kubernetes platforms</summary>
+<p>In contrast to other Kubernetes platforms, where the output of <code>kubectl&nbsp;get&nbsp;nodes</code> includes control plane <em>and</em> worker nodes, in a Gardener cluster the same command <em>only</em> lists the worker nodes.</p>
+</details>
 <h2 id="deploying-an-application">Deploying an application</h2>
 <p>Create a sample deployment with an <code>echo-server</code> application:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>echo-server<span class="w"> </span>--image<span class="o">=</span>k8s.gcr.io/echoserver:1.10
@@ -7695,13 +7701,14 @@ They <em>also</em> disappear when you <a href="../hibernate-shoot-cluster/">hibe
 </code></pre></div>
 <p>After a couple of minutes or so, you should get the load balancer service <em>with</em> its external IP and port number:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>get<span class="w"> </span>services
-<span class="go">NAME          TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE</span>
-<span class="go">echo-server   LoadBalancer   100.64.59.27   198.51.100.42 80:31511/TCP   26s</span>
-<span class="go">kubernetes    ClusterIP      100.64.0.1     &lt;none&gt;        443/TCP        49m</span>
+<span class="go">NAME          TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)        AGE</span>
+<span class="go">echo-server   LoadBalancer   100.65.68.44   198.51.100.42    80:32005/TCP   3d11h</span>
+<span class="go">kubernetes    ClusterIP      100.64.0.1     &lt;none&gt;           443/TCP        3d12h</span>
 </code></pre></div>
 <p>Open a browser and navigate to <code>http://198.51.100.42</code> (substituting the correct <code>EXTERNAL-IP</code> listed for your service).
 You should see the page of the <code>echo-server</code> application.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trying out the new Kubernetes cluster with the echo-server application" src="../assets/echo_server_app.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trying out the new Kubernetes cluster with the echo-server application" src="../assets/echo_server_app_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trying out the new Kubernetes cluster with the echo-server application" src="../assets/echo_server_app_dark.png#only-dark"></a></p>
 <h2 id="rotating-kubeconfig">Rotating kubeconfig</h2>
 <p>You may rotate an existing kubeconfig for a fresh one.
 Since certificate-based kubeconfig files have time-bound validity, issuing fresh kubeconfig files of this type is standard practice.</p>
@@ -7709,29 +7716,37 @@ Since certificate-based kubeconfig files have time-bound validity, issuing fresh
 Here’s how to go about it, using the Cleura&nbsp;Cloud Management&nbsp;Panel.</p>
 <p>Locate the shoot cluster you are interested in.
 Click on its row to bring all relevant details into view, and go to the <em>KubeConfig</em> tab.
-Click the red button labeled <em>Rotate CA Bundle</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Click the red button labeled &quot;Rotate CA Bundle&quot;" src="../assets/kubeconfig_cert_rotate_01.png"></a></p>
+Click the button labeled <em>Rotate CA Bundle</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Click the button labeled &quot;Rotate CA Bundle&quot;" src="../assets/kubeconfig_cert_rotate_01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Click the button labeled &quot;Rotate CA Bundle&quot;" src="../assets/kubeconfig_cert_rotate_01_dark.png#only-dark"></a></p>
 <p>A new window pops up, informing you in detail about the 3-step process that is about to take place.
 Please notice that it may take up to twenty minutes to complete.
-When ready, click the red <em>Start CA rotation</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Detailed information regarding the whole CA bundle rotation process" src="../assets/kubeconfig_cert_rotate_02.png"></a></p>
+When ready, click the <em>Start CA rotation</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Detailed information regarding the whole CA bundle rotation process" src="../assets/kubeconfig_cert_rotate_02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Detailed information regarding the whole CA bundle rotation process" src="../assets/kubeconfig_cert_rotate_02_dark.png#only-dark"></a></p>
 <p>During the first step, a new CA bundle is generated.
 This may take up to ten minutes to complete.
 During that time, the existing kubeconfig file still works.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generating a new CA bundle" src="../assets/kubeconfig_cert_rotate_03.png"></a></p>
-<p>When the new CA bundle is ready, you remove the existing one by clicking the red <em>Remove old CA bundle</em> button.
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generating a new CA bundle" src="../assets/kubeconfig_cert_rotate_03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generating a new CA bundle" src="../assets/kubeconfig_cert_rotate_03_dark.png#only-dark"></a></p>
+<p>When the new CA bundle is ready, you remove the existing one by clicking the <em>Remove old CA bundle</em> button.
 As soon as you click it, the existing kubeconfig stops working.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Removing the old CA bundle" src="../assets/kubeconfig_cert_rotate_04.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Removing the old CA bundle" src="../assets/kubeconfig_cert_rotate_04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Removing the old CA bundle" src="../assets/kubeconfig_cert_rotate_04_dark.png#only-dark"></a></p>
 <p>The old CA bundle removal process may take up to ten minutes.
 Notice the gray animated icon, indicating the process is ongoing.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Old CA bundle removal in progress" src="../assets/kubeconfig_cert_rotate_05.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Old CA bundle removal in progress" src="../assets/kubeconfig_cert_rotate_05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Old CA bundle removal in progress" src="../assets/kubeconfig_cert_rotate_05_dark.png#only-dark"></a></p>
 <p>It is now time to create a new certificate-based kubeconfig, which will be based on the new CA bundle.
 This time, click the <em>Back</em> button, or the CA bundle creation process will start over.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Time to create a fresh certificate-based kubeconfig file" src="../assets/kubeconfig_cert_rotate_06.png"></a></p>
-<p>Choose a duration for the new kubeconfig, then click the green <em>Generate config</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set duration for the new kubeconfig and generate it" src="../assets/kubeconfig_cert_rotate_07.png"></a></p>
-<p>To get your new certificate-based kubeconfig file, click the blue <em>Download KubeConfig</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download fresh certificate-based kubeconfig" src="../assets/kubeconfig_cert_rotate_08.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Time to create a fresh certificate-based kubeconfig file" src="../assets/kubeconfig_cert_rotate_06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Time to create a fresh certificate-based kubeconfig file" src="../assets/kubeconfig_cert_rotate_06_dark.png#only-dark"></a></p>
+<p>Choose a duration for the new kubeconfig, then click the <em>Generate config</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set duration for the new kubeconfig and generate it" src="../assets/kubeconfig_cert_rotate_07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set duration for the new kubeconfig and generate it" src="../assets/kubeconfig_cert_rotate_07_dark.png#only-dark"></a></p>
+<p>To get your new certificate-based kubeconfig file, click the <em>Download KubeConfig</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download fresh certificate-based kubeconfig" src="../assets/kubeconfig_cert_rotate_08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Download fresh certificate-based kubeconfig" src="../assets/kubeconfig_cert_rotate_08_dark.png#only-dark"></a></p>
 
 
 
@@ -7754,7 +7769,7 @@ This time, click the <em>Back</em> button, or the CA bundle creation process wil
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 16, 2026 15:33:57 UTC">2026-02-16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 6, 2026 10:26:10 UTC">2026-05-06</span>
   </span>
 
     
