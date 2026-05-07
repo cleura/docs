@@ -15,7 +15,8 @@ You can conveniently do this via the {{gui}}.
 To activate {{k8s_management_service}}, select Containers → [{{k8s_management_service}}](https://{{gui_domain}}/containers/gardener) in the side panel.
 Then, click the _Activate {{k8s_management_service}} Service_ button:
 
-!["Activate {{k8s_management_service}}" dialog in {{gui}}](assets/activate-gardener.png)
+!["Activate {{k8s_management_service}}" dialog in {{gui}}](assets/activate-gardener_light.png#only-light)
+!["Activate {{k8s_management_service}}" dialog in {{gui}}](assets/activate-gardener_dark.png#only-dark)
 
 You only need to do this once.
 
