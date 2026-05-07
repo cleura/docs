@@ -7323,49 +7323,61 @@
 <h1 id="enabling-high-availability">Enabling high availability</h1>
 <p>When you <a href="../create-shoot-cluster/">create a new Gardener cluster</a>, you have the option to enable high availability (HA) features for its control plane.
 In case you have an existing Gardener cluster with a non-HA control plane, you may at any time enable the HA features for that control plane.</p>
-<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">HA for control plane cannot be disabled</p>
 <p>Keep in mind that once you enable HA for the control plane of a Gardener cluster, you cannot disable it for that particular cluster.</p>
-</blockquote>
+</div>
 <p>Additionally, you may add HA characteristics to one or more Worker Groups of an existing cluster.</p>
 <h2 id="enabling-ha-for-the-control-plane">Enabling HA for the control plane</h2>
 <p>Using your favorite web browser, navigate to <a href="https://compliant.cleura.cloud">https://compliant.cleura.cloud</a> and log in.
 In the left-hand side panel, choose <em>Containers&nbsp;→&nbsp;<a href="https://compliant.cleura.cloud/containers/gardener">Gardener</a></em>.
 Then, in the central pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, you see all of your Gardener clusters, organized by Cleura&nbsp;Cloud region.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get the list of all available Gardener clusters" src="../assets/shoot-enable-ha-01.png"></a></p>
-<p>Locate the cluster you are interested in, and click the orange <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right of the corresponding row.
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get the list of all available Gardener clusters" src="../assets/shoot-enable-ha-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get the list of all available Gardener clusters" src="../assets/shoot-enable-ha-01_dark.png#only-dark"></a></p>
+<p>Locate the cluster you are interested in, and click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right of the corresponding row.
 From the drop-down menu that appears, select <em>Modify Cluster</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for modifying a cluster" src="../assets/shoot-enable-ha-02.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for modifying a cluster" src="../assets/shoot-enable-ha-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for modifying a cluster" src="../assets/shoot-enable-ha-02_dark.png#only-dark"></a></p>
 <p>A vertical pane titled <em>Modify Gardener Shoot Cluster</em> slides over from the right.
 In it, you see the disabled option <em>Enable Highly Available Control Plane</em>.
 Click on it to enable HA for the control plane of the shoot cluster.</p>
 <p>As soon as you enable HA, Control Plane components spread out and live across all Availability Zones.
 Then, in case of an Availability Zone outage, the Control Plane for the cluster remains available.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Notice the option for enabling control plane HA" src="../assets/shoot-enable-ha-03.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Notice the option for enabling control plane HA" src="../assets/shoot-enable-ha-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Notice the option for enabling control plane HA" src="../assets/shoot-enable-ha-03_dark.png#only-dark"></a></p>
 <p>Before the change is applied, a warning appears:
 enabling HA is an irreversible action.
 Once you take it, there is no way to disable HA at a later time.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select HA for the control plane" src="../assets/shoot-enable-ha-04.png"></a></p>
-<p>If you are sure you want to enable HA, scroll down a bit until you see the green <em>Update</em> button and click on it.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Activate HA for the control plane" src="../assets/shoot-enable-ha-05.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select HA for the control plane" src="../assets/shoot-enable-ha-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select HA for the control plane" src="../assets/shoot-enable-ha-04_dark.png#only-dark"></a></p>
+<p>If you are sure you want to enable HA, scroll down a bit until you see the <em>Update</em> button and click on it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Activate HA for the control plane" src="../assets/shoot-enable-ha-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Activate HA for the control plane" src="../assets/shoot-enable-ha-05_dark.png#only-dark"></a></p>
 <p>Enabling HA for the control plane of any Gardener cluster takes a few minutes.
 You can see how the process is progressing by the animated icon on the left of the cluster row.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is being prepared" src="../assets/shoot-enable-ha-06.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is being prepared" src="../assets/shoot-enable-ha-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is being prepared" src="../assets/shoot-enable-ha-06_dark.png#only-dark"></a></p>
 <p>As soon as HA is enabled, the animated icon changes into a check mark (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"></path></svg></span>).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is now enabled" src="../assets/shoot-enable-ha-07.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is now enabled" src="../assets/shoot-enable-ha-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HA for control plane is now enabled" src="../assets/shoot-enable-ha-07_dark.png#only-dark"></a></p>
 <h2 id="enabling-ha-for-worker-groups">Enabling HA for Worker Groups</h2>
 <p>You may add HA characteristics to one or more Worker Groups by modifying the <em>Autoscaler&nbsp;Min</em> and <em>Autoscaler&nbsp;Max</em> parameters.</p>
 <p>First off, select the Gardener cluster you are interested in.
 Click on the cluster row to expand its characteristics, then select the <em>Worker Groups</em> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View Worker Group details" src="../assets/shoot-enable-ha-08.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View Worker Group details" src="../assets/shoot-enable-ha-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View Worker Group details" src="../assets/shoot-enable-ha-08_dark.png#only-dark"></a></p>
 <p>Click once more on the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1l97.9 97.9 24.4-24.4c21.9-21.9 21.9-57.3 0-79.2zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32z"></path></svg></span> icon of the Worker Group you wish to modify.
 A vertical pane named <em>Modify Worker Group</em> slides over from the right.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify Worker Group" src="../assets/shoot-enable-ha-09.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify Worker Group" src="../assets/shoot-enable-ha-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify Worker Group" src="../assets/shoot-enable-ha-09_dark.png#only-dark"></a></p>
 <p>Modify the <em>Autoscaler&nbsp;Min</em> and <em>Autoscaler&nbsp;Max</em> parameters.
-You may, for instance, set <em>Autoscaler&nbsp;Min</em> to 3 and <em>Autoscaler&nbsp;Max</em> to 5.
-When you are ready to apply the changes, click the green <em>Update</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify autoscaling parameters" src="../assets/shoot-enable-ha-10.png"></a></p>
+You may, for instance, set <em>Autoscaler&nbsp;Min</em> to 5 and <em>Autoscaler&nbsp;Max</em> to 7.
+When you are ready to apply the changes, click the <em>Update</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify autoscaling parameters" src="../assets/shoot-enable-ha-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify autoscaling parameters" src="../assets/shoot-enable-ha-10_dark.png#only-dark"></a></p>
 <p>After a few seconds, the new values for the autoscaler parameters will be visible in the <em>Worker Groups</em> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View modified Worker Group" src="../assets/shoot-enable-ha-11.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View modified Worker Group" src="../assets/shoot-enable-ha-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View modified Worker Group" src="../assets/shoot-enable-ha-11_dark.png#only-dark"></a></p>
 <h2 id="having-worker-groups-in-different-availability-zones">Having Worker Groups in different Availability Zones</h2>
 <p>Another way to make Worker Groups highly available is to have <em>at least</em> two such groups, each in its own Availability Zone (AZ).</p>
 <p>To create a new Worker Group in its own AZ, begin by locating the cluster you are interested in, then click its row to have all relevant details in full view.
@@ -7406,7 +7418,7 @@ Finally, click on the green <em>Create</em> button to instantiate the new WG.</p
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 6, 2026 10:11:47 UTC">2026-04-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 6, 2026 10:26:10 UTC">2026-05-06</span>
   </span>
 
     

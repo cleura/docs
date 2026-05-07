@@ -7389,27 +7389,33 @@ A central pane named <em>Gardener / Shoot Clusters</em> appears.
 There, you can create and manage your Gardener-based clusters.
 In Gardener terminology, a Kubernetes cluster is called a <strong>shoot</strong> (as in <a href="https://en.wikipedia.org/wiki/Shoot">new plant growth</a>).</p>
 <p>At the top right-hand side of the central pane, click <em>Create&nbsp;Kubernetes&nbsp;cluster</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Gardener page in Cleura&nbsp;Cloud Management&nbsp;Panel" src="../assets/create-shoot-01.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Gardener page in Cleura&nbsp;Cloud Management&nbsp;Panel" src="../assets/create-shoot-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Gardener page in Cleura&nbsp;Cloud Management&nbsp;Panel" src="../assets/create-shoot-01_dark.png#only-dark"></a></p>
 <p>A new pane named <em>Create Gardener Shoot Cluster</em> slides over from the right-hand side of the browser.
 Type in a name for the new shoot cluster, and select a region.
 Also, select the version of Kubernetes the new cluster will be running.
-In the example below, we have chosen version 1.33.7.
 Please note the <em>Load balancer provider</em> parameter, which is already set.
 By turning on the setting below, which is by default disabled, you may enable high availability for the <strong>control plane</strong> of the new cluster.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Gardener Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane" src="../assets/create-shoot-02.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Gardener Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane" src="../assets/create-shoot-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create Gardener Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane" src="../assets/create-shoot-02_dark.png#only-dark"></a></p>
 <p>You should keep in mind that once you enable high availability for the control plane, you cannot disable it for that particular cluster.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Once you enable high availability for the control plane, you cannot disable it" src="../assets/create-shoot-03.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Once you enable high availability for the control plane, you cannot disable it" src="../assets/create-shoot-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Once you enable high availability for the control plane, you cannot disable it" src="../assets/create-shoot-03_dark.png#only-dark"></a></p>
 <p>Next, you may accept the proposed network address (in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR notation</a>) for the worker nodes, or type in the one you prefer.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer" src="../assets/create-shoot-04.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer" src="../assets/create-shoot-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer" src="../assets/create-shoot-04_dark.png#only-dark"></a></p>
 <p>Alternatively, reveal the drop-down menu at the right-hand side of <em>Network for worker nodes</em>.
 From the available menu items, choose a pre-existing network.
 Be sure to select one that has an assigned subnet and is connected to a router.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a pre-existing network" src="../assets/create-shoot-05.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a pre-existing network" src="../assets/create-shoot-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a pre-existing network" src="../assets/create-shoot-05_dark.png#only-dark"></a></p>
 <p>Then, define a new subnet for the worker nodes by typing in a CIDR network address.
 If the new subnet overlaps with one of the subnets of the network you just selected, you will see an error message in red.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Try selecting a pre-existing CIDR for the worker nodes" src="../assets/create-shoot-06.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Try selecting a pre-existing CIDR for the worker nodes" src="../assets/create-shoot-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Try selecting a pre-existing CIDR for the worker nodes" src="../assets/create-shoot-06_dark.png#only-dark"></a></p>
 <p>Instead, you should define a subnet that does not overlap with any of the subnets of your selected network.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set a new, valid subnet for the worker nodes" src="../assets/create-shoot-07.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set a new, valid subnet for the worker nodes" src="../assets/create-shoot-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set a new, valid subnet for the worker nodes" src="../assets/create-shoot-07_dark.png#only-dark"></a></p>
 <p>Now, scroll down a bit until you bring the <em>Worker Groups</em> section into full view.
 Make sure there is at least one defined.
 (By default, you start with one Worker Group.)
@@ -7423,33 +7429,40 @@ this determines the number of CPU cores and the amount of RAM allocated to each 
 <li><em>Autoscaler Max:</em> The maximum number of worker nodes the cluster automatically scales to, in case the current number of nodes cannot handle the deployed workload.</li>
 <li><em>Max Surge:</em> The maximum number of additional nodes to deploy in an autoscaling event.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Worker Group settings" src="../assets/create-shoot-08.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Worker Group settings" src="../assets/create-shoot-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Worker Group settings" src="../assets/create-shoot-08_dark.png#only-dark"></a></p>
 <p>For a test cluster, feel free to leave each parameter at its default value.</p>
 <p>Scrolling a bit further down, you see that for each Worker Group you may add <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels"><em>Labels</em></a>, <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations"><em>Annotations</em></a>, or <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration"><em>Taints</em></a>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Labels, Annotations, or Taints" src="../assets/create-shoot-09.00.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Labels, Annotations, or Taints" src="../assets/create-shoot-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define Labels, Annotations, or Taints" src="../assets/create-shoot-09_dark.png#only-dark"></a></p>
 <p>Each shoot cluster in Cleura&nbsp;Cloud has a maintenance window.
 Additionally, the operating system of the worker nodes can be automatically updated, and so can Kubernetes itself.
 Do not change anything regarding the maintenance window or the <a href="../rolling-upgrades/">updates</a>, for everything is already set for you.
 Also, do not bother with the <em><a href="../hibernate-shoot-cluster/">Hibernation</a> Schedule</em> for now.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Maintenance window and auto-updates" src="../assets/create-shoot-09.01.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Maintenance window and auto-updates" src="../assets/create-shoot-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Maintenance window and auto-updates" src="../assets/create-shoot-10_dark.png#only-dark"></a></p>
 <p>By default, you can access your shoot clusters from anywhere on the internet.
 Still, you may choose to restrict cluster access, permitting it <em>only</em> from certain networks.
-The allowed networks are described in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR&nbsp;notation</a>, and you can define one or more by clicking on the green <em>Set CIDRs…</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may optionally define networks to allow cluster access from" src="../assets/create-shoot-09.02.png"></a></p>
+The allowed networks are described in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR&nbsp;notation</a>, and you can define one or more by clicking on the <em>Set CIDRs…</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may optionally define networks to allow cluster access from" src="../assets/create-shoot-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may optionally define networks to allow cluster access from" src="../assets/create-shoot-11_dark.png#only-dark"></a></p>
 <p>In the example below, we only allow access from one Class C network, expressed in CIDR notation.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define a Class C network, from which access to the cluster is allowed" src="../assets/create-shoot-09.03.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define a Class C network, from which access to the cluster is allowed" src="../assets/create-shoot-12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define a Class C network, from which access to the cluster is allowed" src="../assets/create-shoot-12_dark.png#only-dark"></a></p>
 <p>You can define more networks from which cluster access is allowed.
 Please keep in mind that, besides new shoot clusters, you can add or remove “allow networks” to or from existing clusters.</p>
 <p>When populating the list of allowed networks, include the Cleura&nbsp;Cloud&nbsp;Management&nbsp;System source IP address (<code>185.103.48.75/32</code>) to preserve <a href="#viewing-details-and-monitoring">monitoring</a> functionality.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You can define more than one networks, from which access to the cluster is allowed" src="../assets/create-shoot-09.04.png"></a></p>
-<p>When you are ready, click the green <em>Create</em> button at the bottom of the pane.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to create a new Gardener Shoot Cluster" src="../assets/create-shoot-10.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You can define more than one networks, from which access to the cluster is allowed" src="../assets/create-shoot-13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You can define more than one networks, from which access to the cluster is allowed" src="../assets/create-shoot-13_dark.png#only-dark"></a></p>
+<p>When you are ready, click the <em>Create</em> button at the bottom of the pane.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to create a new Gardener Shoot Cluster" src="../assets/create-shoot-14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to create a new Gardener Shoot Cluster" src="../assets/create-shoot-14_dark.png#only-dark"></a></p>
 <p>In the list of clusters, you will see your new Gardener shoot bootstrapping.
 The animated icon on the left-hand side of the cluster row marks the progress.
-Creating the cluster may take several minutes.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Shoot cluster bootstrapping" src="../assets/create-shoot-11.png"></a></p>
-<p>Once your Gardener cluster has successfully launched, a green check mark (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"></path></svg></span>) will appear to the left of the cluster row.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Shoot cluster is ready" src="../assets/create-shoot-12.png"></a></p>
+Creating the cluster may take several minutes.
+Once your Gardener cluster has successfully launched, a check mark (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"></path></svg></span>) will appear to the left of the cluster row.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Shoot cluster is ready" src="../assets/create-shoot-15_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Shoot cluster is ready" src="../assets/create-shoot-15_dark.png#only-dark"></a></p>
 <h3 id="a-note-on-quotas">A note on quotas</h3>
 <p>Your Gardener worker nodes are subject to <a href="../../../../reference/quotas/openstack/">quotas</a> applicable to your Cleura&nbsp;Cloud project.
 It would be best if you kept that in mind when selecting the worker node <a href="../../../../reference/flavors/"><em>flavor</em></a>, setting the <em>volume size</em> and the <em>Autoscaler Max</em> values, or when creating more than one Worker Groups, so you will not be at risk of violating any quota.</p>
@@ -7459,21 +7472,24 @@ A 4th node would push your total memory allocation to 64&nbsp;GiB, violating you
 <h2 id="viewing-details-and-monitoring">Viewing details and monitoring</h2>
 <p>After the new shoot cluster finishes bootstrapping, you may click its row to bring all relevant details into view.
 For instance, click the <em>Details</em> tab to get networking information about the worker nodes.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Details regarding the new cluster" src="../assets/create-shoot-13.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Details regarding the new cluster" src="../assets/create-shoot-16_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Details regarding the new cluster" src="../assets/create-shoot-16_dark.png#only-dark"></a></p>
 <p>Next, go to the <em>Monitoring</em> tab.
-There, you will notice two orange buttons:
+There, you will notice two buttons:
 one for launching <a href="https://prometheus.io">Prometheus</a>, and one for launching <a href="https://github.com/credativ/plutono">Plutono</a>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Monitoring tab for launching Prometheus or Plutono" src="../assets/create-shoot-14.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Monitoring tab for launching Prometheus or Plutono" src="../assets/create-shoot-17_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Monitoring tab for launching Prometheus or Plutono" src="../assets/create-shoot-17_dark.png#only-dark"></a></p>
 <p>As an example, we have clicked the button for Plutono.
 Before launching the dashboard, a pop-up window appears.
 This shows the default username (<code>admin</code>), and the automatically generated <em>masked</em> password.
-You get this pop-up every time you click on either of the orange buttons.
+You get this pop-up every time you click on either of the buttons.
 In any case, to copy the password into the clipboard, click the related button shown below.
-Then, click the orange button labeled <em>Open Dashboard</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the Plutono password" src="../assets/create-shoot-15.png"></a></p>
+Then, click the button labeled <em>Open Dashboard</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the Plutono password" src="../assets/create-shoot-18_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the Plutono password" src="../assets/create-shoot-18_dark.png#only-dark"></a></p>
 <p>After typing in the default username and pasting the password, you get access to the Prometheus or Plutono dashboard for your shoot cluster.
 In the example below, we have the Plutono dashboard displaying graphical information regarding the cluster nodes.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Plutono dashboard displaying information about the worker nodes" src="../assets/create-shoot-16.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Plutono dashboard displaying information about the worker nodes" src="../assets/create-shoot-19.png"></a></p>
 <h2 id="interacting-with-your-cluster">Interacting with your cluster</h2>
 <p>Once your new shoot cluster is operational, you can <a href="../kubectl/">start interacting with it</a>.</p>
 
@@ -7498,7 +7514,7 @@ In the example below, we have the Plutono dashboard displaying graphical informa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="February 13, 2026 13:43:47 UTC">2026-02-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 05:12:23 UTC">2026-04-30</span>
   </span>
 
     
