@@ -21,50 +21,59 @@ Click on its row for a detailed view of the various cluster characteristics.
 Bring up the *Status* tab and, in the *Constraints* section, check whether hibernation is possible.
 For the shoot cluster in the example below, it is indeed possible.
 
-![{{k8s_management_service}} cluster status](assets/shoot-hiber-01.png)
+![{{k8s_management_service}} cluster status](assets/shoot-hiber-01_light.png#only-light)
+![{{k8s_management_service}} cluster status](assets/shoot-hiber-01_dark.png#only-dark)
 
-To hibernate the cluster, click the orange :material-dots-horizontal-circle: icon at the right-hand side of the cluster row.
+To hibernate the cluster, click the :material-dots-horizontal-circle: icon at the right-hand side of the cluster row.
 From the pop-up menu that appears, select *Hibernate Cluster*.
 
-![Hibernate cluster](assets/shoot-hiber-02.png)
+![Hibernate cluster](assets/shoot-hiber-02_light.png#only-light)
+![Hibernate cluster](assets/shoot-hiber-02_dark.png#only-dark)
 
 A big pop-up window labeled *About to hibernate a gardener shoot* appears, asking you to confirm the action.
-Click the red button labeled *Yes, Hibernate*.
+Click the button labeled *Yes, Hibernate*.
 
-![Confirm cluster hibernation](assets/shoot-hiber-03.png)
+![Confirm cluster hibernation](assets/shoot-hiber-03_light.png#only-light)
+![Confirm cluster hibernation](assets/shoot-hiber-03_dark.png#only-dark)
 
 The cluster will begin hibernating.
 The animated icon at the left-hand side of the cluster row marks the progress.
 
-![Hibernation in progress](assets/shoot-hiber-04.png)
+![Hibernation in progress](assets/shoot-hiber-04_light.png#only-light)
+![Hibernation in progress](assets/shoot-hiber-04_dark.png#only-dark)
 
 After a minute or two, the cluster will be in a hibernated state.
-This fact will be indicated by the red :material-stop-circle: icon, again at the left-hand side of the cluster row.
+This fact will be indicated by the :material-stop-circle: icon, again at the left-hand side of the cluster row.
 
-![Cluster in hibernation](assets/shoot-hiber-05.png)
+![Cluster in hibernation](assets/shoot-hiber-05_light.png#only-light)
+![Cluster in hibernation](assets/shoot-hiber-05_dark.png#only-dark)
 
 From this point on, and as long as the cluster is in hibernation, any attempt to access it, e.g., via `kubectl`, will fail.
 
 ## Waking up a cluster in hibernation
 
-To wake up a cluster in hibernation, click the orange :material-dots-horizontal-circle: icon at the right-hand side of its row.
+To wake up a cluster in hibernation, click the :material-dots-horizontal-circle: icon at the right-hand side of its row.
 From the pop-up menu that appears, select *Wake up Cluster*.
 
-![Wake up cluster](assets/shoot-wakeup-01.png)
+![Wake up cluster](assets/shoot-wakeup-01_light.png#only-light)
+![Wake up cluster](assets/shoot-wakeup-01_dark.png#only-dark)
 
 A big pop-up window labeled *About to wakeup a gardener shoot* appears, asking you to confirm that you want to wake up the cluster.
-Go ahead and click the red *Yes, Wakeup* button.
+Go ahead and click the *Yes, Wakeup* button.
 
-![Confirm cluster wake-up](assets/shoot-wakeup-02.png)
+![Confirm cluster wake-up](assets/shoot-wakeup-02_light.png#only-light)
+![Confirm cluster wake-up](assets/shoot-wakeup-02_dark.png#only-dark)
 
 The cluster will start waking up.
 Again, the animated icon at the left-hand side of the cluster row marks the progress.
 
-![Cluster is awaking](assets/shoot-wakeup-03.png)
+![Cluster is awaking](assets/shoot-wakeup-03_light.png#only-light)
+![Cluster is awaking](assets/shoot-wakeup-03_dark.png#only-dark)
 
 After a couple of minutes, the cluster will be fully awake.
-The fact will be indicated by the green :material-check-circle: icon at the left-hand side of the cluster row.
+The fact will be indicated by the :material-check-circle: icon at the left-hand side of the cluster row.
 
-![Cluster awake](assets/shoot-wakeup-04.png)
+![Cluster awake](assets/shoot-wakeup-04_light.png#only-light)
+![Cluster awake](assets/shoot-wakeup-04_dark.png#only-dark)
 
 From then on, the cluster will be fully operational and accessible again.
