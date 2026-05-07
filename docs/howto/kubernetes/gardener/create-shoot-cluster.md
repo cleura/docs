@@ -19,39 +19,45 @@ In {{k8s_management_service}} terminology, a Kubernetes cluster is called a **sh
 
 At the top right-hand side of the central pane, click *Create Kubernetes cluster*.
 
-![{{k8s_management_service}} page in {{gui}}](assets/create-shoot-01.png)
+![{{k8s_management_service}} page in {{gui}}](assets/create-shoot-01_light.png#only-light)
+![{{k8s_management_service}} page in {{gui}}](assets/create-shoot-01_dark.png#only-dark)
 
 A new pane named *Create {{k8s_management_service}} Shoot Cluster* slides over from the right-hand side of the browser.
 Type in a name for the new shoot cluster, and select a region.
 Also, select the version of Kubernetes the new cluster will be running.
-In the example below, we have chosen version 1.33.7.
 Please note the *Load balancer provider* parameter, which is already set.
 By turning on the setting below, which is by default disabled, you may enable high availability for the **control plane** of the new cluster.
 
-![Create {{k8s_management_service}} Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane](assets/create-shoot-02.png)
+![Create {{k8s_management_service}} Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane](assets/create-shoot-02_light.png#only-light)
+![Create {{k8s_management_service}} Shoot Cluster panel, showing options to type in a cluster name, select a region, set the Kubernetes version, and turn on HA for the control plane](assets/create-shoot-02_dark.png#only-dark)
 
 You should keep in mind that once you enable high availability for the control plane, you cannot disable it for that particular cluster.
 
-![Once you enable high availability for the control plane, you cannot disable it](assets/create-shoot-03.png)
+![Once you enable high availability for the control plane, you cannot disable it](assets/create-shoot-03_light.png#only-light)
+![Once you enable high availability for the control plane, you cannot disable it](assets/create-shoot-03_dark.png#only-dark)
 
 Next, you may accept the proposed network address (in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)) for the worker nodes, or type in the one you prefer.
 
-![Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer](assets/create-shoot-04.png)
+![Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer](assets/create-shoot-04_light.png#only-light)
+![Accept the proposed CIDR network address for the worker nodes or type in the CIDR network address you prefer](assets/create-shoot-04_dark.png#only-dark)
 
 Alternatively, reveal the drop-down menu at the right-hand side of *Network for worker nodes*.
 From the available menu items, choose a pre-existing network.
 Be sure to select one that has an assigned subnet and is connected to a router.
 
-![Select a pre-existing network](assets/create-shoot-05.png)
+![Select a pre-existing network](assets/create-shoot-05_light.png#only-light)
+![Select a pre-existing network](assets/create-shoot-05_dark.png#only-dark)
 
 Then, define a new subnet for the worker nodes by typing in a CIDR network address.
 If the new subnet overlaps with one of the subnets of the network you just selected, you will see an error message in red.
 
-![Try selecting a pre-existing CIDR for the worker nodes](assets/create-shoot-06.png)
+![Try selecting a pre-existing CIDR for the worker nodes](assets/create-shoot-06_light.png#only-light)
+![Try selecting a pre-existing CIDR for the worker nodes](assets/create-shoot-06_dark.png#only-dark)
 
 Instead, you should define a subnet that does not overlap with any of the subnets of your selected network.
 
-![Set a new, valid subnet for the worker nodes](assets/create-shoot-07.png)
+![Set a new, valid subnet for the worker nodes](assets/create-shoot-07_light.png#only-light)
+![Set a new, valid subnet for the worker nodes](assets/create-shoot-07_dark.png#only-dark)
 
 Now, scroll down a bit until you bring the *Worker Groups* section into full view.
 Make sure there is at least one defined.
@@ -66,51 +72,56 @@ this determines the number of CPU cores and the amount of RAM allocated to each 
 * *Autoscaler Max:* The maximum number of worker nodes the cluster automatically scales to, in case the current number of nodes cannot handle the deployed workload.
 * *Max Surge:* The maximum number of additional nodes to deploy in an autoscaling event.
 
-![Worker Group settings](assets/create-shoot-08.png)
+![Worker Group settings](assets/create-shoot-08_light.png#only-light)
+![Worker Group settings](assets/create-shoot-08_dark.png#only-dark)
 
 For a test cluster, feel free to leave each parameter at its default value.
 
 Scrolling a bit further down, you see that for each Worker Group you may add [*Labels*](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels), [*Annotations*](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations), or [*Taints*](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration).
 
-![Define Labels, Annotations, or Taints](assets/create-shoot-09.00.png)
+![Define Labels, Annotations, or Taints](assets/create-shoot-09_light.png#only-light)
+![Define Labels, Annotations, or Taints](assets/create-shoot-09_dark.png#only-dark)
 
 Each shoot cluster in {{brand}} has a maintenance window.
 Additionally, the operating system of the worker nodes can be automatically updated, and so can Kubernetes itself.
 Do not change anything regarding the maintenance window or the [updates](rolling-upgrades.md), for everything is already set for you.
 Also, do not bother with the *[Hibernation](hibernate-shoot-cluster.md) Schedule* for now.
 
-![Maintenance window and auto-updates](assets/create-shoot-09.01.png)
+![Maintenance window and auto-updates](assets/create-shoot-10_light.png#only-light)
+![Maintenance window and auto-updates](assets/create-shoot-10_dark.png#only-dark)
 
 By default, you can access your shoot clusters from anywhere on the internet.
 Still, you may choose to restrict cluster access, permitting it *only* from certain networks.
-The allowed networks are described in [CIDR&nbsp;notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation), and you can define one or more by clicking on the green *Set CIDRs...* button.
+The allowed networks are described in [CIDR&nbsp;notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation), and you can define one or more by clicking on the *Set CIDRs...* button.
 
-![You may optionally define networks to allow cluster access from](assets/create-shoot-09.02.png)
+![You may optionally define networks to allow cluster access from](assets/create-shoot-11_light.png#only-light)
+![You may optionally define networks to allow cluster access from](assets/create-shoot-11_dark.png#only-dark)
 
 In the example below, we only allow access from one Class C network, expressed in CIDR notation.
 
-![Define a Class C network, from which access to the cluster is allowed](assets/create-shoot-09.03.png)
+![Define a Class C network, from which access to the cluster is allowed](assets/create-shoot-12_light.png#only-light)
+![Define a Class C network, from which access to the cluster is allowed](assets/create-shoot-12_dark.png#only-dark)
 
 You can define more networks from which cluster access is allowed.
 Please keep in mind that, besides new shoot clusters, you can add or remove "allow networks" to or from existing clusters.
 
 When populating the list of allowed networks, include the {{ gui_management_service }} source IP address (`{{gui_management_service_ip}}/32`) to preserve [monitoring](#viewing-details-and-monitoring) functionality.
 
-![You can define more than one networks, from which access to the cluster is allowed](assets/create-shoot-09.04.png)
+![You can define more than one networks, from which access to the cluster is allowed](assets/create-shoot-13_light.png#only-light)
+![You can define more than one networks, from which access to the cluster is allowed](assets/create-shoot-13_dark.png#only-dark)
 
-When you are ready, click the green *Create* button at the bottom of the pane.
+When you are ready, click the *Create* button at the bottom of the pane.
 
-![About to create a new {{k8s_management_service}} Shoot Cluster](assets/create-shoot-10.png)
+![About to create a new {{k8s_management_service}} Shoot Cluster](assets/create-shoot-14_light.png#only-light)
+![About to create a new {{k8s_management_service}} Shoot Cluster](assets/create-shoot-14_dark.png#only-dark)
 
 In the list of clusters, you will see your new {{k8s_management_service}} shoot bootstrapping.
 The animated icon on the left-hand side of the cluster row marks the progress.
 Creating the cluster may take several minutes.
+Once your {{k8s_management_service}} cluster has successfully launched, a check mark (:material-check-circle:) will appear to the left of the cluster row.
 
-![Shoot cluster bootstrapping](assets/create-shoot-11.png)
-
-Once your {{k8s_management_service}} cluster has successfully launched, a green check mark (:material-check-circle:) will appear to the left of the cluster row.
-
-![Shoot cluster is ready](assets/create-shoot-12.png)
+![Shoot cluster is ready](assets/create-shoot-15_light.png#only-light)
+![Shoot cluster is ready](assets/create-shoot-15_dark.png#only-dark)
 
 ### A note on quotas
 
@@ -127,27 +138,30 @@ If necessary, be sure to request a quota increase via our [{{support}}](https://
 After the new shoot cluster finishes bootstrapping, you may click its row to bring all relevant details into view.
 For instance, click the *Details* tab to get networking information about the worker nodes.
 
-![Details regarding the new cluster](assets/create-shoot-13.png)
+![Details regarding the new cluster](assets/create-shoot-16_light.png#only-light)
+![Details regarding the new cluster](assets/create-shoot-16_dark.png#only-dark)
 
 Next, go to the *Monitoring* tab.
-There, you will notice two orange buttons:
+There, you will notice two buttons:
 one for launching [Prometheus](https://prometheus.io), and one for launching [Plutono](https://github.com/credativ/plutono).
 
-![Monitoring tab for launching Prometheus or Plutono](assets/create-shoot-14.png)
+![Monitoring tab for launching Prometheus or Plutono](assets/create-shoot-17_light.png#only-light)
+![Monitoring tab for launching Prometheus or Plutono](assets/create-shoot-17_dark.png#only-dark)
 
 As an example, we have clicked the button for Plutono.
 Before launching the dashboard, a pop-up window appears.
 This shows the default username (`admin`), and the automatically generated *masked* password.
-You get this pop-up every time you click on either of the orange buttons.
+You get this pop-up every time you click on either of the buttons.
 In any case, to copy the password into the clipboard, click the related button shown below.
-Then, click the orange button labeled *Open Dashboard*.
+Then, click the button labeled *Open Dashboard*.
 
-![Copy the Plutono password](assets/create-shoot-15.png)
+![Copy the Plutono password](assets/create-shoot-18_light.png#only-light)
+![Copy the Plutono password](assets/create-shoot-18_dark.png#only-dark)
 
 After typing in the default username and pasting the password, you get access to the Prometheus or Plutono dashboard for your shoot cluster.
 In the example below, we have the Plutono dashboard displaying graphical information regarding the cluster nodes.
 
-![Plutono dashboard displaying information about the worker nodes](assets/create-shoot-16.png)
+![Plutono dashboard displaying information about the worker nodes](assets/create-shoot-19.png)
 
 ## Interacting with your cluster
 
