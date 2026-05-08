@@ -3,28 +3,31 @@
 ??? note "Invite-only access"
     Access to {{brand_ai}} services is currently invite-only.
 
-Tokens are the basic units of text that an LLM processes.
-You can think of them as the fundamental building blocks LLMs use to process input and produce output.
+Tokens are the basic parts of text that LLMs process.
+Think of them as building blocks for LLMs.
 
 ## What they look like
 
 Depending on the [tokenization](https://en.wikipedia.org/wiki/Large_language_model#Tokenization) scheme an LLM uses, tokens are whole words, parts of words, or single characters.
 For example, the sentence "Colder is better!" may be tokenized as [`Colder`, `is`, `better`, `!`], while the sentence "Summer is overrated!" may be tokenized as [`Summer`, `is`, `over`, `rated`, `!`].
 
-A rough estimate is that a token is about 75% of an English word, but you should keep in mind that even this estimate varies significantly by language and text complexity.
+A token is about 75% of an English word.
+This varies by language and text type.
 
 ## Why they matter
 
-No LLM can process raw text.
-Instead, an LLM first converts _everything_ into tokens, and only then moves on to processing.
+LLMs cannot process raw text.
+They convert everything to tokens first.
 
-Any prompt you type is measured in tokens, and so is any answer you get back.
+Your prompts and answers are measured in tokens.
 
-The _context window_, which is the maximum amount of text an LLM can process in a single request, is also measured in tokens.
-A 128K context window, for example, means the combined input and output cannot exceed 128,000 tokens, which is roughly 96,000 English words.
+The *context window* is the maximum amount of text an LLM can handle.
+It is measured in tokens.
+For example, a 128K window means input and output cannot go over 128,000 tokens.
+That is about 96,000 English words.
 
-The way tokenization is implemented affects the efficiency of an LLM.
-More specifically, it influences the way an LLM processes text, and thus how accurately it understands word boundaries and meaning.
+Tokenization affects how well LLMs work.
+It changes how they understand word boundaries and meaning.
 
-Finally, tokens play a key role in cost calculations;
-LLM APIs usually charge based on token usage, both for _input_ tokens (your prompts) and _output_ tokens (the responses you get back).
+Tokens affect cost.
+LLM APIs usually charge for input and output tokens.
