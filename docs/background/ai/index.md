@@ -1,5 +1,5 @@
 ---
-description: Cleura AI enables organisations to deploy and consume large language models or make use of speech recognition services, all without managing the underlying infrastructure complexity.
+description: Cleura AI lets organisations use large language models or speech recognition without managing infrastructure.
 ---
 
 # {{brand_ai}}
@@ -12,48 +12,49 @@ description: Cleura AI enables organisations to deploy and consume large languag
 Large Language Models ([LLMs](https://en.wikipedia.org/wiki/Large_language_model)) represent a specific subset of artificial intelligence ([AI](https://en.wikipedia.org/wiki/Artificial_intelligence)), focused on processing and generating human language.
 Unlike broader AI systems that may handle computer vision, robotics, or general pattern recognition, LLMs specialise in text-based tasks including natural language "understanding", generation, translation, and reasoning.
 
-With {{brand_ai}} you can have managed access to such specialised models.
-At the same time, you maintain full control over data residency and compliance requirements.
+{{brand_ai}} gives you access to these models.
+You control data location and legal rules.
 
 {{brand_ai}} falls into the broader category of AI-as-a-Service offerings.
 It eliminates the operational overhead of model deployment, version management, and infrastructure scaling.
 At the same time, {{brand_ai}} is compliant with data sovereignty requirements, ensuring all inference processing occurs within EU data centres.
 
-{{brand_ai}} operates on a flexible resource allocation architecture, built around **shared and on-demand capacity.**
+{{brand_ai}} uses shared and on-demand resources.
 
 ## Shared and on-demand capacity
 
-On-demand AI utilises a *shared* pool of model instances, managed by {{company}}.
-When you send an inference request via the API, the system
+On-demand AI uses shared model instances from {{company}}.
+When you use the API, it
 
-* validates the API key and checks the corresponding model access permissions,
-* routes the request to an available instance of the requested model,
-* processes the inference request, optionally streaming the results,
-* returns the result (unless it is already streamed) and any requested usage data,
-* purges the content of the actual input and response from the GPUs and system memory,
-* persists *only* request metadata required for billing.
+* checks your API key and model access,
+* sends your request to an available model,
+* processes your request, streaming results if needed,
+* returns results and usage data,
+* removes input and response from memory,
+* keeps only metadata for billing.
 
 Model usage is recorded on a per-request basis, rather than by tracking resource allocation over time.
 Even though multiple customers may be utilising the same model instance, security layers always guarantee complete request isolation.
 No crosstalk between concurrent requests is possible, and no data containing the content of any request is ever stored after the request has been completed.
 
-Models are pre-loaded onto pool GPUs based on usage *patterns*, to minimise cold-start latency.
+Models load on GPUs based on usage patterns to reduce wait times.
 
 ## API access and authentication
 
 {{brand_ai}} provides an [OpenAI](https://en.wikipedia.org/wiki/OpenAI)-compatible API, accessible through standard HTTPS endpoints.
 Customer authentication uses API keys generated and managed via the {{gui}}.
 
-The OpenAI-compatible API key features include:
+OpenAI-compatible API keys have:
 
-* Optional expiry dates for time-limited access,
-* IP range restrictions for network-level security,
-* Model access controls,
-* Usage tracking per key for billing and audit purposes.
+* Optional expiry dates,
+* IP range limits,
+* Model access control,
+* Usage tracking for billing.
 
-API keys are tied to specific {{company}} customer accounts, enabling granular tracking of consumption across projects, teams, or applications.
+API keys connect to {{company}} accounts.
+This tracks usage by projects, teams, or applications.
 
-Please find here all the details regarding the available OpenAI-compatible API paths.
+For API details, see the [AI reference section](../../reference/ai/index.md).
 
 ## Supported models
 
@@ -75,12 +76,12 @@ The way data is handled guarantees that
 
 What follows are the metadata that are logged per inference request:
 
-* Timestamps of request initiation and completion,
-* length (in seconds) of audio content uploaded as part of an inference request,
-* prompt tokens count,
-* completion tokens count,
-* source IP address, and
+* Request start and end times,
+* Audio length in seconds,
+* Prompt tokens count,
+* Completion tokens count,
+* Source IP address, and
 * API key identifier.
 
-The logged metadata enable usage billing and security audit trails, whilst preserving content privacy.
-The API key identifiers link consumption to customer accounts for invoicing.
+This metadata allows billing and security checks.
+API key links usage to customer accounts.
