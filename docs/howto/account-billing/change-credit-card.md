@@ -13,7 +13,8 @@ Click on _Settings_, and then on _Manage Invoice Settings._
 In the central pane, named _Invoice Settings,_ notice the three tabs at the top.
 Click on the one labeled _Credit Cards,_ and then on the green _Add New Card_ button below.
 
-![Locating the button for adding a new credit card](assets/add-new-cc.png)
+![Locating the button for adding a new credit card](assets/add-new-cc_light.png#only-light)
+![Locating the button for adding a new credit card](assets/add-new-cc_dark.png#only-dark)
 
 You are redirected to a PayEx Sverige AB page, where you enter your credit card information.
 When you are done, click the black _Confirm_ button.
@@ -27,13 +28,15 @@ Depending on your bank, you might have to use whatever mechanism is provided to 
 
 Once the new credit card is added, it will be visible in the _Credit Cards_ tab.
 
-![New credit card successfully added](assets/new-cc-added.png)
+![New credit card successfully added](assets/new-cc-added_light.png#only-light)
+![New credit card successfully added](assets/new-cc-added_dark.png#only-dark)
 
 ## Changing a credit card
 
 If you want to use another credit card, click the green _Add New Card_ button below the existing card.
 
-![Change an existing credit card](assets/change-cc.png)
+![Change an existing credit card](assets/change-cc_light.png#only-light)
+![Change an existing credit card](assets/change-cc_dark.png#only-dark)
 
 Configure the new card as you did when adding the existing card.
 When you are done adding the new one, you will realize that the old one is no longer listed under _Credit Cards._
