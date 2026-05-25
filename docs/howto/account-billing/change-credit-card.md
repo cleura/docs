@@ -11,7 +11,7 @@ You must be logged in to your [Cleura Cloud](https://{{gui_domain}}) account to
 In the {{gui}}, make sure the vertical pane on the left is visible.
 Click on _Settings_, and then on _Manage Invoice Settings._
 In the central pane, named _Invoice Settings,_ notice the three tabs at the top.
-Click on the one labeled _Credit Cards,_ and then on the green _Add New Card_ button below.
+Click on the one labeled _Credit Cards,_ and then on the _Add New Card_ button below.
 
 ![Locating the button for adding a new credit card](assets/add-new-cc_light.png#only-light)
 ![Locating the button for adding a new credit card](assets/add-new-cc_dark.png#only-dark)
@@ -33,7 +33,7 @@ Once the new credit card is added, it will be visible in the _Credit Cards_ tab.
 
 ## Changing a credit card
 
-If you want to use another credit card, click the green _Add New Card_ button below the existing card.
+If you want to use another credit card, click the _Add New Card_ button below the existing card.
 
 ![Change an existing credit card](assets/change-cc_light.png#only-light)
 ![Change an existing credit card](assets/change-cc_dark.png#only-dark)
