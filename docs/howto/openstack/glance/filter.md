@@ -8,17 +8,22 @@ You can use either the `openstack` command-line interface (CLI), or the {{gui}},
 
     Images are sorted by their Operating System on the *Create a Server*  menu.
 
-    ![A panel displaying the images sorted by operating system during server creation.](assets/image-folders-create-server.png)
+    ![A panel displaying the images sorted by operating system during server creation.](assets/image-folders-create-server_light.png#only-light)
+    ![A panel displaying the images sorted by operating system during server creation.](assets/image-folders-create-server_dark.png#only-dark)
 
-    ![A panel displaying Rocky images when user descends to rocky folder on create a server screen.](assets/image-rocky-list-create-server.png)
+    ![A panel displaying Ubuntu images when user descends to ubuntu folder on create a server screen.](assets/image-ubuntu-list-create-server_light.png#only-light)
+    ![A panel displaying Ubuntu images when user descends to ubuntu folder on create a server screen.](assets/image-ubuntu-list-create-server_dark.png#only-dark)
 
     ## On the Images tab
 
     You can also see the full list of images in the *Images → Public Images* menu item.
     On this page you can filter images based on their name, UUID or even tags.
 
-    ![A public images panel that uses filtering of images by name to show all Rocky images in all regions.](assets/image-rocky-list-public-images.png)
-    ![A public images panel that uses filtering of images by os_version tag to show all images of version 9 in all regions.](assets/image-os_version-9-list-public-images.png)
+    ![A public images panel that uses filtering of images by name to show all Ubuntu images in all regions.](assets/image-ubuntu-list-public-images_light.png#only-light)
+    ![A public images panel that uses filtering of images by name to show all Ubuntu images in all regions.](assets/image-ubuntu-list-public-images_dark.png#only-dark)
+
+    ![A public images panel that uses filtering of images by os_version tag to show all images of version containing "2" in all regions.](assets/image-os_version-2-list-public-images_light.png#only-light)
+    ![A public images panel that uses filtering of images by os_version tag to show all images of version containing "2" in all regions.](assets/image-os_version-2-list-public-images_dark.png#only-dark)
 
 === "OpenStack CLI"
 
