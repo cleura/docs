@@ -46,26 +46,30 @@ We will also need a listener and a pool, but first things first.
     You will notice several rounded boxes on that pane, each for defining, configuring, and instantiating a different {{brand}} object.
     Go ahead and click the _Load Balancer_ box.
 
-    ![Create new object](assets/shot-01.png)
+    ![Create new object](assets/shot-01_light.png#only-light)
+    ![Create new object](assets/shot-01_dark.png#only-dark)
 
     A new pane titled _Create a Load Balancer_ will slide over.
     At the top, type in a name for the new load balancer and select one of the available regions.
     Optionally, type in a description.
 
-    ![Set name, region, and description for the new LB](assets/shot-02.png)
+    ![Set name, region, and description for the new LB](assets/shot-02_light.png#only-light)
+    ![Set name, region, and description for the new LB](assets/shot-02_dark.png#only-dark)
 
     In the same pane, scroll down a bit if you have to and activate the _Subnet_ radio button.
     Then, from the _Subnet_ dropdown menu below, select an appropriate subnet for the new load balancer to move in front of.
     In our example, the two test servers we have are members of the `network-{{api_region|lower}}` internal network, and `subnet-{{api_region|lower}}` is the name of the corresponding subnet.
-    Click the green _Create_ button below to instantiate the new load balancer.
+    Click the _Create_ button below to instantiate the new load balancer.
 
-    ![Select a subnet for the new LB](assets/shot-03.png)
+    ![Select a subnet for the new LB](assets/shot-03_light.png#only-light)
+    ![Select a subnet for the new LB](assets/shot-03_dark.png#only-dark)
 
     The creation of the new load balancer starts and, unless something goes wrong, finishes successfully in a minute or so.
     For a view of the load balancer, make sure the left-hand side vertical pane of the {{gui}} is fully visible, click on the _Networking_ category to expand it, and then click once more on the _Load Balancers_ option.
-    In the main area of the {{gui}}, select the new load balancer, click the three-dot icon on the right, and select _View details_ from the pop-up menu that appears.
+    In the main area of the {{gui}}, select the new load balancer, click the :material-dots-horizontal-circle: icon on the right, and select _View details_ from the pop-up menu that appears.
 
-    ![View the newly created LB](assets/shot-04.png)
+    ![View the newly created LB](assets/shot-04_light.png#only-light)
+    ![View the newly created LB](assets/shot-04_dark.png#only-dark)
 === "OpenStack CLI"
     To create your load balancer, type something like this:
 
@@ -128,27 +132,31 @@ The load balancer you instantiated has no listener, so let us see how you can eq
 === "{{gui}}"
     Looking at the detailed view of the new load balancer, you see three tabs: _Details_, _Listeners_, and _Pools_.
     Click the _Listeners_ tab and notice the message: "No Listeners for this LoadBalancer".
-    Time to create one, so click the green button labeled _Create a Listener_.
+    Time to create one, so click the button labeled _Create a Listener_.
 
-    ![Create a listener](assets/shot-05.png)
+    ![Create a listener](assets/shot-05_light.png#only-light)
+    ![Create a listener](assets/shot-05_dark.png#only-dark)
 
     From the right-hand side of the {{gui}}, a pane named _Create a Listener_ slides over.
     Type in a name for the new listener --- and optionally a description.
 
-    ![Set name and description for the new listener](assets/shot-06.png)
+    ![Set name and description for the new listener](assets/shot-06_light.png#only-light)
+    ![Set name and description for the new listener](assets/shot-06_dark.png#only-dark)
 
     Further down, from the _Protocol_ dropdown menu, select the protocol the listener will be paying attention to.
     Since you are setting up a TCP load balancer, the protocol for the listener will also have to be TCP.
     Additionally, type in the listening port.
     The load balancer will be redirecting connections to a couple of servers, which listen for connections on port 61234/TCP, so it makes sense ---though it is not necessary--- for the load balancer to use that same listening port.
     Since you have not yet defined a pool, ignore the _Default pool_ dropdown menu for now.
-    Instead, go ahead and click the green _Create_ button.
+    Instead, go ahead and click the _Create_ button.
 
-    ![Select protocol and set port](assets/shot-07.png)
+    ![Select protocol and set port](assets/shot-07_light.png#only-light)
+    ![Select protocol and set port](assets/shot-07_dark.png#only-dark)
 
     The listener will be created in no time, and you will be able to see its characteristics in the _Listeners_ tab of your load balancer detailed view.
 
-    ![Listener successfully created](assets/shot-08.png)
+    ![Listener successfully created](assets/shot-08_light.png#only-light)
+    ![Listener successfully created](assets/shot-08_dark.png#only-dark)
 === "OpenStack CLI"
     Create a listener for your load balancer like this:
 
@@ -221,29 +229,34 @@ For our load balancer to work, we must create a pool and explicitly list its mem
 
 === "{{gui}}"
     With the detailed view of the load balancer expanded, click the _Pools_ tab.
-    You will notice the message "No pools for this LoadBalancer", so click the green _Create a Pool_ button.
+    You will notice the message "No pools for this LoadBalancer", so click the _Create a Pool_ button.
 
-    ![Create a pool](assets/shot-09.png)
+    ![Create a pool](assets/shot-09_light.png#only-light)
+    ![Create a pool](assets/shot-09_dark.png#only-dark)
 
     A new pane named _Create a Pool_ slides over.
     First, type in a name for the new pool.
     For the _Algorithm_, make sure to select *ROUND_ROBIN*.
     Since you are configuring a TCP load balancer, set the _Protocol_ to _TCP_.
 
-    ![Type in name, set algorithm and protocol](assets/shot-10.png)
+    ![Type in name, set algorithm and protocol](assets/shot-10_light.png#only-light)
+    ![Type in name, set algorithm and protocol](assets/shot-10_dark.png#only-dark)
 
     A little bit further down the pane, there is the _Listener_ dropdown menu; select the one you created in the previous step.
-    Leave the _Session persistence_ parameter as it is, and create your pool with a click on the green _Create_ button.
+    Leave the _Session persistence_ parameter as it is, and create your pool with a click on the _Create_ button.
 
-    ![Select listener, create pool](assets/shot-11.png)
+    ![Select listener, create pool](assets/shot-11_light.png#only-light)
+    ![Select listener, create pool](assets/shot-11_dark.png#only-dark)
 
     The pool is instantaneously available; as you can see, it has zero members and one listener (the one you created in the previous step).
 
-    ![Zero members, one listener](assets/shot-12.png)
+    ![Zero members, one listener](assets/shot-12_light.png#only-light)
+    ![Zero members, one listener](assets/shot-12_dark.png#only-dark)
 
     Notice that the listener already knows about the new pool, even though you did not explicitly mention it.
 
-    ![The listener knows](assets/shot-13.png)
+    ![The listener knows](assets/shot-13_light.png#only-light)
+    ![The listener knows](assets/shot-13_dark.png#only-dark)
 === "OpenStack CLI"
     To create a pool named `mylb-pool` that distributes incoming TCP connections to its members in a round-robin fashion from the listener named `mylb-listener`, type this command:
 
@@ -303,28 +316,33 @@ For our load balancer to work, we must create a pool and explicitly list its mem
 The pool you created has no members, so it is time to populate it.
 
 === "{{gui}}"
-    In the detailed view of your load balancer, go to the _Pools_ tab and click the bulleted-list icon.
+    In the detailed view of your load balancer, go to the _Pools_ tab and click the :material-format-list-bulleted: icon.
 
-    ![Populate the pool](assets/shot-14.png)
+    ![Populate the pool](assets/shot-14_light.png#only-light)
+    ![Populate the pool](assets/shot-14_dark.png#only-dark)
 
     A new pane titled _Modify Pool Members_ appears, listing all the servers that share the same region with the load balancer.
     In our example, there are three servers.
-    We created `srv-lbaas-1` and `srv-lbaas-2` to test the load balancer, so now we click on the corresponding plus-sign icons to add those to the pool.
+    We created `srv-lbaas-1` and `srv-lbaas-2` to test the load balancer, so now we click on the corresponding :material-plus: icons to add those to the pool.
 
-    ![Add members](assets/shot-15.png)
+    ![Add members](assets/shot-15_light.png#only-light)
+    ![Add members](assets/shot-15_dark.png#only-dark)
 
     You may have noticed that the listening port of each server we added is by default 80, but we want port 61234.
-    To change the listening port of a server, just click the corresponding notepad-and-pen icon.
+    To change the listening port of a server, just click the corresponding :material-pencil-box-outline: icon.
 
-    ![Modify ports](assets/shot-16.png)
+    ![Modify ports](assets/shot-16_light.png#only-light)
+    ![Modify ports](assets/shot-16_dark.png#only-dark)
 
-    To confirm the changes, click the green _Update_ button.
+    To confirm the changes, click the _Update_ button.
 
-    ![Apply changes to pool](assets/shot-17.png)
+    ![apply changes to pool](assets/shot-17_light.png#only-light)
+    ![apply changes to pool](assets/shot-17_dark.png#only-dark)
 
     At this point, the load balancer should have its listener plus a pool with two members.
 
-    ![Pool is populated](assets/shot-18.png)
+    ![Pool is populated](assets/shot-18_light.png#only-light)
+    ![Pool is populated](assets/shot-18_dark.png#only-dark)
 === "OpenStack CLI"
     Both our test servers are in the `subnet-{{api_region|lower}}` subnet, one of them has IP `10.15.25.105`, and the other one has IP `10.15.25.236`.
     To add those two servers in pool `mylb-pool`, type:
@@ -415,29 +433,33 @@ This makes it reachable from other servers in the same subnet but not from the I
 You probably want the load balancer to be reachable from anywhere, meaning you have to equip it with a floating IP.
 
 === "{{gui}}"
-    While viewing your load balancer, click the three-dot icon on the right.
+    While viewing your load balancer, click the :material-dots-horizontal-circle: icon on the right.
     From the pop-up menu that appears, select _Modify Load Balancer_.
 
-    ![Modify load balancer](assets/shot-19.png)
+    ![Modify load balancer](assets/shot-19_light.png#only-light)
+    ![Modify load balancer](assets/shot-19_dark.png#only-dark)
 
     The _Modify Load Balancer_ pane appears.
     For the _Floating IP_ option, select _Create and attach IP_.
 
-    ![Create and attach floating IP](assets/shot-20.png)
+    ![Create and attach floating IP](assets/shot-20_light.png#only-light)
+    ![Create and attach floating IP](assets/shot-20_dark.png#only-dark)
 
     A new pane slides over, named _Create a Floating IP_.
     For the _Region_ parameter, select the one the load balancer resides in.
     Select an external network for the _External Network_ parameter.
     For the _Assign to_ parameter, make sure you choose _Load Balancer_.
-    In our example, there's only one load balancer in the region we are working in, so the parameter _LoadBalancer_ below is automaticlally set for us.
-    To finalize the assignment, click the green _Create and Assign_ button.
+    In our example, there's only one load balancer in the region we are working in, so the parameter _Assign To_ is already set for us.
+    To finalize the assignment, click the _Create and Assign_ button.
 
-    ![Configure attachment](assets/shot-21.png)
+    ![Configure attachment](assets/shot-21_light.png#only-light)
+    ![Configure attachment](assets/shot-21_dark.png#only-dark)
 
     As you may see, your load balancer now has a floating IP.
     You can now use that to test the balancer and make sure it works as expected.
 
-    ![Floating IP attached to load balancer](assets/shot-22.png)
+    ![Floating IP attached to load balancer](assets/shot-22_light.png#only-light)
+    ![Floating IP attached to load balancer](assets/shot-22_dark.png#only-dark)
 === "OpenStack CLI"
     First, create a new floating IP:
 
@@ -551,25 +573,29 @@ Of course, whenever an inaccessible service gets accessible again, the load bala
     In the detailed view of your load balancer, pull up the _Pools_ tab.
     In the _Health Monitor_ column there is a "0", for the pool has no health monitor yet.
 
-    ![There is no health monitor](assets/shot-23.png)
+    ![There is no health monitor](assets/shot-23_light.png#only-light)
+    ![There is no health monitor](assets/shot-23_dark.png#only-dark)
 
-    To add a health monitor, click the notepad-and-pen icon.
+    To add a health monitor, click the :material-pencil-box-outline: icon.
     A pane titled _Modify Pool_ slides over.
     Scroll down if you have to, and stop when the _Health Monitor_ section is fully visible.
-    You will see a message saying, "No health monitor created", so click the green _Create a Healthmonitor_ button to create one.
+    You will see a message saying, "No health monitor created", so click the _Create a Healthmonitor_ button to create one.
 
-    ![Create new health monitor](assets/shot-24.png)
+    ![Create new health monitor](assets/shot-24_light.png#only-light)
+    ![Create new health monitor](assets/shot-24_dark.png#only-dark)
 
     Pick a name for the new health monitor, and set its type to TCP.
     That is the connection protocol that will be used to determine whether pool member services are accessible.
-    Finalize your choices with a click on the green _Create_ button.
+    Finalize your choices with a click on the _Create_ button.
 
-    ![Define health monitor characteristics](assets/shot-25.png)
+    ![Define health monitor characteristics](assets/shot-25_light.png#only-light)
+    ![Define health monitor characteristics](assets/shot-25_dark.png#only-dark)
 
     You will then see that in the _Health Monitor_ column there is a "1" --- and that means the monitor is active.
     To see real-time information regarding pool members operating status, click over "1".
 
-    ![Check members operating status](assets/shot-26.png)
+    ![Check members operating status](assets/shot-26_light.png#only-light)
+    ![Check members operating status](assets/shot-26_dark.png#only-dark)
 === "OpenStack CLI"
     To create a health monitor for pool `mylb-pool` of load balancer `mylb`, type something like the following:
 
@@ -648,7 +674,8 @@ During our testing, we killed `ncat` running on `srv-lbaas-1`, and then took a l
     After a second or two, you will see information regarding all pool members.
     Pay attention to the _Operating Status_ column, where you can see the status of any of the pool members.
 
-    ![Operating status of all pool members](assets/shot-27.png)
+    ![Operating status of all pool members](assets/shot-27_light.png#only-light)
+    ![Operating status of all pool members](assets/shot-27_dark.png#only-dark)
 
 === "OpenStack CLI"
     To check the operating status of any of the pool members of your load balancer, type something like this:
