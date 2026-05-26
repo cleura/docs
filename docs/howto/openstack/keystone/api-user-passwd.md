@@ -13,18 +13,21 @@ You do so using the {{gui}}, or the OpenStack CLI.
 
     All of your OpenStack users, categorized by {{brand}} region, appear on the main pane.
 
-    ![All OpenStack users](assets/api-user-passwd-shot-01.png)
+    ![All OpenStack users](assets/api-user-passwd-shot-01_light.png#only-light)
+    ![All OpenStack users](assets/api-user-passwd-shot-01_dark.png#only-dark)
 
-    Locate the OpenStack user you wish to change their password, click the orange :material-dots-horizontal-circle: icon at the right of its row, and from the drop-down menu that appears, select _Modify Openstack user_.
+    Locate the OpenStack user you wish to change their password, click the :material-dots-horizontal-circle: icon at the right of its row, and from the drop-down menu that appears, select _Modify Openstack user_.
 
-    ![Modify OpenStack user](assets/api-user-passwd-shot-02.png)
+    ![Modify OpenStack user](assets/api-user-passwd-shot-02_light.png#only-light)
+    ![Modify OpenStack user](assets/api-user-passwd-shot-02_dark.png#only-dark)
 
     A vertical pane, titled _Modify Openstack User_, slides over from the right-hand side of the browser window.
     Notice the text field labeled _Password_.
     There, type-in a new password for the OpenStack user.
-    When ready, confirm with a click on the green _Update_ button.
+    When ready, confirm with a click on the _Update_ button.
 
-    ![Change password of OpenStack user](assets/api-user-passwd-shot-03.png)
+    ![Change password of OpenStack user](assets/api-user-passwd-shot-03_light.png#only-light)
+    ![Change password of OpenStack user](assets/api-user-passwd-shot-03_dark.png#only-dark)
 === "OpenStack CLI"
     First, source the RC file of the OpenStack user you wish to change their password.
     Then, change it as follows:
