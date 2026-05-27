@@ -33,27 +33,32 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     You will notice several rounded boxes, each one for defining, configuring, and instantiating a different {{brand}} object.
     Go ahead and click the _VPN_ box.
 
-    ![Create new object](assets/vpnaas/shot-01.png)
+    ![Create new object](assets/vpnaas/shot-01_light.png#only-light)
+    ![Create new object](assets/vpnaas/shot-01_dark.png#only-dark)
 
     A new pane titled _Create a VPN Service_ will slide over.
     Between the two boxes, click the one titled _Quick (Guided) Connect_.
 
-    ![Quick connect](assets/vpnaas/shot-02.png)
+    ![Quick connect](assets/vpnaas/shot-02_light.png#only-light)
+    ![Quick connect](assets/vpnaas/shot-02_dark.png#only-dark)
 
     Type in a name for the new site-to-site VPN connection.
 
-    ![Connection name](assets/vpnaas/shot-03.png)
+    ![Connection name](assets/vpnaas/shot-03_light.png#only-light)
+    ![Connection name](assets/vpnaas/shot-03_dark.png#only-dark)
 
     Select a region, project, and network for each of the two data centers involved.
 
-    ![Data center choices](assets/vpnaas/shot-04.png)
+    ![Data center choices](assets/vpnaas/shot-04_light.png#only-light)
+    ![Data center choices](assets/vpnaas/shot-04_dark.png#only-dark)
 
     Look at the pre-shared key and, optionally, expand the _Advanced Options_ section to see all presets.
     You do not have to change anything there.
-    When you are ready, click the green _Create_ button.
+    When you are ready, click the _Create_ button.
     The VPN connection between the two regions will be established in a few seconds.
 
-    ![Create](assets/vpnaas/shot-05.png)
+    ![Create](assets/vpnaas/shot-05_light.png#only-light)
+    ![Create](assets/vpnaas/shot-05_dark.png#only-dark)
 === "OpenStack CLI"
     First, you need to have the RC files of the two regions you will be connecting.
     In the example that follows, we demonstrate establishing a site-to-site connection between regions `fra1` and `kna1`.
@@ -422,12 +427,14 @@ No matter if you use the {{gui}} or the OpenStack CLI, you may at any time list 
     From the available options, click _VPN Services_ again.
     You will see two VPN connections in the main pane, each from one region to the other.
 
-    ![Create](assets/vpnaas/shot-06.png)
+    ![Create](assets/vpnaas/shot-06_light.png#only-light)
+    ![Create](assets/vpnaas/shot-06_dark.png#only-dark)
 
-    For more information regarding a specific connection, click the corresponding three-dot icon (right-hand side) and select _View details_.
+    For more information regarding a specific connection, click the :material-dots-horizontal-circle: icon (right-hand side) and select _View details_.
     Then, you can glance over all the details regarding, for example, the connection status and public IP address.
 
-    ![Create](assets/vpnaas/shot-07.png)
+    ![Create](assets/vpnaas/shot-07_light.png#only-light)
+    ![Create](assets/vpnaas/shot-07_dark.png#only-dark)
 === "OpenStack CLI"
     You can list all IPSec VPN connections working from any of the two regions involved.
     See, for example, the view from `fra1`:
