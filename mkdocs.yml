@@ -15,7 +15,7 @@ extra:
     domain: docs.cleura.cloud
     provider: plausible
   api_domain: "citycloud.com"
-  api_region: "Sto1HS"
+  api_region: "Compliant"
   brand: "Cleura Cloud"
   brand_ai: "Cleura AI"
   brand_compliant: "Cleura Compliant Cloud"
@@ -87,7 +87,7 @@ plugins:
       on_undefined: strict
   - mike:
       alias_type: symlink
-      canonical_version: sto1hs
+      canonical_version: compliant
       version_selector: true
   - privacy
   - search
