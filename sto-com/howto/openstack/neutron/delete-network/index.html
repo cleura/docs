@@ -7422,7 +7422,8 @@ Additionally, to use the OpenStack CLI, make sure to <a href="../../../getting-s
 <p>In the vertical pane on the left-hand side of the dashboard, expand the <em>Networking</em> section and click <em>Networks</em>.
 In the central pane of the page, you will see all networks in all regions you have access to.
 For the purposes of this guide, let us assume you no longer need network <code>carmacks</code>, so now you want to delete it.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Listing networks" src="../assets/del-net/shot-01.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Listing networks" src="../assets/del-net/shot-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Listing networks" src="../assets/del-net/shot-01_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To list all available networks in the region you are currently in, type the following:</p>
@@ -7443,17 +7444,29 @@ For the purposes of this guide, let us assume you no longer need network <code>c
 <p>Let us assume you wish to delete the network named <code>carmacks</code>.</p>
 <h2 id="determining-component-dependencies">Determining component dependencies</h2>
 <p>If the network to be deleted has a subnet component — and most likely it will have —, you will first have to delete the subnet before deleting the network.
-If, in addition, the network is behind a router (figurately speaking), then before deleting the subnet, you will have to disconnect it from the router.
+If, in addition, the subnet is behind a router (figurately speaking), then before deleting the subnet, you will have to disconnect it from the router.
 Finally, you will have the option to delete the router also.
 Let us see what the situation is with network <code>carmacks</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>For more information on <code>carmacks</code>, click the three-dot icon (right-hand side of the network row) and select <em>View details</em>.
+<p>For more information on <code>carmacks</code>, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon (right-hand side of the network row) and select <em>View details</em>.
 Four tabs immediately appear below; <em>Details</em>, <em>Ports</em>, <em>Subnets</em>, and <em>Routers</em>.
 Looking at the <em>Details</em> tab, it is clear that network <code>carmacks</code> has a subnet and is behind a router.
 You may click on tabs <em>Subnets</em> and <em>Routers</em>, to see more information regarding the network subnet and the router in front of the network.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network details" src="../assets/del-net/shot-02.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network details" src="../assets/del-net/shot-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network details" src="../assets/del-net/shot-02_dark.png#only-dark"></a></p>
+<details>
+<summary>Automatically deleting networks with all their dependencies</summary>
+<p>There are cases where you know exactly all subnets in a network beforehand, and also any router in front of the network’s subnets.
+If, in addition, you know no other resources are depending on the network, its subnets, and any subnet router, you may try automatically deleting the network and all related components in one go.</p>
+<p>Select the network to delete, and in the pop-up window that appears, before clicking the <em>Yes, Delete</em> button, make sure you activate the <em>Use cascade delete</em> option.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Use cascade delete to automatically delete a network and all related components" src="../assets/del-net/smart-delete_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Use cascade delete to automatically delete a network and all related components" src="../assets/del-net/smart-delete_dark.png#only-dark"></a></p>
+<p>The network and its subnets, including any subnet routers, will be deleted.
+But if there is any resource still using the network, any of its subnets, or any subnet router, the cascading delete will fail.
+In that case, you will have to do some manual work, like in the examples we provide here.</p>
+</details>
 </div>
 <div class="tabbed-block">
 <p>To quickly check whether network <code>carmacks</code> has a subnet or not, type:</p>
@@ -7553,38 +7566,49 @@ Then, you will move on to deleting the subnet and the network, and after that, y
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Go to the <em>Subnets</em> tab of the <code>carmacks</code> network, and click the gray notepad-and-pen icon (at the left of the red circle-with-trashcan icon).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network subnets" src="../assets/del-net/shot-03.png"></a></p>
+<p>Go to the <em>Subnets</em> tab of the <code>carmacks</code> network, and click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18.13 12 1.26-1.26c.44-.44 1-.68 1.61-.74V9l-6-6H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h6v-1.87l.13-.13H5V5h7v7zM14 4.5l5.5 5.5H14zm5.13 9.33 2.04 2.04L15.04 22H13v-2.04zm3.72.36-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72"></path></svg></span> icon (at the left of the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m4 6v7a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-7zm-2.5-4 1 1H17v2H7V7h2.5l1-1z"></path></svg></span> icon).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network subnets" src="../assets/del-net/shot-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network subnets" src="../assets/del-net/shot-03_dark.png#only-dark"></a></p>
 <p>A vertical pane titled <em>Modify Subnet</em> will slide over from the right-hand side of the page. Pay attention to the <em>Router Connections</em> section.
 You will notice an active connection to the router.
-Click the red circle-with-line-over-chainlink icon to deactivate the connection, effectively disconnecting the subnet from the router.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disconnect subnet" src="../assets/del-net/shot-04.png"></a></p>
+Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.43-.98 2.63-2.31 3l1.46 1.44C20.88 15.61 22 13.95 22 12a5 5 0 0 0-5-5m-1 4h-2.19l2 2H16zM2 4.27l3.11 3.11A4.99 4.99 0 0 0 2 12a5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1 0-1.59 1.21-2.9 2.76-3.07L8.73 11H8v2h2.73L13 15.27V17h1.73l4.01 4L20 19.74 3.27 3z"></path></svg></span> icon to deactivate the connection, effectively disconnecting the subnet from the router.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disconnect subnet" src="../assets/del-net/shot-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disconnect subnet" src="../assets/del-net/shot-04_dark.png#only-dark"></a></p>
 <p>A pop-up window will appear, asking if you really want to go ahead with the disconnection.
-Just click the red <em>Yes, Remove interface</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remove interface" src="../assets/del-net/shot-05.png"></a></p>
-<p>After disconnecting the subnet, click the red circle-and-trashcan icon to delete it.
+Just click the <em>Yes, Remove interface</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remove interface" src="../assets/del-net/shot-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remove interface" src="../assets/del-net/shot-05_dark.png#only-dark"></a></p>
+<p>After disconnecting the subnet, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m4 6v7a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-7zm-2.5-4 1 1H17v2H7V7h2.5l1-1z"></path></svg></span> icon to delete it.
 Once more, a pop-up will appear asking for confirmation.
-Click the red <em>Yes, Delete</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-06.png"></a></p>
+Click the <em>Yes, Delete</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-06_dark.png#only-dark"></a></p>
 <p>As soon as you delete the subnet, in the <em>Subnets</em> tab you will see the message <em>No subnets found</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No subnets" src="../assets/del-net/shot-07.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No subnets" src="../assets/del-net/shot-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No subnets" src="../assets/del-net/shot-07_dark.png#only-dark"></a></p>
 <p>You can now delete the network.
-Click the three-dot icon (right-hand side of the network row) and select <em>Delete Network</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Carmacks" src="../assets/del-net/shot-08.png"></a></p>
+Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon (right-hand side of the network row) and select <em>Delete Network</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Carmacks" src="../assets/del-net/shot-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Carmacks" src="../assets/del-net/shot-08_dark.png#only-dark"></a></p>
 <p>Of course, you will have to confirm this action.
-Clicking the red <em>Yes, Delete</em> button is enough.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm network delete" src="../assets/del-net/shot-09.png"></a></p>
+Clicking the <em>Yes, Delete</em> button is enough.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm network delete" src="../assets/del-net/shot-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm network delete" src="../assets/del-net/shot-09_dark.png#only-dark"></a></p>
 <p>After deleting the network, it will not be on the list of all available networks.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of networks" src="../assets/del-net/shot-10.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of networks" src="../assets/del-net/shot-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of networks" src="../assets/del-net/shot-10_dark.png#only-dark"></a></p>
 <p>There’s still that router lying around, and if you have no use for it, go to the <em>Routers</em> page to delete it.
 In the vertical pane on the left, expand the <em>Networking</em> section and click on <em>Routers</em>.
 In the central pane of the page, you will see all routers in all regions you have access to.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All routers" src="../assets/del-net/shot-11.png"></a></p>
-<p>Click the red three-dot icon of the router you wish to delete and select <em>Delete Router</em>.
-A pop-up will appear asking for confirmation, so click the red <em>Yes, Delete</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm router delete" src="../assets/del-net/shot-12.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All routers" src="../assets/del-net/shot-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All routers" src="../assets/del-net/shot-11_dark.png#only-dark"></a></p>
+<p>Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon of the router you wish to delete and select <em>Delete Router</em>.
+A pop-up will appear asking for confirmation, so click the <em>Yes, Delete</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm router delete" src="../assets/del-net/shot-12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm router delete" src="../assets/del-net/shot-12_dark.png#only-dark"></a></p>
 <p>After successfully deleting the router, there will be no trace of it in the list of all routers.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Router is gone" src="../assets/del-net/shot-13.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Router is gone" src="../assets/del-net/shot-13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Router is gone" src="../assets/del-net/shot-13_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>First, take a look at all available subnets:</p>
@@ -7686,11 +7710,14 @@ For our demonstration, we created network <code>teslin</code>, with subnet <code
 In the central pane of the page, you will see all networks in all regions you have access to.
 Select a network with a subnet and no router — like <code>teslin</code> in our example.</p>
 <p>Looking at the network details, it is immediately apparent that there’s no router in front of it.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No router in sight" src="../assets/del-net/shot-14.png"></a></p>
-<p>Go to the <em>Subnets</em> tab, and click the red circle-with-trashcan icon to delete the subnet.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-15.png"></a></p>
-<p>Then, click the red three-dot icon at the right-hand side of the <code>teslin</code> row, and select <em>Delete Network</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Teslin" src="../assets/del-net/shot-16.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No router in sight" src="../assets/del-net/shot-14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="No router in sight" src="../assets/del-net/shot-14_dark.png#only-dark"></a></p>
+<p>Go to the <em>Subnets</em> tab, and click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m4 6v7a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-7zm-2.5-4 1 1H17v2H7V7h2.5l1-1z"></path></svg></span> icon to delete the subnet.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-15_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete subnet" src="../assets/del-net/shot-15_dark.png#only-dark"></a></p>
+<p>Then, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right-hand side of the <code>teslin</code> row, and select <em>Delete Network</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Teslin" src="../assets/del-net/shot-16_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Teslin" src="../assets/del-net/shot-16_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Let us first take a look at all available networks…</p>
@@ -7753,9 +7780,10 @@ For our demonstration, we created a network named <code>mayo</code>, with no sub
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_5_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>While viewing all available networks, click the red three-dot icon at the right-hand side of the <code>mayo</code> row and select <em>Delete Network</em>.
+<p>While viewing all available networks, click the :dots-horizontal-circle: icon at the right-hand side of the <code>mayo</code> row and select <em>Delete Network</em>.
 You will have to confirm the action, and the network will be gone as soon as you do.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Mayo" src="../assets/del-net/shot-17.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Mayo" src="../assets/del-net/shot-17_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete Mayo" src="../assets/del-net/shot-17_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Once more, take a look at all remaining networks:</p>
@@ -7811,7 +7839,7 @@ We should point out, though, that all three namesake towns in Yukon are still th
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 14, 2025 13:52:47 UTC">2025-08-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 18, 2026 14:07:15 UTC">2026-05-18</span>
   </span>
 
     
