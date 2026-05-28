@@ -17,4 +17,4 @@ Refer to the table below for information about each model's origin, and their re
 | gpt-oss-120b            | OpenAI        | Complex reasoning                             |
 | qwen3-coder-30b         | Alibaba Cloud | Code generation, agentic tasks                |
 | qwen3-embedding-8b      | Alibaba Cloud | Text embeddings, ranking                      |
-| qwen3.6-35b-a3b-fp8     | Alibaba Cloud | General purpose chat, reasoning               |
+| qwen3.6-35b-a3b-fp8     | Alibaba Cloud | Code generation, agentic tasks                |
