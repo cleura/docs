@@ -46,6 +46,9 @@ extra:
       url: "https://s3-kna1.citycloud.com/6a5aa55d8f094a13ae18199639aa72c2:cleura.files/Cleura-Form-Transfer-Ownership.pdf"
   rest_api: "Cleura Cloud REST API"
   rest_api_domain: "rest.cleura.cloud"
+  statuspage_domain:
+    public: "https://status.cleura.cloud"
+    compliant: "https://status.compliant.cleura.cloud"
   support: "Service Center"
   support_domain: "servicecenter.cleura.cloud"
   support_email: "support@cleura.com"
