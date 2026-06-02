@@ -116,13 +116,13 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
 
     ![Choose a security group](assets/new-server/shot-09.png)
 
-    If you already have one or more key pairs in your {{brand}} account, you can now select a public key to be included in the `~/.ssh/authorized_keys` file of the server's default user.
+    If you already have one or more [keypairs](managing-keypairs.md) in your {{brand}} account, you can now select a public key to be included in the `~/.ssh/authorized_keys` file of the server's default user.
     (For the image you have selected, that would be the `ubuntu` user.)
     That way, you can securely log into the remote user's account via SSH without typing a password.
 
     ![Indicate an existing keypair](assets/new-server/shot-10.png)
 
-    In case there are no key pairs to choose from, activate the _Set&nbsp;password_ option and set a password for the default user account (`ubuntu`).
+    In case there are no keypairs to choose from, activate the _Set&nbsp;password_ option and set a password for the default user account (`ubuntu`).
 
     ![Optionally set a password for the default user account](assets/new-server/shot-11.png)
 
@@ -238,32 +238,14 @@ On the other hand, if you prefer to work with the OpenStack CLI, please do not f
     ```
 
     You most likely want a server you can remotely connect to via SSH without typing a password.
-    Upload one of our public keys to your {{brand}} account:
-
-    ```bash
-    openstack keypair create --public-key ~/.ssh/id_ed25519.pub bahnhof
-    ```
-
-    In the example above, we uploaded the public key `~/.ssh/id_ed25519.pub` to our {{brand}} account and named it `bahnhof`.
-    Follow our example, and do not forget to set the `KEY_NAME`:
+    Suppose you have a [keypair](managing-keypairs.md), named `bahnhof`:
 
     ```bash
     KEY_NAME="bahnhof"
     ```
 
-    By the way, check all uploaded public keys...
-
-    ```bash
-    openstack keypair list
-    ```
-
-    ...and get more information regarding the one you just uploaded:
-
-    ```bash
-    openstack keypair show $KEY_NAME
-    ```
-
-    You are almost ready to create your new server. Decide on a name...
+    You are almost ready to create your new server.
+    Decide on a name...
 
     ```bash
     SERVER_NAME="zug" # just an example

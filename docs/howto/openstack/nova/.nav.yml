@@ -1,6 +1,7 @@
 ---
 nav:
   - index.md
+  - managing-keypairs.md
   - new-server.md
   - new-server-cnw.md
   - server-group.md
