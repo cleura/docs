@@ -59,7 +59,7 @@ Do so and then click the blue _Download_ button.
 A _Save as_ dialog window appears.
 Select a convenient location and save your RC file.
 
-## Modifying and sourcing the RC file
+## Modifying the RC file
 
 The general naming for RC files goes like this:
 
@@ -95,7 +95,9 @@ Also, change the permissions of the file so it is readable and writable by your 
 chmod 600 olafsdottir--{{api_region|lower}}--katla--rc
 ```
 
-Then, go ahead and source it:
+## Sourcing the RC file
+
+Next, you can source the RC file, enabling the defined environment variables in your shell session:
 
 ```bash
 source olafsdottir--{{api_region|lower}}--katla--rc
