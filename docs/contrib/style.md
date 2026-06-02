@@ -89,6 +89,13 @@ Note, Warning, and Danger.
         This is a danger admonition.
     ```
 
+## Footnotes
+
+While you *can* use [footnotes](https://www.markdownguide.org/extended-syntax/#footnotes), you should consider alternatives before using them.
+
+Generally, it is often better to use a collapsible Note [admonition](#admonitions).
+However, footnotes are sometimes practical, for example when you want to add extra information to the contents of a table (as in [this example](../reference/volumes/index.md#volume-types)).
+
 ## Renamed sources
 
 If you rename an existing Markdown source, the path of the rendered page's [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) will change.
