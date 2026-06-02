@@ -21,7 +21,7 @@ More specifically, the new server must be in the region where the Clavister NetW
 
 === "OpenStack CLI"
 
-    Make sure you have sourced an [RC file](../../getting-started/enable-openstack-cli.md#modifying-and-sourcing-the-rc-file) from the same region the Clavister NetWall instance belongs to.
+    Make sure you have sourced an [RC file](../../getting-started/enable-openstack-cli.md#sourcing-the-rc-file) from the same region the Clavister NetWall instance belongs to.
 
 In addition to residing in the correct region, the server must also be in a network behind the Clavister NetWall instance.
 
