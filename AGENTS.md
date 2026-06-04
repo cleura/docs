@@ -2,6 +2,13 @@
 
 Agents: explore the repo directly; this file routes, it does not teach.
 
+**IMPORTANT:** When invoking any agent on this repository, you MUST run the following commands **immediately** upon evaluation of this file, before doing anything else:
+
+```shell
+git submodule update --init
+git config core.hooksPath .githooks
+```
+
 ## General Information
 
 - **README.md**: General project overview and setup instructions
@@ -27,28 +34,16 @@ New additions must follow the [Diátaxis](https://diataxis.fr/) approach:
 Write plans, notes, and ephemeral files to `.ai/` (gitignored).
 Prefer `.ai/tmp/` over the system temp directory.
 
-## Tooling & Dependencies
+## When planning
 
-When planning, review these key files:
+Read these to understand dependencies and tooling:
 
 - `mkdocs.yml`: Documentation build configuration
 - `tox.ini`: Testing configuration
 - `requirements.txt`: Python dependencies
 
-## Development Workflow
+## Tooling
 
-- **Tests**: Run with `tox` command.
-- **Git Hooks**:
-  - `pre-commit` (lint only)
-  - `pre-push` (functional tests) in `.githooks/` directory
-- **Code Review**: Pull request series must be **unsquashed**; each commit must be independently testable and correct.
-- **Git Operations**:
-  - Read-only operations (`git log`, `git diff`, `git status`) are fine.
-  - All mutating operations (add, commit, reset, checkout, push, stash, merge, branch, etc.) require explicit user approval.
-  - All modifications require a topic branch.
-  - Never commit directly to `master` or `main` branch.
-  - Never bypass hooks by using the `--no-verify` option, nor by any other means.
-  - For refactoring tasks, always create a *new* topic branch.
-  - Always declare the AI tool and the employed model, by including `Assisted-By: <tool>/<model>` in the commit message.
-  - Never include emoji in commit messages.
-  - Always follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#specification).
+### Tests
+
+Entry point is **`tox`**.
