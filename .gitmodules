@@ -1,3 +1,6 @@
 [submodule "submodules/launch-pad"]
 	path = submodules/launch-pad
 	url = ../launch-pad
+[submodule "submodules/cleura-skills"]
+	path = submodules/cleura-skills
+	url = ../skills
