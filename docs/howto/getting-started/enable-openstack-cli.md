@@ -11,50 +11,59 @@ From your favorite web browser, navigate to the [{{gui}}](https://{{gui_domain}}
 
 Please make sure the left-hand side pane on the {{gui}} is fully visible, click the _Users_ category to expand it, and click on _Openstack Users_.
 
-![Add a new OpenStack user](assets/ostack-cli/shot-01.png)
+![Add a new OpenStack user](assets/ostack-cli/shot-01_light.png#only-light)
+![Add a new OpenStack user](assets/ostack-cli/shot-01_dark.png#only-dark)
 
 Then, at the top right-hand side of the {{gui}}, click once more on the _Add new Openstack user_ option.
 A new pane will slide into view, titled _Create Openstack User_.
 
-![Create new OpenStack user](assets/ostack-cli/shot-02.png)
+![Create new OpenStack user](assets/ostack-cli/shot-02_light.png#only-light)
+![Create new OpenStack user](assets/ostack-cli/shot-02_dark.png#only-dark)
 
 Type in a username and a password for the new OpenStack user.
 To ensure you typed the password correctly, you must re-type it below.
 This password should be adequately strong, and thus a password manager may come in handy.
 
-![Set username and password](assets/ostack-cli/shot-03.png)
+![Set username and password](assets/ostack-cli/shot-03_light.png#only-light)
+![Set username and password](assets/ostack-cli/shot-03_dark.png#only-dark)
 
-Scroll down a bit, so the _Regions_ section is in full view.
+Scroll down a bit, until the region section is in full view.
 Expand one or more of the available regions you want your new user to have access to.
 For each one of the expanded regions, select one or more _Projects_.
 For each project, activate one or more _Roles_.
-(Hint: For an overview of the rights that roles provide, hover the mouse pointer over the exclamation mark icon by the _Roles_.)
+(Hint: For an overview of the rights that roles provide, hover the mouse pointer over the :material-alert-circle: icon by the _Roles_.)
 
-![Regions, projects, and roles](assets/ostack-cli/shot-04.png)
+![Regions, projects, and roles](assets/ostack-cli/shot-04_light.png#only-light)
+![Regions, projects, and roles](assets/ostack-cli/shot-04_dark.png#only-dark)
 
 Optionally, type in a description for the new OpenStack user.
-Then, create the user by clicking the green _Create_ button below the _Description_ box.
+Then, create the user by clicking the _Create_ button below the _Description_ box.
 
-![User description and creation](assets/ostack-cli/shot-05.png)
+![User description and creation](assets/ostack-cli/shot-05_light.png#only-light)
+![User description and creation](assets/ostack-cli/shot-05_dark.png#only-dark)
 
 The new OpenStack user will be ready in just a few seconds.
 At any time, you can view all available OpenStack users by going to the left-hand side pane on the {{gui}} and selecting _Users_ > _Openstack Users_.
 
-![All available OpenStack users](assets/ostack-cli/shot-06.png)
+![All available OpenStack users](assets/ostack-cli/shot-06_light.png#only-light)
+![All available OpenStack users](assets/ostack-cli/shot-06_dark.png#only-dark)
 
 ## Downloading an RC file
 
 On the {{gui}}, expand the left-hand side vertical pane, click _Users_, and then _Openstack Users_.
 You will see, listed in the main pane, all available users.
-Click the three-dot round icon on the right of the user their RC file you want.
+Click the :material-dots-horizontal-circle: icon on the right of the user their RC file you want.
+
 From the drop-down menu that appears, select _Download RC-File._
 
-![Download RC file](assets/ostack-cli/shot-07.png)
+![Download RC file](assets/ostack-cli/shot-07_light.png#only-light)
+![Download RC file](assets/ostack-cli/shot-07_dark.png#only-dark)
 
 Before downloading the RC file onto your local computer, you must select one of the available projects to relate it to.
-Do so and then click the blue _Download_ button.
+Do so and then click the _Download_ button.
 
-![Select project](assets/ostack-cli/shot-08.png)
+![Select project](assets/ostack-cli/shot-08_light.png#only-light)
+![Select project](assets/ostack-cli/shot-08_dark.png#only-dark)
 
 A _Save as_ dialog window appears.
 Select a convenient location and save your RC file.
