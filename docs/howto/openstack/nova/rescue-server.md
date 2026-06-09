@@ -1,69 +1,82 @@
 ---
-description: How to access a virtual server in rescue mode
+description: How to access a server in rescue mode
 ---
 # Rescuing a server
 
-This guide will walk you through the required steps to access a server in [rescue mode](https://docs.openstack.org/nova/latest/user/rescue.html) when you need to.
+This guide walks you through the required steps for accessing a server in [rescue mode](https://docs.openstack.org/nova/latest/user/rescue.html).
 
-You can use rescue mode to access the server’s operating system disk to fix a corrupted file system, reset access credentials on the server, and do other emergency recovery tasks.
+When you boot a server into rescue mode, you can then access its boot disk to fix a corrupted file system, reset access credentials, or perform other emergency recovery tasks.
 
 
 ## Prerequisites
 
-You need to have previously [created a server](new-server.md) that you now wish to rescue.
-Additionally, if you prefer to work with the OpenStack CLI, then make sure to properly [enable it first](../../getting-started/enable-openstack-cli.md).
+You can boot a server into rescue mode by using the {{gui}}.
+If, on the other hand, you prefer to work with the OpenStack CLI, then make sure to properly [enable it first](../../getting-started/enable-openstack-cli.md).
 
 
 ## Initiating the rescue
 
 === "{{gui}}"
-    Navigate to the server list.
+    Using the left-hand side navigation pane, bring into view the server you are interested in.
 
-    ![The left hand side navigation panel, with the word "Servers" highlighted.](assets/rescue-server/01-left-side-panel.png)
+    ![Use the left-hand side navigation panel, reveal the "servers" central pane, and locate the server of interest](assets/rescue-server/left-side-panel_light.png#only-light)
+    ![Use the left-hand side navigation panel, reveal the "servers" central pane, and locate the server of interest](assets/rescue-server/left-side-panel_dark.png#only-dark)
 
-    Find the server you want to rescue in the list, and on the right-hand side, click on its menu button.
+    Click the :material-dots-horizontal-circle: icon at the right-hand side of the server row.
+    From the drop-down menu that appears, select _Rescue Server_.
 
-    ![An orange circle with three white dots.](assets/rescue-server/02-menu-button.png)
+    ![From the server's drop-down menu, select "rescue server"](assets/rescue-server/menu-list_light.png#only-light)
+    ![From the server's drop-down menu, select "rescue server"](assets/rescue-server/menu-list_dark.png#only-dark)
 
-    Click on _Rescue Server_.
+    The rescue dialog window appears.
+    Leave the default option, _Use System Rescue Image_, selected.
+    Click the _Rescue_ button to proceed.
 
-    ![A list of server actions, with the line "Rescue Server" highlighted.](assets/rescue-server/03-menu-list.png)
+    ![Make sure the "use system rescue image" toggle is active, then click the "rescue" button](assets/rescue-server/rescue-button_light.png#only-light)
+    ![Make sure the "use system rescue image" toggle is active, then click the "rescue" button](assets/rescue-server/rescue-button_dark.png#only-dark)
 
-    Once selected, the rescue dialog appears.
-    Leave the default option, _Use System Rescue Image_.
+    The server starts rebooting into rescue mode.
+    When it finishes booting, its status icon has an exclamation mark.
 
-    Click _No_ to cancel or _Rescue_ to proceed.
-
-    ![About to rescue a server, showing details with the default option "Use System Rescue Image".](assets/rescue-server/04-rescue-button.png)
-
-    When a server has been switched to rescue mode, its status icon appears with an exclamation mark:
-
-    ![Exclamation mark on server icon showing the server on "rescue mode".](assets/rescue-server/05-rescue-mode.png)
+    ![The exclamation mark at the left indicates that the server has finihsed booting into rescue mode](assets/rescue-server/server-booted-into-rescue-mode_light.png#only-light)
+    ![The exclamation mark at the left indicates that the server has finihsed booting into rescue mode](assets/rescue-server/server-booted-into-rescue-mode_dark.png#only-dark)
 
 === "OpenStack CLI"
-    You must first select a system rescue image from the available images:
+    First, get the `id` of the server of interest.
+    For example, use `openstack` like so:
+
+    ```console
+    $ openstack server show -c id <server_of_interest_name>
+    +-------+--------------------------------------+
+    | Field | Value                                |
+    +-------+--------------------------------------+
+    | id    | c9fb10a0-4de9-11f1-8eb0-c319c95cc812 |
+    +-------+--------------------------------------+
+    ```
+
+    Then, find the `id` of a system rescue image:
 
     ```console
     $ openstack image list --tag system-rescue
     +--------------------------------------+---------------+--------+
     | ID                                   | Name          | Status |
     +--------------------------------------+---------------+--------+
-    | cb2217f3-1ca7-4440-b10e-df7ff2d92cae | system-rescue | active |
+    | bdf8030f-aa9d-44ba-afb9-bb1597ff1b2e | system-rescue | active |
     +--------------------------------------+---------------+--------+
     ```
 
-    To start the server using the system rescue image, use the following command, substituting the correct ID for the `system-rescue` image in your {{brand}} region:
+    To boot the server of interest using the system rescue image, use the following command, substituting the correct `id` for the `system-rescue` image in your {{brand}} region:
 
     ```bash
-    openstack --os-compute-api-version 2.87 \
-      server rescue \
-      --image cb2217f3-1ca7-4440-b10e-df7ff2d92cae <server_id>
+    openstack server rescue \
+      --image bdf8030f-aa9d-44ba-afb9-bb1597ff1b2e \
+      <server_id>
     ```
 
-    While the rescue is ongoing, the server should have the `OS-EXT-STS:vm_state` of `rescued` and the `status` of `RESCUE`.
+    For as long as the server is in rescue mode, the server's `OS-EXT-STS:vm_state` and `status` fields are set to `rescued` and `RESCUE` respectively:
 
     ```console
-    $ openstack server show -v OS-EXT-STS:vm_state -c status <server_id>
+    $ openstack server show -c OS-EXT-STS:vm_state -c status <server_id>
     +---------------------+---------+
     | Field               | Value   |
     +---------------------+---------+
@@ -74,6 +87,26 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 
 ## Accessing the server in rescue mode
 
-You can now proceed to accessing the remote console of your server, [as you would with any other newly launched server](new-server.md#connecting-to-the-server-console).
+You can now proceed to accessing the remote console of your server, [as you would with any other active server](new-server.md#connecting-to-the-server-console).
 
-Please refer to the [System Rescue documentation](https://www.system-rescue.org/manual/) documentation for details on the available tools and features bundled with System Rescue.
+Please refer to the [System Rescue documentation](https://www.system-rescue.org/manual/) for details on the available tools and features bundled with System Rescue.
+
+## Bringing the server back to normal mode
+
+=== "{{gui}}"
+
+    Click the :material-dots-horizontal-circle: icon at the right-hand side of the server-in-rescue-mode row.
+    From the drop-down menu that appears, select _Unrescue Server_.
+
+    ![From the server-in-rescue drop-down menu, select "unrescue server"](assets/rescue-server/unrescue_light.png#only-light)
+    ![From the server-in-rescue drop-down menu, select "unrescue server"](assets/rescue-server/unrescue_dark.png#only-dark)
+
+=== "OpenStack CLI"
+
+    Send the `unrescue` sub-command to the server, like so:
+
+    ```
+    $ openstack server unrescue <server_id>
+    ```
+
+In a few seconds, the server finishes rebooting into normal mode.
