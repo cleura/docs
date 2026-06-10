@@ -21,21 +21,22 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 === "{{gui}}"
     Navigate to the server list.
 
-    ![The left hand side navigation panel, with the word "Servers" highlighted.](assets/resize-server/01-left-side-panel.png)
+    ![In the left hand side navigation panel, select "compute" and then "servers"](assets/resize-server/01-left-side-panel_light.png#only-light)
+    ![In the left hand side navigation panel, select "compute" and then "servers"](assets/resize-server/01-left-side-panel_dark.png#only-dark)
 
-    Find the server you want to resize in the list, and on the right-hand side click on its menu button.
+    Find the server you want to resize in the list.
+    At the right-hand side of its row, click the :material-dots-horizontal-circle: icon.
+    In the drop-down menu that appears, click on _Modify Server_.
 
-    ![An orange circle with three white dots.](assets/resize-server/02-menu-button.png)
+    ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_light.png#only-light)
+    ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_dark.png#only-dark)
 
-    Click on _Modify Server_.
+    Near the top of the options panel, find the _Flavor_ section.
+    See the current flavor used by the server.
+    Expand the dropdown menu to get all available flavors.
 
-    ![A list of server actions, with the line "Modify Server" highlighted.](assets/resize-server/03-menu-list.png)
-
-    On this panel near the top, find the section called _Flavor_.
-    This is the current flavor used by the server.
-    Press on the dropdown menu to see all available flavors.
-
-    ![A panel displaying the servers current flavor, 8 Cores and 24 GB RAM with the name of the flavor "b.8c24gb" within parenthesis.](assets/resize-server/04-modify-server.png)
+    ![The server's current flavor](assets/resize-server/03-modify-server_light.png#only-light)
+    ![The server's current flavor](assets/resize-server/03-modify-server_dark.png#only-dark)
 === "OpenStack CLI"
     To list all available flavors you can simply run `openstack flavor list`, but that will return a very long unsorted list, instead we recommend the following command:
 
@@ -64,15 +65,17 @@ Choose a new flavor that you want your server to use instead.
 > A resize is only possible with [flavors](../../../reference/flavors/index.md) using the same prefix letter. Most commonly you will have a `b.` flavor, thus you must select another `b.` flavor.
 
 === "{{gui}}"
-    Once selected, the _Resize_ button will appear.
+    As soon as you select a new flavor, the _Resize_ button appears.
 
-    ![A panel displaying the servers new flavor, 4 Cores and 24 GB RAM with the name of the flavor "b.4c24gb" within parenthesis, also a green button below it with the text "Resize".](assets/resize-server/05-resize-button.png)
+    ![The server's new flavor](assets/resize-server/04-resize-button_light.png#only-light)
+    ![The server's new flavor](assets/resize-server/04-resize-button_dark.png#only-dark)
 
     Click on it to start the resize.
 
-    While the resize is ongoing you will see a spinning circle saying _Resize is in progress_.
+    While the resize is ongoing, you see a spinning circle and the message "Resize is in progress".
 
-    ![A spinning circle with the text "Resize in progress...".](assets/resize-server/06-resize-in-progress.png)
+    ![Server resize operation in progress](assets/resize-server/05-resize-in-progress_light.png#only-light)
+    ![Server resize operation in progress](assets/resize-server/05-resize-in-progress_dark.png#only-dark)
 === "OpenStack CLI"
     To start the resize use the following command:
 
@@ -122,7 +125,8 @@ If you do not confirm the resize, your server will automatically have the resize
 === "{{gui}}"
     This is done by clicking the _Confirm_ button.
 
-    ![A panel displaying the servers flavor, 4 Cores and 24 GB RAM with the name of the flavor "b.4c24gb" within parenthesis, a red button with the text "Cancel" below it and a green button with the text "Confirm" beside that.](assets/resize-server/07-resize-confirm.png)
+    ![Confirm or cancel the server resize attempt](assets/resize-server/06-resize-confirm_light.png#only-light)
+    ![Confirm or cancel the server resize attempt](assets/resize-server/06-resize-confirm_dark.png#only-dark)
 
     > If your server is not working as intended, or you simply regret the resize, instead click _Cancel_.
 === "OpenStack CLI"

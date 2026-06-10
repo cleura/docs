@@ -17,7 +17,8 @@ More specifically, the new server must be in the region where the Clavister NetW
 
     After you type in the new server's name, choose its region from the drop-down menu named *Region*.
 
-    ![Select a region for the new server](assets/new-server-cnw/new-server-cnw-01.png)
+    ![Select a region for the new server](assets/new-server-cnw/new-server-cnw-01_light.png#only-light)
+    ![Select a region for the new server](assets/new-server-cnw/new-server-cnw-01_dark.png#only-dark)
 
 === "OpenStack CLI"
 
@@ -29,7 +30,8 @@ In addition to residing in the correct region, the server must also be in a netw
 
     While creating your new server, use the *Networks* drop-down menu to select a network.
 
-    ![Select a network for the new server](assets/new-server-cnw/new-server-cnw-02.png)
+    ![Select a network for the new server](assets/new-server-cnw/new-server-cnw-02_light.png#only-light)
+    ![Select a network for the new server](assets/new-server-cnw/new-server-cnw-02_dark.png#only-dark)
 
 === "OpenStack CLI"
 
@@ -57,7 +59,8 @@ In addition to residing in the correct region, the server must also be in a netw
     In the central pane, select the region in which your new server resides.
     Click on the server row to expand it, and go to the *Addresses* tab.
 
-    ![View server connectivity information](assets/new-server-cnw/new-server-cnw-03.png)
+    ![View server connectivity information](assets/new-server-cnw/new-server-cnw-03_light.png#only-light)
+    ![View server connectivity information](assets/new-server-cnw/new-server-cnw-03_dark.png#only-dark)
 
     There, you can see the server's IP address.
     You might also want to jot down the corresponding MAC address.
@@ -96,4 +99,4 @@ The firewall has two network interfaces: `if1` is the external interface, and `i
 ![View Clavister NetWall neighbor devices](assets/new-server-cnw/new-server-cnw-04.png)
 
 You will notice the IP address of the new server you just spun up and its network adapter MAC address.
-Finally, in the *Status* column, there is a green box labeled *ACTIVE*, indicating that the server is accessible to the firewall.
+Finally, in the *Status* column, there is a box labeled *ACTIVE*, indicating that the server is accessible to the firewall.
