@@ -29,21 +29,24 @@ Follow our [How-To guide](new-server.md) to create your new cloud server using e
     When you are done configuring the server, right before creating it notice the icon on the left-hand side of _Advanced Options_.
     Click on it to expand all related options.
 
-    ![Expand advanced configuration options](assets/config-drive/shot-01.png)
+    ![Expand advanced configuration options](assets/config-drive/shot-01_light.png#only-light)
+    ![Expand advanced configuration options](assets/config-drive/shot-01_dark.png#only-dark)
 
     In the _User-Data_ area, you see everything that will be executed upon server boot.
 
     Right below, in the _User-data propagation method_ area, the _Use metadata service (Default)_ option is preselected for you.
     To opt for the alternative metadata discovery method, select _Use configuration drive_.
 
-    ![Select the configuration drive method](assets/config-drive/shot-02.png)
+    ![Select the configuration drive method](assets/config-drive/shot-02_light.png#only-light)
+    ![Select the configuration drive method](assets/config-drive/shot-02_dark.png#only-dark)
 
-    Then, instantiate the server by clicking the green _Create_ button.
+    Then, instantiate the server by clicking the _Create_ button.
 
     Once the server is ready, you may see what happened during configuration by examining the console log.
     In the {{gui}}, click on the server line to get an extended view of its characteristics, and then click once more on the _Console Output_ tab.
 
-    ![Watch the server console](assets/config-drive/shot-03.png)
+    ![Watch the server console](assets/config-drive/shot-03_light.png#only-light)
+    ![Watch the server console](assets/config-drive/shot-03_dark.png#only-dark)
 
     There might be quite a lot of text to sift through, but you can easily do so by pressing the `Up` or `Down` arrow keys.
 === "OpenStack CLI"
