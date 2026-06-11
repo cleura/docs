@@ -7597,15 +7597,18 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Navigate to the server list.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The left hand side navigation panel, with the word &quot;Servers&quot; highlighted." src="../assets/resize-server/01-left-side-panel.png"></a></p>
-<p>Find the server you want to resize in the list, and on the right-hand side click on its menu button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An orange circle with three white dots." src="../assets/resize-server/02-menu-button.png"></a></p>
-<p>Click on <em>Modify Server</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A list of server actions, with the line &quot;Modify Server&quot; highlighted." src="../assets/resize-server/03-menu-list.png"></a></p>
-<p>On this panel near the top, find the section called <em>Flavor</em>.
-This is the current flavor used by the server.
-Press on the dropdown menu to see all available flavors.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A panel displaying the servers current flavor, 8 Cores and 24 GB RAM with the name of the flavor &quot;b.8c24gb&quot; within parenthesis." src="../assets/resize-server/04-modify-server.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the left hand side navigation panel, select &quot;compute&quot; and then &quot;servers&quot;" src="../assets/resize-server/01-left-side-panel_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the left hand side navigation panel, select &quot;compute&quot; and then &quot;servers&quot;" src="../assets/resize-server/01-left-side-panel_dark.png#only-dark"></a></p>
+<p>Find the server you want to resize in the list.
+At the right-hand side of its row, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon.
+In the drop-down menu that appears, click on <em>Modify Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the drop-down menu of the server you want to resize, click on &quot;modify server&quot;" src="../assets/resize-server/02-menu-list_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the drop-down menu of the server you want to resize, click on &quot;modify server&quot;" src="../assets/resize-server/02-menu-list_dark.png#only-dark"></a></p>
+<p>Near the top of the options panel, find the <em>Flavor</em> section.
+See the current flavor used by the server.
+Expand the dropdown menu to get all available flavors.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's current flavor" src="../assets/resize-server/03-modify-server_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's current flavor" src="../assets/resize-server/03-modify-server_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To list all available flavors you can simply run <code>openstack flavor list</code>, but that will return a very long unsorted list, instead we recommend the following command:</p>
@@ -7633,11 +7636,13 @@ b.4c4gb
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Once selected, the <em>Resize</em> button will appear.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A panel displaying the servers new flavor, 4 Cores and 24 GB RAM with the name of the flavor &quot;b.4c24gb&quot; within parenthesis, also a green button below it with the text &quot;Resize&quot;." src="../assets/resize-server/05-resize-button.png"></a></p>
+<p>As soon as you select a new flavor, the <em>Resize</em> button appears.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's new flavor" src="../assets/resize-server/04-resize-button_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's new flavor" src="../assets/resize-server/04-resize-button_dark.png#only-dark"></a></p>
 <p>Click on it to start the resize.</p>
-<p>While the resize is ongoing you will see a spinning circle saying <em>Resize is in progress</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A spinning circle with the text &quot;Resize in progress...&quot;." src="../assets/resize-server/06-resize-in-progress.png"></a></p>
+<p>While the resize is ongoing, you see a spinning circle and the message “Resize is in progress”.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Server resize operation in progress" src="../assets/resize-server/05-resize-in-progress_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Server resize operation in progress" src="../assets/resize-server/05-resize-in-progress_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To start the resize use the following command:</p>
@@ -7677,7 +7682,8 @@ If you do not confirm the resize, your server will automatically have the resize
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>This is done by clicking the <em>Confirm</em> button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A panel displaying the servers flavor, 4 Cores and 24 GB RAM with the name of the flavor &quot;b.4c24gb&quot; within parenthesis, a red button with the text &quot;Cancel&quot; below it and a green button with the text &quot;Confirm&quot; beside that." src="../assets/resize-server/07-resize-confirm.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm or cancel the server resize attempt" src="../assets/resize-server/06-resize-confirm_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm or cancel the server resize attempt" src="../assets/resize-server/06-resize-confirm_dark.png#only-dark"></a></p>
 <blockquote>
 <p>If your server is not working as intended, or you simply regret the resize, instead click <em>Cancel</em>.</p>
 </blockquote>
@@ -7715,7 +7721,7 @@ If you do not confirm the resize, your server will automatically have the resize
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 4, 2025 14:38:40 UTC">2025-07-04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 10, 2026 16:12:12 UTC">2026-05-10</span>
   </span>
 
     

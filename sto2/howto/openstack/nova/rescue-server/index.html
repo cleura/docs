@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="How to access a virtual server in rescue mode">
+        <meta name="description" content="How to access a server in rescue mode">
       
       
       
@@ -1237,6 +1237,17 @@
     <span class="md-ellipsis">
       
         Accessing the server in rescue mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bringing-the-server-back-to-normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bringing the server back to normal mode
       
     </span>
   </a>
@@ -7534,6 +7545,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bringing-the-server-back-to-normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bringing the server back to normal mode
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7560,44 +7582,57 @@
 
 
 <h1 id="rescuing-a-server">Rescuing a server</h1>
-<p>This guide will walk you through the required steps to access a server in <a href="https://docs.openstack.org/nova/latest/user/rescue.html">rescue&nbsp;mode</a> when you need to.</p>
-<p>You can use rescue mode to access the server’s operating system disk to fix a corrupted file system, reset access credentials on the server, and do other emergency recovery tasks.</p>
+<p>This guide walks you through the required steps for accessing a server in <a href="https://docs.openstack.org/nova/latest/user/rescue.html">rescue&nbsp;mode</a>.</p>
+<p>When you boot a server into rescue mode, you can then access its boot disk to fix a corrupted file system, reset access credentials, or perform other emergency recovery tasks.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>You need to have previously <a href="../new-server/">created a server</a> that you now wish to rescue.
-Additionally, if you prefer to work with the OpenStack CLI, then make sure to properly <a href="../../../getting-started/enable-openstack-cli/">enable it first</a>.</p>
+<p>You can boot a server into rescue mode by using the Cleura&nbsp;Cloud Management&nbsp;Panel.
+If, on the other hand, you prefer to work with the OpenStack CLI, then make sure to properly <a href="../../../getting-started/enable-openstack-cli/">enable it first</a>.</p>
 <h2 id="initiating-the-rescue">Initiating the rescue</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_1_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Navigate to the server list.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The left hand side navigation panel, with the word &quot;Servers&quot; highlighted." src="../assets/rescue-server/01-left-side-panel.png"></a></p>
-<p>Find the server you want to rescue in the list, and on the right-hand side, click on its menu button.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An orange circle with three white dots." src="../assets/rescue-server/02-menu-button.png"></a></p>
-<p>Click on <em>Rescue Server</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A list of server actions, with the line &quot;Rescue Server&quot; highlighted." src="../assets/rescue-server/03-menu-list.png"></a></p>
-<p>Once selected, the rescue dialog appears.
-Leave the default option, <em>Use System Rescue Image</em>.</p>
-<p>Click <em>No</em> to cancel or <em>Rescue</em> to proceed.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to rescue a server, showing details with the default option &quot;Use System Rescue Image&quot;." src="../assets/rescue-server/04-rescue-button.png"></a></p>
-<p>When a server has been switched to rescue mode, its status icon appears with an exclamation mark:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exclamation mark on server icon showing the server on &quot;rescue mode&quot;." src="../assets/rescue-server/05-rescue-mode.png"></a></p>
+<p>Using the left-hand side navigation pane, bring into view the server you are interested in.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Use the left-hand side navigation panel, reveal the &quot;servers&quot; central pane, and locate the server of interest" src="../assets/rescue-server/left-side-panel_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Use the left-hand side navigation panel, reveal the &quot;servers&quot; central pane, and locate the server of interest" src="../assets/rescue-server/left-side-panel_dark.png#only-dark"></a></p>
+<p>Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right-hand side of the server row.
+From the drop-down menu that appears, select <em>Rescue Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="From the server's drop-down menu, select &quot;rescue server&quot;" src="../assets/rescue-server/menu-list_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="From the server's drop-down menu, select &quot;rescue server&quot;" src="../assets/rescue-server/menu-list_dark.png#only-dark"></a></p>
+<p>The rescue dialog window appears.
+Leave the default option, <em>Use System Rescue Image</em>, selected.
+Click the <em>Rescue</em> button to proceed.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Make sure the &quot;use system rescue image&quot; toggle is active, then click the &quot;rescue&quot; button" src="../assets/rescue-server/rescue-button_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Make sure the &quot;use system rescue image&quot; toggle is active, then click the &quot;rescue&quot; button" src="../assets/rescue-server/rescue-button_dark.png#only-dark"></a></p>
+<p>The server starts rebooting into rescue mode.
+When it finishes booting, its status icon has an exclamation mark.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The exclamation mark at the left indicates that the server has finihsed booting into rescue mode" src="../assets/rescue-server/server-booted-into-rescue-mode_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The exclamation mark at the left indicates that the server has finihsed booting into rescue mode" src="../assets/rescue-server/server-booted-into-rescue-mode_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
-<p>You must first select a system rescue image from the available images:</p>
+<p>First, get the <code>id</code> of the server of interest.
+For example, use <code>openstack</code> like so:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>id<span class="w"> </span>&lt;server_of_interest_name&gt;
+<span class="go">+-------+--------------------------------------+</span>
+<span class="go">| Field | Value                                |</span>
+<span class="go">+-------+--------------------------------------+</span>
+<span class="go">| id    | c9fb10a0-4de9-11f1-8eb0-c319c95cc812 |</span>
+<span class="go">+-------+--------------------------------------+</span>
+</code></pre></div>
+<p>Then, find the <code>id</code> of a system rescue image:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>image<span class="w"> </span>list<span class="w"> </span>--tag<span class="w"> </span>system-rescue
 <span class="go">+--------------------------------------+---------------+--------+</span>
 <span class="go">| ID                                   | Name          | Status |</span>
 <span class="go">+--------------------------------------+---------------+--------+</span>
-<span class="go">| cb2217f3-1ca7-4440-b10e-df7ff2d92cae | system-rescue | active |</span>
+<span class="go">| bdf8030f-aa9d-44ba-afb9-bb1597ff1b2e | system-rescue | active |</span>
 <span class="go">+--------------------------------------+---------------+--------+</span>
 </code></pre></div>
-<p>To start the server using the system rescue image, use the following command, substituting the correct ID for the <code>system-rescue</code> image in your Cleura&nbsp;Cloud region:</p>
-<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>--os-compute-api-version<span class="w"> </span><span class="m">2</span>.87<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>server<span class="w"> </span>rescue<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--image<span class="w"> </span>cb2217f3-1ca7-4440-b10e-df7ff2d92cae<span class="w"> </span>&lt;server_id&gt;
+<p>To boot the server of interest using the system rescue image, use the following command, substituting the correct <code>id</code> for the <code>system-rescue</code> image in your Cleura&nbsp;Cloud region:</p>
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>rescue<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--image<span class="w"> </span>bdf8030f-aa9d-44ba-afb9-bb1597ff1b2e<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&lt;server_id&gt;
 </code></pre></div>
-<p>While the rescue is ongoing, the server should have the <code>OS-EXT-STS:vm_state</code> of <code>rescued</code> and the <code>status</code> of <code>RESCUE</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-v<span class="w"> </span>OS-EXT-STS:vm_state<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>&lt;server_id&gt;
+<p>For as long as the server is in rescue mode, the server’s <code>OS-EXT-STS:vm_state</code> and <code>status</code> fields are set to <code>rescued</code> and <code>RESCUE</code> respectively:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>OS-EXT-STS:vm_state<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>&lt;server_id&gt;
 <span class="go">+---------------------+---------+</span>
 <span class="go">| Field               | Value   |</span>
 <span class="go">+---------------------+---------+</span>
@@ -7609,8 +7644,25 @@ Leave the default option, <em>Use System Rescue Image</em>.</p>
 </div>
 </div>
 <h2 id="accessing-the-server-in-rescue-mode">Accessing the server in rescue mode</h2>
-<p>You can now proceed to accessing the remote console of your server, <a href="../new-server/#connecting-to-the-server-console">as you would with any other newly launched server</a>.</p>
-<p>Please refer to the <a href="https://www.system-rescue.org/manual/">System&nbsp;Rescue documentation</a> documentation for details on the available tools and features bundled with System Rescue.</p>
+<p>You can now proceed to accessing the remote console of your server, <a href="../new-server/#connecting-to-the-server-console">as you would with any other active server</a>.</p>
+<p>Please refer to the <a href="https://www.system-rescue.org/manual/">System&nbsp;Rescue documentation</a> for details on the available tools and features bundled with System Rescue.</p>
+<h2 id="bringing-the-server-back-to-normal-mode">Bringing the server back to normal mode</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right-hand side of the server-in-rescue-mode row.
+From the drop-down menu that appears, select <em>Unrescue Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="From the server-in-rescue drop-down menu, select &quot;unrescue server&quot;" src="../assets/rescue-server/unrescue_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="From the server-in-rescue drop-down menu, select &quot;unrescue server&quot;" src="../assets/rescue-server/unrescue_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
+<p>Send the <code>unrescue</code> sub-command to the server, like so:</p>
+<div class="highlight"><pre><span></span><code>$ openstack server unrescue &lt;server_id&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>In a few seconds, the server finishes rebooting into normal mode.</p>
 
 
 
@@ -7633,7 +7685,7 @@ Leave the default option, <em>Use System Rescue Image</em>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 4, 2025 14:38:40 UTC">2025-07-04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 12, 2026 10:49:38 UTC">2026-05-12</span>
   </span>
 
     
