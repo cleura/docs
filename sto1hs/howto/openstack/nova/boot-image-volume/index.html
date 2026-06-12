@@ -7682,18 +7682,60 @@ If this is a boot-from-image server, it will say <em>Ephemeral Disk</em>.</p>
 The solution is first to convert it to a boot-from-volume server and then move it.
 In the following, we show how to perform the conversion using the OpenStack CLI.</p>
 <h2 id="preparation">Preparation</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_1_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Fire up your favorite web browser and navigate to the <a href="https://compliant.cleura.cloud">Cleura&nbsp;Cloud Management&nbsp;Panel</a> start page.
+Log in to your Cleura&nbsp;Cloud account if you have to.</p>
+</div>
+<div class="tabbed-block">
 <p>To work with the OpenStack CLI, make sure to properly <a href="../../../getting-started/enable-openstack-cli/">enable it</a> for the region your boot-from-image server resides in.</p>
+</div>
+</div>
+</div>
 <h2 id="shutting-down-the-server">Shutting down the server</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Make sure the left-hand side vertical pane is in full view, then select <em>Compute</em> → <a href="https://compliant.cleura.cloud/compute/servers"><em>Servers</em></a>.
+You will see all supported Cleura&nbsp;Cloud regions in the main pane.
+Expand the one with the boot-from-image server you want to convert to boot-from-volume.
+Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of the server row, and from the pop-up menu that appears, select <em>Stop Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stopping server" src="../assets/bfi-to-bfv/shot01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stopping server" src="../assets/bfi-to-bfv/shot01_dark.png#only-dark"></a></p>
+<p>A pop-up window appears, asking if you want to stop the server.
+Confirm by clicking on the button labeled <em>Yes, Stop</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server shutdown" src="../assets/bfi-to-bfv/are-you-really-really-sure_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server shutdown" src="../assets/bfi-to-bfv/are-you-really-really-sure_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>Assuming your boot-from-image server is named <code>ephemeral_eyjolfur</code>, shut it down by typing the following:</p>
-<div class="highlight"><pre><span></span><code>openstack server stop ephemeral_eyjolfur
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>stop<span class="w"> </span>ephemeral_eyjolfur
 </code></pre></div>
 <p>To confirm that it has finished shutting down, type:</p>
-<div class="highlight"><pre><span></span><code>openstack server show ephemeral_eyjolfur -c status -f value
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>ephemeral_eyjolfur<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>-f<span class="w"> </span>value
 </code></pre></div>
 <p>You should see this:</p>
 <div class="highlight"><pre><span></span><code>SHUTOFF
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="taking-a-snapshot">Taking a snapshot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>When the server is shut off, click on its row to get the detailed view and go to the <em>Snapshots</em> tab.
+There, click the button labeled <em>Create a Snapshot</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a snapshot" src="../assets/bfi-to-bfv/shot02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a snapshot" src="../assets/bfi-to-bfv/shot02_dark.png#only-dark"></a></p>
+<p>A pop-up window appears, where you have to type in a name for the snapshot.
+You must also be explicit regarding the operation you are about to perform, so activate the switch at the left of the corresponding question.
+When you are ready, click the button labeled <em>Create</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming snapshot creation" src="../assets/bfi-to-bfv/shot03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming snapshot creation" src="../assets/bfi-to-bfv/shot03_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>To take a snapshot of the server, all you have to do is type something like the following:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ephemeral_eyjolfur_snap<span class="w"> </span>ephemeral_eyjolfur
 
@@ -7732,12 +7774,33 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
 </code></pre></div>
 <p>At first, the status of the snapshot is <code>queued</code>.
 To make sure the snapshot has been successfully created, type:</p>
-<div class="highlight"><pre><span></span><code>openstack image show ephemeral_eyjolfur_snap -c status -f value
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>ephemeral_eyjolfur_snap<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>-f<span class="w"> </span>value
 </code></pre></div>
 <p>You should see this:</p>
 <div class="highlight"><pre><span></span><code>active
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="creating-a-volume-from-the-snapshot">Creating a volume from the snapshot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_4_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>After a few seconds, the snapshot will be created and listed in the <em>Snapshots</em> tab.
+Before you proceed, take note of its size.
+At the right-hand side of the snapshot row, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V288c0 44.2 100.3 80 224 80s224-35.8 224-80zm0-77.8V80c0-44.2-100.3-80-224-80S0 35.8 0 80v48c0 44.2 100.3 80 224 80s224-35.8 224-80m-49.5 261.8C351.6 406.5 289.9 416 224 416s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V432c0 44.2 100.3 80 224 80s224-35.8 224-80v-66.2c-14.8 9.8-31.8 17.7-49.5 24"></path></svg></span> icon to create a new volume off of the snapshot you just created.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating volume from snapshot" src="../assets/bfi-to-bfv/shot04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating volume from snapshot" src="../assets/bfi-to-bfv/shot04_dark.png#only-dark"></a></p>
+<p>A new vertical pane will slide over from the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel.
+Type in a name for the new volume, and choose a volume size <strong>bigger</strong> than the snapshot size.
+Then, you need to type in a description regarding the new volume.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Typing in name, size, and description" src="../assets/bfi-to-bfv/shot05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Typing in name, size, and description" src="../assets/bfi-to-bfv/shot05_dark.png#only-dark"></a></p>
+<p>Scroll down a bit if you have to, and click the <em>Create</em> button.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Starting volume creation" src="../assets/bfi-to-bfv/shot06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Starting volume creation" src="../assets/bfi-to-bfv/shot06_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>Before creating a volume off of the snapshot you just created, jot down its size like this:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>nanisivik_snap<span class="w"> </span>-c<span class="w"> </span>min_disk<span class="w"> </span>-f<span class="w"> </span>value
 </code></pre></div>
@@ -7782,10 +7845,27 @@ Now, go ahead and create a volume slightly larger than the size of the snapshot:
 </code></pre></div>
 <p>As you can see in the example above, we named our volume <code>ephemeral_eyjolfur_vol</code>, and its <code>status</code> was at first <code>creating</code>.
 You may check the progress of this operation by typing this:</p>
-<div class="highlight"><pre><span></span><code>openstack volume show ephemeral_eyjolfur_vol -c status -f value
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>volume<span class="w"> </span>show<span class="w"> </span>ephemeral_eyjolfur_vol<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>-f<span class="w"> </span>value
 </code></pre></div>
 <p>As soon as the new volume is ready, the <code>status</code> becomes <code>available</code>.</p>
+</div>
+</div>
+</div>
 <h2 id="viewing-the-new-volume">Viewing the new volume</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_5_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In the left-hand side vertical pane, select <em>Storage</em> → <a href="https://compliant.cleura.cloud/storage/volumes"><em>Volumes</em></a>.
+In the main pane, select the region your boot-from-image server resides in.
+You will see the volume you created in the previous step.</p>
+<p>In the intersection of the volume row and the <em>Attached To</em> column, it says <em>-No attachments-</em>.
+That is expected.</p>
+<p>Then, notice that the volume is bootable.
+That is also expected.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing new volume" src="../assets/bfi-to-bfv/shot07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing new volume" src="../assets/bfi-to-bfv/shot07_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>To view all details regarding the volume you just created off of the boot-from-image server snapshot, type the following:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>show<span class="w"> </span>ephemeral_eyjolfur_vol
 
@@ -7842,25 +7922,82 @@ You may check the progress of this operation by typing this:</p>
 <span class="go">| bootable | True  |</span>
 <span class="go">+----------+-------+</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="deleting-the-boot-from-image-server">Deleting the boot-from-image server</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_6_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Go to the servers view by selecting <em>Compute</em> → <a href="https://compliant.cleura.cloud/compute/servers"><em>Servers</em></a>, and locate the boot-from-image server.
+It is time to delete it, so click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of the server row, and from the pop-up menu that appears, select <em>Delete Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deleting server" src="../assets/bfi-to-bfv/shot08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deleting server" src="../assets/bfi-to-bfv/shot08_dark.png#only-dark"></a></p>
+<p>A window titled <em>About to delete a server</em> will appear, asking you if you want to proceed with the deletion.
+Click the button labeled <em>Yes, Delete</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server deletion" src="../assets/bfi-to-bfv/shot09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server deletion" src="../assets/bfi-to-bfv/shot09_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>Since you have a snapshot and a volume of your server, you can now delete it:</p>
-<div class="highlight"><pre><span></span><code>openstack server delete ephemeral_eyjolfur
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>delete<span class="w"> </span>ephemeral_eyjolfur
 </code></pre></div>
 <p>A successful <code>delete</code> operation produces no terminal output.</p>
+</div>
+</div>
+</div>
 <h2 id="creating-a-new-boot-from-volume-server">Creating a new boot-from-volume server</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_7_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Now, go back to your volumes by selecting <em>Storage</em> → <a href="https://compliant.cleura.cloud/storage/volumes"><em>Volumes</em></a>.
+Tick the volume you created a bit earlier, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of the volume row, and from the pop-up menu that appears, select <em>Create Server</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new server" src="../assets/bfi-to-bfv/shot10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new server" src="../assets/bfi-to-bfv/shot10_dark.png#only-dark"></a></p>
+<p>A vertical pane will slide over from the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, titled <em>Create a Server</em>.
+Type in a name for the new server.
+Notice that the server region is pre-selected and the same as the one in which the volume resides.
+The boot source of the server is also pre-selected and is the volume itself.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Naming the server" src="../assets/bfi-to-bfv/shot11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Naming the server" src="../assets/bfi-to-bfv/shot11_dark.png#only-dark"></a></p>
+<p>Scroll down a bit if you have to.
+Take notice of the <em>Boot Target</em>, which should be <em>Volume</em>.
+Consider leaving the <a href="../../../../background/recovery-service/"><em>Recovery service</em></a> option enabled.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keeping the recovery service enabled" src="../assets/bfi-to-bfv/shot12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keeping the recovery service enabled" src="../assets/bfi-to-bfv/shot12_dark.png#only-dark"></a></p>
+<p>To create the new server, scroll all the way down and click the button labeled <em>Create</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating server creation" src="../assets/bfi-to-bfv/shot13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating server creation" src="../assets/bfi-to-bfv/shot13_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>To create your new boot-from-volume server (<code>eyjolfur</code>), using the volume (<code>ephemeral_eyjolfur_vol</code>) you got from the snapshot (<code>ephemeral_eyjolfur_snap</code>) of the old boot-from-image server (<code>ephemeral_eyjolfur</code>), type something like the following:</p>
-<div class="highlight"><pre><span></span><code>openstack server create \
-    --flavor b.2c4gb \
-    --volume ephemeral_eyjolfur_vol \
-    --network network-sto1hs \
-    --security-group default \
-    --key-name karlskrona \
-    --wait \
-    eyjolfur
+<div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--flavor<span class="w"> </span>b.2c4gb<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--volume<span class="w"> </span>ephemeral_eyjolfur_vol<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--network<span class="w"> </span>network-sto1hs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--security-group<span class="w"> </span>default<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--key-name<span class="w"> </span>karlskrona<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--wait<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>eyjolfur
 </code></pre></div>
 <p>The most important parameter in the command above is <code>--volume</code>, which is used to specify the boot volume of the server.
 Regarding server creation in general, you might want to <a href="../new-server/">check the corresponding guide</a>.</p>
+</div>
+</div>
+</div>
 <h2 id="viewing-the-new-server">Viewing the new server</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_8_2">OpenStack CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In the left-hand side vertical pane, select <em>Compute</em> → <a href="https://compliant.cleura.cloud/compute/servers"><em>Servers</em></a>.
+In the main pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, go to the region where the new server resides
+Select the server and click on its row to see all its characteristics.
+In the <em>Details</em> tab, you will notice, among other things, that it has one attached volume;
+that would be the one you created from the snapshot you created from the old boot-from-image server.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing the new boot-from-volume server" src="../assets/bfi-to-bfv/shot14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing the new boot-from-volume server" src="../assets/bfi-to-bfv/shot14_dark.png#only-dark"></a></p>
+</div>
+<div class="tabbed-block">
 <p>You may see all details regarding the new boot-from-volume server by typing something like the following:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>eyjolfur
 
@@ -7908,6 +8045,9 @@ Regarding server creation in general, you might want to <a href="../new-server/"
 <span class="go">+-------------------------------------+------------------------------------------------------------+</span>
 </code></pre></div>
 <p>Pay attention to the value of the <code>image</code> field, which confirms that this is indeed a boot-from-volume server.</p>
+</div>
+</div>
+</div>
 
 
 
@@ -7930,7 +8070,7 @@ Regarding server creation in general, you might want to <a href="../new-server/"
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 5, 2026 12:26:58 UTC">2026-06-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 12, 2026 13:11:46 UTC">2026-06-12</span>
   </span>
 
     
