@@ -13,7 +13,7 @@ In the main pane of the dashboard, you will see a list of paid and outstanding i
 ![All invoices](assets/mgmnt-inv/shot-01_light.png#only-light)
 ![All invoices](assets/mgmnt-inv/shot-01_dark.png#only-dark)
 
-Any paid invoice has a green :material-check-circle: icon at the left of its row.
+Any paid invoice has a :material-check-circle: icon at the left of its row.
 At the _Outstanding Amount_ column, for each paid invoice there is a value of `0.00`.
 
 ![Paid invoices](assets/mgmnt-inv/shot-02_light.png#only-light)
@@ -21,7 +21,7 @@ At the _Outstanding Amount_ column, for each paid invoice there is a value of `0
 
 ## Displaying invoice details
 
-Notice the orange :material-dots-horizontal-circle: icon at the right of any invoice row.
+Notice the :material-dots-horizontal-circle: icon at the right of any invoice row.
 By clicking on it, you get a pop-up with specific options regarding the corresponding invoice.
 For example, you can view the invoice or download it onto your computer in PDF format.
 
@@ -42,7 +42,7 @@ You may activate automatic payments for pending invoices.
 
 From the left-hand side vertical pane, click on *Settings* and then on *Manage Invoice Settings*.
 In the central pane, make sure you are in the *Settings* tab.
-Use the radio button on the right of *Automatic Payment* to enable automatic payments, and then click the green *Update* button.
+Use the radio button on the right of *Automatic Payment* to enable automatic payments, and then click the *Update* button.
 If the automatic payments are already enabled, you may disable them by using the same radio button.
 
 ![Enable or disable automatic payments](assets/mgmnt-inv/shot-05_light.png#only-light)
