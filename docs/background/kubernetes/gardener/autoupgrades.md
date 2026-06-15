@@ -65,41 +65,45 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
       "kubernetes": {
         "versions": [
           {
-            "version": "1.31.13",
-            "expirationDate": "2025-12-29T00:00:00Z",
+            "version": "1.33.9",
+            "expirationDate": "2026-05-04T00:00:00Z",
             "classification": "deprecated"
           },
           {
-            "version": "1.31.14",
-            "expirationDate": "2026-02-16T00:00:00Z",
+            "version": "1.33.10",
+            "expirationDate": "2026-06-08T00:00:00Z",
             "classification": "deprecated"
           },
           {
-            "version": "1.32.9",
-            "expirationDate": "2026-01-02T00:00:00Z",
+            "version": "1.33.11",
+            "expirationDate": "2026-06-22T00:00:00Z",
             "classification": "deprecated"
           },
           {
-            "version": "1.32.10",
-            "expirationDate": "2026-02-16T00:00:00Z",
-            "classification": "deprecated"
-          },
-          {
-            "version": "1.32.11",
+            "version": "1.33.12",
             "classification": "supported"
           },
           {
-            "version": "1.33.5",
-            "expirationDate": "2026-01-02T00:00:00Z",
+            "version": "1.34.3",
+            "expirationDate": "2026-06-08T00:00:00Z",
             "classification": "deprecated"
           },
           {
-            "version": "1.33.6",
-            "expirationDate": "2026-02-16T00:00:00Z",
+            "version": "1.34.7",
+            "expirationDate": "2026-06-22T00:00:00Z",
             "classification": "deprecated"
           },
           {
-            "version": "1.33.7",
+            "version": "1.34.8",
+            "classification": "supported"
+          },
+          {
+            "version": "1.35.4",
+            "expirationDate": "2026-06-22T00:00:00Z",
+            "classification": "deprecated"
+          },
+          {
+            "version": "1.35.5",
             "classification": "supported"
           }
         ]
@@ -109,8 +113,8 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
           "name": "gardenlinux",
           "versions": [
             {
-              "version": "1877.4.0",
-              "expirationDate": "2025-12-10T00:00:00Z",
+              "version": "1877.13.0",
+              "expirationDate": "2026-05-25T00:00:00Z",
               "classification": "deprecated",
               "cri": [
                 {
@@ -122,8 +126,8 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
               ]
             },
             {
-              "version": "1877.5.0",
-              "expirationDate": "2026-01-02T00:00:00Z",
+              "version": "1877.14.0",
+              "expirationDate": "2026-06-12T00:00:00Z",
               "classification": "deprecated",
               "cri": [
                 {
@@ -135,8 +139,8 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
               ]
             },
             {
-              "version": "1877.7.0",
-              "expirationDate": "2026-02-23T00:00:00Z",
+              "version": "1877.16.0",
+              "expirationDate": "2026-06-29T00:00:00Z",
               "classification": "deprecated",
               "cri": [
                 {
@@ -148,7 +152,7 @@ $ curl -s -H "X-AUTH-LOGIN: <username>" -H "X-AUTH-TOKEN: <token>" \
               ]
             },
             {
-              "version": "1877.9.0",
+              "version": "1877.17.0",
               "classification": "supported",
               "cri": [
                 {
