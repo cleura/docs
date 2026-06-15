@@ -5,7 +5,7 @@
 
 ### Kubernetes version
 
-The latest Kubernetes version you can install in {{brand}} with {{k8s_management_service}} is 1.33.
+The latest Kubernetes version you can install in {{brand}} with {{k8s_management_service}} is 1.35.
 
 ### IP version
 
