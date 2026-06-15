@@ -11,21 +11,25 @@ If you are eligible for e-invoicing and wish to activate it, navigate to the [{{
 
 Make sure the vertical pane at the left-hand side of the {{gui}} is expanded.
 Click on _Settings_, then on _Manage Invoice Settings_.
-In the central pane of the {{gui}}, titled *Invoice Settings*, be sure to have the *Settings* tab open, and then click on the green _Request form_ button.
+In the central pane of the {{gui}}, titled *Invoice Settings*, be sure to have the *Settings* tab open, and then click on the _Request form_ button.
 
-![Request e-invoice](assets/swe-einv-01.png)
+![Request e-invoice](assets/swe-einv-01_light.png#only-light)
+![Request e-invoice](assets/swe-einv-01_dark.png#only-dark)
 
 A pop-up window titled _Request e-invoice_ will appear.
 Click on the _Choose Provider_ drop-down menu to expand it.
 
-![Choose invoicing provider drop-down menu](assets/swe-einv-02.png)
+![Choose invoicing provider drop-down menu](assets/swe-einv-02_light.png#only-light)
+![Choose invoicing provider drop-down menu](assets/swe-einv-02_dark.png#only-dark)
 
 Choose one of the available providers for your invoicing application.
 
-![Available invoicing providers](assets/swe-einv-03.png)
+![Available invoicing providers](assets/swe-einv-03_light.png#only-light)
+![Available invoicing providers](assets/swe-einv-03_dark.png#only-dark)
 
-Finally, click the green _Send request_ button.
+Finally, click the _Send request_ button.
 
-![Submit request for new invoicing provider](assets/swe-einv-04.png)
+![Submit request for new invoicing provider](assets/swe-einv-04_light.png#only-light)
+![Submit request for new invoicing provider](assets/swe-einv-04_dark.png#only-dark)
 
 Please note that if your provider is not on the list, we cannot provide e-invoicing.
