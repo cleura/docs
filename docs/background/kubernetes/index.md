@@ -11,7 +11,7 @@ For more details on the merits of {{k8s_management_service}}, refer to the secti
 | -------------                                                   | ----------------             |
 | Kubernetes Cloud Provider                                       | OpenStack                    |
 | Base operating system for nodes                                 | Garden Linux                 |
-| Latest installable Kubernetes minor release                     | 1.33                         |
+| Latest installable Kubernetes minor release                     | 1.35                         |
 
 
 ## API and CLI support
