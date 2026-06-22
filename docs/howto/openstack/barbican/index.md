@@ -11,7 +11,7 @@ To manage secrets with Barbican, you will need the `openstack` command line inte
 You can install them both with the following commands:
 
 ```bash
-pip install python-openstackclient python-barbicanclient
+pip install cleura-openstackclient
 ```
 
 On Debian/Ubuntu platforms, you may also install these utilities via their APT packages:
