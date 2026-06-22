@@ -131,7 +131,7 @@ Some examples follow.
     ```
 === "Python package"
     ```bash
-    pip install python-openstackclient
+    pip install cleura-openstackclient
     ```
 
 ### Testing access

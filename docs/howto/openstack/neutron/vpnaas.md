@@ -19,7 +19,7 @@ Use either the package manager of your operating system or `pip`:
     This Python module is unavailable via `brew`, but you can install it via `pip`.
 === "Python Package"
     ```bash
-    pip install python-neutronclient
+    pip install cleura-openstackclient
     ```
 
 ## Creating a VPN connection between two regions
