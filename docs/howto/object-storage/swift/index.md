@@ -16,7 +16,7 @@ Use either the package manager of your operating system, or `pip`:
     install it via `pip`.
 === "Python Package"
     ```bash
-    pip install python-swiftclient
+    pip install cleura-openstackclient
     ```
 
 ## Availability

@@ -32,7 +32,7 @@ For that, use either the package manager of your operating system or `pip`:
     can install it via `pip`.
 === "Python Package"
     ```bash
-    pip install python-octaviaclient
+    pip install cleura-openstackclient
     ```
 
 ## Assumptions and scenario

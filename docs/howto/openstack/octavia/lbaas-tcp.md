@@ -22,7 +22,7 @@ For that, use either the package manager of your operating system or `pip`:
     This particular Python module is unavailable via `brew`, but you can install it via `pip`.
 === "Python Package"
     ```bash
-    pip install python-octaviaclient
+    pip install cleura-openstackclient
     ```
 
 ## Scenario and terminology
