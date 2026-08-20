@@ -13,51 +13,53 @@ To upload a custom image, use `openstack` like so:
 openstack image create --disk-format <format> --file <local-filename> <image-name>
 ```
 
-For instance, see how to upload a Debian 13 cloud image, which you can subsequently use to create cloud servers in {{brand}}:
+For instance, see how to upload a Debian 14 cloud image, which you can subsequently use to create cloud servers in {{brand}}:
 
 ```console
 $ openstack image create \
     --disk-format qcow2 \
-    --file debian-13-genericcloud-amd64-daily-20250623-2152.qcow2 \
-    debian-13-daily
+    --file debian-14-genericcloud-amd64-daily-20260819-2575.qcow2 \
+    debian-14-daily
 
 +------------------+-------------------------------------------------------------------------------+
 | Field            | Value                                                                         |
 +------------------+-------------------------------------------------------------------------------+
-| checksum         | 5d073d57c0b89afa3a7a3352a42fd073                                              |
+| checksum         | 1d5859321fcb664daa30e792742e05e7                                              |
 | container_format | bare                                                                          |
-| created_at       | 2025-06-23T15:32:37Z                                                          |
+| created_at       | 2026-08-19T09:24:00Z                                                          |
 | disk_format      | qcow2                                                                         |
-| file             | /v2/images/b8e875da-cf0a-4732-ac12-5aad29adc2c0/file                          |
-| id               | b8e875da-cf0a-4732-ac12-5aad29adc2c0                                          |
+| file             | /v2/images/5a3dcd59-cd52-441d-b6d3-080312bf593a/file                          |
+| id               | 5a3dcd59-cd52-441d-b6d3-080312bf593a                                          |
 | min_disk         | 0                                                                             |
 | min_ram          | 0                                                                             |
-| name             | debian-13-daily-20250623-2152                                                 |
+| name             | debian-14-daily                                                               |
 | owner            | dfc700467396428bacba4376e72cc3e9                                              |
-| properties       | direct_url='rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/b8e875da-       |
-|                  | cf0a-4732-ac12-5aad29adc2c0/snap', locations='[{'url':                        |
-|                  | 'rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/b8e875da-                  |
-|                  | cf0a-4732-ac12-5aad29adc2c0/snap', 'metadata': {'store': 'rbd'}}]',           |
-|                  | os_hash_algo='sha512', os_hash_value='8f7c42267ca2b592f5d0b4d2155951e4cbc33be |
-|                  | 0c9e64063a986424b123ac15acfba33c93a14211ba2071f5a18601de6665f7dae6e989fec8578 |
-|                  | f1f1a800d06f', os_hidden='False',                                             |
-|                  | owner_specified.openstack.md5='5d073d57c0b89afa3a7a3352a42fd073',             |
-|                  | owner_specified.openstack.object='images/debian-13-daily-20250623-2152', owne |
-|                  | r_specified.openstack.sha256='440c4c8be83225f855de5a91e009b2c3257bfb84beb9550 |
-|                  | 7c5beffeeaaa59a32', self='/v2/images/b8e875da-cf0a-4732-ac12-5aad29adc2c0',   |
-|                  | stores='rbd'                                                                  |
+| properties       | direct_url='rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/5a3dcd59-cd52-  |
+|                  | 441d-b6d3-080312bf593a/snap', locations='[{'url': 'rbd://2ae305d1-6742-4b1c-  |
+|                  | af69-825a3bae8b53/images/5a3dcd59-cd52-441d-b6d3-080312bf593a/snap',          |
+|                  | 'metadata': {'store': 'rbd'}}]', os_hash_algo='sha512', os_hash_value='7819e7 |
+|                  | 9db883e45ae8921718291a69417328f5c6df50b93b8920fa279982bf2b55a13725c548a517013 |
+|                  | 872bee4e7e5cbed3cf26680bf8e8f6feec264fb9a2045', os_hidden='False',            |
+|                  | owner_specified.openstack.md5='',                                             |
+|                  | owner_specified.openstack.object='images/debian-14-daily',                    |
+|                  | owner_specified.openstack.sha256='', stores='rbd'                             |
 | protected        | False                                                                         |
 | schema           | /v2/schemas/image                                                             |
-| size             | 337444864                                                                     |
+| size             | 354091008                                                                     |
 | status           | active                                                                        |
 | tags             |                                                                               |
-| updated_at       | 2025-06-23T15:36:54Z                                                          |
+| updated_at       | 2026-08-19T09:28:25Z                                                          |
 | virtual_size     | 3221225472                                                                    |
 | visibility       | shared                                                                        |
 +------------------+-------------------------------------------------------------------------------+
 ```
 
-You may also set properties like `os_type`, `os_distro`, and `os_admin_user`, so it becomes easier to filter through your list of custom images:
+??? "Debian Official Cloud Images"
+    In the example above, we used a daily cloud image of Debian 14 Forky.
+    You may get such images from the [Debian Official Cloud Images](https://cloud.debian.org/images/cloud/) page.
+
+You may also set properties like `os_type`, `os_distro`, and `os_admin_user`, so it becomes easier to filter through your list of custom images.
+See the following example for a [FreeBSD](https://www.freebsd.org/) image:
 
 ```console
 $ openstack image create \
