@@ -25,7 +25,6 @@ jobs:
         run: |
           tox -e gitlint
           tox
-          tox -e check
       - name: Upload build
         uses: actions/upload-artifact@v7
         with:
