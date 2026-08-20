@@ -1,5 +1,7 @@
 #!/bin/bash -ex
 
+env | sort >&2
+
 if [ -n "$DOCS_DISABLE_LINKCHECK" ]; then
     echo "Linkcheck disabled, unset DOCS_DISABLE_LINKCHECK to enable" >&2
     exit 0
