@@ -21,7 +21,9 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install tox
-      - name: Test with tox
+      - env:
+          DOCS_DISABLE_LINKCHECK: ${{ vars.DOCS_DISABLE_LINKCHECK }}
+        name: Test with tox
         run: |
           tox -e gitlint
           tox
