@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -7545,48 +7545,51 @@ In addition to that, you can create an image from a server’s boot volume.</p>
 <p>To upload a custom image, use <code>openstack</code> like so:</p>
 <div class="highlight"><pre><span></span><code>openstack image create --disk-format &lt;format&gt; --file &lt;local-filename&gt; &lt;image-name&gt;
 </code></pre></div>
-<p>For instance, see how to upload a Debian 13 cloud image, which you can subsequently use to create cloud servers in Cleura&nbsp;Cloud:</p>
+<p>For instance, see how to upload a Debian 14 cloud image, which you can subsequently use to create cloud servers in Cleura&nbsp;Cloud:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--disk-format<span class="w"> </span>qcow2<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--file<span class="w"> </span>debian-13-genericcloud-amd64-daily-20250623-2152.qcow2<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>debian-13-daily
+<span class="w">    </span>--file<span class="w"> </span>debian-14-genericcloud-amd64-daily-20260819-2575.qcow2<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>debian-14-daily
 
 <span class="go">+------------------+-------------------------------------------------------------------------------+</span>
 <span class="go">| Field            | Value                                                                         |</span>
 <span class="go">+------------------+-------------------------------------------------------------------------------+</span>
-<span class="go">| checksum         | 5d073d57c0b89afa3a7a3352a42fd073                                              |</span>
+<span class="go">| checksum         | 1d5859321fcb664daa30e792742e05e7                                              |</span>
 <span class="go">| container_format | bare                                                                          |</span>
-<span class="go">| created_at       | 2025-06-23T15:32:37Z                                                          |</span>
+<span class="go">| created_at       | 2026-08-19T09:24:00Z                                                          |</span>
 <span class="go">| disk_format      | qcow2                                                                         |</span>
-<span class="go">| file             | /v2/images/b8e875da-cf0a-4732-ac12-5aad29adc2c0/file                          |</span>
-<span class="go">| id               | b8e875da-cf0a-4732-ac12-5aad29adc2c0                                          |</span>
+<span class="go">| file             | /v2/images/5a3dcd59-cd52-441d-b6d3-080312bf593a/file                          |</span>
+<span class="go">| id               | 5a3dcd59-cd52-441d-b6d3-080312bf593a                                          |</span>
 <span class="go">| min_disk         | 0                                                                             |</span>
 <span class="go">| min_ram          | 0                                                                             |</span>
-<span class="go">| name             | debian-13-daily-20250623-2152                                                 |</span>
+<span class="go">| name             | debian-14-daily                                                               |</span>
 <span class="go">| owner            | dfc700467396428bacba4376e72cc3e9                                              |</span>
-<span class="go">| properties       | direct_url='rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/b8e875da-       |</span>
-<span class="go">|                  | cf0a-4732-ac12-5aad29adc2c0/snap', locations='[{'url':                        |</span>
-<span class="go">|                  | 'rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/b8e875da-                  |</span>
-<span class="go">|                  | cf0a-4732-ac12-5aad29adc2c0/snap', 'metadata': {'store': 'rbd'}}]',           |</span>
-<span class="go">|                  | os_hash_algo='sha512', os_hash_value='8f7c42267ca2b592f5d0b4d2155951e4cbc33be |</span>
-<span class="go">|                  | 0c9e64063a986424b123ac15acfba33c93a14211ba2071f5a18601de6665f7dae6e989fec8578 |</span>
-<span class="go">|                  | f1f1a800d06f', os_hidden='False',                                             |</span>
-<span class="go">|                  | owner_specified.openstack.md5='5d073d57c0b89afa3a7a3352a42fd073',             |</span>
-<span class="go">|                  | owner_specified.openstack.object='images/debian-13-daily-20250623-2152', owne |</span>
-<span class="go">|                  | r_specified.openstack.sha256='440c4c8be83225f855de5a91e009b2c3257bfb84beb9550 |</span>
-<span class="go">|                  | 7c5beffeeaaa59a32', self='/v2/images/b8e875da-cf0a-4732-ac12-5aad29adc2c0',   |</span>
-<span class="go">|                  | stores='rbd'                                                                  |</span>
+<span class="go">| properties       | direct_url='rbd://2ae305d1-6742-4b1c-af69-825a3bae8b53/images/5a3dcd59-cd52-  |</span>
+<span class="go">|                  | 441d-b6d3-080312bf593a/snap', locations='[{'url': 'rbd://2ae305d1-6742-4b1c-  |</span>
+<span class="go">|                  | af69-825a3bae8b53/images/5a3dcd59-cd52-441d-b6d3-080312bf593a/snap',          |</span>
+<span class="go">|                  | 'metadata': {'store': 'rbd'}}]', os_hash_algo='sha512', os_hash_value='7819e7 |</span>
+<span class="go">|                  | 9db883e45ae8921718291a69417328f5c6df50b93b8920fa279982bf2b55a13725c548a517013 |</span>
+<span class="go">|                  | 872bee4e7e5cbed3cf26680bf8e8f6feec264fb9a2045', os_hidden='False',            |</span>
+<span class="go">|                  | owner_specified.openstack.md5='',                                             |</span>
+<span class="go">|                  | owner_specified.openstack.object='images/debian-14-daily',                    |</span>
+<span class="go">|                  | owner_specified.openstack.sha256='', stores='rbd'                             |</span>
 <span class="go">| protected        | False                                                                         |</span>
 <span class="go">| schema           | /v2/schemas/image                                                             |</span>
-<span class="go">| size             | 337444864                                                                     |</span>
+<span class="go">| size             | 354091008                                                                     |</span>
 <span class="go">| status           | active                                                                        |</span>
 <span class="go">| tags             |                                                                               |</span>
-<span class="go">| updated_at       | 2025-06-23T15:36:54Z                                                          |</span>
+<span class="go">| updated_at       | 2026-08-19T09:28:25Z                                                          |</span>
 <span class="go">| virtual_size     | 3221225472                                                                    |</span>
 <span class="go">| visibility       | shared                                                                        |</span>
 <span class="go">+------------------+-------------------------------------------------------------------------------+</span>
 </code></pre></div>
-<p>You may also set properties like <code>os_type</code>, <code>os_distro</code>, and <code>os_admin_user</code>, so it becomes easier to filter through your list of custom images:</p>
+<details>
+<summary>Debian Official Cloud Images</summary>
+<p>In the example above, we used a daily cloud image of Debian 14 Forky.
+You may get such images from the <a href="https://cloud.debian.org/images/cloud/">Debian Official Cloud Images</a> page.</p>
+</details>
+<p>You may also set properties like <code>os_type</code>, <code>os_distro</code>, and <code>os_admin_user</code>, so it becomes easier to filter through your list of custom images.
+See the following example for a <a href="https://www.freebsd.org/">FreeBSD</a> image:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--disk-format<span class="w"> </span>qcow2<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--property<span class="w"> </span><span class="nv">os_type</span><span class="o">=</span>linux<span class="w"> </span><span class="se">\</span>
@@ -7669,7 +7672,7 @@ The server has one boot volume, and you need to know its ID:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 23, 2025 19:30:11 UTC">2025-06-23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 19, 2026 10:09:33 UTC">2026-08-19</span>
   </span>
 
     
@@ -7752,7 +7755,7 @@ The server has one boot volume, and you need to know its ID:</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.indexes", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "non-existent default; this is intentional", "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
