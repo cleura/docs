@@ -43,6 +43,33 @@ All public images available in {{brand}} support the following image properties:
 [Other properties](https://docs.openstack.org/glance/latest/admin/useful-image-properties.html) may also be set on individual images.
 In particular, {{brand}} aims to set image properties according to the [metadata standard](https://docs.scs.community/standards/scs-0102-v1-image-metadata/) defined by the [Sovereign Cloud Stack](https://scs.community/) (SCS) initiative.
 
+## Supported images
+
+The following table lists the minimum root volume size and memory capacity required for servers launched from supported public images:
+
+| Image Name                                                    | Minimum root volume size (GiB) | Minimum RAM capacity (MiB) |
+|---------------------------------------------------------------|--------------------------------|----------------------------|
+| CentOS 10 Stream x86_64                                       | 5                              | 512                          |
+| CentOS 9 Stream x86_64                                        | 5                              | 512                          |
+| Clavister cOS Core 15.00 x86_64                               | 5                              | 512                          |
+| Debian 11 Bullseye x86_64                                     | 5                              | 512                          |
+| Debian 12 Bookworm x86_64                                     | 5                              | 312                          |
+| Debian 13 Trixie x86_64                                       | 5                              | 512                          |
+| Microsoft Windows Server Standard 2022 with MSSQL 2019 x86_64 | 100                            | 4096                         |
+| Microsoft Windows Server Standard 2022 with MSSQL 2022 x86_64 | 100                            | 4096                         |
+| Microsoft Windows Server Standard 2022 x86_64                 | 100                            | 4096                         |
+| Microsoft Windows Server Standard 2025 with MSSQL 2022 x86_64 | 60                             | 8192                         |
+| Microsoft Windows Server Standard 2025 with MSSQL 2025 x86_64 | 100                            | 8192                         |
+| Microsoft Windows Server Standard 2025 x86_64                 | 60                             | 8192                         |
+| OPNsense 25.7                                                 | 10                             | 512                          |
+| Rocky Linux 10 x86_64                                         | 5                              | 512                          |
+| Rocky Linux 8 x86_64                                          | 6                              | 512                          |
+| Rocky Linux 9 x86_64                                          | 5                              | 512                          |
+| Ubuntu 22.04 Jammy Jellyfish x86_64                           | 10                             | 1024                         |
+| Ubuntu 24.04 Noble Numbat x86_64                              | 10                             | 1024                         |
+| Ubuntu 26.04 Resolute Raccoon x86_64                          | 10                             | 1024                         |
+| system-rescue                                                 | 2                              | 512                          |
+
 ## Community images
 
 At {{brand}}, we regularly update and rotate our images to always provide secure public images.
