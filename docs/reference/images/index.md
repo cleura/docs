@@ -61,7 +61,6 @@ The following table lists the minimum root volume size and memory capacity requi
 | Microsoft Windows Server Standard 2025 with MSSQL 2022 x86_64 | 60                             | 8192                         |
 | Microsoft Windows Server Standard 2025 with MSSQL 2025 x86_64 | 100                            | 8192                         |
 | Microsoft Windows Server Standard 2025 x86_64                 | 60                             | 8192                         |
-| OPNsense 25.7                                                 | 10                             | 512                          |
 | Rocky Linux 10 x86_64                                         | 5                              | 512                          |
 | Rocky Linux 8 x86_64                                          | 6                              | 512                          |
 | Rocky Linux 9 x86_64                                          | 5                              | 512                          |
