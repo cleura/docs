@@ -9,9 +9,9 @@ Provided you have a [Clavister NetWall instance](../../marketplace/clavister/dep
 ## Creating a new server
 
 You may follow our [server creation guide](new-server.md) using the {{gui}} or the OpenStack CLI *almost* to the letter.
-You should only pay *extra* attention to the region the new server will reside in and the network it will be connected to.
+Pay *extra* attention to the region the new server will reside in and the network it will connect to.
 
-More specifically, the new server must be in the region where the Clavister NetWall instance you are interested in resides.
+More specifically, the new server must be in the same region as the Clavister NetWall instance you want to connect to.
 
 === "{{gui}}"
 
@@ -99,4 +99,4 @@ The firewall has two network interfaces: `if1` is the external interface, and `i
 ![View Clavister NetWall neighbor devices](assets/new-server-cnw/new-server-cnw-04.png)
 
 You will notice the IP address of the new server you just spun up and its network adapter MAC address.
-Finally, in the *Status* column, there is a box labeled *ACTIVE*, indicating that the server is accessible to the firewall.
+Finally, in the *Status* column, a box labeled *ACTIVE* indicates the server is accessible to the firewall.
