@@ -16,10 +16,10 @@ In order to move a server from one region to another, you will need
 
 ## Finding a volume's ID
 
-To work with the OpenStack CLI, please do not forget to [source the RC file first](../../getting-started/enable-openstack-cli.md).
+To work with the OpenStack CLI, be sure to [source the RC file first](../../getting-started/enable-openstack-cli.md).
 
-Use the ID of the server instead of using the server name.
-This will make sure that you are using the correct server.
+Use the server ID instead of the server name.
+This ensures you operate on the correct server.
 
 Find the ID of your server by matching the name, using the following command:
 
@@ -37,7 +37,7 @@ $ openstack server list --name 'name'
 +-----------------+-----------------+---------+-----------------+--------------------+-------------+
 ```
 
-This guide is only applicable to servers that are using boot from volume.
+This guide applies only to servers that boot from a volume.
 To verify this, make sure your server's `Image` value is `N/A (booted from volume)`.
 
 To get the ID of your server's boot volume, use the following command:
@@ -53,17 +53,17 @@ $ openstack server show -c volumes_attached <server_id>
 +------------------+-------------------------------------------+
 ```
 
-If there are multiple volumes attached, the first volume in the list is the server system volume.
+If multiple volumes are attached, the first volume in the list is the server system volume.
 Copy this ID.
 
-If you want to move any other attached volumes along with your server's system volume, you also need to follow the same steps for each one of these volumes.
+If you want to move any other attached volumes along with your server's system volume, follow the same steps for each volume.
 
 ## Stopping a running server
 
-In the next step you are instructed to make a copy of the server's system volume.
-Some operating systems or applications might experience issues being copied at the same time it might be performing operations.
+In the next step, you are instructed to copy the server's system volume.
+Some operating systems or applications may have issues when copied while they are performing operations.
 
-While this step is not strictly required, it is recommended to first power off your server.
+While this step is not strictly required, we recommend powering off your server first.
 
 Stop the running server with the following command:
 
@@ -79,7 +79,9 @@ Begin by making a copy of the volume, using the following command:
 openstack volume create --source <source_volume_id> <copy_volume_name>
 ```
 
-You will get a printout showing you information about the created volume, such as `source_volid` which is the ID of volume you just copied, and `id` of this **new** volume, that you will use in the next step to create an image.
+You will get a printout showing information about the created volume.
+The `source_volid` field has the ID of the volume you just copied, while the `id` field has the ID of the **new** volume.
+You will use the `id` value in the next step to create an image.
 
 ```plain
 +---------------------+--------------------------------------+
@@ -109,7 +111,7 @@ You will get a printout showing you information about the created volume, such a
 
 ## Creating an image of a volume
 
-Then create an image of the copied volume, by using the following command:
+Create an image of the copied volume by using the following command:
 
 ```bash
 openstack image create --volume <copy_volume_id> <new_image_name>
@@ -117,7 +119,8 @@ openstack image create --volume <copy_volume_id> <new_image_name>
 
 > Substitute `<copy_volume_id>` with the ID from the newly created volume in the previous step.
 
-After a while you will get a printout showing you information of the new image, such as the image disk format `disk_format` and the image ID `image_id`, you need these two values in an upcoming step.
+After a while, you will get a printout showing information about the new image, such as the image disk format (`disk_format`) and the image ID (`image_id`).
+You will soon need the values of `disk_format` and `image_id`.
 
 ```plain
 +---------------------+--------------------------------------+
@@ -138,8 +141,10 @@ After a while you will get a printout showing you information of the new image, 
 +---------------------+--------------------------------------+
 ```
 
-Depending on the size of the volume it might take some time to upload and while it is, the image `status` will be `uploading`.
-Before you continue to the next step, make sure the image `status` is `active`, otherwise wait a bit and then check again with:
+Depending on the volume size, the upload may take some time;
+while it uploads, the image `status` is `uploading`.
+Before you continue to the next step, make sure the image `status` is `active`.
+If it isn't yet, wait a bit and then check again with:
 
 ```bash
 openstack image show -c status <image_id>
@@ -159,7 +164,7 @@ The printout should look like this before you continue.
 
 ## Downloading an image
 
-Download the image to your local computer, using the following command:
+Download the image to your local computer using the following command:
 
 ```bash
 openstack image save --file <local_image_name>.<disk_format> <image_id>
@@ -181,13 +186,13 @@ This will output the checksum of your local file.
 MD5 (<local_image_name>.<disk_format>) = 4b086035a943cc1676583c0cc78f0896
 ```
 
-Show the checksum of the image in the cloud, using the following command:
+Show the checksum of the image in the cloud using the following command:
 
 ```bash
 openstack image show -c checksum <image_id>
 ```
 
-These two checksums should be the same.
+These two checksums should match.
 
 ```plain
 +----------+----------------------------------+
@@ -207,21 +212,22 @@ The following steps will be done on the target region.
 
 ## Uploading an image
 
-Source the RC-file for the region you want to upload to.
+Source the RC file for the region you want to upload to.
 
 ```bash
 source <target_region_openrc>
 ```
 
 Upload the image to the new region.
-Set the correct disk format, input the path to the image file and select a name for the new image.
+Set the correct disk format:
+enter the path to the image file, and select a name for the new image.
 
 ```bash
 openstack image create --disk-format <disk_format> --file <local_image_name>.<disk_format> <new_image_name>
 ```
 
-The upload will take some time, depending on your internet upload speed and the size of the image.
-When the upload is finished you get a printout displaying information about your image.
+The upload will take some time, depending on your internet upload speed and the image size.
+When the upload finishes, you get a printout with information about your image.
 
 ```plain
 +------------------+-------------------------------------------------------------------------------+
@@ -248,7 +254,8 @@ When the upload is finished you get a printout displaying information about your
 +------------------+-------------------------------------------------------------------------------+
 ```
 
-But your image is not yet ready to use, {{brand}} still needs to process the file, which shouldn't take long.
+Your image is not ready yet;
+{{brand}} still needs to process the file, which shouldn't take long.
 To check the status of the image, use the ID of the new image with the following command:
 
 ```console
@@ -278,9 +285,9 @@ $ openstack image show <new_image_id>
 +------------------+-------------------------------------------------------------------------------+
 ```
 
-When the image's `status` value is `active`, the whole upload process is done.
+When the image's `status` is `active`, the upload process is complete.
 
-Verify that the checksum of the new image is the same as your local file:
+Verify that the checksum of the new image matches the checksum of your local file:
 
 ```bash
 openstack image show -c checksum <new_image_id>
@@ -290,7 +297,7 @@ openstack image show -c checksum <new_image_id>
 
 ## Creating a volume from an image
 
-First you must choose the image you want to create a volume from.
+First, you must choose the image you want to create a volume from.
 
 List all your private images with the following command:
 
@@ -313,12 +320,12 @@ openstack volume create --size <GB> --image <new_image_id> <new_volume_name>
 
 ## Creating a server from a volume
 
-Now you need to create the new server using the system volume.
+Now create the new server using the system volume.
 To create a new server, follow [this guide](new-server.md).
 
 === "{{gui}}"
-    If you use the {{gui}}, when choosing a _boot source,_ select _Boot from volume_ and then your server's system volume.
+    If you use the {{gui}}, when choosing a _boot source,_ select _Boot from volume,_ then select your server's system volume.
 === "OpenStack CLI"
     If you use the OpenStack CLI, forgo the `--image` and `--boot-from-volume` options and instead use `--volume <new_volume_name>`
 
-If you also moved other volumes, after you have created the server is the time to attach those volumes to the server.
+If you also moved other volumes, when you finish creating the server, do not forget to attach those volumes.
