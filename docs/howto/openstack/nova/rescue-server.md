@@ -11,7 +11,7 @@ When you boot a server into rescue mode, you can then access its boot disk to fi
 ## Prerequisites
 
 You can boot a server into rescue mode by using the {{gui}}.
-If, on the other hand, you prefer to work with the OpenStack CLI, then make sure to properly [enable it first](../../getting-started/enable-openstack-cli.md).
+If you prefer to work with the OpenStack CLI, make sure you [enable it first](../../getting-started/enable-openstack-cli.md).
 
 
 ## Initiating the rescue
@@ -23,7 +23,7 @@ If, on the other hand, you prefer to work with the OpenStack CLI, then make sure
     ![Use the left-hand side navigation panel, reveal the "servers" central pane, and locate the server of interest](assets/rescue-server/left-side-panel_dark.png#only-dark)
 
     Click the :material-dots-horizontal-circle: icon at the right-hand side of the server row.
-    From the drop-down menu that appears, select _Rescue Server_.
+    From the drop-down menu, select _Rescue Server_.
 
     ![From the server's drop-down menu, select "rescue server"](assets/rescue-server/menu-list_light.png#only-light)
     ![From the server's drop-down menu, select "rescue server"](assets/rescue-server/menu-list_dark.png#only-dark)
@@ -42,7 +42,7 @@ If, on the other hand, you prefer to work with the OpenStack CLI, then make sure
     ![The exclamation mark at the left indicates that the server has finihsed booting into rescue mode](assets/rescue-server/server-booted-into-rescue-mode_dark.png#only-dark)
 
 === "OpenStack CLI"
-    First, get the `id` of the server of interest.
+    First, get the `id` of the server you want to inspect.
     For example, use `openstack` like so:
 
     ```console
@@ -73,7 +73,7 @@ If, on the other hand, you prefer to work with the OpenStack CLI, then make sure
       <server_id>
     ```
 
-    For as long as the server is in rescue mode, the server's `OS-EXT-STS:vm_state` and `status` fields are set to `rescued` and `RESCUE` respectively:
+    For as long as the server is in rescue mode, the server's `OS-EXT-STS:vm_state` and `status` fields are set to `rescued` and `RESCUE`, respectively:
 
     ```console
     $ openstack server show -c OS-EXT-STS:vm_state -c status <server_id>
@@ -87,7 +87,7 @@ If, on the other hand, you prefer to work with the OpenStack CLI, then make sure
 
 ## Accessing the server in rescue mode
 
-You can now proceed to accessing the remote console of your server, [as you would with any other active server](new-server.md#connecting-to-the-server-console).
+You can now access the remote console of your server, [as you would with any other active server](new-server.md#connecting-to-the-server-console).
 
 Please refer to the [System Rescue documentation](https://www.system-rescue.org/manual/) for details on the available tools and features bundled with System Rescue.
 
