@@ -7493,9 +7493,9 @@
 <li>a sufficiently configured target region including a <a href="../../neutron/new-network/">virtual network</a> and necessary <a href="../../neutron/create-security-groups/">security groups</a>.</li>
 </ul>
 <h2 id="finding-a-volumes-id">Finding a volume’s ID</h2>
-<p>To work with the OpenStack CLI, please do not forget to <a href="../../../getting-started/enable-openstack-cli/">source the RC file first</a>.</p>
-<p>Use the ID of the server instead of using the server name.
-This will make sure that you are using the correct server.</p>
+<p>To work with the OpenStack CLI, be sure to <a href="../../../getting-started/enable-openstack-cli/">source the RC file first</a>.</p>
+<p>Use the server ID instead of the server name.
+This ensures you operate on the correct server.</p>
 <p>Find the ID of your server by matching the name, using the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>list<span class="w"> </span>--name<span class="w"> </span><span class="s1">'name'</span>
 <span class="go">+-----------------+-----------------+---------+-----------------+--------------------+-------------+</span>
@@ -7509,7 +7509,7 @@ This will make sure that you are using the correct server.</p>
 <span class="go">| ab8100          |                 |         |                 |                    |             |</span>
 <span class="go">+-----------------+-----------------+---------+-----------------+--------------------+-------------+</span>
 </code></pre></div>
-<p>This guide is only applicable to servers that are using boot from volume.
+<p>This guide applies only to servers that boot from a volume.
 To verify this, make sure your server’s <code>Image</code> value is <code>N/A (booted from volume)</code>.</p>
 <p>To get the ID of your server’s boot volume, use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>volumes_attached<span class="w"> </span>&lt;server_id&gt;
@@ -7521,13 +7521,13 @@ To verify this, make sure your server’s <code>Image</code> value is <code>N/A 
 <span class="go">|                  | id='68756558-dbf0-44db-9475-1bc24822371c' |</span>
 <span class="go">+------------------+-------------------------------------------+</span>
 </code></pre></div>
-<p>If there are multiple volumes attached, the first volume in the list is the server system volume.
+<p>If multiple volumes are attached, the first volume in the list is the server system volume.
 Copy this ID.</p>
-<p>If you want to move any other attached volumes along with your server’s system volume, you also need to follow the same steps for each one of these volumes.</p>
+<p>If you want to move any other attached volumes along with your server’s system volume, follow the same steps for each volume.</p>
 <h2 id="stopping-a-running-server">Stopping a running server</h2>
-<p>In the next step you are instructed to make a copy of the server’s system volume.
-Some operating systems or applications might experience issues being copied at the same time it might be performing operations.</p>
-<p>While this step is not strictly required, it is recommended to first power off your server.</p>
+<p>In the next step, you are instructed to copy the server’s system volume.
+Some operating systems or applications may have issues when copied while they are performing operations.</p>
+<p>While this step is not strictly required, we recommend powering off your server first.</p>
 <p>Stop the running server with the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>stop<span class="w"> </span>&lt;server_id&gt;
 </code></pre></div>
@@ -7535,7 +7535,9 @@ Some operating systems or applications might experience issues being copied at t
 <p>Begin by making a copy of the volume, using the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>--source<span class="w"> </span>&lt;source_volume_id&gt;<span class="w"> </span>&lt;copy_volume_name&gt;
 </code></pre></div>
-<p>You will get a printout showing you information about the created volume, such as <code>source_volid</code> which is the ID of volume you just copied, and <code>id</code> of this <strong>new</strong> volume, that you will use in the next step to create an image.</p>
+<p>You will get a printout showing information about the created volume.
+The <code>source_volid</code> field has the ID of the volume you just copied, while the <code>id</code> field has the ID of the <strong>new</strong> volume.
+You will use the <code>id</code> value in the next step to create an image.</p>
 <div class="highlight"><pre><span></span><code>+---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
@@ -7561,13 +7563,14 @@ Some operating systems or applications might experience issues being copied at t
 +---------------------+--------------------------------------+
 </code></pre></div>
 <h2 id="creating-an-image-of-a-volume">Creating an image of a volume</h2>
-<p>Then create an image of the copied volume, by using the following command:</p>
+<p>Create an image of the copied volume by using the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span>--volume<span class="w"> </span>&lt;copy_volume_id&gt;<span class="w"> </span>&lt;new_image_name&gt;
 </code></pre></div>
 <blockquote>
 <p>Substitute <code>&lt;copy_volume_id&gt;</code> with the ID from the newly created volume in the previous step.</p>
 </blockquote>
-<p>After a while you will get a printout showing you information of the new image, such as the image disk format <code>disk_format</code> and the image ID <code>image_id</code>, you need these two values in an upcoming step.</p>
+<p>After a while, you will get a printout showing information about the new image, such as the image disk format (<code>disk_format</code>) and the image ID (<code>image_id</code>).
+You will soon need the values of <code>disk_format</code> and <code>image_id</code>.</p>
 <div class="highlight"><pre><span></span><code>+---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
@@ -7585,8 +7588,10 @@ Some operating systems or applications might experience issues being copied at t
 | volume_type         | default                              |
 +---------------------+--------------------------------------+
 </code></pre></div>
-<p>Depending on the size of the volume it might take some time to upload and while it is, the image <code>status</code> will be <code>uploading</code>.
-Before you continue to the next step, make sure the image <code>status</code> is <code>active</code>, otherwise wait a bit and then check again with:</p>
+<p>Depending on the volume size, the upload may take some time;
+while it uploads, the image <code>status</code> is <code>uploading</code>.
+Before you continue to the next step, make sure the image <code>status</code> is <code>active</code>.
+If it isn’t yet, wait a bit and then check again with:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>&lt;image_id&gt;
 </code></pre></div>
 <p>The printout should look like this before you continue.</p>
@@ -7600,7 +7605,7 @@ Before you continue to the next step, make sure the image <code>status</code> is
 <p>It is now safe to remove the volume you created earlier, using the command: <code>openstack volume delete &lt;copy_volume_id&gt;</code></p>
 </blockquote>
 <h2 id="downloading-an-image">Downloading an image</h2>
-<p>Download the image to your local computer, using the following command:</p>
+<p>Download the image to your local computer using the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>save<span class="w"> </span>--file<span class="w"> </span>&lt;local_image_name&gt;.&lt;disk_format&gt;<span class="w"> </span>&lt;image_id&gt;
 </code></pre></div>
 <blockquote>
@@ -7613,10 +7618,10 @@ Before you continue to the next step, make sure the image <code>status</code> is
 <p>This will output the checksum of your local file.</p>
 <div class="highlight"><pre><span></span><code>MD5 (&lt;local_image_name&gt;.&lt;disk_format&gt;) = 4b086035a943cc1676583c0cc78f0896
 </code></pre></div>
-<p>Show the checksum of the image in the cloud, using the following command:</p>
+<p>Show the checksum of the image in the cloud using the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>checksum<span class="w"> </span>&lt;image_id&gt;
 </code></pre></div>
-<p>These two checksums should be the same.</p>
+<p>These two checksums should match.</p>
 <div class="highlight"><pre><span></span><code>+----------+----------------------------------+
 | Field    | Value                            |
 +----------+----------------------------------+
@@ -7631,15 +7636,16 @@ The following steps will be done on the target region.</p>
 </code></pre></div><p></p>
 </blockquote>
 <h2 id="uploading-an-image">Uploading an image</h2>
-<p>Source the RC-file for the region you want to upload to.</p>
+<p>Source the RC file for the region you want to upload to.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>&lt;target_region_openrc&gt;
 </code></pre></div>
 <p>Upload the image to the new region.
-Set the correct disk format, input the path to the image file and select a name for the new image.</p>
+Set the correct disk format:
+enter the path to the image file, and select a name for the new image.</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span>--disk-format<span class="w"> </span>&lt;disk_format&gt;<span class="w"> </span>--file<span class="w"> </span>&lt;local_image_name&gt;.&lt;disk_format&gt;<span class="w"> </span>&lt;new_image_name&gt;
 </code></pre></div>
-<p>The upload will take some time, depending on your internet upload speed and the size of the image.
-When the upload is finished you get a printout displaying information about your image.</p>
+<p>The upload will take some time, depending on your internet upload speed and the image size.
+When the upload finishes, you get a printout with information about your image.</p>
 <div class="highlight"><pre><span></span><code>+------------------+-------------------------------------------------------------------------------+
 | Field            | Value                                                                         |
 +------------------+-------------------------------------------------------------------------------+
@@ -7663,7 +7669,8 @@ When the upload is finished you get a printout displaying information about your
 | visibility       | shared                                                                        |
 +------------------+-------------------------------------------------------------------------------+
 </code></pre></div>
-<p>But your image is not yet ready to use, Cleura&nbsp;Cloud still needs to process the file, which shouldn’t take long.
+<p>Your image is not ready yet;
+Cleura&nbsp;Cloud still needs to process the file, which shouldn’t take long.
 To check the status of the image, use the ID of the new image with the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>&lt;new_image_id&gt;
 <span class="go">+------------------+-------------------------------------------------------------------------------+</span>
@@ -7690,15 +7697,15 @@ To check the status of the image, use the ID of the new image with the following
 <span class="go">| visibility       | shared                                                                        |</span>
 <span class="go">+------------------+-------------------------------------------------------------------------------+</span>
 </code></pre></div>
-<p>When the image’s <code>status</code> value is <code>active</code>, the whole upload process is done.</p>
-<p>Verify that the checksum of the new image is the same as your local file:</p>
+<p>When the image’s <code>status</code> is <code>active</code>, the upload process is complete.</p>
+<p>Verify that the checksum of the new image matches the checksum of your local file:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>image<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>checksum<span class="w"> </span>&lt;new_image_id&gt;
 </code></pre></div>
 <blockquote>
 <p>It is now safe to remove the image file from your local computer.</p>
 </blockquote>
 <h2 id="creating-a-volume-from-an-image">Creating a volume from an image</h2>
-<p>First you must choose the image you want to create a volume from.</p>
+<p>First, you must choose the image you want to create a volume from.</p>
 <p>List all your private images with the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>image<span class="w"> </span>list<span class="w"> </span>--private
 <span class="go">+--------------------------------------+--------------------------+--------+</span>
@@ -7714,19 +7721,19 @@ To check the status of the image, use the ID of the new image with the following
 <p>Substitute <code>&lt;GB&gt;</code> with the size in gigabytes you wish the volume to be.</p>
 </blockquote>
 <h2 id="creating-a-server-from-a-volume">Creating a server from a volume</h2>
-<p>Now you need to create the new server using the system volume.
+<p>Now create the new server using the system volume.
 To create a new server, follow <a href="../new-server/">this guide</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_1_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>If you use the Cleura&nbsp;Cloud Management&nbsp;Panel, when choosing a <em>boot source,</em> select <em>Boot from volume</em> and then your server’s system volume.</p>
+<p>If you use the Cleura&nbsp;Cloud Management&nbsp;Panel, when choosing a <em>boot source,</em> select <em>Boot from volume,</em> then select your server’s system volume.</p>
 </div>
 <div class="tabbed-block">
 <p>If you use the OpenStack CLI, forgo the <code>--image</code> and <code>--boot-from-volume</code> options and instead use <code>--volume &lt;new_volume_name&gt;</code></p>
 </div>
 </div>
 </div>
-<p>If you also moved other volumes, after you have created the server is the time to attach those volumes to the server.</p>
+<p>If you also moved other volumes, when you finish creating the server, do not forget to attach those volumes.</p>
 
 
 
@@ -7749,7 +7756,7 @@ To create a new server, follow <a href="../new-server/">this guide</a>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 4, 2025 14:38:40 UTC">2025-07-04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 31, 2026 14:02:08 UTC">2026-08-31</span>
   </span>
 
     
