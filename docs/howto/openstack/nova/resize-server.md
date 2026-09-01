@@ -3,7 +3,8 @@ description: How to adjust the number of CPU cores and amount of memory for a vi
 ---
 # Resizing a server
 
-This guide will walk you through the required steps to change the number of CPU cores and the amount of memory your server has access to, this is done by changing the server's [flavor](../../../reference/flavors/index.md).
+This guide shows how to change the number of CPU cores and the amount of memory your server has;
+essentially, you do this by changing the server's [flavor](../../../reference/flavors/index.md).
 
 [Resize](https://docs.openstack.org/nova/latest/admin/configuration/resize.html) (or Server resize) is the ability to change the flavor of a server, thus allowing it to upscale or downscale according to user needs.
 A resize operation is a two-step process for the user:
@@ -13,8 +14,8 @@ A resize operation is a two-step process for the user:
 
 ## Prerequisites
 
-You need to have a server you wish to resize.
-Additionally, if you prefer to work with the OpenStack CLI, then make sure to properly [enable it first](../../getting-started/enable-openstack-cli.md).
+You need to have a server you can resize.
+Additionally, if you prefer to use the OpenStack CLI, make sure you [enable it first](../../getting-started/enable-openstack-cli.md).
 
 ## Listing available flavors
 
@@ -26,25 +27,26 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 
     Find the server you want to resize in the list.
     At the right-hand side of its row, click the :material-dots-horizontal-circle: icon.
-    In the drop-down menu that appears, click on _Modify Server_.
+    In the drop-down menu, click _Modify Server_.
 
     ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_light.png#only-light)
     ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_dark.png#only-dark)
 
     Near the top of the options panel, find the _Flavor_ section.
-    See the current flavor used by the server.
+    See the server's current flavor.
     Expand the dropdown menu to get all available flavors.
 
     ![The server's current flavor](assets/resize-server/03-modify-server_light.png#only-light)
     ![The server's current flavor](assets/resize-server/03-modify-server_dark.png#only-dark)
 === "OpenStack CLI"
-    To list all available flavors you can simply run `openstack flavor list`, but that will return a very long unsorted list, instead we recommend the following command:
+    To list all available flavors, you may run `openstack flavor list`.
+    That returns a very long unsorted list, though, so instead we recommend the following command:
 
     ```bash
     openstack flavor list -c Name -f value | grep '[0-9]c[0-9]' | sort -V
     ```
 
-    The printout is a simple and clean list, sorted by the compute type, the number of cores and then by the amount of memory.
+    The output is a simple, clean list, sorted by compute type, number of cores, and then memory.
 
     ```plain
     b.1c1gb
@@ -62,10 +64,11 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 
 Choose a new flavor that you want your server to use instead.
 
-> A resize is only possible with [flavors](../../../reference/flavors/index.md) using the same prefix letter. Most commonly you will have a `b.` flavor, thus you must select another `b.` flavor.
+> A resize is only possible with [flavors](../../../reference/flavors/index.md) using the same prefix letter.
+> Most commonly, you will have a `b.` flavor, so you will select another `b.` flavor.
 
 === "{{gui}}"
-    As soon as you select a new flavor, the _Resize_ button appears.
+    Once you select a new flavor, the _Resize_ button appears.
 
     ![The server's new flavor](assets/resize-server/04-resize-button_light.png#only-light)
     ![The server's new flavor](assets/resize-server/04-resize-button_dark.png#only-dark)
@@ -77,13 +80,13 @@ Choose a new flavor that you want your server to use instead.
     ![Server resize operation in progress](assets/resize-server/05-resize-in-progress_light.png#only-light)
     ![Server resize operation in progress](assets/resize-server/05-resize-in-progress_dark.png#only-dark)
 === "OpenStack CLI"
-    To start the resize use the following command:
+    To start the resize, use the following command:
 
     ```bash
     openstack server resize --flavor <new_flavor> <server_id>
     ```
 
-    While the resize is ongoing the server should have the `OS-EXT-STS:task_state` of `resize_migrating` and the `status` of `RESIZE`.
+    While the resize is ongoing, the server should have `OS-EXT-STS:task_state` set to `resize_migrating`, and `status` set to `RESIZE`.
 
     ```bash
     openstack server show -c OS-EXT-STS:task_state -c OS-EXT-STS:vm_state -c status <server_id>
@@ -113,14 +116,14 @@ Choose a new flavor that you want your server to use instead.
 
 The resize process might take a minute or more.
 {{brand}} will now make a restore point in case the resize process fails.
-It would then restore your server to the state it was before the resize.
+It would then restore your server to the state it was in before the resize.
 
 ## Confirming the resize
 
-Your server is now using the new flavor you selected earlier, and you need to make sure the server is working as intended after the resize.
+Your server is now using the new flavor you selected earlier, and you need to make sure it is still working as intended.
 
-Once you are certain your server is working as intended, you should confirm the resize.
-If you do not confirm the resize, your server will automatically have the resize confirmed after 24 hours.
+Once you are certain your server is working as intended, confirm the resize.
+If you do not, your server will automatically confirm the resize after 24 hours.
 
 === "{{gui}}"
     This is done by clicking the _Confirm_ button.
