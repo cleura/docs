@@ -7582,7 +7582,8 @@
 
 
 <h1 id="resizing-a-server">Resizing a server</h1>
-<p>This guide will walk you through the required steps to change the number of CPU cores and the amount of memory your server has access to, this is done by changing the server’s <a href="../../../../reference/flavors/">flavor</a>.</p>
+<p>This guide shows how to change the number of CPU cores and the amount of memory your server has;
+essentially, you do this by changing the server’s <a href="../../../../reference/flavors/">flavor</a>.</p>
 <p><a href="https://docs.openstack.org/nova/latest/admin/configuration/resize.html">Resize</a> (or Server resize) is the ability to change the flavor of a server, thus allowing it to upscale or downscale according to user needs.
 A resize operation is a two-step process for the user:</p>
 <ol>
@@ -7590,8 +7591,8 @@ A resize operation is a two-step process for the user:</p>
 <li>Either confirm (verify) success and release the old server, or declare a revert to release the new server and restart the old one.</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>You need to have a server you wish to resize.
-Additionally, if you prefer to work with the OpenStack CLI, then make sure to properly <a href="../../../getting-started/enable-openstack-cli/">enable it first</a>.</p>
+<p>You need to have a server you can resize.
+Additionally, if you prefer to use the OpenStack CLI, make sure you <a href="../../../getting-started/enable-openstack-cli/">enable it first</a>.</p>
 <h2 id="listing-available-flavors">Listing available flavors</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_1_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
@@ -7601,20 +7602,21 @@ Additionally, if you prefer to work with the OpenStack CLI, then make sure to pr
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the left hand side navigation panel, select &quot;compute&quot; and then &quot;servers&quot;" src="../assets/resize-server/01-left-side-panel_dark.png#only-dark"></a></p>
 <p>Find the server you want to resize in the list.
 At the right-hand side of its row, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon.
-In the drop-down menu that appears, click on <em>Modify Server</em>.</p>
+In the drop-down menu, click <em>Modify Server</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the drop-down menu of the server you want to resize, click on &quot;modify server&quot;" src="../assets/resize-server/02-menu-list_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="In the drop-down menu of the server you want to resize, click on &quot;modify server&quot;" src="../assets/resize-server/02-menu-list_dark.png#only-dark"></a></p>
 <p>Near the top of the options panel, find the <em>Flavor</em> section.
-See the current flavor used by the server.
+See the server’s current flavor.
 Expand the dropdown menu to get all available flavors.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's current flavor" src="../assets/resize-server/03-modify-server_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's current flavor" src="../assets/resize-server/03-modify-server_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
-<p>To list all available flavors you can simply run <code>openstack flavor list</code>, but that will return a very long unsorted list, instead we recommend the following command:</p>
+<p>To list all available flavors, you may run <code>openstack flavor list</code>.
+That returns a very long unsorted list, though, so instead we recommend the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>flavor<span class="w"> </span>list<span class="w"> </span>-c<span class="w"> </span>Name<span class="w"> </span>-f<span class="w"> </span>value<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">'[0-9]c[0-9]'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-V
 </code></pre></div>
-<p>The printout is a simple and clean list, sorted by the compute type, the number of cores and then by the amount of memory.</p>
+<p>The output is a simple, clean list, sorted by compute type, number of cores, and then memory.</p>
 <div class="highlight"><pre><span></span><code>b.1c1gb
 b.1c2gb
 b.1c4gb
@@ -7631,12 +7633,13 @@ b.4c4gb
 <h2 id="initiating-the-resize">Initiating the resize</h2>
 <p>Choose a new flavor that you want your server to use instead.</p>
 <blockquote>
-<p>A resize is only possible with <a href="../../../../reference/flavors/">flavors</a> using the same prefix letter. Most commonly you will have a <code>b.</code> flavor, thus you must select another <code>b.</code> flavor.</p>
+<p>A resize is only possible with <a href="../../../../reference/flavors/">flavors</a> using the same prefix letter.
+Most commonly, you will have a <code>b.</code> flavor, so you will select another <code>b.</code> flavor.</p>
 </blockquote>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>As soon as you select a new flavor, the <em>Resize</em> button appears.</p>
+<p>Once you select a new flavor, the <em>Resize</em> button appears.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's new flavor" src="../assets/resize-server/04-resize-button_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The server's new flavor" src="../assets/resize-server/04-resize-button_dark.png#only-dark"></a></p>
 <p>Click on it to start the resize.</p>
@@ -7645,10 +7648,10 @@ b.4c4gb
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Server resize operation in progress" src="../assets/resize-server/05-resize-in-progress_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
-<p>To start the resize use the following command:</p>
+<p>To start the resize, use the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>resize<span class="w"> </span>--flavor<span class="w"> </span>&lt;new_flavor&gt;<span class="w"> </span>&lt;server_id&gt;
 </code></pre></div>
-<p>While the resize is ongoing the server should have the <code>OS-EXT-STS:task_state</code> of <code>resize_migrating</code> and the <code>status</code> of <code>RESIZE</code>.</p>
+<p>While the resize is ongoing, the server should have <code>OS-EXT-STS:task_state</code> set to <code>resize_migrating</code>, and <code>status</code> set to <code>RESIZE</code>.</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>OS-EXT-STS:task_state<span class="w"> </span>-c<span class="w"> </span>OS-EXT-STS:vm_state<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>&lt;server_id&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>+-----------------------+------------------+
@@ -7673,11 +7676,11 @@ b.4c4gb
 </div>
 <p>The resize process might take a minute or more.
 Cleura&nbsp;Cloud will now make a restore point in case the resize process fails.
-It would then restore your server to the state it was before the resize.</p>
+It would then restore your server to the state it was in before the resize.</p>
 <h2 id="confirming-the-resize">Confirming the resize</h2>
-<p>Your server is now using the new flavor you selected earlier, and you need to make sure the server is working as intended after the resize.</p>
-<p>Once you are certain your server is working as intended, you should confirm the resize.
-If you do not confirm the resize, your server will automatically have the resize confirmed after 24 hours.</p>
+<p>Your server is now using the new flavor you selected earlier, and you need to make sure it is still working as intended.</p>
+<p>Once you are certain your server is working as intended, confirm the resize.
+If you do not, your server will automatically confirm the resize after 24 hours.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -7721,7 +7724,7 @@ If you do not confirm the resize, your server will automatically have the resize
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 10, 2026 16:12:12 UTC">2026-05-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 31, 2026 14:02:08 UTC">2026-08-31</span>
   </span>
 
     
