@@ -1,8 +1,8 @@
 # Deleting networks
 
-Deleting a network in {{brand}} may sound like a pretty straightforward task --- and it is.
-It's just that before deleting a network, there are some steps we almost always need to take.
-In what follows we show, step by step and through specific examples, how we delete networks using either the {{gui}} or the OpenStack CLI.
+Deleting a network in {{brand}} may sound straightforward --- and it is.
+Before deleting a network, though, we almost always need to take a few steps.
+In what follows, we show, step by step and through specific examples, how we delete networks using either the {{gui}} or the OpenStack CLI.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Unless you already have the ID or know the name of the network you wish to delet
 
     In the vertical pane on the left-hand side of the dashboard, expand the _Networking_ section and click _Networks_.
     In the central pane of the page, you will see all networks in all regions you have access to.
-    For the purposes of this guide, let us assume you no longer need network `carmacks`, so now you want to delete it.
+    For the purposes of this guide, let us assume you no longer need the `carmacks` network, so now you want to delete it.
 
     ![Listing networks](assets/del-net/shot-01_light.png#only-light)
     ![Listing networks](assets/del-net/shot-01_dark.png#only-dark)
@@ -43,15 +43,15 @@ Let us assume you wish to delete the network named `carmacks`.
 ## Determining component dependencies
 
 If the network to be deleted has a subnet component --- and most likely it will have ---, you will first have to delete the subnet before deleting the network.
-If, in addition, the subnet is behind a router (figurately speaking), then before deleting the subnet, you will have to disconnect it from the router.
-Finally, you will have the option to delete the router also.
-Let us see what the situation is with network `carmacks`.
+And then, if the subnet is behind a router (figuratively speaking), you must disconnect it from the router before deleting it.
+Finally, you can also delete the router.
+Let us see what the situation is with `carmacks`.
 
 === "{{gui}}"
     For more information on `carmacks`, click the :material-dots-horizontal-circle: icon (right-hand side of the network row) and select _View details_.
     Four tabs immediately appear below; _Details_, _Ports_, _Subnets_, and _Routers_.
-    Looking at the _Details_ tab, it is clear that network `carmacks` has a subnet and is behind a router.
-    You may click on tabs _Subnets_ and _Routers_, to see more information regarding the network subnet and the router in front of the network.
+    On the _Details_ tab, you can see that the `carmacks` network has a subnet and is behind a router.
+    You may click on the _Subnets_ and _Routers_ tabs to get more information regarding the network subnet and the router in front of the network.
 
     ![Network details](assets/del-net/shot-02_light.png#only-light)
     ![Network details](assets/del-net/shot-02_dark.png#only-dark)
@@ -66,8 +66,8 @@ Let us see what the situation is with network `carmacks`.
         ![Use cascade delete to automatically delete a network and all related components](assets/del-net/smart-delete_dark.png#only-dark)
 
         The network and its subnets, including any subnet routers, will be deleted.
-        But if there is any resource still using the network, any of its subnets, or any subnet router, the cascading delete will fail.
-        In that case, you will have to do some manual work, like in the examples we provide here.
+        But if any resource is still using the network, any of its subnets, or any subnet router, the cascading delete will fail.
+        In that case, you will need to do some manual work, like in the examples below.
 === "OpenStack CLI"
     To quickly check whether network `carmacks` has a subnet or not, type:
 
@@ -81,7 +81,7 @@ Let us see what the situation is with network `carmacks`.
     +---------+--------------------------------------+
     ```
 
-    If the value for the field `subnets` is non-empty, like in the example output above, that means the network has a subnet indeed, and the value is the ID of that subnet.
+    If the `subnets` field has a value, as in the example output above, the network has a subnet indeed, and the aforementioned value is the subnet ID.
     At this point, it helps to assign the subnet ID to an environment variable, like so:
 
     ```bash
@@ -157,30 +157,30 @@ Let us see what the situation is with network `carmacks`.
     +-----------------+--------------------------------------------------------------------------------+
     ```
 
-    Looking at the value of `interfaces_info`, it is easy to see that `subnet_id` has the value of the variable `SUBNET_ID` you just instantiated.
+    Looking at the `interfaces_info` value, it is easy to see that `subnet_id` has the value of the variable `SUBNET_ID` you just instantiated.
     In other words, router `carmacks-router` is indeed in front of network `carmacks`.
 
-    > There will be times when router names won't help much.
-    > Then, try a more exhaustive search approach:
-    >
-    > ```console
-    > $ for i in $(openstack router list -f value -c Name); do
-    >     echo Checking router "$i"
-    >     openstack router show "$i" -f json -c interfaces_info | grep "$SUBNET_ID"
-    > done
-    > 
-    > Checking router carmacks-router
-    >       "subnet_id": "7fa9e5a2-7d5a-466e-b120-7d2bffb99ce5"
-    > Checking router router-{{api_region|lower}}
-    > ```
+    ??? "When router names don't help"
+        Sometimes router names won't help much.
+        Then, try a more exhaustive search approach:
+        ```console
+        $ for i in $(openstack router list -f value -c Name); do
+            echo Checking router "$i"
+            openstack router show "$i" -f json -c interfaces_info | grep "$SUBNET_ID"
+        done
+        
+        Checking router carmacks-router
+              "subnet_id": "7fa9e5a2-7d5a-466e-b120-7d2bffb99ce5"
+        Checking router router-{{api_region|lower}}
+        ```
 
 ## Tearing down networks
 
 Now that you know you're dealing with a full-blown network and a router, you start by disconnecting the subnet from the router.
-Then, you will move on to deleting the subnet and the network, and after that, you can finish up with deleting the router.
+Then, delete the subnet and the network, and after that, delete the router.
 
 === "{{gui}}"
-    Go to the _Subnets_ tab of the `carmacks` network, and click the :material-note-edit-outline: icon (at the left of the :material-delete-circle-outline: icon).
+    Go to the _Subnets_ tab of the `carmacks` network, and click the :material-note-edit-outline: icon (to the left of the :material-delete-circle-outline: icon).
 
     ![Network subnets](assets/del-net/shot-03_light.png#only-light)
     ![Network subnets](assets/del-net/shot-03_dark.png#only-dark)
@@ -192,14 +192,14 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     ![Disconnect subnet](assets/del-net/shot-04_light.png#only-light)
     ![Disconnect subnet](assets/del-net/shot-04_dark.png#only-dark)
 
-    A pop-up window will appear, asking if you really want to go ahead with the disconnection.
+    A pop-up window will appear, asking whether you really want to proceed with the disconnection.
     Just click the _Yes, Remove interface_ button.
 
     ![Remove interface](assets/del-net/shot-05_light.png#only-light)
     ![Remove interface](assets/del-net/shot-05_dark.png#only-dark)
 
     After disconnecting the subnet, click the :material-delete-circle-outline: icon to delete it.
-    Once more, a pop-up will appear asking for confirmation.
+    A pop-up appears, asking for confirmation.
     Click the _Yes, Delete_ button.
 
     ![Delete subnet](assets/del-net/shot-06_light.png#only-light)
@@ -216,31 +216,31 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     ![Delete Carmacks](assets/del-net/shot-08_light.png#only-light)
     ![Delete Carmacks](assets/del-net/shot-08_dark.png#only-dark)
 
-    Of course, you will have to confirm this action.
-    Clicking the _Yes, Delete_ button is enough.
+    Of course, you will need to confirm this action;
+    click the _Yes, Delete_ button.
 
     ![Confirm network delete](assets/del-net/shot-09_light.png#only-light)
     ![Confirm network delete](assets/del-net/shot-09_dark.png#only-dark)
 
-    After deleting the network, it will not be on the list of all available networks.
+    After you delete the network, it will no longer appear in the list of available networks.
 
     ![List of networks](assets/del-net/shot-10_light.png#only-light)
     ![List of networks](assets/del-net/shot-10_dark.png#only-dark)
 
-    There's still that router lying around, and if you have no use for it, go to the _Routers_ page to delete it.
+    If you no longer need the router, go to the _Routers_ page to delete it.
     In the vertical pane on the left, expand the _Networking_ section and click on _Routers_.
-    In the central pane of the page, you will see all routers in all regions you have access to.
+    In the central pane, you will see all routers in all regions you have access to.
 
     ![All routers](assets/del-net/shot-11_light.png#only-light)
     ![All routers](assets/del-net/shot-11_dark.png#only-dark)
 
     Click the :material-dots-horizontal-circle: icon of the router you wish to delete and select _Delete Router_.
-    A pop-up will appear asking for confirmation, so click the _Yes, Delete_ button.
+    A pop-up will appear asking for confirmation, so click _Yes, Delete._
 
     ![Confirm router delete](assets/del-net/shot-12_light.png#only-light)
     ![Confirm router delete](assets/del-net/shot-12_dark.png#only-dark)
 
-    After successfully deleting the router, there will be no trace of it in the list of all routers.
+    After you delete the router, it will no longer appear in the router list.
 
     ![Router is gone](assets/del-net/shot-13_light.png#only-light)
     ![Router is gone](assets/del-net/shot-13_dark.png#only-dark)
@@ -262,7 +262,7 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     +-------------------------------+-----------------+--------------------------------+---------------+
     ```
 
-    As you would expect, included on the list is subnet `carmacks-subnet`, which you are about to delete.
+    As you would expect, the list includes the `carmacks-subnet`, which you are about to delete.
     That's easier said than done, though:
 
     ```console
@@ -275,14 +275,15 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     1 of 1 subnets failed to delete.
     ```
 
-    The trick here is to first disconnect the subnet from the corresponding router, which is perfectly doable from the side of the router.
+    The trick is to first disconnect the subnet from the corresponding router;
+    you can do that from the router side.
     As we discovered a bit earlier, the router we are talking about is `carmacks-router`:
 
     ```bash
     openstack router remove subnet carmacks-router $SUBNET_ID
     ```
 
-    If the command above is successful, you will see no output on your terminal.
+    If the command above succeeds, you will see no output in your terminal.
     Now, an attempt to delete `carmacks-subnet` should go through with flying colors:
 
     ```bash
@@ -304,8 +305,8 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     +--------------------------------+---------------+---------------------------------+---------------+
     ```
 
-    The subnet `carmacks-subnet` is not on the list, which is what you wanted exactly.
-    Next is network `carmacks`, which you should be able to delete by now.
+    The subnet `carmacks-subnet` is not on the list, which is exactly what you wanted.
+    Next is the `carmacks` network, which you should be able to delete by now.
     First, take a look at all available networks:
 
     ```console
@@ -321,7 +322,7 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     +--------------------------------------+--------------+--------------------------------------+
     ```
 
-    Network `carmacks` is on the list, and by looking at the `Subnets` column, you see that it has no subnet.
+    Network `carmacks` is on the list, and the `Subnets` column shows it has no subnets.
     That's expected, so go ahead and delete the network:
 
     ```bash
@@ -342,7 +343,7 @@ Then, you will move on to deleting the subnet and the network, and after that, y
     +--------------------------------------+--------------+--------------------------------------+
     ```
 
-    Network `carmacks` is gone, and if you have no use of `carmacks-router`, go ahead and delete it:
+    Network `carmacks` is gone, and if you have no use for `carmacks-router`, go ahead and delete it:
 
     ```bash
     openstack router delete carmacks-router
@@ -371,22 +372,22 @@ For our demonstration, we created network `teslin`, with subnet `teslin-subnet` 
     In the central pane of the page, you will see all networks in all regions you have access to.
     Select a network with a subnet and no router --- like `teslin` in our example.
 
-    Looking at the network details, it is immediately apparent that there's no router in front of it.
+    In the network details, it is immediately clear there's no router in front of it.
 
     ![No router in sight](assets/del-net/shot-14_light.png#only-light)
     ![No router in sight](assets/del-net/shot-14_dark.png#only-dark)
 
-    Go to the _Subnets_ tab, and click the :material-delete-circle-outline: icon to delete the subnet.
+    Go to the _Subnets_ tab and click the :material-delete-circle-outline: icon to delete the subnet.
 
     ![Delete subnet](assets/del-net/shot-15_light.png#only-light)
     ![Delete subnet](assets/del-net/shot-15_dark.png#only-dark)
 
-    Then, click the :material-dots-horizontal-circle: icon at the right-hand side of the `teslin` row, and select _Delete Network_.
+    Then, click the :material-dots-horizontal-circle: icon on the right-hand side of the `teslin` row, and select _Delete Network_.
 
     ![Delete Teslin](assets/del-net/shot-16_light.png#only-light)
     ![Delete Teslin](assets/del-net/shot-16_dark.png#only-dark)
 === "OpenStack CLI"
-    Let us first take a look at all available networks...
+    First, let's look at all available networks...
 
     ```console
     $ openstack network list --internal
@@ -441,7 +442,7 @@ For our demonstration, we created network `teslin`, with subnet `teslin-subnet` 
     openstack network delete teslin
     ```
 
-    The absence of any output means the command was successful.
+    No output means the command succeeded.
     Take a look yourself:
 
     ```console
@@ -457,12 +458,12 @@ For our demonstration, we created network `teslin`, with subnet `teslin-subnet` 
 
 ## Networks with no subnet and no router
 
-You may directly, without the slightest preparation, delete networks like these.
+You can delete networks like these directly, without any preparation.
 For our demonstration, we created a network named `mayo`, with no subnet and no router in front of it.
 
 === "{{gui}}"
     While viewing all available networks, click the :dots-horizontal-circle: icon at the right-hand side of the `mayo` row and select _Delete Network_.
-    You will have to confirm the action, and the network will be gone as soon as you do.
+    Confirm the action, and the network will be gone.
 
     ![Delete Mayo](assets/del-net/shot-17_light.png#only-light)
     ![Delete Mayo](assets/del-net/shot-17_dark.png#only-dark)
@@ -498,10 +499,10 @@ For our demonstration, we created a network named `mayo`, with no subnet and no 
     +--------------------------------------+--------------+--------------------------------------+
     ```
 
-## Recap: Of networks and towns
+## Recap: Of networks and of towns
 
-Depending on the features of a Neutron network, deleting it may require some preparation work.
-For the purposes of this guide, we created three different networks with different characteristics; `carmacks`, `teslin`, and `mayo`.
-Then, either from the {{gui}} or with the help of OpenStack CLI, we showed how we discover any component dependencies and how we work towards deletion.
+Depending on a Neutron network's features, deleting it may require some preparation.
+For this guide, we created three networks with different characteristics: `carmacks`, `teslin`, and `mayo`.
+Then, either from the {{gui}} or with the help of OpenStack CLI, we showed how to discover component dependencies and work toward deletion.
 Eventually, all three test networks were gone.
-We should point out, though, that all three namesake towns in Yukon are still there.
+We should point out, though, that all three namesake towns in The Yukon are still there.
