@@ -4,7 +4,7 @@ description: How to modernize old boot-from-image servers
 # Converting a boot-from-image server to boot-from-volume
 
 You can freely move any server [between {{brand}} regions](move-server-between-regions.md), provided it boots from a volume.
-Having boot-from-volume servers is something we generally recommend, since it affords more flexibility than booting from an image.
+We generally recommend boot-from-volume servers, since they offer more flexibility than boot-from-image servers.
 
 You may still have boot-from-image servers, though.
 To verify that a particular server is of that type, you can go to the {{gui}}, locate the server, and expand its detailed view.
@@ -15,8 +15,8 @@ If this is a boot-from-image server, it will say *Ephemeral Disk*.
 ![Checking the boot target of a server](assets/bfi-to-bfv/ephemeral_dark.png#only-dark)
 
 Whenever you decide to move a boot-from-image server between regions, you will discover that you cannot do so.
-The solution is first to convert it to a boot-from-volume server and then move it.
-In the following, we show how to perform the conversion using the OpenStack CLI.
+You can, however, convert it to a boot-from-volume server, and then move it.
+Below, we show how to perform the conversion using the OpenStack CLI.
 
 ## Preparation
 
@@ -25,15 +25,15 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     Log in to your {{brand}} account if you have to.
 
 === "OpenStack CLI"
-    To work with the OpenStack CLI, make sure to properly [enable it](../../getting-started/enable-openstack-cli.md) for the region your boot-from-image server resides in.
+    To use the OpenStack CLI, [enable it](../../getting-started/enable-openstack-cli.md) for the region your boot-from-image server resides in.
 
 ## Shutting down the server
 
 === "{{gui}}"
     Make sure the left-hand side vertical pane is in full view, then select *Compute* → [*Servers*](https://{{gui_domain}}/compute/servers).
-    You will see all supported {{brand}} regions in the main pane.
-    Expand the one with the boot-from-image server you want to convert to boot-from-volume.
-    Click the :material-dots-horizontal-circle: icon at the right of the server row, and from the pop-up menu that appears, select *Stop Server*.
+    The main pane shows all supported {{brand}} regions.
+    Expand the region with the boot-from-image server you want to convert.
+    Click the :material-dots-horizontal-circle: icon to the right of the server row, and from the pop-up menu that appears, select *Stop Server*.
 
     ![Stopping server](assets/bfi-to-bfv/shot01_light.png#only-light)
     ![Stopping server](assets/bfi-to-bfv/shot01_dark.png#only-dark)
@@ -66,14 +66,14 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
 ## Taking a snapshot
 
 === "{{gui}}"
-    When the server is shut off, click on its row to get the detailed view and go to the *Snapshots* tab.
+    When the server is shut off, click its row to open the detailed view, then go to the *Snapshots* tab.
     There, click the button labeled *Create a Snapshot*.
 
     ![Creating a snapshot](assets/bfi-to-bfv/shot02_light.png#only-light)
     ![Creating a snapshot](assets/bfi-to-bfv/shot02_dark.png#only-dark)
 
-    A pop-up window appears, where you have to type in a name for the snapshot.
-    You must also be explicit regarding the operation you are about to perform, so activate the switch at the left of the corresponding question.
+    A pop-up window appears where you must enter a name for the snapshot.
+    You must also be explicit regarding the operation you are about to perform, so activate the switch to the left of the corresponding question.
     When you are ready, click the button labeled *Create*.
 
     ![Confirming snapshot creation](assets/bfi-to-bfv/shot03_light.png#only-light)
@@ -119,7 +119,7 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     +------------+-------------------------------------------------------------------------------------+
     ```
 
-    At first, the status of the snapshot is `queued`.
+    Initially, the snapshot status is `queued`.
     To make sure the snapshot has been successfully created, type:
 
     ```bash
@@ -137,14 +137,14 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
 === "{{gui}}"
     After a few seconds, the snapshot will be created and listed in the *Snapshots* tab.
     Before you proceed, take note of its size.
-    At the right-hand side of the snapshot row, click the :fontawesome-solid-database: icon to create a new volume off of the snapshot you just created.
+    At the right-hand side of the snapshot row, click the :fontawesome-solid-database: icon to create a new volume from the snapshot you just created.
 
     ![Creating volume from snapshot](assets/bfi-to-bfv/shot04_light.png#only-light)
     ![Creating volume from snapshot](assets/bfi-to-bfv/shot04_dark.png#only-dark)
 
     A new vertical pane will slide over from the right-hand side of the {{gui}}.
     Type in a name for the new volume, and choose a volume size **bigger** than the snapshot size.
-    Then, you need to type in a description regarding the new volume.
+    Then type a description for the new volume.
 
     ![Typing in name, size, and description](assets/bfi-to-bfv/shot05_light.png#only-light)
     ![Typing in name, size, and description](assets/bfi-to-bfv/shot05_dark.png#only-dark)
@@ -155,7 +155,7 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     ![Starting volume creation](assets/bfi-to-bfv/shot06_dark.png#only-dark)
 
 === "OpenStack CLI"
-    Before creating a volume off of the snapshot you just created, jot down its size like this:
+    Before creating a volume from the snapshot you just created, jot down its size like this:
 
     ```bash
     openstack image show nanisivik_snap -c min_disk -f value
@@ -203,14 +203,14 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     +--------------------------------+--------------------------------------+
     ```
 
-    As you can see in the example above, we named our volume `ephemeral_eyjolfur_vol`, and its `status` was at first `creating`.
+    As you can see in the example above, we named our volume `ephemeral_eyjolfur_vol`, and its `status` was initially `creating`.
     You may check the progress of this operation by typing this:
 
     ```bash
     openstack volume show ephemeral_eyjolfur_vol -c status -f value
     ```
 
-    As soon as the new volume is ready, the `status` becomes `available`.
+    Once the new volume is ready, the `status` becomes `available`.
 
 ## Viewing the new volume
 
@@ -229,7 +229,7 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     ![Viewing new volume](assets/bfi-to-bfv/shot07_dark.png#only-dark)
 
 === "OpenStack CLI"
-    To view all details regarding the volume you just created off of the boot-from-image server snapshot, type the following:
+    To view all details regarding the volume you just created from the boot-from-image server snapshot, type the following:
 
     ```console
     $ openstack volume show ephemeral_eyjolfur_vol
@@ -296,12 +296,12 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
 === "{{gui}}"
 
     Go to the servers view by selecting *Compute* → [*Servers*](https://{{gui_domain}}/compute/servers), and locate the boot-from-image server.
-    It is time to delete it, so click the :material-dots-horizontal-circle: icon at the right of the server row, and from the pop-up menu that appears, select *Delete Server*.
+    Click the :material-dots-horizontal-circle: icon to the right of the server row, and from the pop-up menu that appears, select *Delete Server*.
 
     ![Deleting server](assets/bfi-to-bfv/shot08_light.png#only-light)
     ![Deleting server](assets/bfi-to-bfv/shot08_dark.png#only-dark)
 
-    A window titled *About to delete a server* will appear, asking you if you want to proceed with the deletion.
+    A window titled *About to delete a server* appears, asking whether you wish to proceed with the deletion.
     Click the button labeled *Yes, Delete*.
 
     ![Confirming server deletion](assets/bfi-to-bfv/shot09_light.png#only-light)
@@ -325,22 +325,22 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     ![Creating a new server](assets/bfi-to-bfv/shot10_light.png#only-light)
     ![Creating a new server](assets/bfi-to-bfv/shot10_dark.png#only-dark)
 
-    A vertical pane will slide over from the right-hand side of the {{gui}}, titled *Create a Server*.
+    A vertical pane slides over from the right side of the {{gui}}, titled *Create a Server*.
     Type in a name for the new server.
-    Notice that the server region is pre-selected and the same as the one in which the volume resides.
-    The boot source of the server is also pre-selected and is the volume itself.
+    Notice that the server region is pre-selected and matches the region where the volume resides.
+    The server's boot source is also pre-selected as the volume itself.
 
     ![Naming the server](assets/bfi-to-bfv/shot11_light.png#only-light)
     ![Naming the server](assets/bfi-to-bfv/shot11_dark.png#only-dark)
 
     Scroll down a bit if you have to.
-    Take notice of the *Boot Target*, which should be *Volume*.
+    Note the *Boot Target*, which should be *Volume*.
     Consider leaving the [*Recovery service*](../../../background/recovery-service.md) option enabled.
 
     ![Keeping the recovery service enabled](assets/bfi-to-bfv/shot12_light.png#only-light)
     ![Keeping the recovery service enabled](assets/bfi-to-bfv/shot12_dark.png#only-dark)
 
-    To create the new server, scroll all the way down and click the button labeled *Create*.
+    To create the new server, scroll to the bottom and click the button labeled *Create*.
 
     ![Initiating server creation](assets/bfi-to-bfv/shot13_light.png#only-light)
     ![Initiating server creation](assets/bfi-to-bfv/shot13_dark.png#only-dark)
@@ -359,7 +359,7 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
         eyjolfur
     ```
 
-    The most important parameter in the command above is `--volume`, which is used to specify the boot volume of the server.
+    The most important parameter in the command above is `--volume`, which specifies the server's boot volume.
     Regarding server creation in general, you might want to [check the corresponding guide](new-server.md).
 
 ## Viewing the new server
@@ -424,4 +424,4 @@ In the following, we show how to perform the conversion using the OpenStack CLI.
     +-------------------------------------+------------------------------------------------------------+
     ```
 
-    Pay attention to the value of the `image` field, which confirms that this is indeed a boot-from-volume server.
+    Pay attention to the `image` field, which confirms this is a boot-from-volume server.
