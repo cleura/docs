@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Server groups provide a mechanism to group servers according to a certain policy.">
+        <meta name="description" content="Server groups let you group servers by policy.">
       
       
       
@@ -7706,16 +7706,16 @@
 <h1 id="using-server-groups">Using server groups</h1>
 <p>In Cleura&nbsp;Cloud, you can use server groups to control the scheduling of a group of servers.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>In order to use server groups you must use the OpenStack CLI.
+<p>To use server groups, you must use the OpenStack CLI.
 Make sure you have <a href="../../../getting-started/enable-openstack-cli/">enabled it</a>.</p>
 <h2 id="policies">Policies</h2>
-<p>A server group can have one of four different policies: affinity, soft-affinity, anti-affinity or soft-anti-affinity.</p>
+<p>A server group can have one of four different policies: affinity, soft-affinity, anti-affinity, or soft-anti-affinity.</p>
 <h3 id="affinity">Affinity</h3>
-<p>A server group with the policy of <code>affinity</code> will make sure that all the servers in that group are <strong>always</strong> placed on the same physical compute node.</p>
+<p>A server group with the <code>affinity</code> policy ensures that all servers in the group are <strong>always</strong> placed on the same physical compute node.</p>
 <h3 id="soft-affinity">Soft affinity</h3>
 <p>A policy of <code>soft-affinity</code> will <strong>try to</strong> make sure that all the servers in that group are placed on the same physical compute node, but ultimately will allow it if otherwise not possible.</p>
 <h3 id="anti-affinity">Anti-affinity</h3>
-<p>A server group with the policy of <code>anti-affinity</code> will make sure that the servers in that group are <strong>never</strong> placed on the same physical compute node.</p>
+<p>A server group with the <code>anti-affinity</code> policy will ensure that the servers in that group are <strong>never</strong> placed on the same physical compute node.</p>
 <h3 id="soft-anti-affinity">Soft anti-affinity</h3>
 <p>A policy of <code>soft-anti-affinity</code> will <strong>try to</strong> make sure that all the servers in that group are not placed on the same physical compute node, but ultimately will allow it if otherwise not possible.</p>
 <h2 id="creating-server-groups">Creating server groups</h2>
@@ -7727,15 +7727,16 @@ Make sure you have <a href="../../../getting-started/enable-openstack-cli/">enab
 <p>With an <code>anti-affinity</code> or <code>soft-anti-affinity</code> policy, you may also configure how many servers you want to allow on the same physical compute node.
 To do this, use the option <code>--rule&nbsp;max_server_per_host=&lt;number&gt;</code>, where <code>&lt;number&gt;</code> is the amount of servers to allow on the same physical compute node.</p>
 <h2 id="creating-servers-using-server-groups">Creating servers using server groups</h2>
-<p>To apply a server group policy, you must specify the group when creating a server, as a <em>scheduling hint.</em>
+<p>To apply a server group policy, specify the group as a <em>scheduling hint</em> when creating a server.
 To do that, use the <code>--hint</code> parameter in the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>server<span class="w"> </span>create<span class="w"> </span>--hint<span class="w"> </span><span class="nv">group</span><span class="o">=</span>&lt;server_group_id&gt;<span class="w"> </span><span class="o">[</span>...<span class="o">]</span><span class="w"> </span>&lt;server_name&gt;
 </code></pre></div>
 <p>If you subsequently launch more servers referencing the same server group, Cleura&nbsp;Cloud concentrates or distributes them according to the server group’s policy.</p>
 <h2 id="troubleshooting-common-issues">Troubleshooting common issues</h2>
-<p>If you keep creating servers within a server group with a policy of <code>anti-affinity</code>, you will eventually exceed the total amount of physical compute nodes in the region.
+<p>If you keep creating servers within a server group with an <code>anti-affinity</code> policy, you will eventually exceed the region’s total number of physical compute nodes.
 The command will still succeed, but the server will subsequently fail to be scheduled to a compute node.
-Instead, it will assume the <code>ERROR</code> status with the following <code>fault</code> message: <em>No valid host was found.
+Instead, it will assume the <code>ERROR</code> status with the following <code>fault</code> message:
+<em>No valid host was found.
 There are not enough hosts available.</em></p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>fault<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>&lt;server_id&gt;
 <span class="go">+--------+--------------------------------------------------+</span>
@@ -7747,17 +7748,18 @@ There are not enough hosts available.</em></p>
 <span class="go">| status | ERROR                                            |</span>
 <span class="go">+--------+--------------------------------------------------+</span>
 </code></pre></div>
-<p>This is normal as Cleura&nbsp;Cloud cannot schedule the server on a different physical compute node because there is already a server in the server group on every node.
-The same scheduling error and “fault” message will occur when using a server group with a policy of <code>affinity</code> as well, when you create more servers than a physical compute node can host.</p>
-<p>However when using a soft affinity policy, such as <code>soft-affinity</code> or <code>soft-anti-affinity</code>, the scheduler is allowed to break the server group’s policy if it is unable to uphold it.
-This means you may want to verify that your servers are on the same or on different physical compute nodes by looking at the <em>hostId</em> value of your servers.</p>
+<p>This is normal:
+Cleura&nbsp;Cloud cannot schedule the server on a different physical compute node because each node already has a server from the group.
+The same scheduling error occurs, and a “fault” message appears, when you use a server group with an <code>affinity</code> policy and create more servers than a physical compute node can host.</p>
+<p>However, with a soft affinity policy, such as <code>soft-affinity</code> or <code>soft-anti-affinity</code>, the scheduler can break the server group’s policy if it can’t uphold it.
+This means you may want to verify whether your servers are on the same or different physical compute nodes by checking the <em>hostId</em> value of your servers.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>show<span class="w"> </span>-c<span class="w"> </span>hostId<span class="w"> </span>&lt;server_id&gt;
 <span class="go">+--------+----------------------------------------------------------+</span>
 <span class="go">| hostId | 8fae028139411e9e125d5f39895bef79f916aefce6003a7888de105d |</span>
 <span class="go">+--------+----------------------------------------------------------+</span>
 </code></pre></div>
 <p><code>hostId</code> is a unique identifier for each physical compute node.
-By comparing this value on your different servers you can be sure if your server group policy is being upheld or not.</p>
+By comparing this value across your servers, you can confirm whether your server group policy is being upheld.</p>
 <blockquote>
 <p>It’s not possible to compare <code>hostId</code> between different projects because the values are unique for each project.</p>
 </blockquote>
@@ -7783,7 +7785,7 @@ By comparing this value on your different servers you can be sure if your server
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 4, 2025 14:38:40 UTC">2025-07-04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 31, 2026 14:02:08 UTC">2026-08-31</span>
   </span>
 
     
