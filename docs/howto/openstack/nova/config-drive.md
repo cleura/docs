@@ -26,7 +26,7 @@ Configuration drives are used as a data source for [cloud-init](https://cloudini
 Follow our [How-To guide](new-server.md) to create your new cloud server using either the {{gui}} or the OpenStack CLI.
 
 === "{{gui}}"
-    When you are done configuring the server, right before creating it notice the icon on the left-hand side of _Advanced Options_.
+    When you are done configuring the server, right before creating it, notice the icon on the left-hand side of _Advanced Options_.
     Click on it to expand all related options.
 
     ![Expand advanced configuration options](assets/config-drive/shot-01_light.png#only-light)
@@ -34,7 +34,7 @@ Follow our [How-To guide](new-server.md) to create your new cloud server using e
 
     In the _User-Data_ area, you see everything that will be executed upon server boot.
 
-    Right below, in the _User-data propagation method_ area, the _Use metadata service (Default)_ option is preselected for you.
+    Below, in the _User-data propagation method_ area, the _Use metadata service (Default)_ option is preselected.
     To opt for the alternative metadata discovery method, select _Use configuration drive_.
 
     ![Select the configuration drive method](assets/config-drive/shot-02_light.png#only-light)
