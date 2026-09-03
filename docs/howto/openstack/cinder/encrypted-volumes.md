@@ -10,7 +10,7 @@ That encryption is transparent to virtual machines (instances) that you attach t
 
 ## Creating an encrypted volume
 
-For the creation of an encrypted volume, you need to provide a specific *volume type.*
+To create an encrypted volume, you need to provide a specific *volume type.*
 You can retrieve the list of available volume types with the following command:
 
 ```console
@@ -60,13 +60,15 @@ $ openstack volume create \
 +---------------------+--------------------------------------+
 ```
 
-Upon volume creation, this will create a one-off encryption key, which is stored in Barbican and applies to this one volume only.
-In other words, the key created for this volume will be unable to decrypt any other volumes except the one it was created for.
+When you create a volume, a one-off encryption key is also created.
+This key works only with this volume and is stored in Barbican.
+
+In other words, the key created for this volume cannot decrypt any other volume, except the one it was initially created for.
 
 
 ## Retrieving a volume’s encryption key
 
-Once you have created an encrypted volume, you may retrieve a reference to the Barbican secret that represents its encryption key.
+After you create an encrypted volume, you can retrieve a reference to the Barbican secret that represents its encryption key.
 You do this with the following command:
 
 ```bash
@@ -77,7 +79,7 @@ openstack volume show \
   enc_drive
 ```
 
-Instead of the volume name, you can of course also specify its UUID:
+Instead of the volume name, you can specify its UUID:
 
 ```bash
 openstack volume show \
@@ -91,32 +93,33 @@ openstack volume show \
 ## Deleting an encrypted volume
 
 When you decide you no longer need an encrypted volume and want to delete it, you can do so with the `openstack volume delete` command.
-As long as you do this with the same user account as the one that created the volume, this will succeed without further intervention.
+As long as you do this with the same user account that created the volume, the operation succeeds without further intervention.
 
-However, if you are trying to delete a volume that was created by a different user, you’ll run into the limitation that the *secret* associated with the volume is owned by that user.
-As a result, the deletion of the encrypted volume using your own user credentials will fail.
+However, if you are trying to delete a volume that was created by a different user, you’ll run into the limitation that the *secret* associated with the volume is owned by that other user.
+As a result, deleting the encrypted volume with your own user credentials will fail.
 
 There are two options to work around this limitation:
 
-1. You can switch to the user credentials of the user that created the volume (if you have access to them), and proceed with the deletion.
+1. You can switch to the user credentials of the user that created the volume (assuming you have access to them) and proceed with the deletion.
 2. You can ask the user that created the volume to [add you to the Access Control List (ACL) for the secret](../barbican/share-secret.md).
-   This will enable you to read the secret, and to delete the volume using your own credentials.
+   This will let you read the secret and delete the volume using your own credentials.
 
 
 ## Block device encryption caveats
 
-Once a volume is configured to use encryption and is also attached to an instance in {{brand}}, some caveats apply that you might want to keep in mind.
+Once a volume is configured for encryption and is attached to an instance in {{brand}}, some caveats apply that you might want to keep in mind.
 
 Sometimes, automatically or through administrator intervention, we move one of your instances to another physical machine.
-This process is known as *live migration,* and it normally does not interrupt the instance’s functionality at all — typically, neither you nor the application users notice that live migration has even happened.
-This is a very common occurrence when we do routine upgrades of the {{brand}} platform, during our pre-announced maintenance windows.
+This process is known as *live migration,* and it normally does not interrupt the instance’s functionality at all;
+typically, neither you nor the application users notice that live migration has even happened.
+This is common during routine upgrades of the {{brand}} platform within our pre-announced maintenance windows.
 
 The same considerations apply to physical node failure.
 If the physical machine running your instance fails, we can automatically recover it onto another machine — an action known as *evacuation.*
 
-Live migration or evacuation *including encrypted volumes* does, however, require that whoever does the migration also has at least read access to the volume’s encryption secret.
+Live migration or evacuation *including encrypted volumes* does, however, require that whoever performs the migration also has **at least** read access to the volume’s encryption secret.
 
 This means that you have two options:
 
-1. If you *do* trust us to include your instances in live migrations and evacuations, even if they attach encrypted volumes, then you can [add](../barbican/share-secret.md) our [administrative account](../../../reference/volumes/index.md) to the Access Control List (ACL) for your secrets.
+1. If you *do* trust us to include your instances in live migrations and evacuations, even when they attach encrypted volumes, then you can [add](../barbican/share-secret.md) our [administrative account](../../../reference/volumes/index.md) to the Access Control List (ACL) for your secrets.
 2. If you *don’t* want to share your secrets but you still want to use encrypted volumes, you should build your own mechanism or process (preferably automated) so that your instances recover in case they become non-functional.

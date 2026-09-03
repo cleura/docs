@@ -3,7 +3,7 @@ description: Changing the type of a volume ("retyping") is an offline operation 
 ---
 # Changing a volume's type
 
-You may occasionally need to change the type of a volume.
+You may occasionally need to change a volume's type.
 
 {{page.meta.description}}
 The process of volume retyping incurs a short downtime.
@@ -11,11 +11,14 @@ Depending on the kind of application the server hosts, when you need to retype v
 
 ## Prerequisites
 
-In order to retype volumes, you must use the OpenStack CLI, so make sure you [have it enabled](../../getting-started/enable-openstack-cli.md).
+To retype volumes, you must use the OpenStack CLI, so make sure you [have it enabled](../../getting-started/enable-openstack-cli.md).
+
+If you are about to retype a large volume, or one that holds data associated with a critical service, you may want an estimate of how long the retype operation will take.
+In that case, please file a support request with our [{{support}}](https://{{support_domain}}/servicedesk).
 
 ## Checking the volume's state
 
-Assume you have a volume named `testvol` that is currently attached to a server named `testsrv`:
+Assume you have the `testvol` volume, which is currently attached to the `testsrv` server:
 
 ```console
 $ openstack volume list --long
@@ -29,13 +32,13 @@ $ openstack volume list --long
 +--------------+---------+--------+------+-------------+----------+--------------+------------+
 ```
 
-In this example, this volume status is `in-use`, meaning it is currently attached to a server, and the volume type is `cbs-premium`.
+In this example, the volume status is `in-use`, meaning it is currently attached to a server, and the volume type is `cbs-premium`.
 
 ## Detaching the volume
 
 You cannot retype a volume while it is attached to a server.
 You must thus detach it first.
-It is safest to do this while the server is shut down:
+It is safest to do this while the server is shut off:
 
 ```console
 $ openstack server stop testsrv
@@ -48,8 +51,8 @@ $ openstack server list -c Name -c Status
 +---------+---------+
 ```
 
-Once your server is in the `SHUTOFF` state, you can safely proceed to detaching the volume.
-This will change the volume status from `in-use` to `available`.
+Once your server is in the `SHUTOFF` state, you can safely proceed to detach the volume.
+This will change the volume status from `in-use` to `available`:
 
 ```console
 $ openstack server remove volume testsrv testvol
@@ -82,14 +85,15 @@ $ openstack volume list --long
 +-------------+---------+-----------+------+-------------+----------+-------------+------------+
 ```
 
-Note that the volume status changes from `available` to `retyping`: this status change kicks off the actual data migration, which might take a significant amount of time.
+Note that the volume status changes from `available` to `retyping`:
+this status change kicks off the actual data migration, which might take a significant amount of time.
 
-> You **cannot** use retyping to convert an [encrypted volume](encrypted-volumes.md) to an unencrypted one, or vice versa.
-> Instead, you will need to move your data:
->
-> * Attach a new volume to a running VM that **also** has the original volume attached,
->
-> * copy data over to the new volume.
+!!! warning "Retyping and encryption"
+    You **cannot** use retyping to convert an [encrypted volume](encrypted-volumes.md) to an unencrypted one, or vice versa.
+    Instead, you will need to move your data:
+
+    * Attach a new volume to a running VM that **also** has the original volume attached,
+    * copy data over to the new volume.
 
 ## Re-attaching the volume
 
