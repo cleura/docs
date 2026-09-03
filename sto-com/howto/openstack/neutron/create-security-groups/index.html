@@ -7375,20 +7375,18 @@
 Group rules are project specific; project members can edit the default rules for their group and add new rule sets.”</em></p>
 <h2 id="creating-a-security-group">Creating a security group</h2>
 <p>Navigate to the <a href="https://compliant.cleura.cloud">Cleura&nbsp;Cloud Management&nbsp;Panel</a> page, and log into your Cleura&nbsp;Cloud account.
-On the other hand, if you prefer to work with the OpenStack CLI, please do not forget to <a href="../../../getting-started/enable-openstack-cli/">source the RC file first</a>.</p>
+If you prefer to work with the OpenStack CLI, be sure to <a href="../../../getting-started/enable-openstack-cli/">source the RC file first</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_1_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To create a security group, first make sure the left-hand side vertical pane is fully visible.
-Click on <em>Security&nbsp;Groups</em>, and then on the top-right corner of the central pane, click on <em>Create new Security Group</em>.</p>
+Click on <em>Security&nbsp;Groups</em>, and then in the top-right corner of the central pane, click on <em>Create new Security Group</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating the creation of a new security group" src="../assets/create-security-groups/create-secgroup-01_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating the creation of a new security group" src="../assets/create-security-groups/create-secgroup-01_dark.png#only-dark"></a></p>
-<blockquote>
-<p>An alternative way to create a Security&nbsp;Group is by clicking on the round-cornered <em>Create</em> button, in the top bar.</p>
-</blockquote>
+<p>An alternative way to create a Security&nbsp;Group is by clicking the <em>Create</em> button in the top bar.</p>
 <p>Type in a <em>Name</em> for the new security group, and choose a <em>Region</em> to create it in.
 You may optionally type in a <em>Description</em> for the security group.
-Click on the <em>Create</em> button when you are ready.</p>
+Click <em>Create</em> when you are ready.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setting parameters for the new security group" src="../assets/create-security-groups/create-secgroup-02_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setting parameters for the new security group" src="../assets/create-security-groups/create-secgroup-02_dark.png#only-dark"></a></p>
 </div>
@@ -7474,7 +7472,7 @@ Click on the <code>default</code> security group and select the <em>Rules</em> t
 </div>
 </div>
 </div>
-<p>If you want to restrict the ingress rules to disallow access from other servers and ports in the group, you need to <strong>remove the default two ingress rules.</strong></p>
+<p>If you want to restrict the ingress rules to disallow access from other servers and ports in the group, you need to <strong>remove the two default ingress rules.</strong></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -7519,14 +7517,14 @@ Click on the <code>default</code> security group and select the <em>Rules</em> t
 </code></pre></div>
 <p>The IDs of the two ingress rules, one for IPv4 traffic and one for IPv6, in this case, are:
 <code>5e5e9f4d-1faa-492d-91f1-c105b464072b</code> and <code>86b9413a-ad23-46c4-a35e-9306945dc63c</code>.</p>
-<p>Delete them by using the following command:</p>
+<p>Delete them using the following command:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>security<span class="w"> </span>group<span class="w"> </span>rule<span class="w"> </span>delete<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="m">58785232</span>-3635-49ca-a9d9-5f762c26c92a<span class="w"> </span>baf7d080-32b0-49e3-aa04-b91a20358fd5
 </code></pre></div>
 <p>Print the rules again:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>security<span class="w"> </span>group<span class="w"> </span>rule<span class="w"> </span>list<span class="w"> </span>default
 </code></pre></div>
-<p>Now, the remaining rules are only the egress ones.</p>
+<p>Now the remaining rules are only egress rules.</p>
 <div class="highlight"><pre><span></span><code>+-----------+-------------+-----------+-----------+------------+-----------+-----------------------+----------------------+
 | ID        | IP Protocol | Ethertype | IP Range  | Port Range | Direction | Remote Security Group | Remote Address Group |
 +-----------+-------------+-----------+-----------+------------+-----------+-----------------------+----------------------+
@@ -7548,7 +7546,7 @@ Click on the <code>default</code> security group and select the <em>Rules</em> t
 </div>
 </div>
 <h2 id="allowing-ssh-access">Allowing SSH access</h2>
-<p>The next thing to do is allow SSH access on <strong>port 22</strong> for IPv4 and IPv6 client connections – but <em>only</em> from specific addresses or subnets.</p>
+<p>Next, allow SSH access on <strong>port 22</strong> for IPv4 and IPv6 client connections, but <em>only</em> from specific addresses or subnets.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_4_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -7563,7 +7561,7 @@ Then, set <em>From</em> to <em>Network/IP</em> and, in the <em>Custom&nbsp;CIDR<
 just be sure to set <em>Ether&nbsp;Type</em> to <em>IPv6</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv6 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv6_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv6 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv6_dark.png#only-dark"></a></p>
-<p>When you are done creating the two ingress rules for SSH, you see them listed in the <em>Rules</em> tab of the security group.</p>
+<p>After you create the two ingress rules for SSH, you will see them listed in the security group’s <em>Rules</em> tab.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New ingress rules for SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New ingress rules for SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh_dark.png#only-dark"></a></p>
 </div>
@@ -7588,7 +7586,7 @@ just be sure to set <em>Ether&nbsp;Type</em> to <em>IPv6</em>.</p>
 </blockquote>
 <p>In this example, your IPv4 address is 203.0.113.58, and if you want to allow SSH access from this address only, enter <code>203.0.113.58/32</code> as CIDR.
 If you want to allow SSH access from <em>any</em> address in that <a href="https://en.wikipedia.org/wiki/Classful_network">Class C subnet</a>, instead enter <code>203.0.113.0/24</code> as CIDR.
-Regarding the IPv6 address, in the example we use the <code>2001:db8::/32</code> address block.
+For the IPv6 address, the example uses the <code>2001:db8::/32</code> address block.
 Alternatively, you may use a single IPv6 address, like <code>2001:db8:ffff:ffff:ffff:ffff:ffff:ffff/128</code>.</p>
 <h2 id="allowing-web-traffic">Allowing Web Traffic</h2>
 <p>Next, create the rules that allow anyone to access a server on <strong>port 80</strong> and <strong>port 443</strong>.</p>
@@ -7705,7 +7703,7 @@ in each of the two, you should now type <code>443</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 14, 2026 18:03:56 UTC">2026-05-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 1, 2026 14:10:27 UTC">2026-09-01</span>
   </span>
 
     
