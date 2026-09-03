@@ -1,7 +1,7 @@
 # Creating a VPN connection between regions
 
 Thanks to the Openstack Neutron VPN as a Service (VPNaaS) feature, you can bridge two different regions via a site-to-site IPSec VPN connection.
-This is made possible without setting up and configuring a virtual machine in any one of the regions.
+This is possible without setting up and configuring a virtual machine in either region.
 On the contrary, you can quickly establish such a connection using the {{gui}} or the OpenStack CLI.
 Let us demonstrate the process following both approaches.
 
@@ -16,7 +16,7 @@ Use either the package manager of your operating system or `pip`:
     apt install python3-neutronclient
     ```
 === "Mac OS X with Homebrew"
-    This Python module is unavailable via `brew`, but you can install it via `pip`.
+    This Python module is not available via `brew`, but you can install it with `pip`.
 === "Python Package"
     ```bash
     pip install cleura-openstackclient
@@ -31,7 +31,7 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     On the top right-hand side of the {{gui}}, click the _Create_ button.
     A vertical pane titled _Create_ will slide into view from the right-hand side of the browser window.
     You will notice several rounded boxes, each one for defining, configuring, and instantiating a different {{brand}} object.
-    Go ahead and click the _VPN_ box.
+    Click the _VPN_ box.
 
     ![Create new object](assets/vpnaas/shot-01_light.png#only-light)
     ![Create new object](assets/vpnaas/shot-01_dark.png#only-dark)
@@ -60,16 +60,16 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     ![Create](assets/vpnaas/shot-05_light.png#only-light)
     ![Create](assets/vpnaas/shot-05_dark.png#only-dark)
 === "OpenStack CLI"
-    First, you need to have the RC files of the two regions you will be connecting.
+    First, you need the RC files for the two regions you will connect.
     In the example that follows, we demonstrate establishing a site-to-site connection between regions `fra1` and `kna1`.
-    This means that, while following through, before working in `fra1` you need to source the RC file for `fra1`, and before working in `kna1` you need to source the RC file for `kna1`.
+    This means that, when working in `fra1`, you need to have sourced the RC file for `fra1`, and when working in `kna1`, you need to have sourced the RC file for `kna1`.
 
     > It helps to imagine the site-to-site connection schematically, with `fra1` being on the left side and `kna1` being on the right side of the connection.
-    That is why we interchange the terms `fra1`, _left_ and `kna1`, _right_.
+    That is why we interchange the terms `fra1`, _left,_ and `kna1`, _right._
 
     You also have to decide which subnets from either side you will connect.
-    Additionally, you need to know the respective CIDR notations and routers.
-    In the examples that follow, on the left side we have subnet `subnet-fra1` with CIDR `10.15.25.0/24` and router `router-fra1`, and on the right side we have subnet `subnet-kna1` with CIDR `10.15.20.0/24` and router `router-kna1`.
+    You also need the respective CIDR notations and routers.
+    In the examples that follow, on the left side we have subnet `subnet-fra1` with CIDR `10.15.25.0/24` and router `router-fra1`, while on the right side we have subnet `subnet-kna1` with CIDR `10.15.20.0/24` and router `router-kna1`.
     For convenience, we have set the shell variables `SUBNET_FRA1` and `SUBNET_KNA1`:
 
     ```bash
@@ -79,8 +79,7 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
 
     ### Prepare the left side (region `fra1`)
 
-    Begin by creating a new
-    [IKE](https://en.wikipedia.org/wiki/Internet_Key_Exchange) policy:
+    Begin by creating a new [IKE](https://en.wikipedia.org/wiki/Internet_Key_Exchange) policy:
 
     ```console
     $ openstack vpn ike policy create ike-pol-fra1
@@ -157,7 +156,7 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     ```
 
     The site-to-site connection you are about to create needs two end-point groups on the left, and two end-point groups on the right.
-    More specifically, on either side of the connection, there should be one end-point group for the local subnet and one end-point group for the peer (remote) subnet.
+    More specifically, on each side of the connection, you need one end-point group for the local subnet and one end-point group for the peer (remote) subnet.
     You are now on the left side of the connection (region `fra1`), so begin with the left local end-point group...
 
     ```console
@@ -199,7 +198,7 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     ### Prepare the right side (region `kna1`)
 
     Before establishing a site-to-site VPN connection between the two regions, you must make similar preparations on the right side of the connection (region `kna1`).
-    You should adjust all commands you entered above and execute them on the right side.
+    Adjust all commands you entered above and run them on the right side.
     For your convenience, these are all the adjusted commands with the respective outputs:
 
     Create a new IKE policy:
@@ -316,15 +315,16 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     ### Instantiate a pre-shared key
 
     Before establishing a site-to-site IPSec VPN connection, you must have a randomly generated pre-shared key.
-    You may use `openssl` for generating a random string and immediately set it to a shell variable:
+    You may use `openssl` to generate a random string and immediately set it to a shell variable:
 
     ```bash
     PRE_SHARED_KEY=$(openssl rand -hex 24)
     ```
 
     The above is just an example.
-    The key should not necessarily be a hexadecimal string, nor do you have to use `openssl`.
-    Another option would be to use the fine `pwgen` tool, for example like this:
+    The key does not have to be a hexadecimal string.
+    You also don't have to use `openssl`.
+    Another option would be to use the fine `pwgen` tool:
 
     ```bash
     PRE_SHARED_KEY=$(pwgen 64 1)
@@ -420,12 +420,12 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
 
 ## Viewing VPN connections and getting details
 
-No matter if you use the {{gui}} or the OpenStack CLI, you may at any time list all VPN connections and get relevant details.
+Whether you use the {{gui}} or the OpenStack CLI, you can list all VPN connections and view relevant details.
 
 === "{{gui}}"
     In the vertical pane on the left-hand side of the {{gui}}, expand the _Networking_ section and then the _VPN Services_ subsection.
     From the available options, click _VPN Services_ again.
-    You will see two VPN connections in the main pane, each from one region to the other.
+    You will see two VPN connections in the main pane, one from each region.
 
     ![Create](assets/vpnaas/shot-06_light.png#only-light)
     ![Create](assets/vpnaas/shot-06_dark.png#only-dark)
@@ -436,7 +436,7 @@ No matter if you use the {{gui}} or the OpenStack CLI, you may at any time list 
     ![Create](assets/vpnaas/shot-07_light.png#only-light)
     ![Create](assets/vpnaas/shot-07_dark.png#only-dark)
 === "OpenStack CLI"
-    You can list all IPSec VPN connections working from any of the two regions involved.
+    You can list all IPSec VPN connections from either region.
     See, for example, the view from `fra1`:
 
     ```console
@@ -485,8 +485,8 @@ No matter if you use the {{gui}} or the OpenStack CLI, you may at any time list 
 
 ## Testing the site-to-site VPN connection
 
-One way to test the VPN connection is to have two servers (e.g., `server-fra1` and `server-kna1`), each on a different region (e.g., `fra1` and `kna1` respectively), ping each other using private IP addresses.
-With no VPN connection between the two regions, pinging should not be possible:
+One way to test the VPN connection is to have two servers (e.g., `server-fra1` and `server-kna1`), each in a different region (e.g., `fra1` and `kna1` respectively), ping each other using private IP addresses.
+With no VPN connection between the two regions, pinging **should not** be possible:
 
 ```console
 ubuntu@server-fra1:~$ ping -c 3 10.15.20.148
@@ -504,7 +504,7 @@ PING 10.15.25.58 (10.15.25.58) 56(84) bytes of data.
 3 packets transmitted, 0 received, 100% packet loss, time 2045ms
 ```
 
-On the other hand, with a VPN connection established between the two regions, pinging should be all possible:
+On the other hand, with a VPN connection established between the two regions, pinging **should** be possible:
 
 ```console
 ubuntu@server-fra1:~$ ping -c 3 10.15.20.148
@@ -535,10 +535,10 @@ rtt min/avg/max/mdev = 32.533/32.832/33.336/0.358 ms
 You may, at any time, disable an active site-to-site VPN connection.
 
 === "{{gui}}"
-    Currently, there is no way to disable an active connection from the {{gui}}.
-    If you want to disable an active connection, please use the OpenStack CLI.
+    Currently, you cannot disable an active connection from the {{gui}}.
+    To disable an active connection, use the OpenStack CLI.
 === "OpenStack CLI"
-    All you have to do is get on either side of the connection and disable the VPN connection across the other side.
+    All you need to do is be on either side of the connection and disable the VPN connection to the other side.
     Suppose you are on the left side of the connection (region `fra1`), and for whatever reason, you want to disable the site-to-site connection between left and right (regions `fra1` and `kna1`).
     First, you might want to remember the name of the VPN connection to the right:
 
@@ -553,7 +553,7 @@ You may, at any time, disable an active site-to-site VPN connection.
     +--------------------------+------------------+---------------+--------------------------+--------+
     ```
 
-    That would be `vpn-conn-to-kna1`, and according to the command output above, it is active.
+    That would be `vpn-conn-to-kna1`, and the command output above shows it is active.
     To disable it, type the following:
 
     ```bash
@@ -620,8 +620,8 @@ PING 10.15.25.58 (10.15.25.58) 56(84) bytes of data.
 You can easily enable an inactive site-to-site VPN connection.
 
 === "{{gui}}"
-    Currently, there is no way to enable an inactive connection from the {{gui}}.
-    If you want to re-enable an inactive connection, please use the OpenStack CLI.
+    Currently, you can not enable an inactive connection from the {{gui}}.
+    To re-enable an inactive connection, use the OpenStack CLI.
 === "OpenStack CLI"
     Make sure you hop on the side where you initially disabled the connection.
     According to the example scenario we described in the previous section, that would be the left side (region `fra1`), and the name of the disabled connection would be `vpn-conn-to-kna1`.
@@ -637,7 +637,7 @@ You can easily enable an inactive site-to-site VPN connection.
     +--------+-------+
     ```
 
-    Note that if you issued a similar command from the right side of the connection (region `kna1`), you would also get a `DOWN` status.
+    If you issued a similar command from the right side of the connection (region `kna1`), you would also see a `DOWN` status.
     Being on the left side, all you have to do to enable the inactive connection is type the following:
 
     ```bash
@@ -664,7 +664,7 @@ You can easily enable an inactive site-to-site VPN connection.
     ```
     Hit CTRL+C to stop watching.
 
-To test that a previously disabled site-to-site connection is now enabled, select a server from one region and try to ping a server in another region.
+To confirm a previously disabled site-to-site connection is now enabled, select a server in one region and try to ping a server in another region.
 Suppose, for example, that a re-enabled connection involves regions `fra1` and `kna1`, and that we have servers `server-fra1` (in `fra1`) and `server-kna1` (in `kna1`).
 With the VPN connection between the two regions now re-established, pinging should be possible:
 
