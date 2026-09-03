@@ -7693,8 +7693,8 @@
 
 <h1 id="transferring-data-between-volumes">Transferring data between volumes</h1>
 <p>From time to time, you may want to transfer data from one persistent storage volume to another, while keeping your data within the same Cleura&nbsp;Cloud region.</p>
-<p>For example, you might prefer to select a volume type that has become newly available in that region, but find the downtime associated with <a href="../retype-volumes/">retyping a single volume</a> prohibitive.
-In this case, you can choose an on-line synchronization approach, which comes with much reduced downtime.</p>
+<p>For example, you might prefer a volume type that recently became available in that region but find the downtime associated with <a href="../retype-volumes/">retyping a single volume</a> prohibitive.
+In this case, you can choose an online synchronization approach, which has shorter downtime.</p>
 <p>The process described here assumes that the volume whose contents you are about to transfer is <em>not</em> a boot volume — in other words, that the volume is normally attached as <code>/dev/vdb</code> or <code>/dev/sdc</code> or similar, but <em>not</em> as <code>/dev/vda</code> or <code>/dev/sda</code>.
 If the volume you need to retype <em>is</em> a boot volume, you should plan system downtime and opt for an <a href="../retype-volumes/">offline retype</a> instead.</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -7712,8 +7712,8 @@ If the volume you need to retype <em>is</em> a boot volume, you should plan syst
 </code></pre></div>
 <p>In this example, the volume status is <code>in-use</code> (meaning the volume is currently attached to a server), and the volume type is <code>cbs</code>.</p>
 <h2 id="taking-a-snapshot-of-the-source-volume">Taking a snapshot of the source volume</h2>
-<p>First take a <em>snapshot</em> (a consistent, read-only, point-in-time copy) of your source volume.
-Note that since you are taking a snapshot of an <code>in-use</code> volume, you need to use the <code>--force</code> option with the following command:</p>
+<p>First, take a <em>snapshot</em> (a consistent, read-only, point-in-time copy) of your source volume.
+Note that since you are taking a snapshot of an <code>in-use</code> volume, you need to add the <code>--force</code> option:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>snapshot<span class="w"> </span>create<span class="w"> </span>--force<span class="w"> </span>--volume<span class="w"> </span>sourcevol<span class="w"> </span>sourcevol-snap
 <span class="go">+-------------+--------------------------------------+</span>
 <span class="go">| Field       | Value                                |</span>
@@ -7729,7 +7729,7 @@ Note that since you are taking a snapshot of an <code>in-use</code> volume, you 
 <span class="go">| volume_id   | 526f7741-2c44-4d04-a0c8-86b8d039e674 |</span>
 <span class="go">+-------------+--------------------------------------+</span>
 </code></pre></div>
-<p>The snapshot status should change from <code>creating</code> to <code>available</code> in a matter of seconds.
+<p>The snapshot status should change from <code>creating</code> to <code>available</code> within seconds.
 You can subsequently read back its state with the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>snapshot<span class="w"> </span>show<span class="w"> </span>sourcevol-snap
 <span class="go">+--------------------------------------------+--------------------------------------+</span>
@@ -7780,9 +7780,9 @@ One way to do this is with a bash <code>until</code> loop:</p>
 <span class="k">done</span>
 </code></pre></div>
 <h2 id="retyping-the-target-volume-optional">Retyping the target volume (optional)</h2>
-<p>If you want to retain the current type of your target volume, you can safely skip this step.</p>
-<p>If you do need to select a different volume type for your target volume (see <a href="../retype-volumes/">the relevant how-to guide</a> for details on retyping), now is the time to do so.
-Set the new volume type, and then wait for the retype operation to complete.</p>
+<p>If you want to keep your target volume’s type, you can safely skip this step.</p>
+<p>If you do need a different volume type for your target volume (see <a href="../retype-volumes/">the relevant how-to guide</a> for details on retyping), now is the time to do so.
+Set the new volume type, and then wait for the retype operation to complete:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--type<span class="w"> </span>&lt;new-type&gt;<span class="w"> </span>--retype-policy<span class="w"> </span>on-demand<span class="w"> </span>targetvol
 
 <span class="gp">$ </span><span class="k">until</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="sb">`</span>openstack<span class="w"> </span>volume<span class="w"> </span>show<span class="w"> </span>-f<span class="w"> </span>value<span class="w"> </span>-c<span class="w"> </span>status<span class="w"> </span>targetvol<span class="sb">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"available"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
@@ -7806,7 +7806,8 @@ Set the new volume type, and then wait for the retype operation to complete.</p>
 <h2 id="synchronizing-data-between-the-source-and-target-volume">Synchronizing data between the source and target volume</h2>
 <!-- Creative Commons attribution: this section is partly based on "Volume data migration between volume types" from the CERN OpenStack Private Cloud Guide (https://clouddocs.web.cern.ch/advanced_topics/migrate_volume_type.html), CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). -->
 
-<p>At this point, your server contains <em>current</em> data on the source volume (<code>sourcevol</code>), and <em>outdated</em> data on the target volume (<code>targetvol</code>), since your application has continued to write data since you took the snapshot.</p>
+<p>At this point, your server contains <em>current</em> data on the source volume (<code>sourcevol</code>), and <em>outdated</em> data on the target volume (<code>targetvol</code>);
+that’s because your application has continued writing data since you created the snapshot.</p>
 <p>Thus, you must now conduct a final synchronization of your data.
 How you do this precisely depends on your workload, but certain rules of thumb apply based on the guest operating system.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/BSD/Unix</label><label for="__tabbed_1_2">Windows</label></div>
@@ -7814,9 +7815,10 @@ How you do this precisely depends on your workload, but certain rules of thumb a
 <div class="tabbed-block">
 <ol>
 <li>Mount the device corresponding to the target volume to a temporary path.
-   This may entail that you make some modifications to the filesystem prior to mounting.
-   For example, an XFS filesystem will need a new UUID, which you can set with <code>xfs_admin&nbsp;-U&nbsp;generate&nbsp;&lt;device&gt;</code></li>
-<li>Synchronize your data between the source volume’s mount point and the target volume’s temporary one, for example:
+   This may require modifying the filesystem before mounting.
+   For example, an XFS filesystem will need a new UUID, which you can set with <code>xfs_admin&nbsp;-U&nbsp;generate&nbsp;&lt;device&gt;</code>.</li>
+<li>Synchronize your data between the source volume’s mount point and the target volume’s temporary one.
+   Example:
    <div class="highlight"><pre><span></span><code>rsync<span class="w"> </span>-av<span class="w"> </span>/srv/data<span class="w"> </span>/mnt
 </code></pre></div>
    You can repeat this step as often as necessary.</li>
@@ -7832,7 +7834,8 @@ How you do this precisely depends on your workload, but certain rules of thumb a
 <div class="tabbed-block">
 <ol>
 <li>Assign a drive letter to the device corresponding to the target volume (this example assumes <code>E:</code>)</li>
-<li>Synchronize your data between the source volume’s drive letter (this example assumes <code>D:</code>) and the target volume’s temporary one, for example:
+<li>Synchronize your data between the source volume’s drive letter (this example assumes <code>D:</code>) and the target volume’s temporary one.
+   Example:
    <div class="highlight"><pre><span></span><code><span class="nv">%SystemRoot%</span>\system32\robocopy.exe D: E: /MT:16 /R:0 /W:0 /ZB /NP /COPYALL /DCOPY:T /MIR /NFL /NDL /XJD /XO
 </code></pre></div>
    You can repeat this step as often as necessary.</li>
@@ -7841,7 +7844,7 @@ How you do this precisely depends on your workload, but certain rules of thumb a
    <div class="highlight"><pre><span></span><code><span class="nv">%SystemRoot%</span>\system32\robocopy.exe D: E: /MT:16 /R:0 /W:0 /ZB /NP /COPYALL /DCOPY:T /MIR /NFL /NDL /XJD /XO
 </code></pre></div></li>
 <li>Unassign the drive letter (<code>D:</code>) from the device corresponding to the source volume.</li>
-<li>Change the drive letter of the device corresponding to the target volume (<code>E:</code>) to that previously used by the device corresponding to the source volume (<code>D:</code>)</li>
+<li>Change the drive letter of the device corresponding to the target volume (<code>E:</code>) to that previously used by the device corresponding to the source volume (<code>D:</code>).</li>
 <li>Start the service accessing data on the target volume (this marks the end of your migration downtime).</li>
 </ol>
 </div>
@@ -7852,7 +7855,7 @@ How you do this precisely depends on your workload, but certain rules of thumb a
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>remove<span class="w"> </span>volume<span class="w"> </span>testsrv<span class="w"> </span>sourcevol
 </code></pre></div>
 <h2 id="marking-the-source-volume-read-only-optional">Marking the source volume read-only (optional)</h2>
-<p>If you do not want to delete the source volume straight away, but retain it as a backup in case anything has gone wrong in the migration, it makes good sense to mark it as read-only.
+<p>If you don’t want to delete the source volume right away and prefer to keep it as a backup in case something went wrong during the migration, mark it as read-only.
 That way, if the source volume is accidentally attached to a server, its data cannot be modified.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--read-only<span class="w"> </span>sourcevol
 <span class="gp">$ </span>openstack<span class="w"> </span>volume<span class="w"> </span>show<span class="w"> </span>sourcevol
@@ -7902,7 +7905,7 @@ That way, if the source volume is accidentally attached to a server, its data ca
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="August 21, 2025 09:16:23 UTC">2025-08-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2026 13:27:18 UTC">2026-09-03</span>
   </span>
 
     
