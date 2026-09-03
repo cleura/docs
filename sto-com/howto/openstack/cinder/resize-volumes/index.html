@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.">
+        <meta name="description" content="A server may require additional capacity for a persistent storage volume attached to it. You can expand a volume online while it is attached to a running server.">
       
       
       
@@ -7373,9 +7373,9 @@
 
 
 <h1 id="resizing-a-volume">Resizing a volume</h1>
-<p>A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.</p>
+<p>A server may require additional capacity for a persistent storage volume attached to it. You can expand a volume online while it is attached to a running server.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>In order to expand a volume online (that is, without detaching it from its server), you must use the OpenStack CLI.
+<p>To expand a volume online (that is, without detaching it from its server), you must use the OpenStack CLI.
 Make sure you have <a href="../../../getting-started/enable-openstack-cli/">enabled it</a>.</p>
 <h2 id="checking-the-volumes-state">Checking the volume’s state</h2>
 <p>Assume you have a volume named <code>testvol</code> that is currently attached to a server named <code>testsrv</code>:</p>
@@ -7406,15 +7406,15 @@ Note that in order to be able to do this while the volume is attached to a serve
 <span class="go">| 347                               |         |        |      |                                  |</span>
 <span class="go">+-----------------------------------+---------+--------+------+----------------------------------+</span>
 </code></pre></div>
-<p>When using <a href="https://www.qemu.org/2021/01/19/virtio-blk-scsi-configuration/">one of the VirtIO storage drivers</a>,
-the operating system on the server immediately becomes aware of the new device size.
+<p>When using <a href="https://www.qemu.org/2021/01/19/virtio-blk-scsi-configuration/">one of the VirtIO storage drivers</a>, the operating system on the server immediately becomes aware of the new device size.
 There is no need to rescan the block devices from within the guest operating system.</p>
 <p>You can verify this by using the <code>blockdev</code> command in a shell session, querying the block device size in bytes:
 </p><div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"sudo blockdev --getsize64 /dev/vdb"</span>
 <span class="go">5368709120</span>
 </code></pre></div><p></p>
 <h2 id="using-the-resized-volume">Using the resized volume</h2>
-<p>Resizing a volume only resizes the block device, but does not touch any data structures using that block device.
+<p>Resizing a volume only resizes the block device;
+it does not touch any data structures on that block device.
 In our example, this means that in order to use the block device’s expanded capacity, you must also resize its filesystem:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>server<span class="w"> </span>ssh<span class="w"> </span>testsrv<span class="w"> </span>--<span class="w"> </span>-l<span class="w"> </span>ubuntu<span class="w"> </span><span class="s2">"sudo xfs_growfs /dev/vdb"</span>
 <span class="go">meta-data=/dev/vdb               isize=512    agcount=4, agsize=131072 blks</span>
@@ -7456,7 +7456,7 @@ In our example, this means that in order to use the block device’s expanded ca
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 3, 2023 18:39:57 UTC">2023-01-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2026 13:27:18 UTC">2026-09-03</span>
   </span>
 
     
@@ -7476,11 +7476,11 @@ In our example, this means that in order to use the block device’s expanded ca
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"></path></svg>
       
     </span>
     <nav>
-      Florian Haas
+      Christos Varelas, Florian Haas
     </nav>
   </span>
 
