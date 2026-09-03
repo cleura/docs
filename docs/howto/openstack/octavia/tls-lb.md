@@ -1,7 +1,7 @@
 # HTTPS-terminating load balancers
 
-In {{brand}}’s load balancing service, [OpenStack Octavia](https://docs.openstack.org/octavia/latest/), you can configure load balancers so that they manage HTTPS termination.
-That is to say that the load balancer encrypts and decrypts HTTPS traffic, and forwards HTTP to and from a backend web server.
+With {{brand}}’s load balancing service, [OpenStack Octavia](https://docs.openstack.org/octavia/latest/), you can configure load balancers so that they manage HTTPS termination.
+That is, the load balancer encrypts and decrypts HTTPS traffic and forwards HTTP to and from a backend web server.
 
 To do so, the load balancer must have access to encryption credentials (such as certificates and private keys), which it stores in Barbican.
 
@@ -17,12 +17,12 @@ In case your certificate provider has made your certificate chain and key availa
 openssl pkcs12 -export -inkey key.pem -in fullchain.pem -out bundle.p12
 ```
 
-When prompted for an export password, use a blank one.
+When prompted for an export password, leave it blank.
 
 
 ## Creating Barbican secrets from PKCS #12 bundles
 
-To create a secret from a stored PKCS #12 bundle, you need pass in the contents of the bundle, *pre-encoded with [Base64](https://en.wikipedia.org/wiki/Base64)*, as the secret’s payload.
+To create a secret from a stored PKCS #12 bundle, you need to pass in the contents of the bundle, *pre-encoded with [Base64](https://en.wikipedia.org/wiki/Base64)*, as the secret’s payload.
 
 ```console
 $ openstack secret store \
@@ -51,8 +51,8 @@ $ openstack secret store \
 Once you have created your secret containing your certificate data, you can create a load balancer *listener* with the following properties:
 
 * It uses the `TERMINATED_HTTPS` protocol,
-* It sets its “default TLS container” to the Barbican secret containing the PKCS #12 bundle,
-* It listens on the standard HTTPS port, 443.
+* sets its “default TLS container” to the Barbican secret containing the PKCS #12 bundle, and
+* listens on the standard HTTPS port, 443.
 
 
 You create such a listener with the following command:
@@ -98,7 +98,7 @@ $ openstack loadbalancer listener create \
 +-----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-## Updating the TLS certificate for a HTTPS listener
+## Updating the TLS certificate for an HTTPS listener
 
 When the certificate associated with a `TERMINATED_HTTPS` listener is about to expire, you will need to replace it.
 You can do this online, with no user-noticeable interruption to your service.
