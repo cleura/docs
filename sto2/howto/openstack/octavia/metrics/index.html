@@ -7611,9 +7611,9 @@ Please check the <a href="../../../../reference/features/">feature support matri
 <p>Once you have created load balancers in Cleura&nbsp;Cloud, you can add a special <em>listener</em> that exposes load balancer metrics.
 This listener is meant to be used as a data source for an existing <a href="https://prometheus.io/">Prometheus</a> monitoring system.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>The Cleura&nbsp;Cloud Management&nbsp;Panel does not support defining metrics endpoints, so you will have to work with the OpenStack CLI.
+<p>The Cleura&nbsp;Cloud Management&nbsp;Panel does not support defining metrics endpoints, so you will need to use the OpenStack CLI.
 <a href="../../../getting-started/enable-openstack-cli/">Enable it</a> for the region you will be working in, and make sure you have the Python <code>octaviaclient</code> package installed.
-For that, use either the package manager of your operating system, or <code>pip</code>:</p>
+For that, use either the package manager of your operating system or <code>pip</code>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Debian/Ubuntu</label><label for="__tabbed_1_2">Mac OS X with Homebrew</label><label for="__tabbed_1_3">Python Package</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -7621,7 +7621,7 @@ For that, use either the package manager of your operating system, or <code>pip<
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>This particular Python module is unavailable via <code>brew</code>, but you can install it via <code>pip</code>.</p>
+<p>This Python module is not available via <code>brew</code>, but you can install it with <code>pip</code>.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>cleura-openstackclient
@@ -7631,7 +7631,7 @@ For that, use either the package manager of your operating system, or <code>pip<
 </div>
 <h2 id="assumptions-and-scenario">Assumptions and scenario</h2>
 <p>We assume you already have an <a href="../tls-lb/">HTTPS-terminated load balancer</a> that forwards client requests to a back-end server pool.
-In our test scenario, the load balancer was accepting HTTPS requests for <code>whoogle.example.com</code> and forwarding them to a two-member pool, with servers each running a Docker container for <a href="https://github.com/benbusby/whoogle-search">Whoogle Search</a>.</p>
+In our test scenario, the load balancer accepted HTTPS requests for <code>whoogle.example.com</code> and forwarded them to a two-member pool, with each member (server) running a Docker container for <a href="https://github.com/benbusby/whoogle-search">Whoogle Search</a>.</p>
 <h2 id="creating-a-metrics-listener">Creating a metrics listener</h2>
 <p>Here is <code>mylb</code>, the load balancer we used during testing:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>loadbalancer<span class="w"> </span>list
@@ -7646,7 +7646,7 @@ In our test scenario, the load balancer was accepting HTTPS requests for <code>w
 <span class="go">+---------------+------+---------------+--------------+---------------------+------------------+----------+</span>
 </code></pre></div>
 <p>You may now add <code>mylb-listener-metrics</code>, a new Prometheus-based listener for <code>mylb</code>.</p>
-<p>Most likely, you will want to restrict access to this endpoint to just the IP address of your Prometheus server, which presumably lives on a different network and accesses the load balancer via its public (floating) IP address.
+<p>Most likely, you will want to restrict access to this endpoint to just the IP address of your Prometheus server, which presumably lives on a different network and accesses the load balancer via its floating IP address.
 You can use the <code>--allowed-cidr</code> command-line option for that purpose.
 The example below<sup id="fnref:octavia-client-version"><a class="footnote-ref" href="#fn:octavia-client-version">1</a></sup> assumes that your Prometheus server’s outgoing IP address is <code>203.0.113.132</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>loadbalancer<span class="w"> </span>listener<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
@@ -7700,9 +7700,9 @@ The example below<sup id="fnref:octavia-client-version"><a class="footnote-ref" 
 <span class="go">+---------------------+--------+</span>
 </code></pre></div>
 <h2 id="testing-the-listener">Testing the listener</h2>
-<p>Once the listener reports as being <code>ACTIVE</code>, you should be able to check its endpoint.</p>
+<p>Once the listener reports as <code>ACTIVE</code>, you may check its endpoint.</p>
 <p>From a client that matches your <code>allowed_cidrs</code> filter, you can do so using <code>curl</code>.
-The example below assumes that your load balancer uses a public (floating) IP of <code>198.51.100.234</code>:</p>
+The example below assumes that your load balancer has the floating IP of <code>198.51.100.234</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>curl<span class="w"> </span>-s<span class="w"> </span>http://198.51.100.234:8088/metrics<span class="w"> </span><span class="p">|</span><span class="w"> </span>head
 <span class="gp"># </span>HELP<span class="w"> </span>octavia_loadbalancer_cpu<span class="w"> </span>Load<span class="w"> </span>balancer<span class="w"> </span>CPU<span class="w"> </span>utilization<span class="w"> </span><span class="o">(</span>percentage<span class="o">)</span>.
 <span class="gp"># </span>TYPE<span class="w"> </span>octavia_loadbalancer_cpu<span class="w"> </span>gauge
@@ -7756,7 +7756,7 @@ All exported metrics use the prefix <code>octavia_</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 22, 2026 11:37:40 UTC">2026-06-22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2026 06:52:58 UTC">2026-09-03</span>
   </span>
 
     

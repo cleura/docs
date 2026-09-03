@@ -7714,12 +7714,12 @@
 
 
 <h1 id="setting-up-a-tcp-load-balancer">Setting up a TCP load balancer</h1>
-<p>Octavia is a Load Balancer as a Service (LBaaS) solution designed to work with OpenStack.
+<p>Octavia is a Load Balancer as a Service (LBaaS) solution for OpenStack.
 In this guide, we show how to instantiate and configure a simple TCP load balancer in Cleura&nbsp;Cloud.
-All intermediate steps are presented and explained through a specific scenario, and we work using either the Cleura&nbsp;Cloud Management&nbsp;Panel or the OpenStack CLI.</p>
+We present and explain all intermediate steps through a specific scenario, using either the Cleura&nbsp;Cloud Management&nbsp;Panel or the OpenStack CLI.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Whether you choose the Cleura&nbsp;Cloud Management&nbsp;Panel or the OpenStack CLI, you need to <a href="../../../getting-started/create-account/">have an account</a> in Cleura&nbsp;Cloud.
-Additionally, to use the OpenStack CLI, make sure to <a href="../../../getting-started/enable-openstack-cli/">enable it</a> for the region you will be working in.
+Additionally, to use the OpenStack CLI, <a href="../../../getting-started/enable-openstack-cli/">enable it</a> for the region you will be working in.
 Besides the Python <code>openstackclient</code> module, you will also have to install the Python <code>octaviaclient</code> module.
 For that, use either the package manager of your operating system or <code>pip</code>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Debian/Ubuntu</label><label for="__tabbed_1_2">Mac OS X with Homebrew</label><label for="__tabbed_1_3">Python Package</label></div>
@@ -7729,7 +7729,7 @@ For that, use either the package manager of your operating system or <code>pip</
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>This particular Python module is unavailable via <code>brew</code>, but you can install it via <code>pip</code>.</p>
+<p>This Python module is not available via <code>brew</code>, but you can install it with <code>pip</code>.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>cleura-openstackclient
@@ -7738,40 +7738,42 @@ For that, use either the package manager of your operating system or <code>pip</
 </div>
 </div>
 <h2 id="scenario-and-terminology">Scenario and terminology</h2>
-<p>To configure and test our basic TCP load balancer, we have two servers in the same Cleura&nbsp;Cloud region, both having <code>ncat</code> listening on port 61234/TCP and returning a greeting to clients asking to connect to that port.
-Both servers are in the same internal network, and our load balancer will be responsible for redirecting client connections to them in a round-robin fashion.
-The load balancer will have a single floating IP address, so prospective clients will have to know only that address and not any of the backend server addresses.</p>
-<blockquote>
-<p>Please note that while working with your load balancer, you will encounter some technical terms which go a long way toward conceptualizing the inner logic of the whole LBaaS system.
-This guide introduces those terms not beforehand but exactly when needed.</p>
-</blockquote>
+<p>To configure and test our basic TCP load balancer, we have two servers in the same Cleura&nbsp;Cloud region, both running <code>ncat</code> on port 61234/TCP and returning a greeting to clients that connect to that port.
+Both servers are on the same internal network, and our load balancer will redirect client connections to them in a round-robin fashion.
+The load balancer will have a single floating IP address, and prospective clients will need only that address.</p>
+<details>
+<summary>Technical terms</summary>
+<p>While working with your load balancer, you will encounter technical terms that go a long way toward conceptualizing the inner logic of the whole LBaaS system.
+This guide introduces those terms not beforehand but <strong>exactly</strong> when needed.</p>
+</details>
 <h2 id="creating-a-load-balancer">Creating a load balancer</h2>
-<p>That is only the first step towards our goal, which is to have a fully functional TCP load balancer.
+<p>That is only the first step toward our goal:
+a fully functional TCP load balancer.
 We will also need a listener and a pool, but first things first.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Fire up your favorite web browser, navigate to the <a href="https://cleura.cloud">Cleura&nbsp;Cloud Management&nbsp;Panel</a> start page, and log into your Cleura&nbsp;Cloud account.
-On the top right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, click the <em>Create</em> button.
-A new pane titled <em>Create</em> will slide into view from the right-hand side of the browser window.
+On the top right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, click <em>Create.</em>
+A new <em>Create</em> pane slides into view from the right-hand side of the browser window.
 You will notice several rounded boxes on that pane, each for defining, configuring, and instantiating a different Cleura&nbsp;Cloud object.
 Go ahead and click the <em>Load Balancer</em> box.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new object" src="../assets/shot-01_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new object" src="../assets/shot-01_dark.png#only-dark"></a></p>
-<p>A new pane titled <em>Create a Load Balancer</em> will slide over.
+<p>A new <em>Create a Load Balancer</em> pane slides over.
 At the top, type in a name for the new load balancer and select one of the available regions.
 Optionally, type in a description.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name, region, and description for the new LB" src="../assets/shot-02_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name, region, and description for the new LB" src="../assets/shot-02_dark.png#only-dark"></a></p>
-<p>In the same pane, scroll down a bit if you have to and activate the <em>Subnet</em> radio button.
-Then, from the <em>Subnet</em> dropdown menu below, select an appropriate subnet for the new load balancer to move in front of.
-In our example, the two test servers we have are members of the <code>network-sto2</code> internal network, and <code>subnet-sto2</code> is the name of the corresponding subnet.
-Click the <em>Create</em> button below to instantiate the new load balancer.</p>
+<p>In the same pane, scroll down a bit if you have to, and activate the <em>Subnet</em> radio button.
+Then, from the <em>Subnet</em> dropdown menu below, select an appropriate subnet to put behind the new load balancer.
+In our example, the two test servers are on the <code>subnet-sto2</code> subnet, which is in the <code>network-sto2</code> internal network.
+Click <em>Create</em> to instantiate the new load balancer.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a subnet for the new LB" src="../assets/shot-03_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a subnet for the new LB" src="../assets/shot-03_dark.png#only-dark"></a></p>
-<p>The creation of the new load balancer starts and, unless something goes wrong, finishes successfully in a minute or so.
-For a view of the load balancer, make sure the left-hand side vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel is fully visible, click on the <em>Networking</em> category to expand it, and then click once more on the <em>Load Balancers</em> option.
-In the main area of the Cleura&nbsp;Cloud Management&nbsp;Panel, select the new load balancer, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right, and select <em>View details</em> from the pop-up menu that appears.</p>
+<p>The creation process starts and, unless something goes wrong, finishes successfully in a minute or so.
+To view the load balancer, make sure the left-hand side vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel is fully visible, click the <em>Networking</em> category to expand it, and then click <em>Load Balancers.</em>
+In the main pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, select the new load balancer, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right, and from the pop-up menu that appears, select <em>View details.</em></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View the newly created LB" src="../assets/shot-04_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View the newly created LB" src="../assets/shot-04_dark.png#only-dark"></a></p>
 </div>
@@ -7827,21 +7829,23 @@ The load balancer you instantiated has no listener, so let us see how you can eq
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Looking at the detailed view of the new load balancer, you see three tabs: <em>Details</em>, <em>Listeners</em>, and <em>Pools</em>.
-Click the <em>Listeners</em> tab and notice the message: “No Listeners for this LoadBalancer”.
-Time to create one, so click the button labeled <em>Create a Listener</em>.</p>
+<p>Looking at the detailed view of the new load balancer, you see three tabs:
+<em>Details</em>, <em>Listeners</em>, and <em>Pools</em>.
+Click the <em>Listeners</em> tab and notice the message:
+“No Listeners for this LoadBalancer”.
+Time to create one, so click <em>Create a Listener.</em></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a listener" src="../assets/shot-05_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a listener" src="../assets/shot-05_dark.png#only-dark"></a></p>
-<p>From the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, a pane named <em>Create a Listener</em> slides over.
+<p>From the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, a <em>Create a Listener</em> pane slides over.
 Type in a name for the new listener — and optionally a description.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name and description for the new listener" src="../assets/shot-06_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name and description for the new listener" src="../assets/shot-06_dark.png#only-dark"></a></p>
-<p>Further down, from the <em>Protocol</em> dropdown menu, select the protocol the listener will be paying attention to.
-Since you are setting up a TCP load balancer, the protocol for the listener will also have to be TCP.
-Additionally, type in the listening port.
-The load balancer will be redirecting connections to a couple of servers, which listen for connections on port 61234/TCP, so it makes sense —though it is not necessary— for the load balancer to use that same listening port.
+<p>Further down, in the <em>Protocol</em> dropdown menu, select the protocol the listener will know about.
+Since you are setting up a TCP load balancer, the listener protocol must also be TCP.
+Also, enter the listening port.
+The load balancer will redirect connections to a couple of servers that listen on port 61234/TCP, so it makes sense — though it is not necessary — for the load balancer to use the same listening port.
 Since you have not yet defined a pool, ignore the <em>Default pool</em> dropdown menu for now.
-Instead, go ahead and click the <em>Create</em> button.</p>
+Instead, go ahead and click <em>Create.</em></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select protocol and set port" src="../assets/shot-07_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select protocol and set port" src="../assets/shot-07_dark.png#only-dark"></a></p>
 <p>The listener will be created in no time, and you will be able to see its characteristics in the <em>Listeners</em> tab of your load balancer detailed view.</p>
@@ -7897,29 +7901,29 @@ Instead, go ahead and click the <em>Create</em> button.</p>
 | provisioning_status | ACTIVE |
 +---------------------+--------+
 </code></pre></div>
-<p>Since you wanted to create a TCP load balancer, in the command above, you specified the connection protocol via the <code>--protocol</code> parameter.
+<p>Since you wanted to create a TCP load balancer, the command above specified the connection protocol via the <code>--protocol</code> parameter.
 Also, the new load balancer will be redirecting connections to a couple of servers listening on port 61234, so it makes sense to set the listening port to 61234 (see the <code>--protocol-port</code> parameter).</p>
 </div>
 </div>
 </div>
 <h2 id="creating-a-pool">Creating a pool</h2>
-<p>Any server accepting connections from the listener is said to be a <em>member</em> of a <em>pool</em>.
+<p>Any server that accepts connections from the listener is said to be a <em>member</em> of a <em>pool</em>.
 For our load balancer to work, we must create a pool and explicitly list its members.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_4_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>With the detailed view of the load balancer expanded, click the <em>Pools</em> tab.
-You will notice the message “No pools for this LoadBalancer”, so click the <em>Create a Pool</em> button.</p>
+<p>With the load balancer details expanded, click the <em>Pools</em> tab.
+Notice the message “No pools for this LoadBalancer”, so click <em>Create a Pool.</em></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a pool" src="../assets/shot-09_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a pool" src="../assets/shot-09_dark.png#only-dark"></a></p>
-<p>A new pane named <em>Create a Pool</em> slides over.
+<p>A new <em>Create a Pool</em> pane slides over.
 First, type in a name for the new pool.
-For the <em>Algorithm</em>, make sure to select <em>ROUND_ROBIN</em>.
+For the <em>Algorithm</em>, be sure to select <em>ROUND_ROBIN</em>.
 Since you are configuring a TCP load balancer, set the <em>Protocol</em> to <em>TCP</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in name, set algorithm and protocol" src="../assets/shot-10_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in name, set algorithm and protocol" src="../assets/shot-10_dark.png#only-dark"></a></p>
-<p>A little bit further down the pane, there is the <em>Listener</em> dropdown menu; select the one you created in the previous step.
-Leave the <em>Session persistence</em> parameter as it is, and create your pool with a click on the <em>Create</em> button.</p>
+<p>A little further down the pane, there is the <em>Listener</em> dropdown menu; select the one you created in the previous step.
+Leave the <em>Session persistence</em> parameter as is, then click <em>Create</em> to create your pool.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select listener, create pool" src="../assets/shot-11_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select listener, create pool" src="../assets/shot-11_dark.png#only-dark"></a></p>
 <p>The pool is instantaneously available; as you can see, it has zero members and one listener (the one you created in the previous step).</p>
@@ -7986,11 +7990,11 @@ Leave the <em>Session persistence</em> parameter as it is, and create your pool 
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Populate the pool" src="../assets/shot-14_dark.png#only-dark"></a></p>
 <p>A new pane titled <em>Modify Pool Members</em> appears, listing all the servers that share the same region with the load balancer.
 In our example, there are three servers.
-We created <code>srv-lbaas-1</code> and <code>srv-lbaas-2</code> to test the load balancer, so now we click on the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"></path></svg></span> icons to add those to the pool.</p>
+We created <code>srv-lbaas-1</code> and <code>srv-lbaas-2</code> to test the load balancer, so now we click on the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"></path></svg></span> icons to add them to the pool.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add members" src="../assets/shot-15_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add members" src="../assets/shot-15_dark.png#only-dark"></a></p>
-<p>You may have noticed that the listening port of each server we added is by default 80, but we want port 61234.
-To change the listening port of a server, just click the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5H5v14zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M7 14.94l6.06-6.06 2.06 2.06L9.06 17H7z"></path></svg></span> icon.</p>
+<p>You may have noticed that the listening port of each server we added is 80, but we want port 61234.
+To change a server’s listening port, click the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5H5v14zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M7 14.94l6.06-6.06 2.06 2.06L9.06 17H7z"></path></svg></span> icon.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify ports" src="../assets/shot-16_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify ports" src="../assets/shot-16_dark.png#only-dark"></a></p>
 <p>To confirm the changes, click the <em>Update</em> button.</p>
@@ -8001,8 +8005,9 @@ To change the listening port of a server, just click the corresponding <span cla
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pool is populated" src="../assets/shot-18_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
-<p>Both our test servers are in the <code>subnet-sto2</code> subnet, one of them has IP <code>10.15.25.105</code>, and the other one has IP <code>10.15.25.236</code>.
-To add those two servers in pool <code>mylb-pool</code>, type:</p>
+<p>Both our test servers are in the <code>subnet-sto2</code> subnet;
+one has IP <code>10.15.25.105</code>, and the other has IP <code>10.15.25.236</code>.
+To add those two servers to <code>mylb-pool</code>, type:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>loadbalancer<span class="w"> </span>member<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--subnet-id<span class="w"> </span>subnet-sto2<span class="w"> </span>--address<span class="w"> </span><span class="m">10</span>.15.25.105<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--protocol-port<span class="w"> </span><span class="m">61234</span><span class="w"> </span>mylb-pool
@@ -8076,13 +8081,13 @@ To add those two servers in pool <code>mylb-pool</code>, type:</p>
 </div>
 <h2 id="assigning-a-floating-ip">Assigning a floating IP</h2>
 <p>Your load balancer has an internal IP chosen from the subnet you indicated earlier.
-This makes it reachable from other servers in the same subnet but not from the Internet.
-You probably want the load balancer to be reachable from anywhere, meaning you have to equip it with a floating IP.</p>
+This makes it reachable from other servers in the same subnet, but not from the Internet.
+To make the load balancer reachable from anywhere, assign it a floating IP.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_6_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>While viewing your load balancer, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right.
-From the pop-up menu that appears, select <em>Modify Load Balancer</em>.</p>
+From the pop-up menu, select <em>Modify Load Balancer</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify load balancer" src="../assets/shot-19_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify load balancer" src="../assets/shot-19_dark.png#only-dark"></a></p>
 <p>The <em>Modify Load Balancer</em> pane appears.
@@ -8090,9 +8095,9 @@ For the <em>Floating IP</em> option, select <em>Create and attach IP</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create and attach floating IP" src="../assets/shot-20_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create and attach floating IP" src="../assets/shot-20_dark.png#only-dark"></a></p>
 <p>A new pane slides over, named <em>Create a Floating IP</em>.
-For the <em>Region</em> parameter, select the one the load balancer resides in.
+For the <em>Region</em> parameter, select the load balancer’s region.
 For the <em>Assign to</em> parameter, make sure you choose <em>Load Balancer</em>.
-In our example, there’s only one load balancer in the region we are working in, so the parameter <em>Assign To</em> is already set for us.
+In our example, there’s only one load balancer in our region, so the <em>Assign To</em> parameter is already set for us.
 To finalize the assignment, click the <em>Create and Assign</em> button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configure attachment" src="../assets/shot-21_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configure attachment" src="../assets/shot-21_dark.png#only-dark"></a></p>
@@ -8129,7 +8134,7 @@ You can now use that to test the balancer and make sure it works as expected.</p
 | updated_at          | 2023-01-16T20:25:25Z                 |
 +---------------------+--------------------------------------+
 </code></pre></div>
-<p>Then, load the ID of the new floating IP to a variable:</p>
+<p>Then, assign the new floating IP’s ID to a variable:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">FLOAT_IP_ID</span><span class="o">=</span><span class="k">$(</span>openstack<span class="w"> </span>floating<span class="w"> </span>ip<span class="w"> </span>list<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--floating-ip-address<span class="w"> </span><span class="m">198</span>.51.100.129<span class="w"> </span>-c<span class="w"> </span>ID<span class="w"> </span>-f<span class="w"> </span>value<span class="k">)</span>
 </code></pre></div>
@@ -8158,47 +8163,52 @@ If we run the exact same <code>wget</code> command for a second time, since the 
 
 <span class="go">Yello from srv-lbaas-2!</span>
 </code></pre></div>
-<p>During our testing, executing the <code>wget</code> command repeatedly, we were getting those two hostnames one after the other — and that was proof our TCP load balancer was working as expected.
-But there is one more expectation of any load balancer: the ability to skip backend hosts when they are inaccessible.</p>
+<p>During our testing, when we ran the <code>wget</code> command repeatedly, we got those two hostnames one after the other;
+that proved our TCP load balancer was working as expected.
+But there is one more expectation of any load balancer:
+the ability to skip backend hosts when they are inaccessible.</p>
 <p>To test our load balancer in this new scenario, let us first use <code>wget</code> to connect to port 61234 and jot down the backend server that will respond:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>wget<span class="w"> </span>-q<span class="w"> </span><span class="m">198</span>.51.100.129:61234<span class="w"> </span>-O<span class="w"> </span>-
 
 <span class="go">Yello from srv-lbaas-2!</span>
 </code></pre></div>
-<p>We see that <code>srv-lbaas-2</code> responded. That means the next time we try to connect, <code>srv-lbaas-1</code> will respond.
-But if we SSH into <code>srv-lbaas-1</code> and terminate <code>ncat</code>, then after connecting with <code>wget</code> we will get a response from <code>srv-lbaas-2</code> — again.
+<p>We see that <code>srv-lbaas-2</code> responded.
+That means the next time we try to connect, <code>srv-lbaas-1</code> will respond.
+But if we SSH into <code>srv-lbaas-1</code> and terminate <code>ncat</code>, then after connecting with <code>wget</code> we should <strong>again</strong> get a response from <code>srv-lbaas-2</code>.
 This, at least, is our expectation.
-So without further ado, we SSH into <code>srv-lbaas-1</code>, we terminate <code>ncat</code>, we log out, and from our local terminal, we type:</p>
+So without further ado, we SSH into <code>srv-lbaas-1</code>, we terminate <code>ncat</code>, we log out, and from our local terminal we type:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>wget<span class="w"> </span>-q<span class="w"> </span><span class="m">198</span>.51.100.129:61234<span class="w"> </span>-O<span class="w"> </span>-
 
 <span class="go">Yello from srv-lbaas-2!</span>
 </code></pre></div>
-<p>Exactly as we expected, <code>srv-lbaas-2</code> has responded again, proving our load balancer behaves correctly.
+<p>As expected, <code>srv-lbaas-2</code> responded again, proving our load balancer behaves correctly.
 As an exercise, you might want to shutdown your <code>srv-lbaas-1</code> and/or re-enable <code>ncat</code>, and check the behavior of the load balancer.
 There should be no surprises.</p>
 <h2 id="adding-a-health-monitor">Adding a health monitor</h2>
 <p>You can add a health monitor to the pool of your load balancer, so whenever —and for whatever reason— one or more of the pool member services are inaccessible, the load balancer will know and won’t even bother trying to redirect client requests to them.
-Of course, whenever an inaccessible service gets accessible again, the load balancer will take notice and start treating the corresponding pool member as a fully functional server.</p>
+Of course, when an inaccessible service becomes accessible again, the load balancer will notice and start treating the corresponding pool member as a fully functional server.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_7_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>In the detailed view of your load balancer, pull up the <em>Pools</em> tab.
-In the <em>Health Monitor</em> column there is a “0”, for the pool has no health monitor yet.</p>
+There is a “0” in the <em>Health Monitor</em> column;
+that’s because the pool has no health monitor yet.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="There is no health monitor" src="../assets/shot-23_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="There is no health monitor" src="../assets/shot-23_dark.png#only-dark"></a></p>
 <p>To add a health monitor, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5H5v14zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M7 14.94l6.06-6.06 2.06 2.06L9.06 17H7z"></path></svg></span> icon.
 A pane titled <em>Modify Pool</em> slides over.
-Scroll down if you have to, and stop when the <em>Health Monitor</em> section is fully visible.
-You will see a message saying, “No health monitor created”, so click the <em>Create a Healthmonitor</em> button to create one.</p>
+Scroll down if needed, and stop when the <em>Health Monitor</em> section is fully visible.
+You will see a message saying “No health monitor created”;
+click <em>Create a Healthmonitor</em> to create one.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new health monitor" src="../assets/shot-24_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new health monitor" src="../assets/shot-24_dark.png#only-dark"></a></p>
 <p>Pick a name for the new health monitor, and set its type to TCP.
-That is the connection protocol that will be used to determine whether pool member services are accessible.
+This is the connection protocol used to determine whether pool member services are accessible.
 Finalize your choices with a click on the <em>Create</em> button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define health monitor characteristics" src="../assets/shot-25_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define health monitor characteristics" src="../assets/shot-25_dark.png#only-dark"></a></p>
 <p>You will then see that in the <em>Health Monitor</em> column there is a “1” — and that means the monitor is active.
-To see real-time information regarding pool members operating status, click over “1”.</p>
+To get real-time information about the pool members’ operating status, click on “1”.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check members operating status" src="../assets/shot-26_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check members operating status" src="../assets/shot-26_dark.png#only-dark"></a></p>
 </div>
@@ -8234,8 +8244,8 @@ To see real-time information regarding pool members operating status, click over
 <span class="go">| tags                |                                      |</span>
 <span class="go">+---------------------+--------------------------------------+</span>
 </code></pre></div>
-<p>The name of the new health monitor is <code>mylb-pool-healthmon</code>, and the TCP protocol will be used to check whether members of pool <code>mylb-pool</code> are online or offline.
-To check the provisioning status of the health monitor, type:</p>
+<p>The name of the new health monitor is <code>mylb-pool-healthmon</code>, and the TCP protocol will be used to check whether members of <code>mylb-pool</code> are online or offline.
+Check the provisioning status of the health monitor:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>loadbalancer<span class="w"> </span>healthmonitor<span class="w"> </span>show<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>mylb-pool-healthmon<span class="w"> </span>-c<span class="w"> </span>provisioning_status
 
@@ -8245,7 +8255,7 @@ To check the provisioning status of the health monitor, type:</p>
 <span class="go">| provisioning_status | ACTIVE |</span>
 <span class="go">+---------------------+--------+</span>
 </code></pre></div>
-<p>Once the health monitor is provisioned, you may at any time check the pool members status like so:</p>
+<p>Once the health monitor is provisioned, you may at any time check the pool members’ status like so:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>openstack<span class="w"> </span>loadbalancer<span class="w"> </span>member<span class="w"> </span>list<span class="w"> </span>mylb-pool
 
 <span class="go">+-----------+-----------+------------+---------------------+-----------+---------------+------------------+--------+</span>
@@ -8269,15 +8279,15 @@ To check the provisioning status of the health monitor, type:</p>
 </div>
 </div>
 <h2 id="observing-and-testing-the-monitor">Observing and testing the monitor</h2>
-<p>Having a health monitor for your load balancer’s pool up and running, whenever the service of interest in any of the pool members gets inaccessible, the monitor notices and immediately considers the corresponding member as offline.
-From then on, and until the same service gets accessible again, the load balancer does not even try to redirect client connections to the affected member.
+<p>With a health monitor for your load balancer’s pool up and running, when the service of interest of any pool member becomes inaccessible, the monitor notices and immediately marks the corresponding member as offline.
+From then on, until the service becomes accessible again, the load balancer stops redirecting client connections to the affected member.
 During our testing, we killed <code>ncat</code> running on <code>srv-lbaas-1</code>, and then took a look at the health monitor from the Cleura&nbsp;Cloud Management&nbsp;Panel — and also from a local terminal.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_8_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>In the detailed view of your load balancer, pull up the <em>Pools</em> tab and click anywhere on its line.
+<p>In the detailed view of your load balancer, pull up the <em>Pools</em> tab and click anywhere on its row.
 After a second or two, you will see information regarding all pool members.
-Pay attention to the <em>Operating Status</em> column, where you can see the status of any of the pool members.</p>
+In the <em>Operating Status</em> column, there is the status of each pool member.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Operating status of all pool members" src="../assets/shot-27_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Operating status of all pool members" src="../assets/shot-27_dark.png#only-dark"></a></p>
 </div>
@@ -8328,7 +8338,7 @@ Regarding the operating status of all pool members, you can always limit the sco
 <span class="go">Yello from srv-lbaas-2!</span>
 </code></pre></div>
 <p>Since pool member <code>srv-lbaas-1</code> is offline to the health monitor, we keep getting an answer from <code>srv-lbaas-2</code>.
-Actually, while the service of interest in <code>srv-lbaas-1</code> is inaccessible, then no matter how many times we run the command above we will keep getting a response from <code>srv-lbaas-2</code> only.</p>
+And while the service of interest on <code>srv-lbaas-1</code> stays inaccessible, no matter how many times we run the command above, we keep getting a response only from <code>srv-lbaas-2</code>.</p>
 
 
 
@@ -8351,7 +8361,7 @@ Actually, while the service of interest in <code>srv-lbaas-1</code> is inaccessi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 22, 2026 11:37:40 UTC">2026-06-22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 3, 2026 06:52:58 UTC">2026-09-03</span>
   </span>
 
     
