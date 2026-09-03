@@ -5,8 +5,8 @@ description: "You can transfer your data between volumes in the same region, wit
 
 From time to time, you may want to transfer data from one persistent storage volume to another, while keeping your data within the same {{brand}} region.
 
-For example, you might prefer to select a volume type that has become newly available in that region, but find the downtime associated with [retyping a single volume](retype-volumes.md) prohibitive.
-In this case, you can choose an on-line synchronization approach, which comes with much reduced downtime.
+For example, you might prefer a volume type that recently became available in that region but find the downtime associated with [retyping a single volume](retype-volumes.md) prohibitive.
+In this case, you can choose an online synchronization approach, which has shorter downtime.
 
 The process described here assumes that the volume whose contents you are about to transfer is *not* a boot volume --- in other words, that the volume is normally attached as `/dev/vdb` or `/dev/sdc` or similar, but *not* as `/dev/vda` or `/dev/sda`.
 If the volume you need to retype *is* a boot volume, you should plan system downtime and opt for an [offline retype](retype-volumes.md) instead.
@@ -34,8 +34,8 @@ In this example, the volume status is `in-use` (meaning the volume is currently 
 
 ## Taking a snapshot of the source volume
 
-First take a *snapshot* (a consistent, read-only, point-in-time copy) of your source volume.
-Note that since you are taking a snapshot of an `in-use` volume, you need to use the `--force` option with the following command:
+First, take a *snapshot* (a consistent, read-only, point-in-time copy) of your source volume.
+Note that since you are taking a snapshot of an `in-use` volume, you need to add the `--force` option:
 
 ```console
 $ openstack volume snapshot create --force --volume sourcevol sourcevol-snap
@@ -54,7 +54,7 @@ $ openstack volume snapshot create --force --volume sourcevol sourcevol-snap
 +-------------+--------------------------------------+
 ```
 
-The snapshot status should change from `creating` to `available` in a matter of seconds.
+The snapshot status should change from `creating` to `available` within seconds.
 You can subsequently read back its state with the following command:
 
 ```console
@@ -116,10 +116,10 @@ done
 
 ## Retyping the target volume (optional)
 
-If you want to retain the current type of your target volume, you can safely skip this step.
+If you want to keep your target volume's type, you can safely skip this step.
 
-If you do need to select a different volume type for your target volume (see [the relevant how-to guide](retype-volumes.md) for details on retyping), now is the time to do so.
-Set the new volume type, and then wait for the retype operation to complete.
+If you do need a different volume type for your target volume (see [the relevant how-to guide](retype-volumes.md) for details on retyping), now is the time to do so.
+Set the new volume type, and then wait for the retype operation to complete:
 
 ```console
 $ openstack volume set --type <new-type> --retype-policy on-demand targetvol
@@ -151,16 +151,18 @@ $ openstack server add volume testsrv targetvol
 
 <!-- Creative Commons attribution: this section is partly based on "Volume data migration between volume types" from the CERN OpenStack Private Cloud Guide (https://clouddocs.web.cern.ch/advanced_topics/migrate_volume_type.html), CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). -->
 
-At this point, your server contains *current* data on the source volume (`sourcevol`), and *outdated* data on the target volume (`targetvol`), since your application has continued to write data since you took the snapshot.
+At this point, your server contains *current* data on the source volume (`sourcevol`), and *outdated* data on the target volume (`targetvol`);
+that's because your application has continued writing data since you created the snapshot.
 
 Thus, you must now conduct a final synchronization of your data.
 How you do this precisely depends on your workload, but certain rules of thumb apply based on the guest operating system.
 
 === "Linux/BSD/Unix"
     1. Mount the device corresponding to the target volume to a temporary path.
-       This may entail that you make some modifications to the filesystem prior to mounting.
-       For example, an XFS filesystem will need a new UUID, which you can set with `xfs_admin -U generate <device>`
-    2. Synchronize your data between the source volume's mount point and the target volume's temporary one, for example:
+       This may require modifying the filesystem before mounting.
+       For example, an XFS filesystem will need a new UUID, which you can set with `xfs_admin -U generate <device>`.
+    2. Synchronize your data between the source volume's mount point and the target volume's temporary one.
+       Example:
        ```bash
        rsync -av /srv/data /mnt
        ```
@@ -175,7 +177,8 @@ How you do this precisely depends on your workload, but certain rules of thumb a
     7. Start the service accessing data on the target volume (this marks the end of your migration downtime).
 === "Windows"
     1. Assign a drive letter to the device corresponding to the target volume (this example assumes `E:`)
-    2. Synchronize your data between the source volume's drive letter (this example assumes `D:`) and the target volume's temporary one, for example:
+    2. Synchronize your data between the source volume's drive letter (this example assumes `D:`) and the target volume's temporary one.
+       Example:
        ```bat
        %SystemRoot%\system32\robocopy.exe D: E: /MT:16 /R:0 /W:0 /ZB /NP /COPYALL /DCOPY:T /MIR /NFL /NDL /XJD /XO
        ```
@@ -186,7 +189,7 @@ How you do this precisely depends on your workload, but certain rules of thumb a
        %SystemRoot%\system32\robocopy.exe D: E: /MT:16 /R:0 /W:0 /ZB /NP /COPYALL /DCOPY:T /MIR /NFL /NDL /XJD /XO
        ```
     5. Unassign the drive letter (`D:`) from the device corresponding to the source volume.
-    6. Change the drive letter of the device corresponding to the target volume (`E:`) to that previously used by the device corresponding to the source volume (`D:`)
+    6. Change the drive letter of the device corresponding to the target volume (`E:`) to that previously used by the device corresponding to the source volume (`D:`).
     7. Start the service accessing data on the target volume (this marks the end of your migration downtime).
 
 ## Detaching the source volume
@@ -200,7 +203,7 @@ $ openstack server remove volume testsrv sourcevol
 
 ## Marking the source volume read-only (optional)
 
-If you do not want to delete the source volume straight away, but retain it as a backup in case anything has gone wrong in the migration, it makes good sense to mark it as read-only.
+If you don't want to delete the source volume right away and prefer to keep it as a backup in case something went wrong during the migration, mark it as read-only.
 That way, if the source volume is accidentally attached to a server, its data cannot be modified.
 
 ```console
