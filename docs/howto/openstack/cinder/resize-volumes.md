@@ -1,5 +1,5 @@
 ---
-description: A server may require additional capacity for a persistent storage volume that is attached to it. You can expand a volume online, while it is attached to a running server.
+description: A server may require additional capacity for a persistent storage volume attached to it. You can expand a volume online while it is attached to a running server.
 ---
 # Resizing a volume
 
@@ -7,7 +7,7 @@ description: A server may require additional capacity for a persistent storage v
 
 ## Prerequisites
 
-In order to expand a volume online (that is, without detaching it from its server), you must use the OpenStack CLI.
+To expand a volume online (that is, without detaching it from its server), you must use the OpenStack CLI.
 Make sure you have [enabled it](../../getting-started/enable-openstack-cli.md).
 
 ## Checking the volume's state
@@ -51,8 +51,7 @@ $ openstack volume list
 +-----------------------------------+---------+--------+------+----------------------------------+
 ```
 
-When using [one of the VirtIO storage drivers](https://www.qemu.org/2021/01/19/virtio-blk-scsi-configuration/),
-the operating system on the server immediately becomes aware of the new device size.
+When using [one of the VirtIO storage drivers](https://www.qemu.org/2021/01/19/virtio-blk-scsi-configuration/), the operating system on the server immediately becomes aware of the new device size.
 There is no need to rescan the block devices from within the guest operating system.
 
 You can verify this by using the `blockdev` command in a shell session, querying the block device size in bytes:
@@ -63,7 +62,8 @@ $ openstack server ssh testsrv -- -l ubuntu "sudo blockdev --getsize64 /dev/vdb"
 
 ## Using the resized volume
 
-Resizing a volume only resizes the block device, but does not touch any data structures using that block device.
+Resizing a volume only resizes the block device;
+it does not touch any data structures on that block device.
 In our example, this means that in order to use the block device's expanded capacity, you must also resize its filesystem:
 
 ```console
