@@ -7580,11 +7580,11 @@
 
 
 <h1 id="creating-new-networks">Creating new networks</h1>
-<p>Before creating a server in Cleura&nbsp;Cloud, you need at least one network to make the new server a member of.
-Since you may have more than one network per region, let us now walk through creating a new network using the Cleura&nbsp;Cloud Management&nbsp;Panel or the OpenStack CLI.</p>
+<p>Before creating a server in Cleura&nbsp;Cloud, you need at least one network to add the new server to.
+Since you may have more than one network per region, let us walk through creating a new network using the Cleura&nbsp;Cloud Management&nbsp;Panel or the OpenStack CLI.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Whether you choose to work from the Cleura&nbsp;Cloud Management&nbsp;Panel or with the OpenStack CLI, you need to <a href="../../../getting-started/create-account/">have an account</a> in Cleura&nbsp;Cloud.
-Additionally, to use the OpenStack CLI make sure to <a href="../../../getting-started/enable-openstack-cli/">enable it first</a>.</p>
+To use the OpenStack CLI, first <a href="../../../getting-started/enable-openstack-cli/">enable it</a>.</p>
 <h2 id="creating-a-network">Creating a network</h2>
 <p>To create a network from the Cleura&nbsp;Cloud Management&nbsp;Panel, fire up your favorite web browser, navigate to the <a href="https://compliant.cleura.cloud">Cleura Cloud</a> start page, and login into your Cleura&nbsp;Cloud account.
 On the other hand, if you prefer to work with OpenStack CLI, please do not forget to source the RC file first.</p>
@@ -7649,16 +7649,16 @@ In our example, let’s name it <code>nordostbahnhof</code>:</p>
 </div>
 </div>
 <h2 id="adding-a-subnet-and-a-router">Adding a subnet and a router</h2>
-<p>Creating a new network does not necessarily mean it has all the features you most likely would expect.
-Unless you work from the Cleura&nbsp;Cloud Management&nbsp;Panel, where almost every component is activated for you with a few clicks here and there, when you use the OpenStack CLI there is some extra work you need to do before you get a network you would characterize as useful.</p>
+<p>Creating a new network does not necessarily mean it has all the features you would expect.
+Unless you work from the Cleura&nbsp;Cloud Management&nbsp;Panel, where almost every component is activated for you with a few clicks here and there, when you use the OpenStack CLI, there is some extra work you need to do before you get a network you would characterize as useful.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_2_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Expand the <em>Advanced Options</em> section below, make sure <em>Port Security</em> is enabled, and leave the MTU parameter blank.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MTU and port security" src="../assets/new-net-panel/shot-03_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MTU and port security" src="../assets/new-net-panel/shot-03_dark.png#only-dark"></a></p>
-<p>Assuming you are going for a full-featured network, activate the <em>Create a complete network, containing a subnet and a router</em> option.</p>
-<p>Notice that, by default, this sets things up for the the creation of an IPv4-based subnet.
+<p>If you want a full-featured network, select <em>Create a complete network, containing a subnet and a router.</em></p>
+<p>By default, this sets things up to create an IPv4-based subnet.
 In particular, by looking at the new <em>Subnet Name (#1)</em> section, it is immediately apparent that you get the following:</p>
 <ul>
 <li>A subnet expressed in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR notation</a>,</li>
@@ -7667,11 +7667,11 @@ In particular, by looking at the new <em>Subnet Name (#1)</em> section, it is im
 <li>a DHCP server.</li>
 </ul>
 <p>For the <em>Gateway IP</em>, accept the suggested address, or type in one chosen from the subnet above.
-As for the DHCP, either accept the defaults or type in <em>Start</em> and <em>End</em> addresses – again chosen from the subnet above.</p>
+For DHCP, either accept the defaults or enter <em>Start</em> and <em>End</em> addresses, again chosen from the subnet above.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IPv4-based network parameters" src="../assets/new-net-panel/shot-04_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IPv4-based network parameters" src="../assets/new-net-panel/shot-04_dark.png#only-dark"></a></p>
 <p>Alongside your IPv4-based subnet, you may also have an IPv6-based subnet;
-both subnets will be members of the network you are now creating.</p>
+both subnets will be members of the network you are creating.</p>
 <p>To create a second, IPv6-based subnet, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512m-24-168v-64h-64c-13.3 0-24-10.7-24-24s10.7-24 24-24h64v-64c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24h-64v64c0 13.3-10.7 24-24 24s-24-10.7-24-24"></path></svg></span> icon at the top of the <em>Subnet Name (#1)</em> section.
 In the new <em>Subnet Name (#2)</em> section that appears, be sure to set <em>IP Version</em> to <em>IPv6</em> abd you will get the following:</p>
 <ul>
@@ -7682,16 +7682,16 @@ In the new <em>Subnet Name (#2)</em> section that appears, be sure to set <em>IP
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IPv6-based network parameters" src="../assets/new-net-panel/shot-04-toronto_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IPv6-based network parameters" src="../assets/new-net-panel/shot-04-toronto_dark.png#only-dark"></a></p>
 <p>Scroll down a bit if you have to.
-Assuming you want your cloud servers to reach hosts on the Internet, for the <em>External network</em> parameter make sure you select <em>ext-net</em>.
-Then, click the <em>Create</em> button.
+If you want your cloud servers to reach hosts on the Internet, select <em>ext-net</em> for the <em>External network</em> parameter.
+Then, click <em>Create.</em>
 In a few seconds, the new network will be readily available.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Finish creating network" src="../assets/new-net-panel/shot-05_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Finish creating network" src="../assets/new-net-panel/shot-05_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
-<p>You now have to create a subnet for the new network.
-Since Neutron networks can have more than one subnets, and subnets can be either IPv4-based or IPv6-based, let us now create two;
-one IPv4-based (<code>nordostbahnhof-subnet-ipv4</code>), and one IPv4-based (<code>nordostbahnhof-subnet-ipv6</code>).</p>
+<p>You now need to create a subnet for the new network.
+Since Neutron networks can have more than one subnet, and subnets can be either IPv4-based or IPv6-based, let us now create two;
+one IPv4-based (<code>nordostbahnhof-subnet-ipv4</code>), and one IPv6-based (<code>nordostbahnhof-subnet-ipv6</code>).</p>
 <p>For the IPv4-based subnet, type the following:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>subnet<span class="w"> </span>create<span class="w"> </span>nordostbahnhof-subnet-ipv4<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--network<span class="w"> </span>nordostbahnhof<span class="w"> </span>--subnet-range<span class="w"> </span><span class="m">10</span>.20.30.0/24
@@ -7736,7 +7736,7 @@ one IPv4-based (<code>nordostbahnhof-subnet-ipv4</code>), and one IPv4-based (<c
 <span class="w">    </span>--ipv6-address-mode<span class="w"> </span>slaac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--use-default-subnet-pool
 </code></pre></div>
-<p>Again, you will get detailed information regarding subnet <code>nordostbahnhof-subnet-ipv6</code>:</p>
+<p>Again, you will get detailed information regarding <code>nordostbahnhof-subnet-ipv6</code>:</p>
 <div class="highlight"><pre><span></span><code>+----------------------+-----------------------------------------------------------------+
 | Field                | Value                                                           |
 +----------------------+-----------------------------------------------------------------+
@@ -7769,7 +7769,7 @@ one IPv4-based (<code>nordostbahnhof-subnet-ipv4</code>), and one IPv4-based (<c
 | updated_at           | 2025-05-07T17:48:33Z                                            |
 +----------------------+-----------------------------------------------------------------+
 </code></pre></div>
-<p>If you want servers connected to the <code>nordostbahnhof</code> network to have Internet access, you need a router in front of the network.
+<p>To give servers in the <code>nordostbahnhof</code> network Internet access, you need a router in front of the network.
 Following our unofficial naming convention, go ahead and create a new router called <code>nordostbahnhof-router</code>:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>router<span class="w"> </span>create<span class="w"> </span>nordostbahnhof-router<span class="w"> </span>
 </code></pre></div>
@@ -7803,14 +7803,14 @@ Following our unofficial naming convention, go ahead and create a new router cal
 The name of this network is <code>ext-net</code>:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>router<span class="w"> </span><span class="nb">set</span><span class="w"> </span>nordostbahnhof-router<span class="w"> </span>--external-gateway<span class="w"> </span>ext-net
 </code></pre></div>
-<p>Please note that if the command above is successful, you will get no output on your terminal.
-There is one last step to take, and that is to connect router <code>nordostbahnhof-router</code> to the subnet <code>nordostbahnhof-subnet-ipv4</code>…</p>
+<p>If the command above succeeds, you will see no output in your terminal.
+One last step is to connect router <code>nordostbahnhof-router</code> to the subnet <code>nordostbahnhof-subnet-ipv4</code>…</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>router<span class="w"> </span>add<span class="w"> </span>subnet<span class="w"> </span>nordostbahnhof-router<span class="w"> </span>nordostbahnhof-subnet-ipv4
 </code></pre></div>
 <p>…and to the subnet <code>nordostbahnhof-subnet-ipv6</code> of network <code>nordostbahnhof</code>:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>router<span class="w"> </span>add<span class="w"> </span>subnet<span class="w"> </span>nordostbahnhof-router<span class="w"> </span>nordostbahnhof-subnet-ipv6
 </code></pre></div>
-<p>Again, if the commands above are successful, you will get no output.</p>
+<p>If the commands above succeed, you will get no output.</p>
 </div>
 </div>
 </div>
@@ -7820,12 +7820,12 @@ Alternatively, you may get all that information using the OpenStack CLI.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Cleura&nbsp;Cloud Management&nbsp;Panel</label><label for="__tabbed_3_2">OpenStack CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>You may see all defined networks, in all supported regions, by selecting <em>Networking</em> &gt; <em>Networks</em> (see the left-hand side pane on the Cleura&nbsp;Cloud Management&nbsp;Panel).</p>
+<p>You may see all defined networks in all supported regions by selecting <em>Networking</em> and then <em>Networks</em> (see the left-hand side pane on the Cleura&nbsp;Cloud Management&nbsp;Panel).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All networks in all regions" src="../assets/new-net-panel/shot-06_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All networks in all regions" src="../assets/new-net-panel/shot-06_dark.png#only-dark"></a></p>
 <p>For more information regarding a specific network, select <em>View details</em>.
 Then, you can glance over all the details regarding the selected network’s ports, subnets, and routers.
-For more information on the network subnets specifically, in the left-hand side pane on the Cleura&nbsp;Cloud Management&nbsp;Panel select <em>Networking</em> &gt; <em>Subnets</em>.</p>
+For more information on the network subnets specifically, in the left-hand side pane on the Cleura&nbsp;Cloud Management&nbsp;Panel, select <em>Networking</em> and then <em>Subnets</em>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network details" src="../assets/new-net-panel/shot-07_light.png#only-light"></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network details" src="../assets/new-net-panel/shot-07_dark.png#only-dark"></a></p>
 </div>
@@ -7840,7 +7840,7 @@ For instance, to see all internal networks only, type the following:</p>
 <p>You can also get detailed information about a specific network:</p>
 <div class="highlight"><pre><span></span><code>openstack<span class="w"> </span>network<span class="w"> </span>show<span class="w"> </span>nordostbahnhof
 </code></pre></div>
-<p>At any time, type <code>openstack network list --help</code> or <code>openstack network show --help</code> to see how to get information regarding networks, and what specific pieces of information you can have.</p>
+<p>At any time, type <code>openstack network list --help</code> or <code>openstack network show --help</code> to see how to get information regarding networks and what specific pieces of information you can have.</p>
 </div>
 </div>
 </div>
@@ -7866,7 +7866,7 @@ For instance, to see all internal networks only, type the following:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 12, 2026 16:18:21 UTC">2026-05-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 1, 2026 14:10:27 UTC">2026-09-01</span>
   </span>
 
     
