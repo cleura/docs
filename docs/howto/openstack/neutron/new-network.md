@@ -1,12 +1,12 @@
 # Creating new networks
 
-Before creating a server in {{brand}}, you need at least one network to make the new server a member of.
-Since you may have more than one network per region, let us now walk through creating a new network using the {{gui}} or the OpenStack CLI.
+Before creating a server in {{brand}}, you need at least one network to add the new server to.
+Since you may have more than one network per region, let us walk through creating a new network using the {{gui}} or the OpenStack CLI.
 
 ## Prerequisites
 
 Whether you choose to work from the {{gui}} or with the OpenStack CLI, you need to [have an account](../../getting-started/create-account.md) in {{brand}}.
-Additionally, to use the OpenStack CLI make sure to [enable it first](../../getting-started/enable-openstack-cli.md).
+To use the OpenStack CLI, first [enable it](../../getting-started/enable-openstack-cli.md).
 
 ## Creating a network
 
@@ -73,8 +73,8 @@ On the other hand, if you prefer to work with OpenStack CLI, please do not forge
 
 ## Adding a subnet and a router
 
-Creating a new network does not necessarily mean it has all the features you most likely would expect.
-Unless you work from the {{gui}}, where almost every component is activated for you with a few clicks here and there, when you use the OpenStack CLI there is some extra work you need to do before you get a network you would characterize as useful.
+Creating a new network does not necessarily mean it has all the features you would expect.
+Unless you work from the {{gui}}, where almost every component is activated for you with a few clicks here and there, when you use the OpenStack CLI, there is some extra work you need to do before you get a network you would characterize as useful.
 
 === "{{gui}}"
     Expand the _Advanced Options_ section below, make sure _Port Security_ is enabled, and leave the MTU parameter blank.
@@ -82,9 +82,9 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     ![MTU and port security](assets/new-net-panel/shot-03_light.png#only-light)
     ![MTU and port security](assets/new-net-panel/shot-03_dark.png#only-dark)
 
-    Assuming you are going for a full-featured network, activate the _Create a complete network, containing a subnet and a router_ option.
+    If you want a full-featured network, select _Create a complete network, containing a subnet and a router._
 
-    Notice that, by default, this sets things up for the the creation of an IPv4-based subnet.
+    By default, this sets things up to create an IPv4-based subnet.
     In particular, by looking at the new _Subnet Name (#1)_ section, it is immediately apparent that you get the following:
 
     - A subnet expressed in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation),
@@ -93,13 +93,13 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     - a DHCP server.
 
     For the _Gateway IP_, accept the suggested address, or type in one chosen from the subnet above.
-    As for the DHCP, either accept the defaults or type in _Start_ and _End_ addresses -- again chosen from the subnet above.
+    For DHCP, either accept the defaults or enter _Start_ and _End_ addresses, again chosen from the subnet above.
 
     ![IPv4-based network parameters](assets/new-net-panel/shot-04_light.png#only-light)
     ![IPv4-based network parameters](assets/new-net-panel/shot-04_dark.png#only-dark)
 
     Alongside your IPv4-based subnet, you may also have an IPv6-based subnet;
-    both subnets will be members of the network you are now creating.
+    both subnets will be members of the network you are creating.
 
     To create a second, IPv6-based subnet, click the :fontawesome-solid-circle-plus: icon at the top of the _Subnet Name (#1)_ section.
     In the new _Subnet Name (#2)_ section that appears, be sure to set _IP Version_ to _IPv6_ abd you will get the following:
@@ -112,16 +112,16 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     ![IPv6-based network parameters](assets/new-net-panel/shot-04-toronto_dark.png#only-dark)
 
     Scroll down a bit if you have to.
-    Assuming you want your cloud servers to reach hosts on the Internet, for the _External network_ parameter make sure you select _ext-net_.
-    Then, click the _Create_ button.
+    If you want your cloud servers to reach hosts on the Internet, select _ext-net_ for the _External network_ parameter.
+    Then, click _Create._
     In a few seconds, the new network will be readily available.
 
     ![Finish creating network](assets/new-net-panel/shot-05_light.png#only-light)
     ![Finish creating network](assets/new-net-panel/shot-05_dark.png#only-dark)
 === "OpenStack CLI"
-    You now have to create a subnet for the new network.
-    Since Neutron networks can have more than one subnets, and subnets can be either IPv4-based or IPv6-based, let us now create two;
-    one IPv4-based (`nordostbahnhof-subnet-ipv4`), and one IPv4-based (`nordostbahnhof-subnet-ipv6`).
+    You now need to create a subnet for the new network.
+    Since Neutron networks can have more than one subnet, and subnets can be either IPv4-based or IPv6-based, let us now create two;
+    one IPv4-based (`nordostbahnhof-subnet-ipv4`), and one IPv6-based (`nordostbahnhof-subnet-ipv6`).
 
     For the IPv4-based subnet, type the following:
 
@@ -176,7 +176,7 @@ Unless you work from the {{gui}}, where almost every component is activated for 
         --use-default-subnet-pool
     ```
 
-    Again, you will get detailed information regarding subnet `nordostbahnhof-subnet-ipv6`:
+    Again, you will get detailed information regarding `nordostbahnhof-subnet-ipv6`:
 
     ```plain
     +----------------------+-----------------------------------------------------------------+
@@ -212,7 +212,7 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     +----------------------+-----------------------------------------------------------------+
     ```
 
-    If you want servers connected to the `nordostbahnhof` network to have Internet access, you need a router in front of the network.
+    To give servers in the `nordostbahnhof` network Internet access, you need a router in front of the network.
     Following our unofficial naming convention, go ahead and create a new router called `nordostbahnhof-router`:
 
     ```bash
@@ -255,8 +255,8 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     openstack router set nordostbahnhof-router --external-gateway ext-net
     ```
 
-    Please note that if the command above is successful, you will get no output on your terminal.
-    There is one last step to take, and that is to connect router `nordostbahnhof-router` to the subnet `nordostbahnhof-subnet-ipv4`...
+    If the command above succeeds, you will see no output in your terminal.
+    One last step is to connect router `nordostbahnhof-router` to the subnet `nordostbahnhof-subnet-ipv4`...
 
     ```bash
     openstack router add subnet nordostbahnhof-router nordostbahnhof-subnet-ipv4
@@ -268,7 +268,7 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     openstack router add subnet nordostbahnhof-router nordostbahnhof-subnet-ipv6
     ```
 
-    Again, if the commands above are successful, you will get no output.
+    If the commands above succeed, you will get no output.
 
 ## Listing networks and getting information
 
@@ -276,14 +276,14 @@ At any time, you may connect to the {{gui}}, list all networks you have already 
 Alternatively, you may get all that information using the OpenStack CLI.
 
 === "{{gui}}"
-    You may see all defined networks, in all supported regions, by selecting _Networking_ > _Networks_ (see the left-hand side pane on the {{gui}}).
+    You may see all defined networks in all supported regions by selecting _Networking_ and then _Networks_ (see the left-hand side pane on the {{gui}}).
 
     ![All networks in all regions](assets/new-net-panel/shot-06_light.png#only-light)
     ![All networks in all regions](assets/new-net-panel/shot-06_dark.png#only-dark)
 
     For more information regarding a specific network, select _View details_.
     Then, you can glance over all the details regarding the selected network's ports, subnets, and routers.
-    For more information on the network subnets specifically, in the left-hand side pane on the {{gui}} select _Networking_ > _Subnets_.
+    For more information on the network subnets specifically, in the left-hand side pane on the {{gui}}, select _Networking_ and then _Subnets_.
 
     ![Network details](assets/new-net-panel/shot-07_light.png#only-light)
     ![Network details](assets/new-net-panel/shot-07_dark.png#only-dark)
@@ -352,4 +352,4 @@ Alternatively, you may get all that information using the OpenStack CLI.
     +---------------------------+--------------------------------------+
     ```
 
-    At any time, type `openstack network list --help` or `openstack network show --help` to see how to get information regarding networks, and what specific pieces of information you can have.
+    At any time, type `openstack network list --help` or `openstack network show --help` to see how to get information regarding networks and what specific pieces of information you can have.

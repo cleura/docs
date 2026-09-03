@@ -6,20 +6,20 @@ Group rules are project specific; project members can edit the default rules for
 ## Creating a security group
 
 Navigate to the [{{gui}}](https://{{gui_domain}}) page, and log into your {{brand}} account.
-On the other hand, if you prefer to work with the OpenStack CLI, please do not forget to [source the RC file first](../../getting-started/enable-openstack-cli.md).
+If you prefer to work with the OpenStack CLI, be sure to [source the RC file first](../../getting-started/enable-openstack-cli.md).
 
 === "{{gui}}"
     To create a security group, first make sure the left-hand side vertical pane is fully visible.
-    Click on _Security&nbsp;Groups_, and then on the top-right corner of the central pane, click on _Create new Security Group_.
+    Click on _Security&nbsp;Groups_, and then in the top-right corner of the central pane, click on _Create new Security Group_.
 
     ![Initiating the creation of a new security group](assets/create-security-groups/create-secgroup-01_light.png#only-light)
     ![Initiating the creation of a new security group](assets/create-security-groups/create-secgroup-01_dark.png#only-dark)
 
-    > An alternative way to create a Security&nbsp;Group is by clicking on the round-cornered _Create_ button, in the top bar.
+    An alternative way to create a Security&nbsp;Group is by clicking the _Create_ button in the top bar.
 
     Type in a _Name_ for the new security group, and choose a _Region_ to create it in.
     You may optionally type in a _Description_ for the security group.
-    Click on the _Create_ button when you are ready.
+    Click _Create_ when you are ready.
 
     ![Setting parameters for the new security group](assets/create-security-groups/create-secgroup-02_light.png#only-light)
     ![Setting parameters for the new security group](assets/create-security-groups/create-secgroup-02_dark.png#only-dark)
@@ -112,7 +112,7 @@ All traffic to any destination (egress) is allowed by default.
     +-----------------+--------------------------------------------------------------------------------+
     ```
 
-If you want to restrict the ingress rules to disallow access from other servers and ports in the group, you need to **remove the default two ingress rules.**
+If you want to restrict the ingress rules to disallow access from other servers and ports in the group, you need to **remove the two default ingress rules.**
 
 === "{{gui}}"
     Click each of the:material-delete-circle: buttons on the right-hand side of the **IPv4 ingress** and also of the **IPv6 ingress** rows.
@@ -165,7 +165,7 @@ If you want to restrict the ingress rules to disallow access from other servers 
     The IDs of the two ingress rules, one for IPv4 traffic and one for IPv6, in this case, are:
     `5e5e9f4d-1faa-492d-91f1-c105b464072b` and `86b9413a-ad23-46c4-a35e-9306945dc63c`.
 
-    Delete them by using the following command:
+    Delete them using the following command:
 
     ```bash
     openstack security group rule delete \
@@ -178,7 +178,7 @@ If you want to restrict the ingress rules to disallow access from other servers 
     openstack security group rule list default
     ```
 
-    Now, the remaining rules are only the egress ones.
+    Now the remaining rules are only egress rules.
 
     ```plain
     +-----------+-------------+-----------+-----------+------------+-----------+-----------------------+----------------------+
@@ -201,7 +201,7 @@ If you want to restrict the ingress rules to disallow access from other servers 
 
 ## Allowing SSH access
 
-The next thing to do is allow SSH access on **port 22** for IPv4 and IPv6 client connections -- but _only_ from specific addresses or subnets.
+Next, allow SSH access on **port 22** for IPv4 and IPv6 client connections, but _only_ from specific addresses or subnets.
 
 === "{{gui}}"
     To do this, while on the _Rules_ tab, click on the _Create new rule_ button.
@@ -221,7 +221,7 @@ The next thing to do is allow SSH access on **port 22** for IPv4 and IPv6 client
     ![Create ingress rule for IPv6 SSH connections](assets/create-security-groups/default-rules-ingress-ssh-ipv6_light.png#only-light)
     ![Create ingress rule for IPv6 SSH connections](assets/create-security-groups/default-rules-ingress-ssh-ipv6_dark.png#only-dark)
 
-    When you are done creating the two ingress rules for SSH, you see them listed in the _Rules_ tab of the security group.
+    After you create the two ingress rules for SSH, you will see them listed in the security group's _Rules_ tab.
 
     ![New ingress rules for SSH connections](assets/create-security-groups/default-rules-ingress-ssh_light.png#only-light)
     ![New ingress rules for SSH connections](assets/create-security-groups/default-rules-ingress-ssh_dark.png#only-dark)
@@ -248,7 +248,7 @@ The next thing to do is allow SSH access on **port 22** for IPv4 and IPv6 client
 
 In this example, your IPv4 address is 203.0.113.58, and if you want to allow SSH access from this address only, enter `203.0.113.58/32` as CIDR.
 If you want to allow SSH access from _any_ address in that [Class C subnet](https://en.wikipedia.org/wiki/Classful_network), instead enter `203.0.113.0/24` as CIDR.
-Regarding the IPv6 address, in the example we use the `2001:db8::/32` address block.
+For the IPv6 address, the example uses the `2001:db8::/32` address block.
 Alternatively, you may use a single IPv6 address, like `2001:db8:ffff:ffff:ffff:ffff:ffff:ffff/128`.
 
 ## Allowing Web Traffic
