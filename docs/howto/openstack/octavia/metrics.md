@@ -11,16 +11,16 @@ This listener is meant to be used as a data source for an existing [Prometheus](
 
 ## Prerequisites
 
-The {{gui}} does not support defining metrics endpoints, so you will have to work with the OpenStack CLI.
+The {{gui}} does not support defining metrics endpoints, so you will need to use the OpenStack CLI.
 [Enable it](../../getting-started/enable-openstack-cli.md) for the region you will be working in, and make sure you have the Python `octaviaclient` package installed.
-For that, use either the package manager of your operating system, or `pip`:
+For that, use either the package manager of your operating system or `pip`:
 
 === "Debian/Ubuntu"
     ```bash
     apt install python3-octaviaclient
     ```
 === "Mac OS X with Homebrew"
-    This particular Python module is unavailable via `brew`, but you can install it via `pip`.
+    This Python module is not available via `brew`, but you can install it with `pip`.
 === "Python Package"
     ```bash
     pip install cleura-openstackclient
@@ -29,7 +29,7 @@ For that, use either the package manager of your operating system, or `pip`:
 ## Assumptions and scenario
 
 We assume you already have an [HTTPS-terminated load balancer](tls-lb.md) that forwards client requests to a back-end server pool.
-In our test scenario, the load balancer was accepting HTTPS requests for `whoogle.example.com` and forwarding them to a two-member pool, with servers each running a Docker container for [Whoogle Search](https://github.com/benbusby/whoogle-search).
+In our test scenario, the load balancer accepted HTTPS requests for `whoogle.example.com` and forwarded them to a two-member pool, with each member (server) running a Docker container for [Whoogle Search](https://github.com/benbusby/whoogle-search).
 
 ## Creating a metrics listener
 
@@ -50,7 +50,7 @@ $ openstack loadbalancer list
 
 You may now add `mylb-listener-metrics`, a new Prometheus-based listener for `mylb`.
 
-Most likely, you will want to restrict access to this endpoint to just the IP address of your Prometheus server, which presumably lives on a different network and accesses the load balancer via its public (floating) IP address.
+Most likely, you will want to restrict access to this endpoint to just the IP address of your Prometheus server, which presumably lives on a different network and accesses the load balancer via its floating IP address.
 You can use the `--allowed-cidr` command-line option for that purpose.
 The example below[^octavia-client-version] assumes that your Prometheus server's outgoing IP address is `203.0.113.132`:
 
@@ -116,10 +116,10 @@ $ openstack loadbalancer listener show mylb-listener-metrics \
 
 ## Testing the listener
 
-Once the listener reports as being `ACTIVE`, you should be able to check its endpoint.
+Once the listener reports as `ACTIVE`, you may check its endpoint.
 
 From a client that matches your `allowed_cidrs` filter, you can do so using `curl`.
-The example below assumes that your load balancer uses a public (floating) IP of `198.51.100.234`:
+The example below assumes that your load balancer has the floating IP of `198.51.100.234`:
 
 ```console
 $ curl -s http://198.51.100.234:8088/metrics | head

@@ -3,14 +3,14 @@ description: A walk-through of creating a TCP load balancer
 ---
 # Setting up a TCP load balancer
 
-Octavia is a Load Balancer as a Service (LBaaS) solution designed to work with OpenStack.
+Octavia is a Load Balancer as a Service (LBaaS) solution for OpenStack.
 In this guide, we show how to instantiate and configure a simple TCP load balancer in {{brand}}.
-All intermediate steps are presented and explained through a specific scenario, and we work using either the {{gui}} or the OpenStack CLI.
+We present and explain all intermediate steps through a specific scenario, using either the {{gui}} or the OpenStack CLI.
 
 ## Prerequisites
 
 Whether you choose the {{gui}} or the OpenStack CLI, you need to [have an account](../../getting-started/create-account.md) in {{brand}}.
-Additionally, to use the OpenStack CLI, make sure to [enable it](../../getting-started/enable-openstack-cli.md) for the region you will be working in.
+Additionally, to use the OpenStack CLI, [enable it](../../getting-started/enable-openstack-cli.md) for the region you will be working in.
 Besides the Python `openstackclient` module, you will also have to install the Python `octaviaclient` module.
 For that, use either the package manager of your operating system or `pip`:
 
@@ -19,7 +19,7 @@ For that, use either the package manager of your operating system or `pip`:
     apt install python3-octaviaclient
     ```
 === "Mac OS X with Homebrew"
-    This particular Python module is unavailable via `brew`, but you can install it via `pip`.
+    This Python module is not available via `brew`, but you can install it with `pip`.
 === "Python Package"
     ```bash
     pip install cleura-openstackclient
@@ -27,46 +27,48 @@ For that, use either the package manager of your operating system or `pip`:
 
 ## Scenario and terminology
 
-To configure and test our basic TCP load balancer, we have two servers in the same {{brand}} region, both having `ncat` listening on port 61234/TCP and returning a greeting to clients asking to connect to that port.
-Both servers are in the same internal network, and our load balancer will be responsible for redirecting client connections to them in a round-robin fashion.
-The load balancer will have a single floating IP address, so prospective clients will have to know only that address and not any of the backend server addresses.
+To configure and test our basic TCP load balancer, we have two servers in the same {{brand}} region, both running `ncat` on port 61234/TCP and returning a greeting to clients that connect to that port.
+Both servers are on the same internal network, and our load balancer will redirect client connections to them in a round-robin fashion.
+The load balancer will have a single floating IP address, and prospective clients will need only that address.
 
-> Please note that while working with your load balancer, you will encounter some technical terms which go a long way toward conceptualizing the inner logic of the whole LBaaS system.
-This guide introduces those terms not beforehand but exactly when needed.
+??? "Technical terms"
+    While working with your load balancer, you will encounter technical terms that go a long way toward conceptualizing the inner logic of the whole LBaaS system.
+    This guide introduces those terms not beforehand but __exactly__ when needed.
 
 ## Creating a load balancer
 
-That is only the first step towards our goal, which is to have a fully functional TCP load balancer.
+That is only the first step toward our goal:
+a fully functional TCP load balancer.
 We will also need a listener and a pool, but first things first.
 
 === "{{gui}}"
     Fire up your favorite web browser, navigate to the [{{gui}}](https://{{gui_domain}}) start page, and log into your {{brand}} account.
-    On the top right-hand side of the {{gui}}, click the _Create_ button.
-    A new pane titled _Create_ will slide into view from the right-hand side of the browser window.
+    On the top right-hand side of the {{gui}}, click _Create._
+    A new _Create_ pane slides into view from the right-hand side of the browser window.
     You will notice several rounded boxes on that pane, each for defining, configuring, and instantiating a different {{brand}} object.
     Go ahead and click the _Load Balancer_ box.
 
     ![Create new object](assets/shot-01_light.png#only-light)
     ![Create new object](assets/shot-01_dark.png#only-dark)
 
-    A new pane titled _Create a Load Balancer_ will slide over.
+    A new _Create a Load Balancer_ pane slides over.
     At the top, type in a name for the new load balancer and select one of the available regions.
     Optionally, type in a description.
 
     ![Set name, region, and description for the new LB](assets/shot-02_light.png#only-light)
     ![Set name, region, and description for the new LB](assets/shot-02_dark.png#only-dark)
 
-    In the same pane, scroll down a bit if you have to and activate the _Subnet_ radio button.
-    Then, from the _Subnet_ dropdown menu below, select an appropriate subnet for the new load balancer to move in front of.
-    In our example, the two test servers we have are members of the `network-{{api_region|lower}}` internal network, and `subnet-{{api_region|lower}}` is the name of the corresponding subnet.
-    Click the _Create_ button below to instantiate the new load balancer.
+    In the same pane, scroll down a bit if you have to, and activate the _Subnet_ radio button.
+    Then, from the _Subnet_ dropdown menu below, select an appropriate subnet to put behind the new load balancer.
+    In our example, the two test servers are on the `subnet-{{api_region|lower}}` subnet, which is in the `network-{{api_region|lower}}` internal network.
+    Click _Create_ to instantiate the new load balancer.
 
     ![Select a subnet for the new LB](assets/shot-03_light.png#only-light)
     ![Select a subnet for the new LB](assets/shot-03_dark.png#only-dark)
 
-    The creation of the new load balancer starts and, unless something goes wrong, finishes successfully in a minute or so.
-    For a view of the load balancer, make sure the left-hand side vertical pane of the {{gui}} is fully visible, click on the _Networking_ category to expand it, and then click once more on the _Load Balancers_ option.
-    In the main area of the {{gui}}, select the new load balancer, click the :material-dots-horizontal-circle: icon on the right, and select _View details_ from the pop-up menu that appears.
+    The creation process starts and, unless something goes wrong, finishes successfully in a minute or so.
+    To view the load balancer, make sure the left-hand side vertical pane of the {{gui}} is fully visible, click the _Networking_ category to expand it, and then click _Load Balancers._
+    In the main pane of the {{gui}}, select the new load balancer, click the :material-dots-horizontal-circle: icon on the right, and from the pop-up menu that appears, select _View details._
 
     ![View the newly created LB](assets/shot-04_light.png#only-light)
     ![View the newly created LB](assets/shot-04_dark.png#only-dark)
@@ -130,25 +132,27 @@ The _listener_ allows a load balancer to do just that.
 The load balancer you instantiated has no listener, so let us see how you can equip it with one.
 
 === "{{gui}}"
-    Looking at the detailed view of the new load balancer, you see three tabs: _Details_, _Listeners_, and _Pools_.
-    Click the _Listeners_ tab and notice the message: "No Listeners for this LoadBalancer".
-    Time to create one, so click the button labeled _Create a Listener_.
+    Looking at the detailed view of the new load balancer, you see three tabs:
+    _Details_, _Listeners_, and _Pools_.
+    Click the _Listeners_ tab and notice the message:
+    "No Listeners for this LoadBalancer".
+    Time to create one, so click _Create a Listener._
 
     ![Create a listener](assets/shot-05_light.png#only-light)
     ![Create a listener](assets/shot-05_dark.png#only-dark)
 
-    From the right-hand side of the {{gui}}, a pane named _Create a Listener_ slides over.
+    From the right-hand side of the {{gui}}, a _Create a Listener_ pane slides over.
     Type in a name for the new listener --- and optionally a description.
 
     ![Set name and description for the new listener](assets/shot-06_light.png#only-light)
     ![Set name and description for the new listener](assets/shot-06_dark.png#only-dark)
 
-    Further down, from the _Protocol_ dropdown menu, select the protocol the listener will be paying attention to.
-    Since you are setting up a TCP load balancer, the protocol for the listener will also have to be TCP.
-    Additionally, type in the listening port.
-    The load balancer will be redirecting connections to a couple of servers, which listen for connections on port 61234/TCP, so it makes sense ---though it is not necessary--- for the load balancer to use that same listening port.
+    Further down, in the _Protocol_ dropdown menu, select the protocol the listener will know about.
+    Since you are setting up a TCP load balancer, the listener protocol must also be TCP.
+    Also, enter the listening port.
+    The load balancer will redirect connections to a couple of servers that listen on port 61234/TCP, so it makes sense --- though it is not necessary --- for the load balancer to use the same listening port.
     Since you have not yet defined a pool, ignore the _Default pool_ dropdown menu for now.
-    Instead, go ahead and click the _Create_ button.
+    Instead, go ahead and click _Create._
 
     ![Select protocol and set port](assets/shot-07_light.png#only-light)
     ![Select protocol and set port](assets/shot-07_dark.png#only-dark)
@@ -219,31 +223,31 @@ The load balancer you instantiated has no listener, so let us see how you can eq
     +---------------------+--------+
     ```
 
-    Since you wanted to create a TCP load balancer, in the command above, you specified the connection protocol via the `--protocol` parameter.
+    Since you wanted to create a TCP load balancer, the command above specified the connection protocol via the `--protocol` parameter.
     Also, the new load balancer will be redirecting connections to a couple of servers listening on port 61234, so it makes sense to set the listening port to 61234 (see the `--protocol-port` parameter).
 
 ## Creating a pool
 
-Any server accepting connections from the listener is said to be a _member_ of a _pool_.
+Any server that accepts connections from the listener is said to be a _member_ of a _pool_.
 For our load balancer to work, we must create a pool and explicitly list its members.
 
 === "{{gui}}"
-    With the detailed view of the load balancer expanded, click the _Pools_ tab.
-    You will notice the message "No pools for this LoadBalancer", so click the _Create a Pool_ button.
+    With the load balancer details expanded, click the _Pools_ tab.
+    Notice the message "No pools for this LoadBalancer", so click _Create a Pool._
 
     ![Create a pool](assets/shot-09_light.png#only-light)
     ![Create a pool](assets/shot-09_dark.png#only-dark)
 
-    A new pane named _Create a Pool_ slides over.
+    A new _Create a Pool_ pane slides over.
     First, type in a name for the new pool.
-    For the _Algorithm_, make sure to select *ROUND_ROBIN*.
+    For the _Algorithm_, be sure to select *ROUND_ROBIN*.
     Since you are configuring a TCP load balancer, set the _Protocol_ to _TCP_.
 
     ![Type in name, set algorithm and protocol](assets/shot-10_light.png#only-light)
     ![Type in name, set algorithm and protocol](assets/shot-10_dark.png#only-dark)
 
-    A little bit further down the pane, there is the _Listener_ dropdown menu; select the one you created in the previous step.
-    Leave the _Session persistence_ parameter as it is, and create your pool with a click on the _Create_ button.
+    A little further down the pane, there is the _Listener_ dropdown menu; select the one you created in the previous step.
+    Leave the _Session persistence_ parameter as is, then click _Create_ to create your pool.
 
     ![Select listener, create pool](assets/shot-11_light.png#only-light)
     ![Select listener, create pool](assets/shot-11_dark.png#only-dark)
@@ -323,13 +327,13 @@ The pool you created has no members, so it is time to populate it.
 
     A new pane titled _Modify Pool Members_ appears, listing all the servers that share the same region with the load balancer.
     In our example, there are three servers.
-    We created `srv-lbaas-1` and `srv-lbaas-2` to test the load balancer, so now we click on the corresponding :material-plus: icons to add those to the pool.
+    We created `srv-lbaas-1` and `srv-lbaas-2` to test the load balancer, so now we click on the corresponding :material-plus: icons to add them to the pool.
 
     ![Add members](assets/shot-15_light.png#only-light)
     ![Add members](assets/shot-15_dark.png#only-dark)
 
-    You may have noticed that the listening port of each server we added is by default 80, but we want port 61234.
-    To change the listening port of a server, just click the corresponding :material-pencil-box-outline: icon.
+    You may have noticed that the listening port of each server we added is 80, but we want port 61234.
+    To change a server's listening port, click the corresponding :material-pencil-box-outline: icon.
 
     ![Modify ports](assets/shot-16_light.png#only-light)
     ![Modify ports](assets/shot-16_dark.png#only-dark)
@@ -344,8 +348,9 @@ The pool you created has no members, so it is time to populate it.
     ![Pool is populated](assets/shot-18_light.png#only-light)
     ![Pool is populated](assets/shot-18_dark.png#only-dark)
 === "OpenStack CLI"
-    Both our test servers are in the `subnet-{{api_region|lower}}` subnet, one of them has IP `10.15.25.105`, and the other one has IP `10.15.25.236`.
-    To add those two servers in pool `mylb-pool`, type:
+    Both our test servers are in the `subnet-{{api_region|lower}}` subnet;
+    one has IP `10.15.25.105`, and the other has IP `10.15.25.236`.
+    To add those two servers to `mylb-pool`, type:
 
     ```bash
     openstack loadbalancer member create \
@@ -429,12 +434,12 @@ The pool you created has no members, so it is time to populate it.
 ## Assigning a floating IP
 
 Your load balancer has an internal IP chosen from the subnet you indicated earlier.
-This makes it reachable from other servers in the same subnet but not from the Internet.
-You probably want the load balancer to be reachable from anywhere, meaning you have to equip it with a floating IP.
+This makes it reachable from other servers in the same subnet, but not from the Internet.
+To make the load balancer reachable from anywhere, assign it a floating IP.
 
 === "{{gui}}"
     While viewing your load balancer, click the :material-dots-horizontal-circle: icon on the right.
-    From the pop-up menu that appears, select _Modify Load Balancer_.
+    From the pop-up menu, select _Modify Load Balancer_.
 
     ![Modify load balancer](assets/shot-19_light.png#only-light)
     ![Modify load balancer](assets/shot-19_dark.png#only-dark)
@@ -446,10 +451,10 @@ You probably want the load balancer to be reachable from anywhere, meaning you h
     ![Create and attach floating IP](assets/shot-20_dark.png#only-dark)
 
     A new pane slides over, named _Create a Floating IP_.
-    For the _Region_ parameter, select the one the load balancer resides in.
+    For the _Region_ parameter, select the load balancer's region.
     Select an external network for the _External Network_ parameter.
     For the _Assign to_ parameter, make sure you choose _Load Balancer_.
-    In our example, there's only one load balancer in the region we are working in, so the parameter _Assign To_ is already set for us.
+    In our example, there's only one load balancer in our region, so the _Assign To_ parameter is already set for us.
     To finalize the assignment, click the _Create and Assign_ button.
 
     ![Configure attachment](assets/shot-21_light.png#only-light)
@@ -493,7 +498,7 @@ You probably want the load balancer to be reachable from anywhere, meaning you h
     +---------------------+--------------------------------------+
     ```
 
-    Then, load the ID of the new floating IP to a variable:
+    Then, assign the new floating IP's ID to a variable:
 
     ```bash
     FLOAT_IP_ID=$(openstack floating ip list \
@@ -538,8 +543,10 @@ $ wget -q 198.51.100.129:61234 -O -
 Yello from srv-lbaas-2!
 ```
 
-During our testing, executing the `wget` command repeatedly, we were getting those two hostnames one after the other --- and that was proof our TCP load balancer was working as expected.
-But there is one more expectation of any load balancer: the ability to skip backend hosts when they are inaccessible.
+During our testing, when we ran the `wget` command repeatedly, we got those two hostnames one after the other;
+that proved our TCP load balancer was working as expected.
+But there is one more expectation of any load balancer:
+the ability to skip backend hosts when they are inaccessible.
 
 To test our load balancer in this new scenario, let us first use `wget` to connect to port 61234 and jot down the backend server that will respond:
 
@@ -549,10 +556,11 @@ $ wget -q 198.51.100.129:61234 -O -
 Yello from srv-lbaas-2!
 ```
 
-We see that `srv-lbaas-2` responded. That means the next time we try to connect, `srv-lbaas-1` will respond.
-But if we SSH into `srv-lbaas-1` and terminate `ncat`, then after connecting with `wget` we will get a response from `srv-lbaas-2` --- again.
+We see that `srv-lbaas-2` responded.
+That means the next time we try to connect, `srv-lbaas-1` will respond.
+But if we SSH into `srv-lbaas-1` and terminate `ncat`, then after connecting with `wget` we should __again__ get a response from `srv-lbaas-2`.
 This, at least, is our expectation.
-So without further ado, we SSH into `srv-lbaas-1`, we terminate `ncat`, we log out, and from our local terminal, we type:
+So without further ado, we SSH into `srv-lbaas-1`, we terminate `ncat`, we log out, and from our local terminal we type:
 
 ```console
 $ wget -q 198.51.100.129:61234 -O -
@@ -560,39 +568,41 @@ $ wget -q 198.51.100.129:61234 -O -
 Yello from srv-lbaas-2!
 ```
 
-Exactly as we expected, `srv-lbaas-2` has responded again, proving our load balancer behaves correctly.
+As expected, `srv-lbaas-2` responded again, proving our load balancer behaves correctly.
 As an exercise, you might want to shutdown your `srv-lbaas-1` and/or re-enable `ncat`, and check the behavior of the load balancer.
 There should be no surprises.
 
 ## Adding a health monitor
 
 You can add a health monitor to the pool of your load balancer, so whenever ---and for whatever reason--- one or more of the pool member services are inaccessible, the load balancer will know and won't even bother trying to redirect client requests to them.
-Of course, whenever an inaccessible service gets accessible again, the load balancer will take notice and start treating the corresponding pool member as a fully functional server.
+Of course, when an inaccessible service becomes accessible again, the load balancer will notice and start treating the corresponding pool member as a fully functional server.
 
 === "{{gui}}"
     In the detailed view of your load balancer, pull up the _Pools_ tab.
-    In the _Health Monitor_ column there is a "0", for the pool has no health monitor yet.
+    There is a "0" in the _Health Monitor_ column;
+    that's because the pool has no health monitor yet.
 
     ![There is no health monitor](assets/shot-23_light.png#only-light)
     ![There is no health monitor](assets/shot-23_dark.png#only-dark)
 
     To add a health monitor, click the :material-pencil-box-outline: icon.
     A pane titled _Modify Pool_ slides over.
-    Scroll down if you have to, and stop when the _Health Monitor_ section is fully visible.
-    You will see a message saying, "No health monitor created", so click the _Create a Healthmonitor_ button to create one.
+    Scroll down if needed, and stop when the _Health Monitor_ section is fully visible.
+    You will see a message saying "No health monitor created";
+    click _Create a Healthmonitor_ to create one.
 
     ![Create new health monitor](assets/shot-24_light.png#only-light)
     ![Create new health monitor](assets/shot-24_dark.png#only-dark)
 
     Pick a name for the new health monitor, and set its type to TCP.
-    That is the connection protocol that will be used to determine whether pool member services are accessible.
+    This is the connection protocol used to determine whether pool member services are accessible.
     Finalize your choices with a click on the _Create_ button.
 
     ![Define health monitor characteristics](assets/shot-25_light.png#only-light)
     ![Define health monitor characteristics](assets/shot-25_dark.png#only-dark)
 
     You will then see that in the _Health Monitor_ column there is a "1" --- and that means the monitor is active.
-    To see real-time information regarding pool members operating status, click over "1".
+    To get real-time information about the pool members' operating status, click on "1".
 
     ![Check members operating status](assets/shot-26_light.png#only-light)
     ![Check members operating status](assets/shot-26_dark.png#only-dark)
@@ -631,8 +641,8 @@ Of course, whenever an inaccessible service gets accessible again, the load bala
     +---------------------+--------------------------------------+
     ```
 
-    The name of the new health monitor is `mylb-pool-healthmon`, and the TCP protocol will be used to check whether members of pool `mylb-pool` are online or offline.
-    To check the provisioning status of the health monitor, type:
+    The name of the new health monitor is `mylb-pool-healthmon`, and the TCP protocol will be used to check whether members of `mylb-pool` are online or offline.
+    Check the provisioning status of the health monitor:
 
     ```console
     $ openstack loadbalancer healthmonitor show \
@@ -645,7 +655,7 @@ Of course, whenever an inaccessible service gets accessible again, the load bala
     +---------------------+--------+
     ```
 
-    Once the health monitor is provisioned, you may at any time check the pool members status like so:
+    Once the health monitor is provisioned, you may at any time check the pool members' status like so:
 
     ```console
     $ openstack loadbalancer member list mylb-pool
@@ -665,14 +675,14 @@ Of course, whenever an inaccessible service gets accessible again, the load bala
 
 ## Observing and testing the monitor
 
-Having a health monitor for your load balancer's pool up and running, whenever the service of interest in any of the pool members gets inaccessible, the monitor notices and immediately considers the corresponding member as offline.
-From then on, and until the same service gets accessible again, the load balancer does not even try to redirect client connections to the affected member.
+With a health monitor for your load balancer's pool up and running, when the service of interest of any pool member becomes inaccessible, the monitor notices and immediately marks the corresponding member as offline.
+From then on, until the service becomes accessible again, the load balancer stops redirecting client connections to the affected member.
 During our testing, we killed `ncat` running on `srv-lbaas-1`, and then took a look at the health monitor from the {{gui}} --- and also from a local terminal.
 
 === "{{gui}}"
-    In the detailed view of your load balancer, pull up the _Pools_ tab and click anywhere on its line.
+    In the detailed view of your load balancer, pull up the _Pools_ tab and click anywhere on its row.
     After a second or two, you will see information regarding all pool members.
-    Pay attention to the _Operating Status_ column, where you can see the status of any of the pool members.
+    In the _Operating Status_ column, there is the status of each pool member.
 
     ![Operating status of all pool members](assets/shot-27_light.png#only-light)
     ![Operating status of all pool members](assets/shot-27_dark.png#only-dark)
@@ -727,4 +737,4 @@ Yello from srv-lbaas-2!
 ```
 
 Since pool member `srv-lbaas-1` is offline to the health monitor, we keep getting an answer from `srv-lbaas-2`.
-Actually, while the service of interest in `srv-lbaas-1` is inaccessible, then no matter how many times we run the command above we will keep getting a response from `srv-lbaas-2` only.
+And while the service of interest on `srv-lbaas-1` stays inaccessible, no matter how many times we run the command above, we keep getting a response only from `srv-lbaas-2`.

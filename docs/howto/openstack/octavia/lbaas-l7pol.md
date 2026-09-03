@@ -1,25 +1,25 @@
 ---
-description: How to add automatic HTTP to HTTPS redirection to an HTTPS-terminated load balancer
+description: How to add automatic HTTP-to-HTTPS redirection to an HTTPS-terminated load balancer
 ---
 # Using layer 7 redirection
 
-Unlike [TCP-based load balancers](lbaas-tcp.md), which may be considered low-level, Layer 7 load balancers follow high-level application logic to redirect client requests to back-end server pools.
+Unlike [TCP-based load balancers](lbaas-tcp.md), which are often considered low-level, Layer 7 load balancers use high-level application logic to redirect client requests to back-end server pools.
 They take their name from the [OSI model](https://en.wikipedia.org/wiki/OSI_model), where Layer 7 is also known as the _Application Layer_.
 A Layer 7, or simply L7, load balancer decides where to redirect incoming packets based on URI, host, HTTP headers, etc.
 
-One common application of L7 load balancing is HTTP to HTTPS redirection.
+One common application of L7 load balancing is HTTP-to-HTTPS redirection.
 More specifically, you may have an [HTTPS-terminated load balancer](tls-lb.md) that distributes incoming client traffic to one or more back-end services, and you are looking for a way to automatically turn each HΤTP request into an HTTPS one.
 To have this kind of automatic redirection, you equip your load balancer with a new listener that acknowledges incoming HTTP requests and silently forwards them to the existing HTTPS-based listener.
 
-The HTTP listener will apply a specific _L7 policy_ to accomplish this.
+The HTTP listener applies a specific _L7 policy_ to accomplish this.
 In general, an L7 policy is nothing but a set of one or more _L7 rules_, along with a predefined action.
-That action is fallowed when all L7 rules evaluate to `true`, and we should point out that an L7 rule is a logical test that evaluates to either `true` or `false`.
+The action is followed when all L7 rules evaluate to `true` (an L7 rule is a logical test that evaluates to either `true` or `false`).
 
-In what follows, we show, step by step, how we add such a listener, policy, and set of rules to an existing HTTPS-terminated load balancer.
+Below, we show how to add such a listener, policy, and set of rules to an existing HTTPS-terminated load balancer.
 
 ## Prerequisites
 
-The {{gui}} does not support defining L7 policies and rules, so you will have to work with the OpenStack CLI.
+The {{gui}} does not support defining L7 policies and rules, so you will need to use the OpenStack CLI.
 [Enable it](../../getting-started/enable-openstack-cli.md) for the region you will be working in, and make sure you have the Python `octaviaclient` module installed.
 For that, use either the package manager of your operating system or `pip`:
 
@@ -38,7 +38,7 @@ For that, use either the package manager of your operating system or `pip`:
 ## Assumptions and scenario
 
 We assume you already have an [HTTPS-terminated load balancer](tls-lb.md) that forwards client requests to a back-end server pool.
-In our test scenario, the load balancer was accepting HTTPS requests for `whoogle.example.com` and forwarding them to a two-member pool, with servers each running a Docker container for [Whoogle Search](https://github.com/benbusby/whoogle-search).
+In our test scenario, the load balancer accepted HTTPS requests for `whoogle.example.com` and forwarded them to a two-member pool, with each server running a Docker container for [Whoogle Search](https://github.com/benbusby/whoogle-search).
 
 ## Creating an HTTP listener
 
