@@ -1,0 +1,12 @@
+---
+nav:
+  - index.md
+  - introduction.md
+  - general-design-principles.md
+  - operational-excellence.md
+  - security-digital-sovereignty.md
+  - reliability.md
+  - performance-efficiency.md
+  - cost-optimization.md
+  - well-architected-review.md
+title: "Well-Architected Framework"
