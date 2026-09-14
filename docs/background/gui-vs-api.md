@@ -27,7 +27,7 @@ In cases like this, you will use the OpenStack API via a tool like the OpenStack
 Although `openstack` usually requires some reading before doing a specific task, it doesn't take much time to get used to its logic for constructing commands to achieve what you want.
 Plus, there is hardly a thing you can't do with `openstack` or a CLI tool that talks to the OpenStack API.
 
-We should also point out that specific tasks can be performed _only_ via the OpenStack API, for there is no counterpart tool in the {{gui}} toolbox.
+We should also point out that specific tasks can be performed *only* via the OpenStack API, for there is no counterpart tool in the {{gui}} toolbox.
 
 For instance, whenever you need to [move servers between regions](../howto/openstack/nova/move-server-between-regions.md), then `openstack` is your only option.
 Another instance where you work with the OpenStack API and various CLI tools, is when you have to interact with the [S3 API](../howto/object-storage/s3/index.md) or the [Swift API](../howto/object-storage/swift/index.md).

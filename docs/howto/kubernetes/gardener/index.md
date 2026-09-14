@@ -13,7 +13,7 @@ To use {{brand_container_orchestration}}, you first need to *activate* the servi
 You can conveniently do this via the {{gui}}.
 
 To activate {{k8s_management_service}}, select Containers → [{{k8s_management_service}}](https://{{gui_domain}}/containers/gardener) in the side panel.
-Then, click the _Activate {{k8s_management_service}} Service_ button:
+Then, click the *Activate {{k8s_management_service}} Service* button:
 
 !["Activate {{k8s_management_service}}" dialog in {{gui}}](assets/activate-gardener_light.png#only-light)
 !["Activate {{k8s_management_service}}" dialog in {{gui}}](assets/activate-gardener_dark.png#only-dark)

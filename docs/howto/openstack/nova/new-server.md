@@ -4,7 +4,7 @@ description: How to create a new virtual server in Cleura Cloud
 # Creating new servers
 
 Once you have an [account in
-{{brand}}](../../getting-started/create-account.md), you can create virtual machines --- henceforth simply _servers_ --- using either the {{gui}} or the OpenStack CLI.
+{{brand}}](../../getting-started/create-account.md), you can create virtual machines --- henceforth simply *servers* --- using either the {{gui}} or the OpenStack CLI.
 
 ## Prerequisites
 
@@ -17,32 +17,32 @@ To create a server from the {{gui}}, fire up your favorite web browser, navigate
 If you prefer to work with the OpenStack CLI, be sure to [source the RC file first](../../getting-started/enable-openstack-cli.md).
 
 === "{{gui}}"
-    On the top right-hand side of the {{gui}}, click the _Create_ button.
-    A new pane titled _Create_ slides into view.
+    On the top right-hand side of the {{gui}}, click the *Create* button.
+    A new pane titled *Create* slides into view.
 
     ![Create new {{brand}} object](assets/new-server/shot-01_light.png#only-light)
     ![Create new {{brand}} object](assets/new-server/shot-01_dark.png#only-dark)
 
     Notice all these rounded boxes on that pane, each for defining, configuring, and instantiating a different {{brand}} object.
-    Go ahead and click the _Server_ box.
+    Go ahead and click the *Server* box.
 
-    Another pane, titled _Create a Server_, slides over.
+    Another pane, titled *Create a Server*, slides over.
     At the top, enter a name for the new server and select an available region.
 
     ![Type in server name and select region](assets/new-server/shot-02_light.png#only-light)
     ![Type in server name and select region](assets/new-server/shot-02_dark.png#only-dark)
 
-    Set the _Connect to_ parameter to _Network_.
+    Set the *Connect to* parameter to *Network*.
     Select at least one available network to attach the new server to.
 
     ![Attach server to a network, and optionally connect a floating IP to server](assets/new-server/shot-03_light.png#only-light)
     ![Attach server to a network, and optionally connect a floating IP to server](assets/new-server/shot-03_dark.png#only-dark)
 
     If that network is dual-stack or has one IPv4-based subnet, you may want the server to be publicly accessible via an IPv4 address.
-    In that case, make sure to activate the _Connect&nbsp;a&nbsp;floating&nbsp;IP&nbsp;to&nbsp;the&nbsp;server_ switch.
-    Then, use the dropdown menu below to set the _Create&nbsp;External&nbsp;IP&nbsp;on_ parameter to the network you have already attached the server to.
+    In that case, make sure to activate the *Connect&nbsp;a&nbsp;floating&nbsp;IP&nbsp;to&nbsp;the&nbsp;server* switch.
+    Then, use the dropdown menu below to set the *Create&nbsp;External&nbsp;IP&nbsp;on* parameter to the network you have already attached the server to.
 
-    Now, pay attention to the _Server profile_ parameter.
+    Now, pay attention to the *Server profile* parameter.
 
     ![Select server profile](assets/new-server/shot-04_light.png#only-light)
     ![Select server profile](assets/new-server/shot-04_dark.png#only-dark)
@@ -50,40 +50,40 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     From the corresponding dropdown menu, you must select a profile.
     Currently, the following profiles are available:
 
-    *  _Generic_,
-    * _High CPU_, and
-    * _Low Latency Disk_.
+    *  *Generic*,
+    * *High CPU*, and
+    * *Low Latency Disk*.
 
-    Selecting one of those gives you access to a subset of all available [_flavors_](../../../reference/flavors/index.md).
+    Selecting one of those gives you access to a subset of all available [*flavors*](../../../reference/flavors/index.md).
 
-    As the profile names suggest, each profile but the _Generic_ points to a subset of flavors suitable for servers intended to run specific types of applications:
+    As the profile names suggest, each profile but the *Generic* points to a subset of flavors suitable for servers intended to run specific types of applications:
 
-    * the _Generic_ profile is for general-purpose cloud servers,
-    * the _High CPU_ profile is for servers designed to host CPU-intensive applications, and
-    * the _Low Latency Disk_ profile is for servers created with a local low-latency disk.
+    * the *Generic* profile is for general-purpose cloud servers,
+    * the *High CPU* profile is for servers designed to host CPU-intensive applications, and
+    * the *Low Latency Disk* profile is for servers created with a local low-latency disk.
 
     Some profiles may not be available in all regions.
-    For now, choose the _Generic_ profile, which is available in any region.
+    For now, choose the *Generic* profile, which is available in any region.
 
-    In the _Boot source_ section below, click the dropdown menu on the left and make sure you select _Image_, so you can choose one of the readily available OS images to boot the new server from.
+    In the *Boot source* section below, click the dropdown menu on the left and make sure you select *Image*, so you can choose one of the readily available OS images to boot the new server from.
 
     ![Select boot source and image](assets/new-server/shot-05_light.png#only-light)
     ![Select boot source and image](assets/new-server/shot-05_dark.png#only-dark)
 
     To pick a specific image, click on the dropdown menu on the right.
-    In this example, we have chosen _ubuntu_ in general and *Ubuntu 24.04 Noble Numbat x86_64* in particular.
+    In this example, we have chosen *ubuntu* in general and *Ubuntu 24.04 Noble Numbat x86_64* in particular.
 
-    Next, notice that the _Boot Target_ is preselected for you.
-    Depending on the server profile you have already selected, the boot target will be either _Volume_ or _Ephemeral_.
+    Next, notice that the *Boot Target* is preselected for you.
+    Depending on the server profile you have already selected, the boot target will be either *Volume* or *Ephemeral*.
     Specifically:
 
-    * for the _Generic_ and _High CPU_ profiles, the boot target is _Volume_, and
-    * for the _Low Latency Disk_ profile, the boot target is _Ephemeral_.
+    * for the *Generic* and *High CPU* profiles, the boot target is *Volume*, and
+    * for the *Low Latency Disk* profile, the boot target is *Ephemeral*.
 
     ![Boot target, volume, and volume size](assets/new-server/shot-06_light.png#only-light)
     ![Boot target, volume, and volume size](assets/new-server/shot-06_dark.png#only-dark)
 
-    For the server's CPU core count and memory, set the [_Flavor_](../../../reference/flavors/index.md) accordingly.
+    For the server's CPU core count and memory, set the [*Flavor*](../../../reference/flavors/index.md) accordingly.
     We suggest selecting a flavor that specifies 1 CPU core and 1 GiB of RAM.
 
     Note that the estimated monthly cost changes depending on the chosen flavor.
@@ -91,27 +91,27 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     At any time, this estimated cost is displayed in the rectangular area at the top.
 
     Another factor affecting cost is the size of the root device.
-    Take a look at the _Volume_ parameter below, and notice the default (in [gibibytes](https://en.wikipedia.org/wiki/Gigabyte#Base_2_(binary))).
+    Take a look at the *Volume* parameter below, and notice the default (in [gibibytes](https://en.wikipedia.org/wiki/Gigabyte#Base_2_(binary))).
     You may leave the root device size unchanged or increase it slightly above the default.
 
     Later, when you decide to delete the server, you can do so but **keep** its boot volume (for example, you may want to attach that volume to a new server).
-    Disable the _Delete&nbsp;on&nbsp;termination_ option if you want this kind of flexibility.
-    On the other hand, if you want your root volume to be automatically deleted when the server is deleted, the _Delete&nbsp;on&nbsp;termination_ option is already enabled for you.
+    Disable the *Delete&nbsp;on&nbsp;termination* option if you want this kind of flexibility.
+    On the other hand, if you want your root volume to be automatically deleted when the server is deleted, the *Delete&nbsp;on&nbsp;termination* option is already enabled for you.
     In any case, use this option with caution.
 
     ![Boot target, volume, and volume size](assets/new-server/shot-07_light.png#only-light)
     ![Boot target, volume, and volume size](assets/new-server/shot-07_dark.png#only-dark)
 
-    Also, notice the _Storage classes (types)_ parameter, which actually deals with [volume types](../../../reference/volumes/index.md).
-    By default, this parameter is set to _cbs_.
+    Also, notice the *Storage classes (types)* parameter, which actually deals with [volume types](../../../reference/volumes/index.md).
+    By default, this parameter is set to *cbs*.
 
-    Next, you may choose to leave the _Recovery&nbsp;service_ option enabled.
+    Next, you may choose to leave the *Recovery&nbsp;service* option enabled.
     If you do, daily server snapshots will be created, and you will have the option for easy, fast roll-ups to previous snapshots.
 
-    Take note of the _Retention Days_ parameter, which by default is set to 10 days;
+    Take note of the *Retention Days* parameter, which by default is set to 10 days;
     that means that each snapshot will be kept for 10 days, and only then deleted automatically.
 
-    You can also enable the _Immutable_ switch.
+    You can also enable the *Immutable* switch.
     If you do, you will not be able to manually delete snapshots before the retention period ends.
     You also won't be able to delete the server volume until all immutable snapshots are deleted.
 
@@ -120,7 +120,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     ![Recovery service option](assets/new-server/shot-08_light.png#only-light)
     ![Recovery service option](assets/new-server/shot-08_dark.png#only-dark)
 
-    To control network access to the server, use the dropdown menu to the right of [_Security Groups_](../neutron/create-security-groups.md) and choose one.
+    To control network access to the server, use the dropdown menu to the right of [*Security Groups*](../neutron/create-security-groups.md) and choose one.
 
     ![Choose a security group](assets/new-server/shot-09_light.png#only-light)
     ![Choose a security group](assets/new-server/shot-09_dark.png#only-dark)
@@ -132,24 +132,24 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     ![Indicate an existing keypair](assets/new-server/shot-10_light.png#only-light)
     ![Indicate an existing keypair](assets/new-server/shot-10_dark.png#only-dark)
 
-    In case there are no keypairs to choose from, activate the _Set&nbsp;password_ option and set a password for the default user account (`ubuntu`).
+    In case there are no keypairs to choose from, activate the *Set&nbsp;password* option and set a password for the default user account (`ubuntu`).
 
     ![Optionally set a password for the default user account](assets/new-server/shot-11_light.png#only-light)
     ![Optionally set a password for the default user account](assets/new-server/shot-11_dark.png#only-dark)
 
     A configuration script is automatically prepared based on the choices you have already made.
     That script runs during boot and performs housekeeping tasks like creating user accounts, enabling acceptable authentication methods, and configuring remote package repositories.
-    Click on _Advanced Options_ to see the default script.
-    You can also optionally enable the _Upgrade packages_ option, so it applies any available package upgrades during system boot.
+    Click on *Advanced Options* to see the default script.
+    You can also optionally enable the *Upgrade packages* option, so it applies any available package upgrades during system boot.
 
     ![Default server configuration script and user data propagation method](assets/new-server/shot-12_light.png#only-light)
     ![Default server configuration script and user data propagation method](assets/new-server/shot-12_dark.png#only-dark)
 
-    Regarding the _User-data propagation method_ above, notice that the _Use&nbsp;metadata&nbsp;service_ is pre-selected for you.
-    For more on what this is and why you might want to select the _Use&nbsp;configuration&nbsp;drive_ method, please read our guide on [launching a server with a configuration drive](config-drive.md).
+    Regarding the *User-data propagation method* above, notice that the *Use&nbsp;metadata&nbsp;service* is pre-selected for you.
+    For more on what this is and why you might want to select the *Use&nbsp;configuration&nbsp;drive* method, please read our guide on [launching a server with a configuration drive](config-drive.md).
 
     It is now time to create your {{brand}} server.
-    Click the _Create_ button, and the new server will be readily available in a few seconds.
+    Click the *Create* button, and the new server will be readily available in a few seconds.
 
     ![Initiate server creation process](assets/new-server/shot-13_light.png#only-light)
     ![Initiate server creation process](assets/new-server/shot-13_dark.png#only-dark)
@@ -170,7 +170,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
 
     Each variable represents a piece of information we have to look for or, in the cases of `KEY_NAME` and `SERVER_NAME`, arbitrarily define.
 
-    Let us begin with the [_flavors_](../../../reference/flavors/index.md) (`FLAVOR_NAME`), which describe combinations of CPU core count and memory size.
+    Let us begin with the [*flavors*](../../../reference/flavors/index.md) (`FLAVOR_NAME`), which describe combinations of CPU core count and memory size.
     Each server has a distinct flavor, and to see all available flavors, type:
 
     ```bash
@@ -317,7 +317,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
 ## Viewing information about the newly created server
 === "{{gui}}"
     At any time, you can view all servers and see detailed information for each one.
-    Expand the left-hand side vertical pane, click _Compute_, then _Servers_, and, in the central pane, select the region and the server you want.
+    Expand the left-hand side vertical pane, click *Compute*, then *Servers*, and, in the central pane, select the region and the server you want.
 
     ![View server details](assets/new-server/shot-14_light.png#only-light)
     ![View server details](assets/new-server/shot-14_dark.png#only-dark)
@@ -335,9 +335,9 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     ```
 ## Connecting to the server console
 === "{{gui}}"
-    While viewing your server's information, you can find its IPv6 or public IPv4 address (e.g., in the _Addresses_ tab) and connect remotely via SSH.
+    While viewing your server's information, you can find its IPv6 or public IPv4 address (e.g., in the *Addresses* tab) and connect remotely via SSH.
     Alternatively, you may launch a web console and log in.
-    Click the :material-dots-horizontal-circle: icon on the right of the server row, and from the pop-up menu that appears, select _Remote Console_.
+    Click the :material-dots-horizontal-circle: icon on the right of the server row, and from the pop-up menu that appears, select *Remote Console*.
 
     ![Launch remote console](assets/new-server/shot-15_light.png#only-light)
     ![Launch remote console](assets/new-server/shot-15_dark.png#only-dark)

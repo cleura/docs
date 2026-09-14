@@ -21,13 +21,13 @@ Then, in the central pane of the {{gui}}, you see all of your {{k8s_management_s
 ![Get the list of all available {{k8s_management_service}} clusters](assets/shoot-enable-ha-01_dark.png#only-dark)
 
 Locate the cluster you are interested in, and click the :material-dots-horizontal-circle: icon on the right of the corresponding row.
-From the drop-down menu that appears, select _Modify Cluster_.
+From the drop-down menu that appears, select *Modify Cluster*.
 
 ![Select the option for modifying a cluster](assets/shoot-enable-ha-02_light.png#only-light)
 ![Select the option for modifying a cluster](assets/shoot-enable-ha-02_dark.png#only-dark)
 
-A vertical pane titled _Modify Gardener Shoot Cluster_ slides over from the right.
-In it, you see the disabled option _Enable Highly Available Control Plane_.
+A vertical pane titled *Modify Gardener Shoot Cluster* slides over from the right.
+In it, you see the disabled option *Enable Highly Available Control Plane*.
 Click on it to enable HA for the control plane of the shoot cluster.
 
 As soon as you enable HA, Control Plane components spread out and live across all Availability Zones.
@@ -43,7 +43,7 @@ Once you take it, there is no way to disable HA at a later time.
 ![Select HA for the control plane](assets/shoot-enable-ha-04_light.png#only-light)
 ![Select HA for the control plane](assets/shoot-enable-ha-04_dark.png#only-dark)
 
-If you are sure you want to enable HA, scroll down a bit until you see the _Update_ button and click on it.
+If you are sure you want to enable HA, scroll down a bit until you see the *Update* button and click on it.
 
 ![Activate HA for the control plane](assets/shoot-enable-ha-05_light.png#only-light)
 ![Activate HA for the control plane](assets/shoot-enable-ha-05_dark.png#only-dark)
@@ -61,47 +61,47 @@ As soon as HA is enabled, the animated icon changes into a check mark (:material
 
 ## Enabling HA for Worker Groups
 
-You may add HA characteristics to one or more Worker Groups by modifying the _Autoscaler&nbsp;Min_ and _Autoscaler&nbsp;Max_ parameters.
+You may add HA characteristics to one or more Worker Groups by modifying the *Autoscaler&nbsp;Min* and *Autoscaler&nbsp;Max* parameters.
 
 First off, select the {{k8s_management_service}} cluster you are interested in.
-Click on the cluster row to expand its characteristics, then select the _Worker Groups_ tab.
+Click on the cluster row to expand its characteristics, then select the *Worker Groups* tab.
 
 ![View Worker Group details](assets/shoot-enable-ha-08_light.png#only-light)
 ![View Worker Group details](assets/shoot-enable-ha-08_dark.png#only-dark)
 
 Click once more on the :fontawesome-solid-pen-to-square: icon of the Worker Group you wish to modify.
-A vertical pane named _Modify Worker Group_ slides over from the right.
+A vertical pane named *Modify Worker Group* slides over from the right.
 
 ![Modify Worker Group](assets/shoot-enable-ha-09_light.png#only-light)
 ![Modify Worker Group](assets/shoot-enable-ha-09_dark.png#only-dark)
 
-Modify the _Autoscaler&nbsp;Min_ and _Autoscaler&nbsp;Max_ parameters.
-You may, for instance, set _Autoscaler&nbsp;Min_ to 5 and _Autoscaler&nbsp;Max_ to 7.
-When you are ready to apply the changes, click the _Update_ button.
+Modify the *Autoscaler&nbsp;Min* and *Autoscaler&nbsp;Max* parameters.
+You may, for instance, set *Autoscaler&nbsp;Min* to 5 and *Autoscaler&nbsp;Max* to 7.
+When you are ready to apply the changes, click the *Update* button.
 
 ![Modify autoscaling parameters](assets/shoot-enable-ha-10_light.png#only-light)
 ![Modify autoscaling parameters](assets/shoot-enable-ha-10_dark.png#only-dark)
 
-After a few seconds, the new values for the autoscaler parameters will be visible in the _Worker Groups_ tab.
+After a few seconds, the new values for the autoscaler parameters will be visible in the *Worker Groups* tab.
 
 ![View modified Worker Group](assets/shoot-enable-ha-11_light.png#only-light)
 ![View modified Worker Group](assets/shoot-enable-ha-11_dark.png#only-dark)
 
 ## Having Worker Groups in different Availability Zones
 
-Another way to make Worker Groups highly available is to have _at least_ two such groups, each in its own Availability Zone (AZ).
+Another way to make Worker Groups highly available is to have *at least* two such groups, each in its own Availability Zone (AZ).
 
 To create a new Worker Group in its own AZ, begin by locating the cluster you are interested in, then click its row to have all relevant details in full view.
-Click once more on the _Worker Groups_ tab to see all available groups.
+Click once more on the *Worker Groups* tab to see all available groups.
 In the example below, there is only one Worker Group that resides in the AZ named `az1`.
-To create a new Worker Group, click on the green _Create a Worker Group_ button.
+To create a new Worker Group, click on the green *Create a Worker Group* button.
 
 ![{{k8s_management_service}} cluster with one Worker Group](assets/shoot-enable-ha-12_light.png#only-light)
 ![{{k8s_management_service}} cluster with one Worker Group](assets/shoot-enable-ha-12_dark.png#only-dark)
 
-A vertical pane named _Create Worker Group_ slides over from the right.
+A vertical pane named *Create Worker Group* slides over from the right.
 There, you see the parameters of a new group.
-Before you create it, click on the drop-down menu for _Availability Zones_, and indicate an AZ for the new group.
+Before you create it, click on the drop-down menu for *Availability Zones*, and indicate an AZ for the new group.
 Make sure you pick one which is **different** from the AZ where the first Worker Group resides.
 
 ![selecting an availability zone for a new worker group](assets/shoot-enable-ha-13_light.png#only-light)
@@ -109,12 +109,12 @@ Make sure you pick one which is **different** from the AZ where the first Worker
 
 Optionally, you can have the new Worker Group reside **only** in the new AZ you just selected:
 for that, click the old AZ label to remove it.
-Finally, click on the green _Create_ button to instantiate the new WG.
+Finally, click on the green *Create* button to instantiate the new WG.
 
 ![Removing the label of the default Availability Zone and create the new Worker Group](assets/shoot-enable-ha-14_light.png#only-light)
 ![Removing the label of the default Availability Zone and create the new Worker Group](assets/shoot-enable-ha-14_dark.png#only-dark)
 
-When the new Worker Group is ready, you can see all groups in the _Worker Groups_ tab, each in its own AZ.
+When the new Worker Group is ready, you can see all groups in the *Worker Groups* tab, each in its own AZ.
 
 ![Two Worker Groups, each in its own Availability Zone](assets/shoot-enable-ha-15_light.png#only-light)
 ![Two Worker Groups, each in its own Availability Zone](assets/shoot-enable-ha-15_dark.png#only-dark)

@@ -14,15 +14,15 @@ To create a network from the {{gui}}, fire up your favorite web browser, navigat
 On the other hand, if you prefer to work with OpenStack CLI, please do not forget to source the RC file first.
 
 === "{{gui}}"
-    On the top right-hand side of the {{gui}}, click the _Create_ button.
-    A new pane will slide into view from the right-hand side of the browser window, titled _Create_.
+    On the top right-hand side of the {{gui}}, click the *Create* button.
+    A new pane will slide into view from the right-hand side of the browser window, titled *Create*.
 
     ![Create a new object](assets/new-net-panel/shot-01_light.png#only-light)
     ![Create a new object](assets/new-net-panel/shot-01_dark.png#only-dark)
 
     You will notice several rounded boxes prominently displayed on that pane, each for defining, configuring, and instantiating a different {{brand}} object.
-    Go ahead and click the _Network_ box.
-    A new pane titled _Create Network_ will slide over.
+    Go ahead and click the *Network* box.
+    A new pane titled *Create Network* will slide over.
     At the top, type in a name and select one of the available regions for the new network.
 
     ![New network name and region](assets/new-net-panel/shot-02_light.png#only-light)
@@ -77,23 +77,23 @@ Creating a new network does not necessarily mean it has all the features you wou
 Unless you work from the {{gui}}, where almost every component is activated for you with a few clicks here and there, when you use the OpenStack CLI, there is some extra work you need to do before you get a network you would characterize as useful.
 
 === "{{gui}}"
-    Expand the _Advanced Options_ section below, make sure _Port Security_ is enabled, and leave the MTU parameter blank.
+    Expand the *Advanced Options* section below, make sure *Port Security* is enabled, and leave the MTU parameter blank.
 
     ![MTU and port security](assets/new-net-panel/shot-03_light.png#only-light)
     ![MTU and port security](assets/new-net-panel/shot-03_dark.png#only-dark)
 
-    If you want a full-featured network, select _Create a complete network, containing a subnet and a router._
+    If you want a full-featured network, select *Create a complete network, containing a subnet and a router.*
 
     By default, this sets things up to create an IPv4-based subnet.
-    In particular, by looking at the new _Subnet Name (#1)_ section, it is immediately apparent that you get the following:
+    In particular, by looking at the new *Subnet Name (#1)* section, it is immediately apparent that you get the following:
 
     - A subnet expressed in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation),
     - two DNS servers,
     - a Gateway, and
     - a DHCP server.
 
-    For the _Gateway IP_, accept the suggested address, or type in one chosen from the subnet above.
-    For DHCP, either accept the defaults or enter _Start_ and _End_ addresses, again chosen from the subnet above.
+    For the *Gateway IP*, accept the suggested address, or type in one chosen from the subnet above.
+    For DHCP, either accept the defaults or enter *Start* and *End* addresses, again chosen from the subnet above.
 
     ![IPv4-based network parameters](assets/new-net-panel/shot-04_light.png#only-light)
     ![IPv4-based network parameters](assets/new-net-panel/shot-04_dark.png#only-dark)
@@ -101,8 +101,8 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     Alongside your IPv4-based subnet, you may also have an IPv6-based subnet;
     both subnets will be members of the network you are creating.
 
-    To create a second, IPv6-based subnet, click the :fontawesome-solid-circle-plus: icon at the top of the _Subnet Name (#1)_ section.
-    In the new _Subnet Name (#2)_ section that appears, be sure to set _IP Version_ to _IPv6_ abd you will get the following:
+    To create a second, IPv6-based subnet, click the :fontawesome-solid-circle-plus: icon at the top of the *Subnet Name (#1)* section.
+    In the new *Subnet Name (#2)* section that appears, be sure to set *IP Version* to *IPv6* abd you will get the following:
 
     - One 64bit-prefixed subnet with
     - SLAAC addressing, and
@@ -112,8 +112,8 @@ Unless you work from the {{gui}}, where almost every component is activated for 
     ![IPv6-based network parameters](assets/new-net-panel/shot-04-toronto_dark.png#only-dark)
 
     Scroll down a bit if you have to.
-    If you want your cloud servers to reach hosts on the Internet, select _ext-net_ for the _External network_ parameter.
-    Then, click _Create._
+    If you want your cloud servers to reach hosts on the Internet, select *ext-net* for the *External network* parameter.
+    Then, click *Create.*
     In a few seconds, the new network will be readily available.
 
     ![Finish creating network](assets/new-net-panel/shot-05_light.png#only-light)
@@ -276,14 +276,14 @@ At any time, you may connect to the {{gui}}, list all networks you have already 
 Alternatively, you may get all that information using the OpenStack CLI.
 
 === "{{gui}}"
-    You may see all defined networks in all supported regions by selecting _Networking_ and then _Networks_ (see the left-hand side pane on the {{gui}}).
+    You may see all defined networks in all supported regions by selecting *Networking* and then *Networks* (see the left-hand side pane on the {{gui}}).
 
     ![All networks in all regions](assets/new-net-panel/shot-06_light.png#only-light)
     ![All networks in all regions](assets/new-net-panel/shot-06_dark.png#only-dark)
 
-    For more information regarding a specific network, select _View details_.
+    For more information regarding a specific network, select *View details*.
     Then, you can glance over all the details regarding the selected network's ports, subnets, and routers.
-    For more information on the network subnets specifically, in the left-hand side pane on the {{gui}}, select _Networking_ and then _Subnets_.
+    For more information on the network subnets specifically, in the left-hand side pane on the {{gui}}, select *Networking* and then *Subnets*.
 
     ![Network details](assets/new-net-panel/shot-07_light.png#only-light)
     ![Network details](assets/new-net-panel/shot-07_dark.png#only-dark)

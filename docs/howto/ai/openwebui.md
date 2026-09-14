@@ -14,25 +14,25 @@ To proceed, make sure you have an [API key](api-keys.md) readily available.
 
 ## Adding {{brand_ai}} models
 
-As soon as your Open WebUI instance is ready and you are logged in, click on _Select a model_, and then on the _Manage Connections_ button.
+As soon as your Open WebUI instance is ready and you are logged in, click on *Select a model*, and then on the *Manage Connections* button.
 
 ![Manage API connections](assets/openwebui-manage-connections_light.png#only-light)
 ![Manage API connections](assets/openwebui-manage-connections_dark.png#only-dark)
 
 On the upper right-hand side of the new page that appears, click the :material-plus: icon.
-A window labeled _Add Connection_ pops up.
+A window labeled *Add Connection* pops up.
 
 ![Add new API connection](assets/openwebui-add-connection_light.png#only-light)
 ![Add new API connection](assets/openwebui-add-connection_dark.png#only-dark)
 
-* Set _Connection Type_ to _External_.
-* Set _URL_ to `https://{{ai_api_domain}}/v1`.
-* Set _Auth_ to _Bearer_.
+* Set *Connection Type* to *External*.
+* Set *URL* to `https://{{ai_api_domain}}/v1`.
+* Set *Auth* to *Bearer*.
 
-In the text field right of _Bearer_, paste your API key's bearer token.
-Then, click the _Save_ button.
+In the text field right of *Bearer*, paste your API key's bearer token.
+Then, click the *Save* button.
 
-The _Add Connection_ window closes, and below the _Manage OpenAI API Connections_ list you see that `https://{{ai_api_domain}}/v1` is included.
+The *Add Connection* window closes, and below the *Manage OpenAI API Connections* list you see that `https://{{ai_api_domain}}/v1` is included.
 
 ![Add new API connection](assets/openwebui-connection-added_light.png#only-light)
 ![Add new API connection](assets/openwebui-connection-added_dark.png#only-dark)

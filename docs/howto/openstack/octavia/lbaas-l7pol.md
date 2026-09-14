@@ -4,15 +4,15 @@ description: How to add automatic HTTP-to-HTTPS redirection to an HTTPS-terminat
 # Using layer 7 redirection
 
 Unlike [TCP-based load balancers](lbaas-tcp.md), which are often considered low-level, Layer 7 load balancers use high-level application logic to redirect client requests to back-end server pools.
-They take their name from the [OSI model](https://en.wikipedia.org/wiki/OSI_model), where Layer 7 is also known as the _Application Layer_.
+They take their name from the [OSI model](https://en.wikipedia.org/wiki/OSI_model), where Layer 7 is also known as the *Application Layer*.
 A Layer 7, or simply L7, load balancer decides where to redirect incoming packets based on URI, host, HTTP headers, etc.
 
 One common application of L7 load balancing is HTTP-to-HTTPS redirection.
 More specifically, you may have an [HTTPS-terminated load balancer](tls-lb.md) that distributes incoming client traffic to one or more back-end services, and you are looking for a way to automatically turn each HΤTP request into an HTTPS one.
 To have this kind of automatic redirection, you equip your load balancer with a new listener that acknowledges incoming HTTP requests and silently forwards them to the existing HTTPS-based listener.
 
-The HTTP listener applies a specific _L7 policy_ to accomplish this.
-In general, an L7 policy is nothing but a set of one or more _L7 rules_, along with a predefined action.
+The HTTP listener applies a specific *L7 policy* to accomplish this.
+In general, an L7 policy is nothing but a set of one or more *L7 rules*, along with a predefined action.
 The action is followed when all L7 rules evaluate to `true` (an L7 rule is a logical test that evaluates to either `true` or `false`).
 
 Below, we show how to add such a listener, policy, and set of rules to an existing HTTPS-terminated load balancer.

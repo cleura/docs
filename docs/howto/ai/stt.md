@@ -6,7 +6,7 @@ description: How to use the AI API via Python, for speech-to-text
 ??? note "Invite-only access"
     Access to {{brand_ai}} services is currently invite-only.
 
-Of the [on-demand models](../../reference/ai/llms.md) we provide, `faster-whisper-large-v3` is optimized for speech-to-text (STT) applications, also known as _audio transcription_.
+Of the [on-demand models](../../reference/ai/llms.md) we provide, `faster-whisper-large-v3` is optimized for speech-to-text (STT) applications, also known as *audio transcription*.
 
 More specifically, you may use {{brand}}'s OpenAI-compatible API to programmatically upload audio files and get back transcribed texts.
 
@@ -41,7 +41,7 @@ print(transcription)
 ```
 
 To test STT, replace `the-audio-file.mp3` with an audio file from [LibriVox](https://librivox.org).
-Use, for instance, [_The&nbsp;Aurora&nbsp;Borealis&nbsp;in&nbsp;1719&nbsp;by&nbsp;Sidney&nbsp;Perley&nbsp;(1858-1928)_](https://librivox.org/coffee-break-collection-13-weather-by-various/).
+Use, for instance, [*The&nbsp;Aurora&nbsp;Borealis&nbsp;in&nbsp;1719&nbsp;by&nbsp;Sidney&nbsp;Perley&nbsp;(1858-1928)*](https://librivox.org/coffee-break-collection-13-weather-by-various/).
 Directly download the file onto your local computer...
 
 ```console
