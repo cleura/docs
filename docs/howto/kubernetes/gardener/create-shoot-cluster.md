@@ -126,7 +126,7 @@ Once your {{k8s_management_service}} cluster has successfully launched, a check 
 ### A note on quotas
 
 Your {{k8s_management_service}} worker nodes are subject to [quotas](../../../reference/quotas/openstack.md) applicable to your {{brand}} project.
-It would be best if you kept that in mind when selecting the worker node [*flavor*](../../../reference/flavors/index.md), setting the _volume size_ and the _Autoscaler Max_ values, or when creating more than one Worker Groups, so you will not be at risk of violating any quota.
+It would be best if you kept that in mind when selecting the worker node [*flavor*](../../../reference/flavors/index.md), setting the *volume size* and the *Autoscaler Max* values, or when creating more than one Worker Groups, so you will not be at risk of violating any quota.
 
 For example, if your project is configured with the [default quotas](../../../reference/quotas/openstack.md), and you select the `b.4c16gb` flavor for your worker nodes, your cluster would be able to run with a maximum of 3 worker nodes (since their total memory footprint would be 3×16=48 GiB, just short of the default 50 GiB limit).
 A 4th node would push your total memory allocation to 64 GiB, violating your quota.
