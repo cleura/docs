@@ -26,24 +26,24 @@ Configuration drives are used as a data source for [cloud-init](https://cloudini
 Follow our [How-To guide](new-server.md) to create your new cloud server using either the {{gui}} or the OpenStack CLI.
 
 === "{{gui}}"
-    When you are done configuring the server, right before creating it, notice the icon on the left-hand side of _Advanced Options_.
+    When you are done configuring the server, right before creating it, notice the icon on the left-hand side of *Advanced Options*.
     Click on it to expand all related options.
 
     ![Expand advanced configuration options](assets/config-drive/shot-01_light.png#only-light)
     ![Expand advanced configuration options](assets/config-drive/shot-01_dark.png#only-dark)
 
-    In the _User-Data_ area, you see everything that will be executed upon server boot.
+    In the *User-Data* area, you see everything that will be executed upon server boot.
 
-    Below, in the _User-data propagation method_ area, the _Use metadata service (Default)_ option is preselected.
-    To opt for the alternative metadata discovery method, select _Use configuration drive_.
+    Below, in the *User-data propagation method* area, the *Use metadata service (Default)* option is preselected.
+    To opt for the alternative metadata discovery method, select *Use configuration drive*.
 
     ![Select the configuration drive method](assets/config-drive/shot-02_light.png#only-light)
     ![Select the configuration drive method](assets/config-drive/shot-02_dark.png#only-dark)
 
-    Then, instantiate the server by clicking the _Create_ button.
+    Then, instantiate the server by clicking the *Create* button.
 
     Once the server is ready, you may see what happened during configuration by examining the console log.
-    In the {{gui}}, click on the server line to get an extended view of its characteristics, and then click once more on the _Console Output_ tab.
+    In the {{gui}}, click on the server line to get an extended view of its characteristics, and then click once more on the *Console Output* tab.
 
     ![Watch the server console](assets/config-drive/shot-03_light.png#only-light)
     ![Watch the server console](assets/config-drive/shot-03_dark.png#only-dark)
