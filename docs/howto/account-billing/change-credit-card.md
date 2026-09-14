@@ -9,15 +9,15 @@ You must be logged in to your [Cleura Cloud](https://{{gui_domain}}) account to
 ## Adding a credit card
 
 In the {{gui}}, make sure the vertical pane on the left is visible.
-Click on _Settings_, and then on _Manage Invoice Settings._
-In the central pane, named _Invoice Settings,_ notice the three tabs at the top.
-Click on the one labeled _Credit Cards,_ and then on the _Add New Card_ button below.
+Click on *Settings*, and then on *Manage Invoice Settings.*
+In the central pane, named *Invoice Settings,* notice the three tabs at the top.
+Click on the one labeled *Credit Cards,* and then on the *Add New Card* button below.
 
 ![Locating the button for adding a new credit card](assets/add-new-cc_light.png#only-light)
 ![Locating the button for adding a new credit card](assets/add-new-cc_dark.png#only-dark)
 
 You are redirected to a PayEx Sverige AB page, where you enter your credit card information.
-When you are done, click the black _Confirm_ button.
+When you are done, click the black *Confirm* button.
 
 ![Entering credit card information](assets/add-new-cc-info.png)
 
@@ -26,21 +26,21 @@ Depending on your bank, you might have to use whatever mechanism is provided to 
 
 ![Authorize zero-charge](assets/accept-zero-charge.png)
 
-Once the new credit card is added, it will be visible in the _Credit Cards_ tab.
+Once the new credit card is added, it will be visible in the *Credit Cards* tab.
 
 ![New credit card successfully added](assets/new-cc-added_light.png#only-light)
 ![New credit card successfully added](assets/new-cc-added_dark.png#only-dark)
 
 ## Changing a credit card
 
-If you want to use another credit card, click the _Add New Card_ button below the existing card.
+If you want to use another credit card, click the *Add New Card* button below the existing card.
 
 ![Change an existing credit card](assets/change-cc_light.png#only-light)
 ![Change an existing credit card](assets/change-cc_dark.png#only-dark)
 
 Configure the new card as you did when adding the existing card.
-When you are done adding the new one, you will realize that the old one is no longer listed under _Credit Cards._
-In addition to the old card not being visible, please keep in mind that it is also __removed__ from the system.
+When you are done adding the new one, you will realize that the old one is no longer listed under *Credit Cards.*
+ In addition to the old card not being visible, please keep in mind that it is also **removed** from the system.
 
 ## Removing a credit card
 

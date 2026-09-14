@@ -324,7 +324,7 @@ Now create the new server using the system volume.
 To create a new server, follow [this guide](new-server.md).
 
 === "{{gui}}"
-    If you use the {{gui}}, when choosing a _boot source,_ select _Boot from volume,_ then select your server's system volume.
+    If you use the {{gui}}, when choosing a *boot source,* select *Boot from volume,* then select your server's system volume.
 === "OpenStack CLI"
     If you use the OpenStack CLI, forgo the `--image` and `--boot-from-volume` options and instead use `--volume <new_volume_name>`
 

@@ -48,8 +48,8 @@ For a {{k8s_management_service}} cluster, it is possible to disable automatic up
 ![Disable automatic upgrades](assets/disable_automatic_upgrades_dark.png#only-dark)
 
 Even so, you may find out that, from time to time, your cluster gets upgraded.
-These seemingly unscheduled upgrades happen when either the cluster's Kubernetes or Garden Linux release _expires_.
-In this context, the expiration happens about a month after the _next_ release of Kubernetes or Garden Linux is out.
+These seemingly unscheduled upgrades happen when either the cluster's Kubernetes or Garden Linux release *expires*.
+In this context, the expiration happens about a month after the *next* release of Kubernetes or Garden Linux is out.
 
 You may use the [{{brand}} REST API](../../../howto/getting-started/accessing-cc-rest-api.md) to know in advance if any of your Gardener clusters is about to expire.
 Consider the following example, specifically paying attention to the `expirationDate` field:
