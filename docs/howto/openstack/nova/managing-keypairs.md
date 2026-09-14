@@ -18,33 +18,33 @@ If you prefer to use the OpenStack CLI, please be sure to [enable it first](../.
 ## Creating keypairs
 
 === "{{gui}}"
-    In the left-hand side vertical pane of the {{gui}}, select _Compute_ and then _KeyPairs_.
-    All existing keypairs appear in the central pane, named _Compute_ / _Keypairs_.
-    To create a new one, click the _Add new Keypair_ link in the top-right corner.
+    In the left-hand side vertical pane of the {{gui}}, select *Compute* and then *KeyPairs*.
+    All existing keypairs appear in the central pane, named *Compute* / *Keypairs*.
+    To create a new one, click the *Add new Keypair* link in the top-right corner.
 
     ![All available keypairs](assets/keypairs/keypair-01_light.png#only-light)
     ![All available keypairs](assets/keypairs/keypair-01_dark.png#only-dark)
 
-    A window titled _Create Keypair_ slides over from the right side of the browser window.
-    Enter a _Name_ for the new keypair, and select a _Region_ for it.
+    A window titled *Create Keypair* slides over from the right side of the browser window.
+    Enter a *Name* for the new keypair, and select a *Region* for it.
 
     ![Create a new keypair without specifying a public key](assets/keypairs/keypair-02_light.png#only-light)
     ![Create a new keypair without specifying a public key](assets/keypairs/keypair-02_dark.png#only-dark)
 
-    Without pasting anything in the _Public Keys_ text field, you can already instantiate the new keypair by clicking the _Create_ button.
-    Alternatively, you may want to paste one of your public keys in the _Public Keys_ text field.
+    Without pasting anything in the *Public Keys* text field, you can already instantiate the new keypair by clicking the *Create* button.
+    Alternatively, you may want to paste one of your public keys in the *Public Keys* text field.
 
-    In the example below, we pasted the public key of an Ed25519 keypair into the _Public Keys_ field.
+    In the example below, we pasted the public key of an Ed25519 keypair into the *Public Keys* field.
 
     ![Before instantiating a new keypair, you may provide a public SSH key of yours](assets/keypairs/keypair-03_light.png#only-light)
     ![Before instantiating a new keypair, you may provide a public SSH key of yours](assets/keypairs/keypair-03_dark.png#only-dark)
 
-    You can paste two or more public keys in the _Public Keys_ field, one per line.
+    You can paste two or more public keys in the *Public Keys* field, one per line.
 
     ![You may provide more than one of your public keys, one in a separate line](assets/keypairs/keypair-04_light.png#only-light)
     ![You may provide more than one of your public keys, one in a separate line](assets/keypairs/keypair-04_dark.png#only-dark)
 
-    Whenever you choose not to provide a public key, right after creating the new keypair, a window named _Private Key_ pops up.
+    Whenever you choose not to provide a public key, right after creating the new keypair, a window named *Private Key* pops up.
     From it, you can either download the private key of the keypair or copy it to the clipboard.
     In any case, securely store it and make it accessible only to your local user.
 
@@ -72,7 +72,7 @@ If you prefer to use the OpenStack CLI, please be sure to [enable it first](../.
     ```
 
     The command output includes the private key of the `my-new-keypair` keypair.
-    You may __not__ want the private key displayed on the terminal, so instead of the command above, use something like this:
+    You may _*not*_ want the private key displayed on the terminal, so instead of the command above, use something like this:
 
     ```console
     $ openstack keypair create --private-key my-priv-key my-new-keypair
@@ -123,7 +123,7 @@ If you prefer to use the OpenStack CLI, please be sure to [enable it first](../.
 ## Viewing keypair details
 
 === "{{gui}}"
-    To get more details on a specific keypair, go to the _Compute_ / _KeyPairs_ pane, locate the keypair of interest, and click on its row.
+    To get more details on a specific keypair, go to the *Compute* / *KeyPairs* pane, locate the keypair of interest, and click on its row.
 
     ![Viewing keypair details](assets/keypairs/keypair-07_light.png#only-light)
     ![Viewing keypair details](assets/keypairs/keypair-07_dark.png#only-dark)
@@ -170,16 +170,16 @@ You may want to use the same SSH key for authentication in multiple {{brand}} re
 To do so, you can duplicate your keypairs.
 
 === "{{gui}}"
-    First off, go to the _Compute_ / _KeyPairs_ pane and locate the keypair you wish to duplicate to other regions.
+    First off, go to the *Compute* / *KeyPairs* pane and locate the keypair you wish to duplicate to other regions.
     Click the :material-dots-horizontal-circle: icon to the right of the keypair row.
-    From the pop-up menu, select _Duplicate Keypair_.
+    From the pop-up menu, select *Duplicate Keypair*.
 
     ![Select the option for duplicating a keypair](assets/keypairs/keypair-08_light.png#only-light)
     ![Select the option for duplicating a keypair](assets/keypairs/keypair-08_dark.png#only-dark)
 
-    A window named _Duplicate Keypair_ slides over.
+    A window named *Duplicate Keypair* slides over.
     Use the toggle buttons to indicate the regions you wish to duplicate the keypair to.
-    When you are ready, click the _Duplicate_ button.
+    When you are ready, click the *Duplicate* button.
 
     ![Indicate the regions you wish to duplicate the keypair to, then click the Duplicate button](assets/keypairs/keypair-09_light.png#only-light)
     ![Indicate the regions you wish to duplicate the keypair to, then click the Duplicate button](assets/keypairs/keypair-09_dark.png#only-dark)
@@ -242,15 +242,15 @@ To do so, you can duplicate your keypairs.
 ## Deleting keypairs
 
 === "{{gui}}"
-    In the _Compute_ / _KeyPairs_ pane, locate the keypair you wish to delete.
+    In the *Compute* / *KeyPairs* pane, locate the keypair you wish to delete.
     At the right of the keypair row, click the :material-dots-horizontal-circle: icon.
-    From the pop-up menu, select _Delete Keypair_.
+    From the pop-up menu, select *Delete Keypair*.
 
     ![Select the option for deleting a keypair](assets/keypairs/keypair-11_light.png#only-light)
     ![Select the option for deleting a keypair](assets/keypairs/keypair-11_dark.png#only-dark)
 
     A window appears asking whether you want to delete the keypair.
-    If you are, click the _Yes, Delete_ button.
+    If you are, click the *Yes, Delete* button.
 
     ![Confirm that you want to delete the selected keypair](assets/keypairs/keypair-12_light.png#only-light)
     ![Confirm that you want to delete the selected keypair](assets/keypairs/keypair-12_dark.png#only-dark)
@@ -261,14 +261,14 @@ To do so, you can duplicate your keypairs.
     ![The selected keypair is deleted, and any duplicates are still available](assets/keypairs/keypair-13_light.png#only-light)
     ![The selected keypair is deleted, and any duplicates are still available](assets/keypairs/keypair-13_dark.png#only-dark)
 
-    If you want to delete more than one keypair at once, first go to the _Compute_ / _KeyPairs_ pane and select them.
+    If you want to delete more than one keypair at once, first go to the *Compute* / *KeyPairs* pane and select them.
     Then, click the :material-delete: icon at the top left.
 
     ![Choose more than one keypairs you wish to delete](assets/keypairs/keypair-14_light.png#only-light)
     ![Choose more than one keypairs you wish to delete](assets/keypairs/keypair-14_dark.png#only-dark)
 
     A window appears asking whether you want to delete the selected keypairs.
-    Click the _Yes, Delete_ button to confirm, or the _No_ button if you changed your mind.
+    Click the *Yes, Delete* button to confirm, or the *No* button if you changed your mind.
 
     ![Confirm that you want to delete the selected keypairs](assets/keypairs/keypair-15_light.png#only-light)
     ![Confirm that you want to delete the selected keypairs](assets/keypairs/keypair-15_dark.png#only-dark)

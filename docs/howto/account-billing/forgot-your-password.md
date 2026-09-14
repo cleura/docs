@@ -18,7 +18,7 @@ Type in your username, then click on the "Reclaim password!" button.
 
 The content of the pop-up window changes, informing you that an email has been sent to you with instructions on how to reset your password.
 
-Click the "Ok!" button, then go ahead and check your inbox (or spam/junk folder) for an email with the subject **_Cleura Account password reset request_**.
+Click the "Ok!" button, then go ahead and check your inbox (or spam/junk folder) for an email with the subject **Cleura Account password reset request**.
 
 ![Reset your password email has been sent](assets/OK-reclaim-lost-password_light.png#only-light)
 ![Reset your password email has been sent](assets/OK-reclaim-lost-password_dark.png#only-dark)
@@ -62,7 +62,7 @@ Type in your account email address, then click the "Reclaim username" button.
 
 Now, the same pop-up window informs you that, provided the email address you just typed exists in the system, you will shortly receive a new email with your username.
 
-Click the "Ok!" button, then go ahead and check your inbox (or spam/junk folder) for an email with the subject **_List of usernames for Cleura Cloud_**.
+Click the "Ok!" button, then go ahead and check your inbox (or spam/junk folder) for an email with the subject **List of usernames for Cleura Cloud**.
 
 ![Reclaim username email has been sent](assets/OK-reclaim-lost-username_light.png#only-light)
 ![Reclaim username email has been sent](assets/OK-reclaim-lost-username_dark.png#only-dark)

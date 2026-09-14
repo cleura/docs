@@ -8,4 +8,5 @@ nav:
   - AI: ai
   - kubernetes
   - Marketplace: marketplace.md
+  - "Well-Architected Framework": waf
 title: "Background"
