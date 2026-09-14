@@ -28,16 +28,16 @@ To create and establish such a connection from the {{gui}}, fire up your favorit
 Should you decide to follow the OpenStack CLI route instead, please make sure you have the appropriate [RC file](../../getting-started/enable-openstack-cli.md) for each region involved.
 
 === "{{gui}}"
-    On the top right-hand side of the {{gui}}, click the _Create_ button.
-    A vertical pane titled _Create_ will slide into view from the right-hand side of the browser window.
+    On the top right-hand side of the {{gui}}, click the *Create* button.
+    A vertical pane titled *Create* will slide into view from the right-hand side of the browser window.
     You will notice several rounded boxes, each one for defining, configuring, and instantiating a different {{brand}} object.
-    Click the _VPN_ box.
+    Click the *VPN* box.
 
     ![Create new object](assets/vpnaas/shot-01_light.png#only-light)
     ![Create new object](assets/vpnaas/shot-01_dark.png#only-dark)
 
-    A new pane titled _Create a VPN Service_ will slide over.
-    Between the two boxes, click the one titled _Quick (Guided) Connect_.
+    A new pane titled *Create a VPN Service* will slide over.
+    Between the two boxes, click the one titled *Quick (Guided) Connect*.
 
     ![Quick connect](assets/vpnaas/shot-02_light.png#only-light)
     ![Quick connect](assets/vpnaas/shot-02_dark.png#only-dark)
@@ -52,9 +52,9 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     ![Data center choices](assets/vpnaas/shot-04_light.png#only-light)
     ![Data center choices](assets/vpnaas/shot-04_dark.png#only-dark)
 
-    Look at the pre-shared key and, optionally, expand the _Advanced Options_ section to see all presets.
+    Look at the pre-shared key and, optionally, expand the *Advanced Options* section to see all presets.
     You do not have to change anything there.
-    When you are ready, click the _Create_ button.
+    When you are ready, click the *Create* button.
     The VPN connection between the two regions will be established in a few seconds.
 
     ![Create](assets/vpnaas/shot-05_light.png#only-light)
@@ -65,7 +65,7 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
     This means that, when working in `fra1`, you need to have sourced the RC file for `fra1`, and when working in `kna1`, you need to have sourced the RC file for `kna1`.
 
     > It helps to imagine the site-to-site connection schematically, with `fra1` being on the left side and `kna1` being on the right side of the connection.
-    That is why we interchange the terms `fra1`, _left,_ and `kna1`, _right._
+    That is why we interchange the terms `fra1`, *left,* and `kna1`, *right.*
 
     You also have to decide which subnets from either side you will connect.
     You also need the respective CIDR notations and routers.
@@ -423,14 +423,14 @@ Should you decide to follow the OpenStack CLI route instead, please make sure yo
 Whether you use the {{gui}} or the OpenStack CLI, you can list all VPN connections and view relevant details.
 
 === "{{gui}}"
-    In the vertical pane on the left-hand side of the {{gui}}, expand the _Networking_ section and then the _VPN Services_ subsection.
-    From the available options, click _VPN Services_ again.
+    In the vertical pane on the left-hand side of the {{gui}}, expand the *Networking* section and then the *VPN Services* subsection.
+    From the available options, click *VPN Services* again.
     You will see two VPN connections in the main pane, one from each region.
 
     ![Create](assets/vpnaas/shot-06_light.png#only-light)
     ![Create](assets/vpnaas/shot-06_dark.png#only-dark)
 
-    For more information regarding a specific connection, click the :material-dots-horizontal-circle: icon (right-hand side) and select _View details_.
+    For more information regarding a specific connection, click the :material-dots-horizontal-circle: icon (right-hand side) and select *View details*.
     Then, you can glance over all the details regarding, for example, the connection status and public IP address.
 
     ![Create](assets/vpnaas/shot-07_light.png#only-light)

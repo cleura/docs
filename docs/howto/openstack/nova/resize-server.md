@@ -27,12 +27,12 @@ Additionally, if you prefer to use the OpenStack CLI, make sure you [enable it f
 
     Find the server you want to resize in the list.
     At the right-hand side of its row, click the :material-dots-horizontal-circle: icon.
-    In the drop-down menu, click _Modify Server_.
+    In the drop-down menu, click *Modify Server*.
 
     ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_light.png#only-light)
     ![In the drop-down menu of the server you want to resize, click on "modify server"](assets/resize-server/02-menu-list_dark.png#only-dark)
 
-    Near the top of the options panel, find the _Flavor_ section.
+    Near the top of the options panel, find the *Flavor* section.
     See the server's current flavor.
     Expand the dropdown menu to get all available flavors.
 
@@ -68,7 +68,7 @@ Choose a new flavor that you want your server to use instead.
 > Most commonly, you will have a `b.` flavor, so you will select another `b.` flavor.
 
 === "{{gui}}"
-    Once you select a new flavor, the _Resize_ button appears.
+    Once you select a new flavor, the *Resize* button appears.
 
     ![The server's new flavor](assets/resize-server/04-resize-button_light.png#only-light)
     ![The server's new flavor](assets/resize-server/04-resize-button_dark.png#only-dark)
@@ -126,12 +126,12 @@ Once you are certain your server is working as intended, confirm the resize.
 If you do not, your server will automatically confirm the resize after 24 hours.
 
 === "{{gui}}"
-    This is done by clicking the _Confirm_ button.
+    This is done by clicking the *Confirm* button.
 
     ![Confirm or cancel the server resize attempt](assets/resize-server/06-resize-confirm_light.png#only-light)
     ![Confirm or cancel the server resize attempt](assets/resize-server/06-resize-confirm_dark.png#only-dark)
 
-    > If your server is not working as intended, or you simply regret the resize, instead click _Cancel_.
+    > If your server is not working as intended, or you simply regret the resize, instead click *Cancel*.
 === "OpenStack CLI"
     This is done by using the following command:
 
