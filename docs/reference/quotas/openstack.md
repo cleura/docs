@@ -7,7 +7,7 @@ Most of the OpenStack resources you create in {{brand}} are subject to quotas.
 Once you hit a quota limit, the creation of new resources of that type will fail, until you either reduce your resource utilization or your quota is raised.
 
 {{brand}} applies most quotas on a per-project basis.
-Your {{brand}} _account_ can manage up to 3 projects.
+Your {{brand}} *account* can manage up to 3 projects.
 
 The following quotas apply in any of your {{brand}} projects by default:
 
