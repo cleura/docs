@@ -16,31 +16,31 @@ Click its row to get all server details, then go to the *Recovery Service* tab.
 ![The Recovery Service tab of the server of interest](assets/rest-srv-to-snap/recovery-service-tab_light.png#only-light)
 ![The Recovery Service tab of the server of interest](assets/rest-srv-to-snap/recovery-service-tab_dark.png#only-dark)
 
-Notice the _Backing volume_ and its ID.
-Click the ID, and in the pop-up window that appears, select _View&nbsp;Details_.
+Notice the *Backing volume* and its ID.
+Click the ID, and in the pop-up window that appears, select *View&nbsp;Details*.
 
 ![Backing volume and its ID](assets/rest-srv-to-snap/backing-volume-and-id_light.png#only-light)
 ![Backing volume and its ID](assets/rest-srv-to-snap/backing-volume-and-id_dark.png#only-dark)
 
 A new pop-up window appears, displaying details about the server volume.
-Select the _Recovery&nbsp;Service_ tab.
+Select the *Recovery&nbsp;Service* tab.
 
 ![Backing volume details](assets/rest-srv-to-snap/backing-volume-details_light.png#only-light)
 ![Backing volume details](assets/rest-srv-to-snap/backing-volume-details_dark.png#only-dark)
 
 You now see all available volume snapshots.
-You may restore the server to any of those, so click the _Restore_ option for a specific snapshot.
+You may restore the server to any of those, so click the *Restore* option for a specific snapshot.
 
 ![Backing volume snapshot list](assets/rest-srv-to-snap/backing-volume-recovery-service_light.png#only-light)
 ![Backing volume snapshot list](assets/rest-srv-to-snap/backing-volume-recovery-service_dark.png#only-dark)
 
-A new window named _Restore Snapshot_ appears.
+A new window named *Restore Snapshot* appears.
 
 If the snapshot you are about to restore comes from a boot volume, as in the example here, you can only restore it to a **new** volume.
 
 You can restore a snapshot to an existing volume only when the snapshot comes from a non-boot volume **and** is the newest.
 
-To restore the selected snapshot, click the _Restore_ button.
+To restore the selected snapshot, click the *Restore* button.
 
 ![About to restore the selected snapshot](assets/rest-srv-to-snap/restore-selected-snapshot_light.png#only-light)
 ![About to restore the selected snapshot](assets/rest-srv-to-snap/restore-selected-snapshot_dark.png#only-dark)
@@ -53,14 +53,14 @@ Check the messages at the bottom of the window for the latest restore jobs.
 
 To see the new snapshot, from the left-hand side vertical pane of the {{gui}}, choose Storage → [Volumes](https://{{gui_domain}}/storage/volumes).
 
-You can spot the new volume by looking at the _name_ column;
+You can spot the new volume by looking at the *name* column;
 its name is prefixed by "Restored" and immediately followed by the ID of the original volume.
 
 ![All volumes, including one created from a snapshot](assets/rest-srv-to-snap/all-volumes_light.png#only-light)
 ![All volumes, including one created from a snapshot](assets/rest-srv-to-snap/all-volumes_dark.png#only-dark)
 
 You can now create a server from the new volume.
-Click the :material-dots-horizontal-circle: icon at the left of the volume row, select _Create Server_, and work as you usually would while [creating a new server](new-server.md).
+Click the :material-dots-horizontal-circle: icon at the left of the volume row, select *Create Server*, and work as you usually would while [creating a new server](new-server.md).
 
 ![Creating a server from the new volume](assets/rest-srv-to-snap/volume-restored-create-server_light.png#only-light)
 ![Creating a server from the new volume](assets/rest-srv-to-snap/volume-restored-create-server_dark.png#only-dark)

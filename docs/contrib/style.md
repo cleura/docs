@@ -4,7 +4,7 @@ We try to follow a handful of style rules when maintaining this documentation.
 
 ## Sections
 
-Generally, content additions should fit somewhere within the existing top-level and second-level sections (like [_Background_](../background/index.md), or [_Kubernetes_](../howto/kubernetes/index.md)).
+Generally, content additions should fit somewhere within the existing top-level and second-level sections (like [*Background*](../background/index.md), or [*Kubernetes*](../howto/kubernetes/index.md)).
 Try not to introduce a new top-level or second-level section.
 
 ## Headings

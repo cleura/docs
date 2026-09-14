@@ -7,14 +7,14 @@ Using your favorite web browser, navigate to the [{{gui}}](https://{{gui_domain}
 ## Listing invoices
 
 Make sure the vertical pane on the left-hand side of the dashboard is expanded.
-Click on _Invoices_, right below _Users_.
+Click on *Invoices*, right below *Users*.
 In the main pane of the dashboard, you will see a list of paid and outstanding invoices.
 
 ![All invoices](assets/mgmnt-inv/shot-01_light.png#only-light)
 ![All invoices](assets/mgmnt-inv/shot-01_dark.png#only-dark)
 
 Any paid invoice has a :material-check-circle: icon at the left of its row.
-At the _Outstanding Amount_ column, for each paid invoice there is a value of `0.00`.
+At the *Outstanding Amount* column, for each paid invoice there is a value of `0.00`.
 
 ![Paid invoices](assets/mgmnt-inv/shot-02_light.png#only-light)
 ![Paid invoices](assets/mgmnt-inv/shot-02_dark.png#only-dark)
@@ -30,7 +30,7 @@ For example, you can view the invoice or download it onto your computer in PDF f
 
 ## Paying outstanding invoices
 
-There is also the _Pay this invoice_ option.
+There is also the *Pay this invoice* option.
 Choose it for an outstanding invoice, and you will get a pop-up with a detailed rundown of the dues, together with available payment methods.
 
 ![Payment options](assets/mgmnt-inv/shot-04_light.png#only-light)

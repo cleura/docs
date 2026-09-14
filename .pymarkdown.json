@@ -28,6 +28,10 @@
         },
         "ul-indent": {
             "enabled": false
+        },
+        "emphasis-style": {
+            "enabled": true,
+            "style": "asterisk"
         }
     }
 }

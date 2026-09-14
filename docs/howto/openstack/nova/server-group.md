@@ -60,8 +60,8 @@ If you subsequently launch more servers referencing the same server group, {{bra
 If you keep creating servers within a server group with an `anti-affinity` policy, you will eventually exceed the region's total number of physical compute nodes.
 The command will still succeed, but the server will subsequently fail to be scheduled to a compute node.
 Instead, it will assume the `ERROR` status with the following `fault` message:
-_No valid host was found.
-There are not enough hosts available._
+*No valid host was found.
+There are not enough hosts available.*
 
 ```console
 $ openstack server show -c fault -c status <server_id>
@@ -80,7 +80,7 @@ This is normal:
 The same scheduling error occurs, and a "fault" message appears, when you use a server group with an `affinity` policy and create more servers than a physical compute node can host.
 
 However, with a soft affinity policy, such as `soft-affinity` or `soft-anti-affinity`, the scheduler can break the server group's policy if it can't uphold it.
-This means you may want to verify whether your servers are on the same or different physical compute nodes by checking the _hostId_ value of your servers.
+This means you may want to verify whether your servers are on the same or different physical compute nodes by checking the *hostId* value of your servers.
 
 ```console
 $ openstack server show -c hostId <server_id>
