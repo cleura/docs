@@ -7706,7 +7706,8 @@
 
 <h1 id="reliability">Reliability</h1>
 <p>Reliability is the ability of a workload to perform its intended function correctly and consistently, including its ability to recover quickly from failure.</p>
-<p>Cleura&nbsp;Compliant&nbsp;Cloud’s multi-availability-zone architecture and built-in snapshot-based recovery give you strong building blocks here.</p>
+<p>Cleura&nbsp;Compliant&nbsp;Cloud provides a multi-availability-zone architecture and built-in snapshot-based recovery.
+These features give you strong building blocks.</p>
 <h2 id="design-principles">Design principles</h2>
 <ul>
 <li>Distribute workloads across availability zones or regions rather than relying on a single data center.</li>
@@ -7717,39 +7718,52 @@
 </ul>
 <h2 id="applying-this-on-cleura-cloud">Applying this on Cleura&nbsp;Cloud</h2>
 <ul>
-<li>Deploy production workloads across Cleura&nbsp;Compliant&nbsp;Cloud’s availability zones — each an independently powered and networked data center, interconnected by redundant, low-latency fiber — so a single facility failure does not take down the workload.</li>
+<li>Deploy production workloads across Cleura&nbsp;Compliant&nbsp;Cloud’s availability zones.
+  Each zone is an independently powered and networked data center, interconnected by redundant, low-latency fiber.
+  A single facility failure cannot take down the workload.</li>
 <li>Use Cleura’s Load Balancer service to distribute traffic across instances and integrate it with auto-scaling for resilience under variable load.</li>
-<li>Enable Cleura’s automated daily snapshots of virtual servers and storage volumes (retained for 10 or 30 days) as a built-in, low-effort disaster-recovery layer with fast RPO/RTO, without needing third-party backup tooling — and periodically test restoring from them.
-  There is also an option to choose immutable backups.</li>
+<li>Enable Cleura’s automated daily snapshots of virtual servers and storage volumes.
+  The snapshots are retained for 10 or 30 days.
+  This built-in, low-effort disaster-recovery layer delivers fast RPO/RTO without third-party backup tooling.
+  Periodically test restoring from them.
+  You can also choose immutable backups.</li>
 <li>For workloads that need regional resilience beyond a single cloud region, architect cross-region disaster recovery across Cleura’s regions (Stockholm, Karlskrona, Frankfurt).</li>
 <li>Use Managed Database and Managed Kubernetes/OpenShift services where you want Cleura to handle patching, monitoring, and high-availability configuration on your behalf.</li>
 </ul>
 <h2 id="designing-for-reliability-virtual-machines">Designing for reliability: Virtual Machines</h2>
 <p>VM-based workloads on Cleura&nbsp;Cloud should be architected so that no single instance, host, or availability zone is a point of failure.</p>
 <ul>
-<li>Use OpenStack anti-affinity server groups so replica instances of the same tier (e.g., web or application nodes) are automatically scheduled onto different physical hosts — a single hypervisor failure should never be able to remove every replica at once.</li>
+<li>Use OpenStack anti-affinity server groups to place replica instances of the same tier (e.g., web or application nodes) on different physical hosts.
+  A single hypervisor failure cannot remove every replica at once.</li>
 <li>Spread each tier’s instances across multiple availability zones in the Cleura&nbsp;Compliant&nbsp;Cloud, not just across hosts within one zone, so a data-center-level event only affects part of your capacity.</li>
 <li>Boot instances from volumes rather than local ephemeral disk when the instance needs to survive host maintenance, evacuation, or rebuild without losing its state.</li>
 <li>Place a Load Balancer in front of any tier that has more than one instance, with health checks configured so unhealthy instances are automatically taken out of rotation rather than continuing to receive traffic.</li>
-<li>Enable the automated daily snapshot policy on both instances and attached volumes, and periodically run a real restore — not just a backup — to confirm recovery actually works within your target RTO.</li>
-<li>For stateful services such as databases or message queues, don’t rely on snapshots alone if you need a low RPO — pair them with application-level replication (for example PostgreSQL streaming replication, MySQL/MariaDB replication, or MongoDB replica sets), or use Managed Database’s own HA configuration where the workload fits a supported engine.</li>
+<li>Enable the automated daily snapshot policy on both instances and attached volumes.
+  Periodically run a real restore, not just a backup, to confirm recovery actually works within your target RTO.</li>
+<li>For stateful services such as databases or message queues, do not rely on snapshots alone if you need a low RPO.</li>
+<li>Pair them with application-level replication (PostgreSQL streaming replication, MySQL/MariaDB replication, or MongoDB replica sets).
+  Alternatively, use Managed Database’s own HA configuration where the workload fits a supported engine.</li>
 <li>Be aware that Cleura&nbsp;Cloud does not provide a native, continuous VM-to-VM replication capability beyond the automated daily snapshot policy.
   For general-purpose VMs where daily snapshots aren’t a tight enough RPO, and where the application itself has no built-in replication, you will need to add replication yourself via general purpose backup/DR vendors.</li>
-<li>Treat instances as replaceable, not precious:
-  keep&nbsp;Infrastructure-as-Code up to date so a failed VM can be recreated automatically in minutes rather than repaired by hand.</li>
-<li>Monitor host and instance health continuously — through Cleura&nbsp;Cloud Managed Services or your own tooling — so degradation is caught before it becomes a customer-facing incident.</li>
+<li>Treat instances as replaceable, not precious.</li>
+<li>Keep Infrastructure-as-Code up to date so a failed VM can be recreated automatically in minutes instead of repaired by hand.</li>
+<li>Monitor host and instance health continuously through Cleura&nbsp;Cloud Managed Services or your own tooling.
+  Detect degradation before it becomes a customer-facing incident.</li>
 </ul>
 <h2 id="designing-for-reliability-containers-and-kubernetes">Designing for reliability: containers and Kubernetes</h2>
 <p>For containerized workloads running on Cleura’s managed Kubernetes (Gardener), reliability is split between the platform layer, which Cleura helps manage, and the workload layer, which is your responsibility to configure correctly.</p>
 <ul>
-<li>Spread worker node pools across multiple availability zones —&nbsp;Gardener support multi-AZ pools — so that losing one zone only removes part of your worker capacity rather than the whole cluster.</li>
+<li>Spread worker node pools across multiple availability zones.
+  Gardener supports multi-AZ pools.
+  Losing one zone removes only part of your worker capacity instead of the whole cluster.</li>
 <li>Let Gardener manage control-plane high availability (etcd and the API server) rather than self-managing it, and put your reliability effort into the workload layer where you have the most control.</li>
-<li>Set Pod anti-affinity rules or topology spread constraints so that replicas of the same service are scheduled onto different nodes and, ideally, different availability zones — the default scheduler will happily stack all replicas on one node otherwise.</li>
+<li>Set Pod anti-affinity rules or topology spread constraints so that replicas of the same service land on different nodes and, ideally, different availability zones.
+  The default scheduler stacks all replicas on one node otherwise.</li>
 <li>Define readiness and liveness probes on every Deployment so Kubernetes automatically stops routing traffic to pods that aren’t ready and restarts pods that have hung.</li>
-<li>Use PodDisruptionBudgets so voluntary disruptions — node upgrades, cluster autoscaler scale-down, routine maintenance — can’t remove every replica of a service at the same time.</li>
+<li>Use PodDisruptionBudgets so voluntary disruptions like node upgrades, cluster autoscaler scale-down, and routine maintenance cannot remove every replica of a service at the same time.</li>
 <li>Enable the cluster autoscaler on worker pools so node capacity grows automatically under load and shrinks safely afterward, paired with the Horizontal Pod Autoscaler at the workload level for pod-level scaling.</li>
-<li>Remember that block storage-backed PersistentVolumeClaims are zone-affine:
-  a StatefulSet’s volume ties its pod to the availability zone where that volume was created.
+<li>Remember that block storage-backed PersistentVolumeClaims are zone-affine.
+  A StatefulSet’s volume ties its pod to the availability zone where that volume was created.
   Plan storage-backed workload placement with this constraint in mind, particularly when combining it with multi-AZ node pools.</li>
 <li>Run your ingress controller with at least two replicas behind the Load Balancer service, with its own health checks, so the ingress layer itself isn’t a single point of failure.</li>
 <li>Use rolling update strategies (maxUnavailable/maxSurge) for deployments and node pool upgrades, and rehearse upgrades in a non-production cluster before rolling them out to production.</li>
@@ -7789,7 +7803,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 10, 2026 14:18:23 UTC">2026-09-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 15, 2026 08:39:09 UTC">2026-09-15</span>
   </span>
 
     
@@ -7809,11 +7823,11 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"></path></svg>
       
     </span>
     <nav>
-      Christer Olsson
+      Christer Olsson, Florian Haas
     </nav>
   </span>
 
