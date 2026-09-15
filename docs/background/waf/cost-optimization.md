@@ -17,7 +17,9 @@ Cost Optimization is the ability to run workloads at the lowest price point that
 
 ## Applying this on {{brand}}
 
-- Take advantage of per-second billing on virtual machines — only pay for the compute time actually used, and shut down non-production instances outside working hours.
+- Take advantage of per-second billing on virtual machines.
+  Only pay for the compute time that actual work uses.
+  Shut down non-production instances outside working hours.
 - Apply lifecycle and versioning policies on object storage to automatically move aging or infrequently accessed data into archival tiers.
 - Use per-project quotas to prevent unplanned overspend and to attribute cost cleanly across teams, environments, or business units.
 - Periodically re-evaluate the build-vs-offload trade-off:
