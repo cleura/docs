@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cloud architecture is never finished — it is continuously evaluated, tested, and improved as your business and workloads evolve.">
+        <meta name="description" content="Cloud architecture is never finished. You continuously evaluate, test, and improve it as your business and workloads evolve.">
       
       
       
@@ -7892,7 +7892,7 @@
 
 
 <h1 id="introduction">Introduction</h1>
-<p>Cloud architecture is never finished — it is continuously evaluated, tested, and improved as your business and workloads evolve.</p>
+<p>Cloud architecture is never finished. You continuously evaluate, test, and improve it as your business and workloads evolve.</p>
 <p>The Cleura&nbsp;Cloud Well-Architected Framework gives customers a structured, repeatable way to design, build, and operate workloads on Cleura&nbsp;Cloud.</p>
 <p>It is organized around <strong>five pillars:</strong></p>
 <ol>
@@ -7903,8 +7903,8 @@
 <li><a href="../cost-optimization/">Cost Optimization</a>.</li>
 </ol>
 <p>Each pillar defines design principles, practical guidance specific to Cleura&nbsp;Cloud’s OpenStack-based platform, and a self-assessment checklist you can use during design reviews.</p>
-<p>The framework is deployment-model agnostic:
-the same principles apply whether you run on Cleura&nbsp;Public&nbsp;Cloud, Cleura&nbsp;Compliant&nbsp;Cloud, or Cleura Private Cloud, though the specific controls available differ between them (see the deployment model note below).</p>
+<p>The framework is deployment-model agnostic: the same principles apply whether you run on Cleura&nbsp;Public&nbsp;Cloud, Cleura&nbsp;Compliant&nbsp;Cloud, or Cleura Private Cloud.
+The specific controls available differ between them (see the deployment model note below).</p>
 <h2 id="who-this-is-for">Who this is for</h2>
 <ul>
 <li>Solution architects and platform teams designing new workloads on Cleura&nbsp;Cloud.</li>
@@ -7914,21 +7914,29 @@ the same principles apply whether you run on Cleura&nbsp;Public&nbsp;Cloud, Cleu
 <h2 id="how-to-use-this-framework">How to use this framework</h2>
 <ol>
 <li>Define the workload.
-   Scope the review to one workload or system at a time — not your entire estate.</li>
+   Scope the review to one workload or system at a time.
+   Do not scope your entire estate.</li>
 <li>Work through each pillar.
    Use the design principles as guidance and the checklist as a gap-finder.</li>
 <li>Prioritize findings.
-   Not every gap needs fixing immediately — weigh risk, cost, and effort.</li>
+   Not every gap needs immediate remediation.
+   Weigh the risk, cost, and effort.</li>
 <li>Create an improvement backlog.
    Track remediation items alongside your normal engineering backlog.</li>
 <li>Repeat regularly.
    Re-run the review after major changes, and at minimum quarterly for production workloads.</li>
 </ol>
 <h2 id="a-note-on-deployment-models">A note on deployment models</h2>
-<p>Cleura offers three IaaS deployment models built on the same open-source, OpenStack foundation:
-Public Cloud (flexible, standard-tools environment for developers and SMBs), Compliant Cloud (enhanced security configuration, availability zones, and controls for regulated and mission-critical workloads), and Private Cloud (a dedicated, turnkey OpenStack environment).</p>
-<p>Many of the practices below — particularly under Security &amp; Digital Sovereignty and Reliability — are strongest on Compliant Cloud or Private Cloud.
-Choosing the right model is a foundational decision that should be made early, based on the workload’s regulatory, security, and availability requirements, since it shapes which controls and practices in this framework are available to you from the outset.</p>
+<p>Cleura offers three IaaS deployment models built on the same open source, OpenStack foundation:</p>
+<ul>
+<li>Public Cloud (flexible, standard-tools environment for developers and SMBs),</li>
+<li>Compliant Cloud (enhanced security configuration, availability zones, and controls for regulated and mission-critical workloads),</li>
+<li>Private Cloud (a dedicated, turnkey OpenStack environment).</li>
+</ul>
+<p>Many practices are strongest on Compliant Cloud or Private Cloud, especially under Security &amp; Digital Sovereignty and Reliability.
+Choosing the right model is a foundational decision that you must make early.
+Base it on the workload’s regulatory, security, and availability requirements.
+Your choice shapes which controls and practices in this framework are available from the outset.</p>
 <h2 id="a-note-on-cleura-cloud-launch-pad">A note on Cleura&nbsp;Cloud Launch Pad</h2>
 <p><a href="../../../howto/getting-started/launch-pad/">Launch Pad</a> is a lightweight bootstrap utility, not a landing zone in the enterprise sense.</p>
 <p>Run via OpenStack Heat, Ansible, or OpenTofu, it creates:</p>
@@ -7937,8 +7945,9 @@ Choosing the right model is a foundational decision that should be made early, b
 <li>a virtual router connected to an internal IPv4/IPv6 network with public internet access, and</li>
 <li>a Pad Ramp jump host that you can restrict to a specific source IP or network.</li>
 </ul>
-<p>That’s a genuinely useful starting point for reaching a brand-new environment.
-Launch Pad does not create projects, quotas, IAM boundaries, a security baseline beyond the jump host’s own access rule, logging, or multi-environment structure.
+<p>This is a genuinely useful starting point for reaching a brand-new environment.
+Launch Pad does not create projects, quotas, or IAM boundaries.
+Launch Pad does not create a security baseline beyond the jump host’s own access rule, logging, or multi-environment structure.
 Treat every other practice in this framework, including basic hygiene like project segmentation and security groups, as work that still needs to happen after Launch Pad hands off.</p>
 
 
@@ -7962,7 +7971,7 @@ Treat every other practice in this framework, including basic hygiene like proje
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 10, 2026 14:18:23 UTC">2026-09-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 15, 2026 08:39:09 UTC">2026-09-15</span>
   </span>
 
     
@@ -7982,11 +7991,11 @@ Treat every other practice in this framework, including basic hygiene like proje
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"></path></svg>
       
     </span>
     <nav>
-      Christer Olsson
+      Christer Olsson, Florian Haas
     </nav>
   </span>
 
