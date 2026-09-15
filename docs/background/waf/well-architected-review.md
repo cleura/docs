@@ -45,6 +45,8 @@ For regulated workloads, align your review cadence with your compliance/audit ca
 
 1. Pick one production workload and run it through the five checklists in this document.
 2. Log every gap found as a backlog item, prioritized by risk.
-3. Confirm the workload's deployment model was chosen deliberately based on its regulatory, security, and availability requirements — not by default.
-4. Schedule the next review — quarterly is a reasonable default for production workloads.
+3. Confirm the workload's deployment model was chosen deliberately based on its regulatory, security, and availability requirements.
+   Do not choose by default.
+4. Schedule the next review.
+   Quarterly is a reasonable default for production workloads.
 

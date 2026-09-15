@@ -9,7 +9,8 @@ Performance Efficiency is the ability to use computing resources efficiently to 
 ## Design principles
 
 - Select the compute, storage, and network resources that actually match the workload's characteristics.
-- Use elasticity — scale resources up and down as demand changes rather than provisioning for peak permanently.
+- Use elasticity.
+  Scale resources up and down as demand changes instead of provisioning for peak permanently.
 - Prefer managed services over self-managed infrastructure where they remove undifferentiated operational work.
 - Continuously monitor and benchmark rather than sizing once and forgetting.
 
@@ -17,9 +18,11 @@ Performance Efficiency is the ability to use computing resources efficiently to 
 
 - Choose the VM flavor profile that fits the workload:
   Generic for general-purpose use, Low Latency Disk for I/O-sensitive applications, or High Intensity CPU for compute-bound workloads.
-- Right-size Kubernetes worker pools using mixed VM flavors through {{k8s_management_service}}-managed clusters, matching node types to the actual mix of workloads running on them.
+- Right-size Kubernetes worker pools using mixed VM flavors through {{k8s_management_service}}-managed clusters.
+  Match node types to the actual mix of workloads.
 - Match storage to access pattern: high-performance block storage for latency-sensitive workloads, S3-compatible object storage for scalable unstructured data, and archival/lifecycle tiers for cold data.
-- Place workloads in the {{company}} region closest to your users — Stockholm, Karlskrona, or Frankfurt — to minimize latency.
+- Place workloads in the {{company}} region closest to your users.
+  This minimizes latency.
 - Monitor resource utilization through CCMP or the API on an ongoing basis, and adjust instance flavors, worker pool sizes, and volume types as usage patterns change rather than only at initial deployment.
 
 ## Self-assessment checklist
