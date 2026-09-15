@@ -18,10 +18,12 @@ On {{brand}} this means treating infrastructure as code, standardizing deploymen
 
 ## Applying this on {{brand}}
 
-- Use {{company}}'s Launch Pad (via Heat, Ansible, or OpenTofu) to bootstrap initial connectivity into a new environment — it creates an SSH keypair, a router and network with public access, and a restrictable jump host.
-  It's a convenient entry point, not a landing zone:
-  project structure, quotas, IAM boundaries, and a security baseline still need to be set up separately using the practices in this framework.
-- Provision and manage resources through the {{gui}} (CCMP), CLI, or API — and drive routine provisioning through Infrastructure-as-Code rather than manual clicks, so changes are auditable and repeatable.
+- Use {{company}}'s Launch Pad (via Heat, Ansible, or OpenTofu) to bootstrap initial connectivity into a new environment.
+- It creates an SSH keypair, a router and network with public access, and a restrictable jump host.
+- It is a convenient entry point, not a landing zone.
+- Project structure, quotas, IAM boundaries, and a security baseline still need to be set up separately using the practices in this framework.
+- Provision and manage resources through the {{gui}} (CCMP), CLI, or API.
+- Drive routine provisioning through Infrastructure-as-Code rather than manual clicks, so changes are auditable and repeatable.
 - Use OpenStack projects to cleanly separate development, test, and production environments, and to scope team access to only what each group needs.
 - Using IaC as the standard for your infrastructure deployments.
   It provides a consistent, standard methodology for development and deployment for all components of your workload.
@@ -33,7 +35,8 @@ On {{brand}} this means treating infrastructure as code, standardizing deploymen
 ## Self-assessment checklist
 
 - Is infrastructure provisioned through code or API calls rather than ad hoc manual changes?
-- If the project used {{company}}'s Launch Pad to bootstrap connectivity, has project structure, IAM, quotas, and a security baseline been set up separately — since Launch Pad itself does not provide these?
+- If the project used {{company}}'s Launch Pad to bootstrap connectivity, have the project structure, IAM, quotas, and a security baseline been set up separately?
+  Launch Pad itself does not provide these.
 - Do you have documented, tested runbooks for common operational events (failover, scale-out, incident response)?
 - Are environments (dev/test/prod) cleanly separated using projects?
 - Do deployments happen through a CI/CD pipeline rather than manual steps?
