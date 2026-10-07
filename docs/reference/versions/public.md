@@ -16,8 +16,8 @@
 
 ## Ceph Services
 
-|                               | Kna1 | Sto2 | Fra1     |
-|-------------------------------|------|------|----------|
-| Block storage (for OpenStack) | Reef | Reef | Tentacle |
-| Object storage (Swift API)    | Reef | Reef | Tentacle |
-| Object storage (S3 API)       | Reef | Reef | Tentacle |
+|                               | Kna1 | Sto2     | Fra1     |
+|-------------------------------|------|--------- |----------|
+| Block storage (for OpenStack) | Reef | Tentacle | Tentacle |
+| Object storage (Swift API)    | Reef | Tentacle | Tentacle |
+| Object storage (S3 API)       | Reef | Tentacle | Tentacle |
