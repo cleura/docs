@@ -29,7 +29,7 @@ These features give you strong building blocks.
   Periodically test restoring from them.
   You can also choose immutable backups.
 - For workloads that need regional resilience beyond a single cloud region, architect cross-region disaster recovery across {{company}}'s regions (Stockholm, Karlskrona, Frankfurt).
-- Use Managed Database and Managed Kubernetes/OpenShift services where you want {{company}} to handle patching, monitoring, and high-availability configuration on your behalf.
+- Use Managed Database and [Managed Kubernetes/OpenShift](https://en.wikipedia.org/wiki/OpenShift) services where you want {{company}} to handle patching, monitoring, and high-availability configuration on your behalf.
 
 ## Designing for reliability: Virtual Machines
 
