@@ -3,9 +3,6 @@ description: Using the OpenStack CLI or the Cleura Cloud Management Panel, you c
 ---
 # Scheduling volume backups
 
-!!! warning "Service availability"
-    Backup as a Service will become available on 2026-10-12 (in the {{api_region}} region only).
-
 {{page.meta.description}}
 
 ## Prerequisites
