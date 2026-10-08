@@ -85,7 +85,7 @@ tox -e serve
 ## Commit messages
 
 When you submit a change, you will need to provide a commit message, which is very nearly as important as the change itself.
-Excellent guides on what constitutes a good commit message are available from [Tim Pope](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) and [Colleen Murphy](http://www.gazlene.net/getting-work-done-in-open-source.html).
+Excellent guides on what constitutes a good commit message are available from [Tim Pope](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) and [Colleen Murphy](https://web.archive.org/web/20251013150312/https://www.gazlene.net/getting-work-done-in-open-source.html).
 
 In addition, we have adopted the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) style for commit message subjects.
 Please make sure that your commit message starts with one of the following prefixes:
