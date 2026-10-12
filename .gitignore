@@ -5,3 +5,5 @@ site/
 .tox/
 linkchecker-out.*
 .ai/
+http.server.*
+public/
