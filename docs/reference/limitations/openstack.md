@@ -24,7 +24,7 @@ It also means that you cannot use the following `openstack` CLI commands; they a
 
 ### Volume backup service
 
-{{brand}} does not support the OpenStack volume backup service (`cinder-backup`).
+{{brand}} supports the OpenStack volume backup service (`cinder-backup`) only in the Sto-Com region.
 
 For automated, scheduled volume *snapshots,* consider enabling the [recovery service](../../background/recovery-service.md) for your servers.
 
