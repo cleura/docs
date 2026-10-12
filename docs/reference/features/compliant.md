@@ -12,11 +12,12 @@
 
 ## Block storage
 
-|                                                                 | Sto1HS           | Sto2HS           | Sto-Com          |
-| ------------------------------                                  | ---------------- | ---------------- | ---------------- |
-| Highly available storage                                        | :material-check: | :material-check: | :material-check: |
-| [High-performance local storage](../flavors/index.md#compute-tiers)  | :material-check: | :material-check: | :material-check: |
+|                                                                        | Sto1HS           | Sto2HS           | Sto-Com          |
+|------------------------------------------------------------------------|------------------|------------------|------------------|
+| Highly available storage                                               | :material-check: | :material-check: | :material-check: |
+| [High-performance local storage](../flavors/index.md#compute-tiers)    | :material-check: | :material-check: | :material-check: |
 | [Volume encryption](../../howto/openstack/cinder/encrypted-volumes.md) | :material-check: | :material-check: | :material-check: |
+| Volume backup                                                          | :material-close: | :material-close: | :material-check: |
 
 
 ## Object storage

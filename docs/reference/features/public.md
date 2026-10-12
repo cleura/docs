@@ -16,10 +16,11 @@
 
 ## Block storage
 |                                                                        | Kna1             | Sto2             | Fra1             |
-| ------------------------------                                         | ---------------- | ---------------- | ---------------- |
+|------------------------------------------------------------------------|------------------|------------------|------------------|
 | Highly available storage                                               | :material-check: | :material-check: | :material-check: |
 | [High-performance local storage](../flavors/index.md#compute-tiers)    | :material-check: | :material-check: | :material-check: |
 | [Volume encryption](../../howto/openstack/cinder/encrypted-volumes.md) | :material-check: | :material-check: | :material-check: |
+| Volume backup                                                          | :material-close: | :material-close: | :material-close: |
 
 
 ## Object storage
