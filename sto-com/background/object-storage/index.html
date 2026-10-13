@@ -7963,11 +7963,11 @@
 
 
 <h1 id="object-storage-in-cleura-cloud">Object storage in Cleura&nbsp;Cloud</h1>
-<p>Object storage in Cleura&nbsp;Cloud is implemented via the <a href="https://docs.ceph.com/en/latest/radosgw/index.html">Ceph Object Gateway</a>, also known as <code>radosgw</code> (commonly pronounced “<a href="https://docs.ceph.com/en/latest/glossary/#term-RADOS">rados</a> gateway”).</p>
+<p>Object storage in Cleura&nbsp;Cloud is implemented via the <a href="https://docs.ceph.com/en/tentacle/radosgw/index.html">Ceph Object Gateway</a>, also known as <code>radosgw</code> (commonly pronounced “<a href="https://docs.ceph.com/en/tentacle/glossary/#term-RADOS">rados</a> gateway”).</p>
 <p>This facility exposes access to objects via two RESTful APIs: the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/">Amazon S3 API</a>, and the <a href="https://docs.openstack.org/api-ref/object-store/">OpenStack Swift API</a>.
 It is, however, important to understand that radosgw shares no code with Amazon S3, nor with OpenStack Swift.</p>
 <p>As such, object storage in Cleura&nbsp;Cloud is not expected to behave <em>exactly</em> as Amazon S3 or OpenStack Swift, although it tracks their behavior very closely.
-The Ceph upstream documentation lists API deviations from the respective reference implementations, for both the <a href="https://docs.ceph.com/en/latest/radosgw/s3/">S3</a> and the <a href="https://docs.ceph.com/en/latest/radosgw/swift/">Swift</a> API.
+The Ceph upstream documentation lists API deviations from the respective reference implementations, for both the <a href="https://docs.ceph.com/en/tentacle/radosgw/s3/">S3</a> and the <a href="https://docs.ceph.com/en/tentacle/radosgw/swift/">Swift</a> API.
 Our <a href="../../reference/">reference section</a> lists additional <a href="../../reference/limitations/object-storage/">limitations</a> specific to Cleura&nbsp;Cloud.</p>
 <h2 id="object-storage-integration-with-openstack-authentication">Object storage integration with OpenStack authentication</h2>
 <p>In Cleura&nbsp;Cloud, the OpenStack <code>object‑store</code> service endpoints point not to native OpenStack Swift proxy servers, but to radosgw endpoints.
@@ -8084,7 +8084,7 @@ Instead, a legal hold will remain in effect until you remove it explicitly.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 9, 2025 11:22:05 UTC">2025-07-09</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 12, 2026 14:05:10 UTC">2026-10-12</span>
   </span>
 
     
