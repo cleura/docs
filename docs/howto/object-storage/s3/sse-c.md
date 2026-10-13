@@ -52,7 +52,7 @@ In order to generate encryption key and store it in Barbican, proceed as follows
 
 ## Managing encrypted objects in S3
 
-Once you have your encryption secret available, you can create or access enabled objects.
+Once you have your encryption secret available, you can create or access encrypted objects.
 
 === "aws"
     1. Create an S3 bucket:
@@ -94,14 +94,14 @@ Once you have your encryption secret available, you can create or access enabled
        ```bash
        mc cp \
          --recursive \
-         --encrypt-key "{{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted=${secret}"
+         --encrypt-key "{{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted=${secret}" \
          ~/media/ {{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted
        ```
     3. Retrieve a file from S3 and decrypt it.
        Again, specify the encryption key in the same manner:
        ```bash
        mc cp \
-         --encrypt-key "{{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted=${secret}"
+         --encrypt-key "{{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted=${secret}" \
          {{api_region|lower}}/{{brand|lower|replace(' ','')}}-encrypted/file.png .
        ```
 
@@ -129,7 +129,7 @@ Once you have your encryption secret available, you can create or access enabled
        env_auth = false
        access_key_id = <access key id>
        secret_access_key = <secret key>
-       endpoint = {{api_region|lower}}.{{api_domain}}
+       endpoint = s3-{{api_region|lower}}.{{api_domain}}
        acl = private
        sse_customer_algorithm = AES256
        ```
