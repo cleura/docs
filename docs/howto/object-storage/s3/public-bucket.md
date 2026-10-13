@@ -11,7 +11,7 @@ Making a bucket globally readable entails setting a *bucket policy* that enables
 
 ## Prerequisites
 
-Object versioning requires that you configure your environment with [working S3-compatible credentials](credentials.md).
+To set up a public bucket, you must first configure your environment with [working S3-compatible credentials](credentials.md).
 
 ## Setting a public read policy for a bucket
 
