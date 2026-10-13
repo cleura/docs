@@ -1,12 +1,12 @@
 # Object storage in {{brand}}
 
-Object storage in {{brand}} is implemented via the [Ceph Object Gateway](https://docs.ceph.com/en/latest/radosgw/index.html), also known as `radosgw` (commonly pronounced "[rados](https://docs.ceph.com/en/latest/glossary/#term-RADOS) gateway").
+Object storage in {{brand}} is implemented via the [Ceph Object Gateway](https://docs.ceph.com/en/tentacle/radosgw/index.html), also known as `radosgw` (commonly pronounced "[rados](https://docs.ceph.com/en/tentacle/glossary/#term-RADOS) gateway").
 
 This facility exposes access to objects via two RESTful APIs: the [Amazon S3 API](https://docs.aws.amazon.com/AmazonS3/latest/API/), and the [OpenStack Swift API](https://docs.openstack.org/api-ref/object-store/).
 It is, however, important to understand that radosgw shares no code with Amazon S3, nor with OpenStack Swift.
 
 As such, object storage in {{brand}} is not expected to behave *exactly* as Amazon S3 or OpenStack Swift, although it tracks their behavior very closely.
-The Ceph upstream documentation lists API deviations from the respective reference implementations, for both the [S3](https://docs.ceph.com/en/latest/radosgw/s3/) and the [Swift](https://docs.ceph.com/en/latest/radosgw/swift/) API.
+The Ceph upstream documentation lists API deviations from the respective reference implementations, for both the [S3](https://docs.ceph.com/en/tentacle/radosgw/s3/) and the [Swift](https://docs.ceph.com/en/tentacle/radosgw/swift/) API.
 Our [reference section](../reference/index.md) lists additional [limitations](../reference/limitations/object-storage.md) specific to {{brand}}.
 
 ## Object storage integration with OpenStack authentication
