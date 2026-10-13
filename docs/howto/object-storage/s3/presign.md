@@ -25,7 +25,7 @@ To create a pre-signed URL for an object, you use the following command (replace
     ```bash
     aws --profile {{api_region|lower}} \
       s3 presign \
-      --expires-in <seconds>
+      --expires-in <seconds> \
       s3://<bucket-name>/<object-name>
     ```
 === "mc"
@@ -111,7 +111,7 @@ To ensure that an object named `bar.pdf` in a bucket named `foo` is always downl
 === "s3cmd"
     ```bash
     s3cmd -c ~/.s3cfg-{{api_region|lower}} modify \
-      --add-header 'Content-Disposition: attachment; filename="bar.pdf"'
+      --add-header 'Content-Disposition: attachment; filename="bar.pdf"' \
       s3://foo/bar.pdf
     ```
 
@@ -122,9 +122,9 @@ To ensure that an object named `bar.pdf` in a bucket named `foo` is always downl
     ```bash
     aws --profile {{api_region|lower}} \
       s3api copy-object \
-      --copy-source <bucket-name>/<object-name>
+      --copy-source <bucket-name>/<object-name> \
       --content-disposition 'attachment;filename="bar.pdf"' \
-      --metadata-directive replace
+      --metadata-directive replace \
       --bucket <bucket-name> \
       --key <object-name>
     ```
@@ -134,7 +134,7 @@ To ensure that an object named `bar.pdf` in a bucket named `foo` is always downl
     `s3cmd` comes with a handy `modify --add-header` subcommand for updating object metadata in-place:
     ```bash
     s3cmd -c ~/.s3cfg-{{api_region|lower}} modify \
-      --add-header 'Content-Disposition: attachment; filename="bar.pdf"'
+      --add-header 'Content-Disposition: attachment; filename="bar.pdf"' \
       s3://foo/bar.pdf
     ```
 

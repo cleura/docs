@@ -21,4 +21,4 @@ In {{brand_public}} we upgrade OpenStack releases annually; this means that we n
 
 [Ceph major releases](https://docs.ceph.com/en/latest/releases/index.html#release-timeline) are also named in alphabetical order, and occur on a roughly annual schedule.
 
-{{brand}} currently runs Ceph [Reef](https://docs.ceph.com/en/latest/releases/reef/) and [Tentacle](https://docs.ceph.com/en/latest/releases/tentacle/).
+{{brand}} currently runs Ceph [Reef](https://docs.ceph.com/en/reef/releases/reef/) and [Tentacle](https://docs.ceph.com/en/tentacle/releases/tentacle/).

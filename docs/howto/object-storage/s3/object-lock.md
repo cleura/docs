@@ -179,7 +179,7 @@ To configure the legal hold for all objects in a bucket, use the following comma
     ```bash
     aws --profile {{api_region|lower}} \
       s3api list-objects \
-      --bucket <bucket-name \
+      --bucket <bucket-name> \
       | jq .Contents[].Key \
       | xargs -n1 aws --profile {{api_region|lower}} s3api put-object-legal-hold --legal-hold Status=ON --bucket <bucket-name> --key
     ```
