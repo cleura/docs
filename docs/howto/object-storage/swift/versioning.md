@@ -5,7 +5,7 @@ Using the Swift API, you have the option to retain multiple versions of an objec
 ## Prerequisites
 
 In order to manage object versioning, be sure that you have [installed and configured](index.md) the `swift` command-line interface (CLI).
-There is presently no way to set object expiry with the `openstack` CLI.
+There is presently no way to manage object versioning with the `openstack` CLI.
 
 Also, ensure that you have configured a [private container](private-container.md), i.e. one with an empty Read ACL.
 The examples in this how-to guide assume that your container is named `private-container`, and that it presently contains a single object named `testobj.txt`.
