@@ -2,16 +2,16 @@
 
 ## OpenStack Services
 
-|                                | Sto1HS | Sto2HS | Sto-Com |
-| ------------------------------ | ------ | ------ | ------- |
-| Barbican (secret storage)      | Epoxy  | Epoxy  | Epoxy   |
-| Cinder (block storage)         | Epoxy  | Epoxy  | Epoxy   |
-| Glance (image management)      | Epoxy  | Epoxy  | Epoxy   |
-| Heat (orchestration)           | Epoxy  | Epoxy  | Epoxy   |
-| Keystone (identity management) | Epoxy  | Epoxy  | Epoxy   |
-| Neutron (networking)           | Epoxy  | Epoxy  | Epoxy   |
-| Nova (server virtualization)   | Epoxy  | Epoxy  | Epoxy   |
-| Octavia (load balancing)       | Epoxy  | Epoxy  | Epoxy   |
+|                                | Sto1HS | Sto2HS | Sto-Com  |
+|--------------------------------|--------|--------|----------|
+| Barbican (secret storage)      | Epoxy  | Epoxy  | Gazpacho |
+| Cinder (block storage)         | Epoxy  | Epoxy  | Gazpacho |
+| Glance (image management)      | Epoxy  | Epoxy  | Gazpacho |
+| Heat (orchestration)           | Epoxy  | Epoxy  | Gazpacho |
+| Keystone (identity management) | Epoxy  | Epoxy  | Gazpacho |
+| Neutron (networking)           | Epoxy  | Epoxy  | Gazpacho |
+| Nova (server virtualization)   | Epoxy  | Epoxy  | Gazpacho |
+| Octavia (load balancing)       | Epoxy  | Epoxy  | Gazpacho |
 
 
 ## Ceph Services
