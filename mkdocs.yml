@@ -72,6 +72,8 @@ plugins:
   - awesome-nav
   - git-authors:
       enabled: true
+      exclude:
+        - 'reference/tools/cleura-cli/*'
       show_email_address: false
   - git-revision-date-localized:
       enable_creation_date: true
@@ -95,6 +97,22 @@ plugins:
       redirect_maps:
         'background/disaster-recovery.md': 'background/recovery-service.md'
         'howto/account-billing/change-billing-data.md': 'howto/account-billing/change-account-data.md'
+        'reference/ai/index.md': 'reference/services/ai/index.md'
+        'reference/ai/llms.md': 'reference/services/ai/llms.md'
+        'reference/dns/index.md': 'reference/services/dns/index.md'
+        'reference/features/compliant.md': 'reference/services/features/compliant.md'
+        'reference/features/index.md': 'reference/services/features/index.md'
+        'reference/features/public.md': 'reference/services/features/public.md'
+        'reference/flavors/index.md': 'reference/services/flavors/index.md'
+        'reference/images/index.md': 'reference/services/images/index.md'
+        'reference/limitations/index.md': 'reference/services/limitations/index.md'
+        'reference/limitations/kubernetes.md': 'reference/services/limitations/kubernetes.md'
+        'reference/limitations/object-storage.md': 'reference/services/limitations/object-storage.md'
+        'reference/limitations/openstack.md': 'reference/services/limitations/openstack.md'
+        'reference/versions/compliant.md': 'reference/services/versions/compliant.md'
+        'reference/versions/index.md': 'reference/services/versions/index.md'
+        'reference/versions/public.md': 'reference/services/versions/public.md'
+        'reference/volumes/index.md': 'reference/services/volumes/index.md'
 repo_url: https://github.com/cleura/docs
 site_name: "Cleura Docs"
 site_url: !ENV [DOCS_SITE_URL, "https://docs.cleura.cloud"]

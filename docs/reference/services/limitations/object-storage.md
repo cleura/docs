@@ -4,7 +4,7 @@
 
 ### Versioning
 
-When using [object versioning](../../howto/object-storage/swift/versioning.md) with the Swift API, only the `X-Versions-Location` header is supported.
+When using [object versioning](../../../howto/object-storage/swift/versioning.md) with the Swift API, only the `X-Versions-Location` header is supported.
 In {{brand}}, there is no support for `X-History-Location`.
 
 ### `.rlistings` ACL element
@@ -28,13 +28,13 @@ There is currently no support for [S3 bucket notifications](https://docs.aws.ama
 
 ### Object lock retention modes
 
-For buckets configured with [object lock](../../howto/object-storage/s3/object-lock.md), the only supported retention mode is `COMPLIANCE`.
+For buckets configured with [object lock](../../../howto/object-storage/s3/object-lock.md), the only supported retention mode is `COMPLIANCE`.
 We do not support `GOVERNANCE` mode.
 
 ### SSE-KMS
 
 There is currently no support for SSE-KMS in {{brand}}.
-SSE-C, in contrast, [is fully supported](../../howto/object-storage/s3/sse-c.md).
+SSE-C, in contrast, [is fully supported](../../../howto/object-storage/s3/sse-c.md).
 
 ### Request checksum calculation
 
