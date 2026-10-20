@@ -159,7 +159,7 @@ nuuk.example.com.  3600    IN  AAAA    2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
 ```
 
 > For extra resilience, the two name servers in any zone reside in different geographic locations.
-> You may see the location of a name server [in the Reference section](../../../reference/dns/index.md).
+> You may see the location of a name server [in the Reference section](../../../reference/services/dns/index.md).
 
 ## Deleting recordsets
 

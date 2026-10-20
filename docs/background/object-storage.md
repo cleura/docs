@@ -7,7 +7,7 @@ It is, however, important to understand that radosgw shares no code with Amazon 
 
 As such, object storage in {{brand}} is not expected to behave *exactly* as Amazon S3 or OpenStack Swift, although it tracks their behavior very closely.
 The Ceph upstream documentation lists API deviations from the respective reference implementations, for both the [S3](https://docs.ceph.com/en/tentacle/radosgw/s3/) and the [Swift](https://docs.ceph.com/en/tentacle/radosgw/swift/) API.
-Our [reference section](../reference/index.md) lists additional [limitations](../reference/limitations/object-storage.md) specific to {{brand}}.
+Our [reference section](../reference/index.md) lists additional [limitations](../reference/services/limitations/object-storage.md) specific to {{brand}}.
 
 ## Object storage integration with OpenStack authentication
 
