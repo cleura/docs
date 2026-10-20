@@ -5,7 +5,7 @@ description: Reference information on DNS management in Cleura Cloud
 
 ## Server regions
 
-By default, each [new zone](../../howto/openstack/designate/zones.md) you create with Designate comes equipped with two name servers.
+By default, each [new zone](../../../howto/openstack/designate/zones.md) you create with Designate comes equipped with two name servers.
 The names of those servers, like `cloud-ns1.fra1-pub.cleura.cloud.` and `cloud-ns2.kna1-pub.cleura.cloud.`, are indicative of the regions whose DNS zones and records they handle and *not* of any server's physical location.
 
 The following matrix shows where each name server is located.

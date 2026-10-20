@@ -54,7 +54,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     * *High CPU*, and
     * *Low Latency Disk*.
 
-    Selecting one of those gives you access to a subset of all available [*flavors*](../../../reference/flavors/index.md).
+    Selecting one of those gives you access to a subset of all available [*flavors*](../../../reference/services/flavors/index.md).
 
     As the profile names suggest, each profile but the *Generic* points to a subset of flavors suitable for servers intended to run specific types of applications:
 
@@ -83,7 +83,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     ![Boot target, volume, and volume size](assets/new-server/shot-06_light.png#only-light)
     ![Boot target, volume, and volume size](assets/new-server/shot-06_dark.png#only-dark)
 
-    For the server's CPU core count and memory, set the [*Flavor*](../../../reference/flavors/index.md) accordingly.
+    For the server's CPU core count and memory, set the [*Flavor*](../../../reference/services/flavors/index.md) accordingly.
     We suggest selecting a flavor that specifies 1 CPU core and 1 GiB of RAM.
 
     Note that the estimated monthly cost changes depending on the chosen flavor.
@@ -102,7 +102,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
     ![Boot target, volume, and volume size](assets/new-server/shot-07_light.png#only-light)
     ![Boot target, volume, and volume size](assets/new-server/shot-07_dark.png#only-dark)
 
-    Also, notice the *Storage classes (types)* parameter, which actually deals with [volume types](../../../reference/volumes/index.md).
+    Also, notice the *Storage classes (types)* parameter, which actually deals with [volume types](../../../reference/services/volumes/index.md).
     By default, this parameter is set to *cbs*.
 
     Next, you may choose to leave the *Recovery&nbsp;service* option enabled.
@@ -170,7 +170,7 @@ If you prefer to work with the OpenStack CLI, be sure to [source the RC file fir
 
     Each variable represents a piece of information we have to look for or, in the cases of `KEY_NAME` and `SERVER_NAME`, arbitrarily define.
 
-    Let us begin with the [*flavors*](../../../reference/flavors/index.md) (`FLAVOR_NAME`), which describe combinations of CPU core count and memory size.
+    Let us begin with the [*flavors*](../../../reference/services/flavors/index.md) (`FLAVOR_NAME`), which describe combinations of CPU core count and memory size.
     Each server has a distinct flavor, and to see all available flavors, type:
 
     ```bash

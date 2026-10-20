@@ -4,7 +4,7 @@ description: How to adjust the number of CPU cores and amount of memory for a vi
 # Resizing a server
 
 This guide shows how to change the number of CPU cores and the amount of memory your server has;
-essentially, you do this by changing the server's [flavor](../../../reference/flavors/index.md).
+essentially, you do this by changing the server's [flavor](../../../reference/services/flavors/index.md).
 
 [Resize](https://docs.openstack.org/nova/latest/admin/configuration/resize.html) (or Server resize) is the ability to change the flavor of a server, thus allowing it to upscale or downscale according to user needs.
 A resize operation is a two-step process for the user:
@@ -64,7 +64,7 @@ Additionally, if you prefer to use the OpenStack CLI, make sure you [enable it f
 
 Choose a new flavor that you want your server to use instead.
 
-> A resize is only possible with [flavors](../../../reference/flavors/index.md) using the same prefix letter.
+> A resize is only possible with [flavors](../../../reference/services/flavors/index.md) using the same prefix letter.
 > Most commonly, you will have a `b.` flavor, so you will select another `b.` flavor.
 
 === "{{gui}}"
