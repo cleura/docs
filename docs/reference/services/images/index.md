@@ -4,7 +4,7 @@ description: Images provide an operating system for your server.
 
 # Images
 
-Public [Glance images](../../howto/openstack/glance/index.md) in {{brand}} contain regularly updated minimal versions of server operating systems.
+Public [Glance images](../../../howto/openstack/glance/index.md) in {{brand}} contain regularly updated minimal versions of server operating systems.
 
 These images also contain the [cloud-init](https://cloudinit.readthedocs.io) package applicable to the operating system, to support the injection of SSH public keys and other user data.
 
@@ -22,8 +22,8 @@ Image names in {{brand}} follow a convention, which can be summarized as `${NAME
 ## Tags and properties
 
 Each public image is assigned a specific set of tags and properties.
-You can use these tags to [filter and list](../../howto/openstack/glance/filter.md) images based on certain conditions.
-You may also use them to simply [examine](../../howto/openstack/glance/examine.md) how an image is configured.
+You can use these tags to [filter and list](../../../howto/openstack/glance/filter.md) images based on certain conditions.
+You may also use them to simply [examine](../../../howto/openstack/glance/examine.md) how an image is configured.
 
 ### Tags
 

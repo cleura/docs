@@ -4,7 +4,7 @@ description: How to add a Prometheus metrics endpoint to a load balancer.
 # Enabling load balancer metrics
 
 > This feature is available in select {{brand}} regions.
-> Please check the [feature support matrix](../../../reference/features/index.md) for details.
+> Please check the [feature support matrix](../../../reference/services/features/index.md) for details.
 
 Once you have created load balancers in {{brand}}, you can add a special *listener* that exposes load balancer metrics.
 This listener is meant to be used as a data source for an existing [Prometheus](https://prometheus.io/) monitoring system.

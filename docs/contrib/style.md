@@ -94,7 +94,7 @@ Note, Warning, and Danger.
 While you *can* use [footnotes](https://www.markdownguide.org/extended-syntax/#footnotes), you should consider alternatives before using them.
 
 Generally, it is often better to use a collapsible Note [admonition](#admonitions).
-However, footnotes are sometimes practical, for example when you want to add extra information to the contents of a table (as in [this example](../reference/volumes/index.md#volume-types)).
+However, footnotes are sometimes practical, for example when you want to add extra information to the contents of a table (as in [this example](../reference/services/volumes/index.md#volume-types)).
 
 ## Renamed sources
 
