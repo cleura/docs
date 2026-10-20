@@ -4,3 +4,7 @@
 [submodule "submodules/cleura-skills"]
 	path = submodules/cleura-skills
 	url = ../skills
+[submodule "submodules/cleura-cli"]
+	path = submodules/cleura-cli
+	url = https://github.com/cleura/cleura-cli
+	branch = main

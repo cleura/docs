@@ -18,7 +18,7 @@ In the following, we explain what this option does, how it works in the backgrou
 ## What it is
 
 The *recovery service* feature is available via the {{gui}} and applies to servers and volumes that use our [Ceph](https://docs.ceph.com/) backend.
-That would be **all** servers but the ones of the `s` [flavor](../reference/flavors/index.md#compute-tiers).
+That would be **all** servers but the ones of the `s` [flavor](../reference/services/flavors/index.md#compute-tiers).
 
 ??? "Differences to the Backup as a Service"
     Compared to the [Backup as a Service](recovery-service.md) (BaaS) {{brand}} offers, the Recovery service works from the {{gui}} only.

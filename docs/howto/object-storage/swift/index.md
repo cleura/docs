@@ -22,4 +22,4 @@ Use either the package manager of your operating system, or `pip`:
 ## Availability
 
 The OpenStack Swift API is available in select {{brand}} regions.
-Refer to [the feature support matrix](../../../reference/features/index.md) for details on Swift API availability.
+Refer to [the feature support matrix](../../../reference/services/features/index.md) for details on Swift API availability.

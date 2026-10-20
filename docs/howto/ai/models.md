@@ -14,4 +14,4 @@ Then, expand the vertical navigation bar at the left, click on *AI* and select *
 
 All LLMs appear on the main pane of the {{gui}}.
 
-You may read more about the characteristics of each [on-demand model](../../reference/ai/llms.md) we offer, and also know about [tokens](../../background/ai/tokens.md) and pricing.
+You may read more about the characteristics of each [on-demand model](../../reference/services/ai/llms.md) we offer, and also know about [tokens](../../background/ai/tokens.md) and pricing.

@@ -1,6 +1,6 @@
 # Listing and filtering images
 
-You can use either the `openstack` command-line interface (CLI), or the {{gui}}, to list available [public images](../../../reference/images/index.md) in {{brand}}.
+You can use either the `openstack` command-line interface (CLI), or the {{gui}}, to list available [public images](../../../reference/services/images/index.md) in {{brand}}.
 
 === "{{gui}}"
 

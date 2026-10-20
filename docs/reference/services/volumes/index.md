@@ -6,14 +6,14 @@ The following volume types are available in {{brand}} for persistent block stora
 
 If you create a volume without specifying a volume type, then the default volume type applies.
 
-| Volume type              | Default          | [Encryption](../../howto/openstack/cinder/encrypted-volumes.md) |
+| Volume type              | Default          | [Encryption](../../../howto/openstack/cinder/encrypted-volumes.md) |
 | -----------              | -------          | ------------                                                    |
 | `cbs-standard`           | :material-check: | :material-close:                                                |
 | `cbs-premium`            | :material-close: | :material-close:                                                |
 | `cbs-standard-encrypted` | :material-close: | :material-check:                                                |
 | `cbs-premium-encrypted`  | :material-close: | :material-check:                                                |
 
-It is possible --- though somewhat involved --- to [change the type of an existing volume](../../howto/openstack/cinder/retype-volumes.md) (also known as retyping).
+It is possible --- though somewhat involved --- to [change the type of an existing volume](../../../howto/openstack/cinder/retype-volumes.md) (also known as retyping).
 
 In {{api_region}}, Quality of Service for Cinder is as follows:
 
@@ -27,7 +27,7 @@ In {{api_region}}, Quality of Service for Cinder is as follows:
 
 ## Administrative access to volume encryption secrets
 
-If you want to enable {{brand}} support to administratively migrate virtual machines with attached [encrypted volumes](../../howto/openstack/cinder/encrypted-volumes.md), please [share your encryption secrets](../../howto/openstack/barbican/share-secret.md) with the following user IDs:
+If you want to enable {{brand}} support to administratively migrate virtual machines with attached [encrypted volumes](../../../howto/openstack/cinder/encrypted-volumes.md), please [share your encryption secrets](../../../howto/openstack/barbican/share-secret.md) with the following user IDs:
 
 | {{brand}} region | Administrative user UUID           |
 | ---------------- | ---------------------------------  |

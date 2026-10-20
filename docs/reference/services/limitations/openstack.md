@@ -5,10 +5,10 @@
 
 ### Administrative privileges
 
-No OpenStack user that you create while [enabling the OpenStack CLI](../../howto/getting-started/enable-openstack-cli.md) ever gets privileges exceeding administrative rights bound to a project.
+No OpenStack user that you create while [enabling the OpenStack CLI](../../../howto/getting-started/enable-openstack-cli.md) ever gets privileges exceeding administrative rights bound to a project.
 
 This means that you cannot use an OpenStack user to *create* a new project.
-You must do so via the {{gui}}, or the [{{rest_api}}](../api/cc/index.md).
+You must do so via the {{gui}}, or the [{{rest_api}}](../../api/cc/index.md).
 
 It also means that you cannot use the following `openstack` CLI commands; they all return `Unauthorized` (HTTP 403):
 
@@ -25,13 +25,13 @@ It also means that you cannot use the following `openstack` CLI commands; they a
 ### Image imports
 
 The web-download import method, which allows importing images from remote URLs, is not supported.
-Although we recommend you use one of our [supported images](../images/index.md), it is possible to [create or upload a custom image](../../howto/openstack/glance/custom.md) using the `openstack` CLI.
+Although we recommend you use one of our [supported images](../images/index.md), it is possible to [create or upload a custom image](../../../howto/openstack/glance/custom.md) using the `openstack` CLI.
 
 ## Nova
 
 ### Nested virtualization
 
-Running nested virtualization is only supported for Nova instances ([servers](../../howto/openstack/nova/new-server.md)) running Linux.
+Running nested virtualization is only supported for Nova instances ([servers](../../../howto/openstack/nova/new-server.md)) running Linux.
 The server must run a [Linux kernel](https://www.kernel.org/) of version 5.0 or later, and [QEMU/KVM](https://www.qemu.org/) 4.1 or later.
 
 This means that you can run nested virtualization on servers booted from a CentOS 9 (or later), Ubuntu 20.04 (or later), or Debian 11 (or later) base image.
@@ -40,7 +40,7 @@ Furthermore, you must ensure that the Nova server [passes the `pcid` CPU feature
 
 ### Maximum attached volumes per server
 
-A Nova [server](../../howto/openstack/nova/new-server.md) in {{brand}} can concurrently attach a maximum of 25 persistent volumes.
+A Nova [server](../../../howto/openstack/nova/new-server.md) in {{brand}} can concurrently attach a maximum of 25 persistent volumes.
 This is a limitation of the `virtio-blk` storage driver that ships as part of the guest operating system's kernel.
 
 ### Default availability zone placement
@@ -51,7 +51,7 @@ To spread resources predictably, assign an AZ explicitly when you create each se
 
 ### Availability zone spreading
 
-A [server group](../../howto/openstack/nova/server-group.md) with an `anti-affinity` policy distributes its members across physical compute hosts, but not across AZs.
+A [server group](../../../howto/openstack/nova/server-group.md) with an `anti-affinity` policy distributes its members across physical compute hosts, but not across AZs.
 There is currently no way to enforce spreading server group members across AZs.
 To spread servers across AZs, manually assign each server to a different AZ when you create it.
 
@@ -79,15 +79,15 @@ To expose a service via IPv4 *and* IPv6, you must set up two separate load balan
 
 ### PTR Records
 
-The [OpenStack Designate](../../howto/openstack/designate/index.md) DNS-as-a-service (DNSaaS) facility in {{brand}} currently does not support managing [PTR records](https://en.wikipedia.org/wiki/PTR_record).
+The [OpenStack Designate](../../../howto/openstack/designate/index.md) DNS-as-a-service (DNSaaS) facility in {{brand}} currently does not support managing [PTR records](https://en.wikipedia.org/wiki/PTR_record).
 
 ## Manila
 
 The [OpenStack Manila](https://docs.openstack.org/manila/) filesystem-as-a-service (FSaaS) facility is currently not available in {{brand}}.
-If you require multiple servers to be able to access the same files, [create a server](../../howto/openstack/nova/new-server.md) that exposes an internal NFS or CIFS service, backed by a Cinder volume.
+If you require multiple servers to be able to access the same files, [create a server](../../../howto/openstack/nova/new-server.md) that exposes an internal NFS or CIFS service, backed by a Cinder volume.
 
 ## Magnum
 
 The [OpenStack Magnum](https://docs.openstack.org/magnum/) container orchestration service facility, previously available in {{brand}}, is no longer supported.
 
-To manage Kubernetes clusters, you can use [{{brand_container_orchestration}}](../../howto/kubernetes/gardener/index.md) instead.
+To manage Kubernetes clusters, you can use [{{brand_container_orchestration}}](../../../howto/kubernetes/gardener/index.md) instead.

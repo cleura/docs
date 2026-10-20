@@ -26,7 +26,7 @@ Each AZ has its own block storage, and no live migration between AZs is possible
 |------------------------------------------------------------------------|------------------|------------------|------------------|
 | Highly available storage                                               | :material-check: | :material-check: | :material-check: |
 | [High-performance local storage](../flavors/index.md#compute-tiers)    | :material-check: | :material-check: | :material-check: |
-| [Volume encryption](../../howto/openstack/cinder/encrypted-volumes.md) | :material-check: | :material-check: | :material-check: |
+| [Volume encryption](../../../howto/openstack/cinder/encrypted-volumes.md) | :material-check: | :material-check: | :material-check: |
 | Volume backup                                                          | :material-close: | :material-close: | :material-check: |
 
 Volumes in {{api_region}} are provided by Ceph.
@@ -37,8 +37,8 @@ Cloud servers with ephemeral storage have low-latency disks (LLDs) that are loca
 |                                                         | Sto1HS           | Sto2HS           | Sto-Com          |
 | ------------------------------                          | ---------------- | ---------------- | ---------------- |
 | S3 API                                                  | :material-check: | :material-check: | :material-check: |
-| S3 [SSE-C](../../howto/object-storage/s3/sse-c.md)             | :material-check: | :material-check: | :material-check: |
-| S3 [object lock](../../howto/object-storage/s3/object-lock.md) | :material-check: | :material-check: | :material-check: |
+| S3 [SSE-C](../../../howto/object-storage/s3/sse-c.md)             | :material-check: | :material-check: | :material-check: |
+| S3 [object lock](../../../howto/object-storage/s3/object-lock.md) | :material-check: | :material-check: | :material-check: |
 | Swift API                                               | :material-check: | :material-check: | :material-check: |
 
 The Object Store in {{api_region}} is configured so that data written in a container or a bucket are automatically stored and synchronized between all three availability zones.
@@ -70,8 +70,8 @@ In {{api_region}}, Quality of Service in Neutron is configured for tenant networ
 | --------------------------------------------------------------------                                        | ---------------- | ---------------- | ---------------- |
 | Transport layer (TCP/UDP)                                                                                   | :material-check: | :material-check: | :material-close: |
 | Application layer (HTTP)                                                                                    | :material-check: | :material-check: | :material-check: |
-| Application layer ([HTTPS, with secrets management for TLS certificates](../../howto/openstack/octavia/tls-lb.md)) | :material-check: | :material-check: | :material-check: |
-| [Metrics endpoint](../../howto/openstack/octavia/metrics.md)                                                | :material-check: | :material-check: | :material-check: |
+| Application layer ([HTTPS, with secrets management for TLS certificates](../../../howto/openstack/octavia/tls-lb.md)) | :material-check: | :material-check: | :material-check: |
+| [Metrics endpoint](../../../howto/openstack/octavia/metrics.md)                                                | :material-check: | :material-check: | :material-check: |
 
 
 ## DNS
