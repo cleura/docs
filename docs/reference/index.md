@@ -1,26 +1,14 @@
 # Reference
 
 This is our reference section.
-It serves to provide general reference information about {{brand}} services.
+It serves to provide general reference information about {{brand}}.
 
-## Feature and service availability
+* The **[Services](services/index.md)** section provides reference information on {{brand}} services, such as the feature support matrix, support limitations, flavors, volume types, images, and service versions.
 
-* Our **[Feature Support Matrix](features/index.md)** lists cloud features and their availability across {{brand}} regions.
+* The **Tools** section contains the **[cleura CLI](tools/cleura-cli/reference/cleura.md)** command reference.
 
-* The **[Limitations](limitations/index.md)** section lists support limitations for specific {{brand}} services.
+* The **[API](api/index.md)** documentation provides useful information for accessing Application Programming Interfaces (APIs), getting information, and manipulating all sorts of {{brand}} objects.
 
-* The **[Flavors](flavors/index.md)** reference explains our naming convention for pre-defined CPU/RAM/disk configurations ("flavors") for server instances, and their availability across {{brand}} regions.
-
-* The **[Volume Types](volumes/index.md)** reference lists the available persistent block storage ("volume") types.
-
-* The **[DNS servers](dns/index.md)** reference offers clarifications regarding the physical locations of the name servers used by Designate.
-
-* Our **[Service Version Matrix](versions/index.md)** lists the open source software versions running in our {{brand}} regions.
-
-## API reference
-
-* The **[API reference](api/index.md)** documentation provides useful information for accessing Application Programming Interfaces (APIs), getting information, and manipulating all sorts of {{brand}} objects.
-
-## Legal reference
+* The **[Quotas](quotas/openstack.md)** reference lists the default resource limits applicable to the OpenStack resources in your project.
 
 * The **[Legal reference](legal/index.md)** section contains information about the terms and agreements governing {{brand}} services.
