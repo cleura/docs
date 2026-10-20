@@ -3,7 +3,7 @@
 You can use the `openstack` CLI to upload a custom image to any of the regions you have access to.
 In addition to that, you can create an image from a server's boot volume.
 
-> Whenever possible, you should use the [supported base images](../../../reference/images/index.md) instead of creating your own.
+> Whenever possible, you should use the [supported base images](../../../reference/services/images/index.md) instead of creating your own.
 
 ## Uploading a custom image
 

@@ -149,3 +149,85 @@ All supported regions should be returned as objects in a JSON array:
   }
 ]
 ```
+
+## Using the `cleura` CLI
+
+Rather than crafting every {{rest_api}} call with a tool like `curl` and manually managing your session token, you can use the [`cleura` CLI](https://github.com/cleura/cleura-cli).
+
+`cleura` is a command-line client for the {{rest_api}}
+It obtains and stores a token on your behalf, and covers functionality such as account users, OpenStack identity resources (domains, projects, users, and role assignments), and {{k8s_management_service}} Kubernetes clusters.
+
+!!! warning
+    `cleura` CLI is in early (`0.x`) development.
+    Even though it is functional and has been tested against live {{brand}} environments, its command coverage is still limited, and its commands and flags may change between releases.
+
+### Installing the `cleura` CLI
+
+Use whichever method suits your environment.
+
+=== "Install script (Linux/macOS)"
+    The install script downloads the latest release binary, verifies its checksum, and installs it into `/usr/local/bin`, using `sudo` if necessary:
+
+    ```bash
+    curl -fsSL https://raw.githubusercontent.com/cleura/cleura-cli/main/install.sh | sh
+    ```
+
+    Set `BINDIR` to install into another directory, like `$HOME/.local/bin`.
+    Set `CLEURA_VERSION` to install a specific release, like `v0.7.1`.
+=== "macOS X with Homebrew"
+    ```bash
+    brew install cleura/tap/cleura
+    ```
+
+    At first launch, macOS may block `cleura`.
+    If that happens, go to the *Privacy & Security* section of *System Settings* and allow the execution of `cleura`.
+=== "Go"
+    Provided you have Go 1.25 or later available, type:
+
+    ```bash
+    go install github.com/cleura/cleura-cli/cmd/cleura@latest
+    ```
+=== "Prebuilt binary"
+    Download the archive that matches your operating system and architecture from the [releases page](https://github.com/cleura/cleura-cli/releases/latest).
+    Extract the archive and place the resulting `cleura` binary somewhere on your `PATH`.
+    Every release comes with a `checksums.txt` file, signed with [cosign](https://github.com/sigstore/cosign), which allows you to verify the authenticity of what you have downloaded.
+
+### Logging in and testing access
+
+Instead of [creating a token](#creating-a-token) yourself, you let `cleura` obtain and store one on your behalf:
+
+```bash
+cleura login
+```
+
+This command prompts you for your {{brand}} username and password.
+Just like the {{rest_api}} itself, `cleura` supports SMS as the only second factor for accounts with two-factor authentication (2FA) enabled.
+
+Should your account rely on WebAuthn or a passkey instead, create an API token on the [{{gui}}](https://{{gui_domain}}), and store it like this:
+
+```bash
+echo "$TOKEN" | cleura login -u your_cc_username --token-stdin
+```
+
+To make sure your local installation of `cleura` works as expected, type:
+
+```console
+$ cleura whoami
+ID:        12345
+Username:  mpapadop
+Name:      Mesos Papadopoulos
+Email:     mesos.papadopoulos@cleura.com
+Admin:     true
+Currency:  EUR
+Profile:   default
+```
+
+If `cleura` can indeed connect to the {{rest_api}}, you will get information regarding the authenticated user.
+
+To get general help regarding `cleura`, type:
+
+```bash
+cleura --help
+```
+
+For an overview of all available commands and flags, refer to the [command reference](../../reference/tools/cleura-cli/reference/cleura.md).

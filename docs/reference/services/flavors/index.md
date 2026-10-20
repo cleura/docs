@@ -29,7 +29,7 @@ For example, the flavor named `b.4c32gb` would be used for a general-purpose com
   This is the default compute tier.
   Instances launched with matching flavors use highly available network-attached storage.
   This makes them flexible to migrate within the {{brand}} infrastructure, without interruption.
-  Some [limitations](../../howto/openstack/cinder/encrypted-volumes.md#block-device-encryption-caveats) apply to instances with attached [encrypted volumes](../../howto/openstack/cinder/encrypted-volumes.md).
+  Some [limitations](../../../howto/openstack/cinder/encrypted-volumes.md#block-device-encryption-caveats) apply to instances with attached [encrypted volumes](../../../howto/openstack/cinder/encrypted-volumes.md).
 * `s`: High-performance local storage.
   Instances launched with matching flavors use local, directly-attached storage.
   This generally provides higher throughput and lower latency for I/O intensive applications, but instances launched with these flavors must configure their own high availability and data replication.

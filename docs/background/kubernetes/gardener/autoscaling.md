@@ -5,7 +5,7 @@ description: Autoscaling allows your cluster to grow and shrink as needed.
 
 Autoscaling is the ability of your {{k8s_management_service}} shoot cluster to add and remove nodes as needed, based on the workload you deploy to the Kubernetes cluster.
 
-Autoscaling in {{brand}} is always **horizontal** rather than vertical, meaning {{k8s_management_service}} adds or removes nodes of the pre-defined machine type ([flavor](../../../reference/flavors/index.md)), rather than changing the flavor of existing nodes in-place.
+Autoscaling in {{brand}} is always **horizontal** rather than vertical, meaning {{k8s_management_service}} adds or removes nodes of the pre-defined machine type ([flavor](../../../reference/services/flavors/index.md)), rather than changing the flavor of existing nodes in-place.
 
 ## Default Settings
 
@@ -36,7 +36,7 @@ This is by design: if the dip in resource utilization is only temporary, suffici
 Autoscaling may sometimes not occur when you expect it to, including the following situations:
 
 * If a Pod [spec](https://kubernetes.io/docs/concepts/overview/working-with-objects/#object-spec-and-status) contains a [request](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits) that is impossible to meet even *with* scale-out, no autoscaling occurs.
-  For example, if a Pod were to request 1TiB of memory, and the configured worker node [flavor](../../../reference/flavors/index.md) has less than that, then scale-out would not help:
+  For example, if a Pod were to request 1TiB of memory, and the configured worker node [flavor](../../../reference/services/flavors/index.md) has less than that, then scale-out would not help:
   to run such a Pod, you would instead have to add a new worker group (with a larger flavor) to the cluster.
 
 * If a [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) contains Pods with [anti-affinity rules](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) that restrict multiple [replicas](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) from running on the same node, *and* its number of running replicas is already equal to the current number of worker nodes in the group, then no scale-in is possible.
