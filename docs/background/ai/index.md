@@ -54,13 +54,13 @@ OpenAI-compatible API keys have:
 API keys connect to {{company}} accounts.
 This tracks usage by projects, teams, or applications.
 
-For API details, see the [AI reference section](../../reference/ai/index.md).
+For API details, see the [AI reference section](../../reference/services/ai/index.md).
 
 ## Supported models
 
 {{company}} maintains a curated selection of open-source models, optimised for a shared GPU pool.
 Those models are selected based on community adoption, performance characteristics, and enterprise suitability.
-The [model catalogue](../../reference/ai/llms.md) updates regularly as new versions are released.
+The [model catalogue](../../reference/services/ai/llms.md) updates regularly as new versions are released.
 
 ## Data privacy and compliance
 
