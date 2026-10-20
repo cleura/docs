@@ -2,678 +2,1014 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/about/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/gui-vs-api/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/marketplace/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/object-storage/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/project-deletion/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/recovery-service/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/ai/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/ai/tokens/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/kubernetes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/kubernetes/gardener/autoscaling/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/kubernetes/gardener/autoupgrades/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/kubernetes/gardener/garden-linux/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/kubernetes/gardener/hibernation/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/cost-optimization/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/general-design-principles/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/introduction/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/operational-excellence/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/performance-efficiency/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/reliability/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/security-digital-sovereignty/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/background/waf/well-architected-review/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/ai/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/issues/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/modifications/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/quality/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/contrib/style/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/change-account-data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/change-credit-card/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/delete-account/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/e-invoice/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/forgot-your-password/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/manage-invoices/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/account-billing/rest-invoice-data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/api-keys/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/models/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/openwebui/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/playground/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/stt/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/ai/token-usage/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/accessing-cc-rest-api/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/create-account/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/enable-openstack-cli/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/launching-resources/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/launch-pad/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/launch-pad/ansible/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/launch-pad/heat/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/getting-started/launch-pad/tf/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/create-shoot-cluster/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/hibernate-shoot-cluster/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/high-avail/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/kubectl/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/kubernetes/gardener/rolling-upgrades/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/bareos/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/bareos/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/clavister/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/clavister/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/grafana/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/grafana/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/harbor/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/harbor/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/keycloak/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/keycloak/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/langfuse/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/langfuse/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/matomo/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/matomo/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/openwebui/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/openwebui/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/prometheus/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/prometheus/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/taiga/delete/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/marketplace/taiga/deploy/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/credentials/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/expiry/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/object-lock/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/presign/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/public-bucket/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/sse-c/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/utilization/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/s3/versioning/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/expiry/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/private-container/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/public-container/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/tempurl/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/utilization/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/object-storage/swift/versioning/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/barbican/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/barbican/generic-secret/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/barbican/share-secret/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/cinder/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/cinder/encrypted-volumes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/cinder/resize-volumes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/cinder/retype-volumes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/cinder/sync-volumes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/designate/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/designate/recordsets/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/designate/zones/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/glance/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/glance/custom/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/glance/examine/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/glance/filter/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/keystone/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/keystone/api-user-passwd/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/keystone/app-creds/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/create-security-groups/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/delete-network/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/multiple-public-ips/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/new-network/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/neutron/vpnaas/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/boot-image-volume/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/config-drive/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/managing-keypairs/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/move-server-between-regions/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/new-server-cnw/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/new-server/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/rescue-server/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/resize-server/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/restore-srv-to-snap/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/nova/server-group/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/octavia/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/octavia/lbaas-l7pol/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/octavia/lbaas-tcp/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/octavia/metrics/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/openstack/octavia/tls-lb/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/support/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/howto/support/raise-issues/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/ai/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/ai/llms/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/api/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/api/cc/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/api/openstack/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/dns/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/features/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/features/compliant/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/features/public/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/flavors/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/images/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/legal/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/limitations/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/limitations/kubernetes/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/limitations/object-storage/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/limitations/openstack/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/reference/quotas/openstack/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/versions/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/</loc>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/versions/compliant/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/ai/</loc>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/versions/public/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/ai/llms/</loc>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleura.cloud/sto2hs/reference/volumes/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/dns/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/features/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/features/compliant/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/features/public/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/flavors/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/images/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/limitations/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/limitations/kubernetes/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/limitations/object-storage/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/limitations/openstack/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/versions/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/versions/compliant/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/versions/public/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/services/volumes/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/configuration/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/gardener/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/openstack/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/release-verification/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/shell-completion/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/users/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_completion/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_completion_bash/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_completion_fish/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_completion_powershell/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_completion_zsh/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_get-credentials/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_path/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_current/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_delete/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_rename/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_set/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_profile_use/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_config_view/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_cloud-profile/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_cloud-profile_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_cloud-profile_show/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_project/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_project_bootstrap/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_ca/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_ca_rotate/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_ca_status/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_check-name/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_enable-ha/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_get/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_hibernate/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_kubeconfig/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_maintain/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_monitoring/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_monitoring_credentials/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_monitoring_node/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_monitoring_nodes/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_monitoring_worker-group/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_reconcile/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_retry/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_ssh-key/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_wake/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_worker-group/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_gardener_shoot_worker-group_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_login/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_logout/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_domain/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_domain_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_project/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_project_create/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_project_edit/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_project_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role_assignment/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role_assignment_create/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role_assignment_delete/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role_assignment_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_role_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_user/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_user_create/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_user_delete/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_openstack_user_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_create/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_delete/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_edit/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_get/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_privilege/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_privilege_list/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_privilege_set/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_user_privilege_unset/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_version/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleura.cloud/sto2hs/reference/tools/cleura-cli/reference/cleura_whoami/</loc>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/tutorials/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/tutorials/ansible/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/tutorials/containers/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/tutorials/heat/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://docs.cleura.cloud/sto2hs/tutorials/tf/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
 </urlset>
