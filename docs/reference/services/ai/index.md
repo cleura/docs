@@ -5,7 +5,7 @@ description: Cleura AI API documentation and API endpoints
 # {{brand_ai}}
 
 ??? note "Invite-only access"
-    Access to {{brand_ai}} services is currently invite-only.
+    Access to {{brand_ai}} is currently invite-only.
 
 Here you may find information on the API documentation and endpoints, and a list of OpenAPI compatible API paths with related documentation.
 
