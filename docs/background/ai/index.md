@@ -5,7 +5,7 @@ description: Cleura AI lets organisations use large language models or speech re
 # {{brand_ai}}
 
 ??? note "Invite-only access"
-    Access to {{brand_ai}} services is currently invite-only.
+    Access to {{brand_ai}} is currently invite-only.
 
 {{page.meta.description}}
 
