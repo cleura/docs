@@ -4,4 +4,5 @@ nav:
   - api-keys.md
   - openwebui.md
   - stt.md
-title: "AI"
+  - token-usage.md
+title: "AI Services"

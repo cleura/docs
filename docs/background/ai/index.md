@@ -55,7 +55,7 @@ OpenAI-compatible API keys have:
 API keys connect to {{company}} accounts.
 This tracks usage by projects, teams, or applications.
 
-For API details, see the [AI reference section](../../reference/services/ai/index.md).
+For API details, see the [AI Services reference section](../../reference/services/ai/index.md).
 
 ## Supported models
 
