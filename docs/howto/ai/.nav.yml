@@ -1,8 +1,5 @@
 ---
 nav:
   - index.md
-  - api-keys.md
-  - openwebui.md
-  - stt.md
-  - token-usage.md
+  - Inference: inference/
 title: "AI Services"

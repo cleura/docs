@@ -14,8 +14,8 @@ Expand the *AI* section and select *API Keys*.
 On the main pane, all existing API keys appear.
 To create a new one, click the *Create API Key* button.
 
-![Creating a new API key for a set of LLMs](assets/create-api-key-01_light.png#only-light)
-![Creating a new API key for a set of LLMs](assets/create-api-key-01_dark.png#only-dark)
+![Creating a new API key for a set of LLMs](../assets/create-api-key-01_light.png#only-light)
+![Creating a new API key for a set of LLMs](../assets/create-api-key-01_dark.png#only-dark)
 
 A new pane slides over.
 There, enter a *Name* for the new API key.
@@ -30,13 +30,13 @@ beyond that date, access to any model using that key will not be possible.
 
 When you are ready, click the *Create* button.
 
-![Set key properties and create the key](assets/create-api-key-02_light.png#only-light)
-![Set key properties and create the key](assets/create-api-key-02_dark.png#only-dark)
+![Set key properties and create the key](../assets/create-api-key-02_light.png#only-light)
+![Set key properties and create the key](../assets/create-api-key-02_dark.png#only-dark)
 
 A new window titled *API Key Created Successfully* pops up.
 
-![Get a copy of the API URL and the bearer token](assets/create-api-key-03_light.png#only-light)
-![Get a copy of the API URL and the bearer token](assets/create-api-key-03_dark.png#only-dark)
+![Get a copy of the API URL and the bearer token](../assets/create-api-key-03_light.png#only-light)
+![Get a copy of the API URL and the bearer token](../assets/create-api-key-03_dark.png#only-dark)
 
 There are two pieces of information on that window that you need to jot down or, better yet, copy to a suitable password manager entry:
 
@@ -48,25 +48,25 @@ The bearer token is only displayed once, and as soon as you close the pop-up win
 When you have secured the bearer token, click anywhere on the {{gui}} but on the pop-up window to close it.
 You will then see all the API keys, including the one you just created, listed on the main pane.
 
-![A list of all API keys, including the new one](assets/create-api-key-04_light.png#only-light)
-![A list of all API keys, including the new one](assets/create-api-key-04_dark.png#only-dark)
+![A list of all API keys, including the new one](../assets/create-api-key-04_light.png#only-light)
+![A list of all API keys, including the new one](../assets/create-api-key-04_dark.png#only-dark)
 
 ## Deleting API keys
 
 To delete an API key, first go to the *API Keys* pane of the {{gui}}.
 Locate the key you wish to delete, click the :material-dots-horizontal-circle: icon at the right of its row, and select *Delete*.
 
-![Locate the API key you wish to delete](assets/delete-api-key-01_light.png#only-light)
-![Locate the API key you wish to delete](assets/delete-api-key-01_dark.png#only-dark)
+![Locate the API key you wish to delete](../assets/delete-api-key-01_light.png#only-light)
+![Locate the API key you wish to delete](../assets/delete-api-key-01_dark.png#only-dark)
 
 A popup window appears at the top of the page, asking if you really want to delete the key.
 If you are sure you do not need the key anymore, click the *OK* button.
 
-![Confirm API key deletion](assets/delete-api-key-02_light.png#only-light)
-![Confirm API key deletion](assets/delete-api-key-02_dark.png#only-dark)
+![Confirm API key deletion](../assets/delete-api-key-02_light.png#only-light)
+![Confirm API key deletion](../assets/delete-api-key-02_dark.png#only-dark)
 
 This deletes the API key.
 The list of keys is now shortened by one, and you get a confirmation on a bubble at the bottom of the page.
 
-![The API key has been deleted](assets/delete-api-key-03_light.png#only-light)
-![The API key has been deleted](assets/delete-api-key-03_dark.png#only-dark)
+![The API key has been deleted](../assets/delete-api-key-03_light.png#only-light)
+![The API key has been deleted](../assets/delete-api-key-03_dark.png#only-dark)
