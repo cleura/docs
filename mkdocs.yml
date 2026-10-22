@@ -98,7 +98,7 @@ plugins:
         'background/disaster-recovery.md': 'background/recovery-service.md'
         'howto/account-billing/change-billing-data.md': 'howto/account-billing/change-account-data.md'
         'reference/ai/index.md': 'reference/services/ai/index.md'
-        'reference/ai/llms.md': 'reference/services/ai/llms.md'
+        'reference/ai/llms.md': 'reference/services/ai/inference/llms.md'
         'reference/dns/index.md': 'reference/services/dns/index.md'
         'reference/features/compliant.md': 'reference/services/features/compliant.md'
         'reference/features/index.md': 'reference/services/features/index.md'
