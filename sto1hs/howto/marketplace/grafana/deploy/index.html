@@ -10578,54 +10578,54 @@
 <p>In the left vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, expand the <em>Marketplace</em> category and click on <em>Discover Apps and Services</em>.
 In the central pane, you will see all available applications and services.
 Locate the <em>Grafana</em> box and click the <em>View</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Grafana application" src="../assets/new-grafana/grafana-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Grafana application" src="../assets/new-grafana/grafana-01_dark.png#only-dark"></a></p>
 <p>You will see the <em>Grafana</em> information page, where you can learn more about its features, and obtain pricing information.
 Click the <em>Deploy this App</em> button to start the deployment process.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Grafana deployment process" src="../assets/new-grafana/grafana-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Grafana deployment process" src="../assets/new-grafana/grafana-02_dark.png#only-dark"></a></p>
 <p>The Grafana application is hosted on a <a href="../../../openstack/nova/new-server/">Nova VM</a>, so now you may select a region, a name, a flavor, a public network, a keypair, and a security group for it.
 Regarding the security group, <a href="../../../openstack/neutron/create-security-groups/">make sure it includes a rule</a> allowing incoming TCP connections to port 3000.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Grafana deployment" src="../assets/new-grafana/grafana-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Grafana deployment" src="../assets/new-grafana/grafana-03_dark.png#only-dark"></a></p>
 <p>Read and agree to the <em>Terms and Conditions.</em>
 When you are ready, click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, then click the Create button" src="../assets/new-grafana/grafana-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, then click the Create button" src="../assets/new-grafana/grafana-04_dark.png#only-dark"></a></p>
 <p>The deployment takes some minutes to complete.
 To check how it is going, expand the Marketplace category in the vertical pane on the left and click <em>Provisioned Apps</em>.
 In the central pane, watch the Grafana Heat stack row.
 The animated icon at the left marks the deployment progress.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-grafana/grafana-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-grafana/grafana-05_dark.png#only-dark"></a></p>
 <p>When the deployment is complete, you will see a check mark in a circle.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Grafana is deployed" src="../assets/new-grafana/grafana-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Grafana is deployed" src="../assets/new-grafana/grafana-06_dark.png#only-dark"></a></p>
 <h2 id="logging-into-the-grafana-dashboard">Logging into the Grafana dashboard</h2>
 <p>You need the administrator’s predefined username and password, as well as the URL of your Grafana instance.
 For that, make sure you are in the <em>Provisioned Apps</em> pane.
 Click on the Grafana row to expand it, and select the <em>Stack Output</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get default credentials and URL" src="../assets/new-grafana/grafana-dashboard-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get default credentials and URL" src="../assets/new-grafana/grafana-dashboard-01_dark.png#only-dark"></a></p>
 <p>We recommend you create a new entry in your password manager, and populate all necessary fields with values from the corresponding output keys.</p>
 <p>For the preset password, click the icon in the <em>Action</em> column of the <em>admin_password</em> row.
 A pop-up window appears.
 Click the <em>Copy Output!</em> button to copy the password into the clipboard.
 When ready, click the <em>Back</em> button to close the window.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's password" src="../assets/new-grafana/grafana-dashboard-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's password" src="../assets/new-grafana/grafana-dashboard-02_dark.png#only-dark"></a></p>
 <p>Similarly, get the administrator’s username from the <em>admin_username</em> row.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's user name" src="../assets/new-grafana/grafana-dashboard-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's user name" src="../assets/new-grafana/grafana-dashboard-03_dark.png#only-dark"></a></p>
 <p>And finally, get your Grafana deployment’s URL from the <em>grafana_url</em> row.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application's URL" src="../assets/new-grafana/grafana-dashboard-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application's URL" src="../assets/new-grafana/grafana-dashboard-04_dark.png#only-dark"></a></p>
 <p>Using your favorite web browser, navigate to your Grafana deployment’s URL.
 The Grafana login page appears.
 Use the default username and password, and click the <em>Log in</em> button.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Grafana login page" src="../assets/new-grafana/grafana-dashboard-05.png"></a></p>
 <p>The Grafana landing page appears.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Grafana landing page" src="../assets/new-grafana/grafana-dashboard-06.png"></a></p>
 <p>Start from the official <a href="https://grafana.com/docs/grafana/latest/">Grafana documentation</a> page to learn how to use your new data visualization service.</p>
 
 

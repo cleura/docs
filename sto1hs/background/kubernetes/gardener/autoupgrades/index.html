@@ -10624,11 +10624,11 @@ If there is a new version of any of those, the cluster starts upgrading automati
 <p>Both minor and major <a href="../garden-linux/">Garden Linux</a> release upgrades are allowed and performed automatically.
 Also, version jumps are allowed over minor release upgrades.</p>
 <p>Whenever there is a new machine image available, this is indicated in the Cleura&nbsp;Cloud Management&nbsp;Panel:</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New machine image indicator" src="../assets/gard_new_img_sign_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New machine image indicator" src="../assets/gard_new_img_sign_dark.png#only-dark"></a></p>
 <p>Before the auto-upgrade kicks in, the version of the new image is displayed in the expanded view of the cluster, in the <em>Worker Groups</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New machine image available" src="../assets/gard_new_img_avail_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New machine image available" src="../assets/gard_new_img_avail_dark.png#only-dark"></a></p>
 <h2 id="kubernetes-upgrades">Kubernetes upgrades</h2>
 <p>Due to the Kubernetes versioning scheme, which does not follow the <a href="https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning">semantic&nbsp;versioning</a> logic, only patch-level release upgrades and jumps are performed automatically.
 For instance, an upgrade from 1.32.8 to 1.32.9 is allowed, and so is an upgrade from 1.32.9 to 1.32.11.</p>
@@ -10640,8 +10640,8 @@ You must always initiate them from the Cleura&nbsp;Cloud Management&nbsp;Panel.<
 That is to say that, rather than recreating them with the old versions and waiting for the next maintenance window, Gardener recreates the worker nodes using current (updated) Garden Linux and Kubernetes versions.</p>
 <h2 id="forced-upgrades">Forced upgrades</h2>
 <p>For a Gardener cluster, it is possible to disable automatic upgrades both for Garden Linux <em>and</em> Kubernetes.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disable automatic upgrades" src="../assets/disable_automatic_upgrades_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Disable automatic upgrades" src="../assets/disable_automatic_upgrades_dark.png#only-dark"></a></p>
 <p>Even so, you may find out that, from time to time, your cluster gets upgraded.
 These seemingly unscheduled upgrades happen when either the cluster’s Kubernetes or Garden Linux release <em>expires</em>.
 In this context, the expiration happens about a month after the <em>next</em> release of Kubernetes or Garden Linux is out.</p>

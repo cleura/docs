@@ -10654,28 +10654,28 @@ Then, when instantiating the new keypair, specify the corresponding public key y
 <p>In the left-hand side vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, select <em>Compute</em> and then <em>KeyPairs</em>.
 All existing keypairs appear in the central pane, named <em>Compute</em> / <em>Keypairs</em>.
 To create a new one, click the <em>Add new Keypair</em> link in the top-right corner.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All available keypairs" src="../assets/keypairs/keypair-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All available keypairs" src="../assets/keypairs/keypair-01_dark.png#only-dark"></a></p>
 <p>A window titled <em>Create Keypair</em> slides over from the right side of the browser window.
 Enter a <em>Name</em> for the new keypair, and select a <em>Region</em> for it.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a new keypair without specifying a public key" src="../assets/keypairs/keypair-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a new keypair without specifying a public key" src="../assets/keypairs/keypair-02_dark.png#only-dark"></a></p>
 <p>Without pasting anything in the <em>Public Keys</em> text field, you can already instantiate the new keypair by clicking the <em>Create</em> button.
 Alternatively, you may want to paste one of your public keys in the <em>Public Keys</em> text field.</p>
 <p>In the example below, we pasted the public key of an Ed25519 keypair into the <em>Public Keys</em> field.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Before instantiating a new keypair, you may provide a public SSH key of yours" src="../assets/keypairs/keypair-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Before instantiating a new keypair, you may provide a public SSH key of yours" src="../assets/keypairs/keypair-03_dark.png#only-dark"></a></p>
 <p>You can paste two or more public keys in the <em>Public Keys</em> field, one per line.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may provide more than one of your public keys, one in a separate line" src="../assets/keypairs/keypair-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="You may provide more than one of your public keys, one in a separate line" src="../assets/keypairs/keypair-04_dark.png#only-dark"></a></p>
 <p>Whenever you choose not to provide a public key, right after creating the new keypair, a window named <em>Private Key</em> pops up.
 From it, you can either download the private key of the keypair or copy it to the clipboard.
 In any case, securely store it and make it accessible only to your local user.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Whenever you create a new keypair without specifying a public key, you have to download and securely store the corresponding private key" src="../assets/keypairs/keypair-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Whenever you create a new keypair without specifying a public key, you have to download and securely store the corresponding private key" src="../assets/keypairs/keypair-05_dark.png#only-dark"></a></p>
 <p>After you create the new keypair, you can see it listed in its region.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The new keypair is listed under its region" src="../assets/keypairs/keypair-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The new keypair is listed under its region" src="../assets/keypairs/keypair-06_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>The simplest way to create a new keypair is by using the <code>openstack keypair create</code> command, as shown in the example below:</p>
@@ -10735,8 +10735,8 @@ Example:</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To get more details on a specific keypair, go to the <em>Compute</em> / <em>KeyPairs</em> pane, locate the keypair of interest, and click on its row.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing keypair details" src="../assets/keypairs/keypair-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing keypair details" src="../assets/keypairs/keypair-07_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Before viewing information about a specific keypair, you might want to list all keypairs in the region you are working in.
@@ -10780,16 +10780,16 @@ To do so, you can duplicate your keypairs.</p>
 <p>First off, go to the <em>Compute</em> / <em>KeyPairs</em> pane and locate the keypair you wish to duplicate to other regions.
 Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon to the right of the keypair row.
 From the pop-up menu, select <em>Duplicate Keypair</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for duplicating a keypair" src="../assets/keypairs/keypair-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for duplicating a keypair" src="../assets/keypairs/keypair-08_dark.png#only-dark"></a></p>
 <p>A window named <em>Duplicate Keypair</em> slides over.
 Use the toggle buttons to indicate the regions you wish to duplicate the keypair to.
 When you are ready, click the <em>Duplicate</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Indicate the regions you wish to duplicate the keypair to, then click the Duplicate button" src="../assets/keypairs/keypair-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Indicate the regions you wish to duplicate the keypair to, then click the Duplicate button" src="../assets/keypairs/keypair-09_dark.png#only-dark"></a></p>
 <p>You now see your keypair under each region it is accessible from.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Your keypair is now accessible from more then one regions" src="../assets/keypairs/keypair-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Your keypair is now accessible from more then one regions" src="../assets/keypairs/keypair-10_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Let’s assume you already have the <code>my-new-keypair</code> keypair in region <code>Fra1</code>, and now you wish to duplicate it (send it over) to region <code>Kna1</code>.</p>
@@ -10839,24 +10839,24 @@ When you are ready, click the <em>Duplicate</em> button.</p>
 <p>In the <em>Compute</em> / <em>KeyPairs</em> pane, locate the keypair you wish to delete.
 At the right of the keypair row, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon.
 From the pop-up menu, select <em>Delete Keypair</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for deleting a keypair" src="../assets/keypairs/keypair-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the option for deleting a keypair" src="../assets/keypairs/keypair-11_dark.png#only-dark"></a></p>
 <p>A window appears asking whether you want to delete the keypair.
 If you are, click the <em>Yes, Delete</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm that you want to delete the selected keypair" src="../assets/keypairs/keypair-12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm that you want to delete the selected keypair" src="../assets/keypairs/keypair-12_dark.png#only-dark"></a></p>
 <p>The selected keypair is now deleted.
 Note that any duplicates in other regions are still available.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The selected keypair is deleted, and any duplicates are still available" src="../assets/keypairs/keypair-13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The selected keypair is deleted, and any duplicates are still available" src="../assets/keypairs/keypair-13_dark.png#only-dark"></a></p>
 <p>If you want to delete more than one keypair at once, first go to the <em>Compute</em> / <em>KeyPairs</em> pane and select them.
 Then, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"></path></svg></span> icon at the top left.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose more than one keypairs you wish to delete" src="../assets/keypairs/keypair-14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose more than one keypairs you wish to delete" src="../assets/keypairs/keypair-14_dark.png#only-dark"></a></p>
 <p>A window appears asking whether you want to delete the selected keypairs.
 Click the <em>Yes, Delete</em> button to confirm, or the <em>No</em> button if you changed your mind.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm that you want to delete the selected keypairs" src="../assets/keypairs/keypair-15_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirm that you want to delete the selected keypairs" src="../assets/keypairs/keypair-15_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To delete a keypair, use the <code>openstack keypair delete</code> command.
