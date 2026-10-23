@@ -10578,59 +10578,59 @@
 <p>In the left vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, expand the <em>Marketplace</em> category and click on <em>Discover Apps and Services</em>.
 In the central pane, you will see all available applications and services.
 Locate the <em>Taiga</em> box and click the <em>View</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Taiga application" src="../assets/new-taiga/taiga-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Taiga application" src="../assets/new-taiga/taiga-01_dark.png#only-dark"></a></p>
 <p>You will see the <em>Taiga</em> information page, where you can learn more about its features, and obtain pricing information.
 Click the <em>Deploy this App</em> button to start the deployment process.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Taiga deployment process" src="../assets/new-taiga/taiga-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Taiga deployment process" src="../assets/new-taiga/taiga-02_dark.png#only-dark"></a></p>
 <p>The Taiga application is hosted on a <a href="../../../openstack/nova/new-server/">Nova VM</a>, so now you may select a region, a name, a flavor, a public network, a keypair, and a security group for it.
 Regarding the security group, <a href="../../../openstack/neutron/create-security-groups/">make sure it includes a rule</a> allowing incoming TCP connections to port 9000.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Taiga deployment" src="../assets/new-taiga/taiga-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Taiga deployment" src="../assets/new-taiga/taiga-03_dark.png#only-dark"></a></p>
 <p>Read and agree to the <em>Terms and Conditions.</em>
 When you are ready, click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, then click the Create button" src="../assets/new-taiga/taiga-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, then click the Create button" src="../assets/new-taiga/taiga-04_dark.png#only-dark"></a></p>
 <p>The deployment takes some minutes to complete.
 To check how it is going, expand the Marketplace category in the vertical pane on the left and click <em>Provisioned Apps</em>.
 In the central pane, watch the Taiga Heat stack row.
 The animated icon at the left marks the deployment progress.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-taiga/taiga-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-taiga/taiga-05_dark.png#only-dark"></a></p>
 <p>When the deployment is complete, you will see a check mark in a circle.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Taiga is deployed" src="../assets/new-taiga/taiga-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Taiga is deployed" src="../assets/new-taiga/taiga-06_dark.png#only-dark"></a></p>
 <h2 id="logging-into-the-taiga-dashboard">Logging into the Taiga dashboard</h2>
 <p>You have to know Taiga’s URL and the password automatically generated for the <code>admin</code> user.
 For that, make sure you are in the <em>Provisioned Apps</em> pane.
 Click on the Taiga row to expand it, and select the <em>Stack Output</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Locate the public IP and the admin user password" src="../assets/new-taiga/taiga-dashboard-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Locate the public IP and the admin user password" src="../assets/new-taiga/taiga-dashboard-01_dark.png#only-dark"></a></p>
 <p>In the <em>superuser_password</em> row, click the icon in the <em>Action</em> column.
 A pop-up window appears.
 Click the <em>Copy Output!</em> button to copy the password displayed in the <em>Output</em> box to the clipboard.
 Then, paste that password into a new text editor window, but don’t save it in a new file.
 Instead, we recommend you create a new entry in your password manager of choice and move the password there.
 Close the pop-up window by clicking on the <em>Back</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the admin user password to the clipboard" src="../assets/new-taiga/taiga-dashboard-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the admin user password to the clipboard" src="../assets/new-taiga/taiga-dashboard-02_dark.png#only-dark"></a></p>
 <p>In the <em>superuser_username</em> row, click the icon in the <em>Action</em> column.
 You will see that the user name in question is <code>admin</code>, so you might want to put that in the corresponding password manager entry.</p>
 <p>Next, get a pop-up window revealing the particular Taiga deployment URL.
 Click the icon in the <em>Action</em> column of the <em>taiga_url</em> row, then click the <em>Copy Output!</em> button.
 Paste the URL into that password manager entry you just created.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application URL" src="../assets/new-taiga/taiga-dashboard-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application URL" src="../assets/new-taiga/taiga-dashboard-03_dark.png#only-dark"></a></p>
 <p>Using your favorite web browser, navigate to the URL you just retrieved.
 The Taiga dashboard loads.
 Notice the <em>Login</em> link and click on it.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Taiga landing page" src="../assets/new-taiga/taiga-dashboard-04.png"></a></p>
 <p>You are directed to the Taiga login page.
 Type in the user name (<code>admin</code>), paste the password from your password manager, and click on the <em>LOGIN</em> button below.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Login to Taiga" src="../assets/new-taiga/taiga-dashboard-05.png"></a></p>
 <p>You now see the main Taiga page.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The main Taiga page" src="../assets/new-taiga/taiga-dashboard-06.png"></a></p>
 <p>On a separate browser window or tab, navigate to the <a href="https://community.taiga.io/c/learn-taiga-basic/">Taiga basics community page</a> to learn how you can start using your new self-hosted project management service.</p>
 
 

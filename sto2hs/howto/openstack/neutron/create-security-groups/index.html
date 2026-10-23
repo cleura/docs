@@ -10646,14 +10646,14 @@ If you prefer to work with the OpenStack CLI, be sure to <a href="../../../getti
 <div class="tabbed-block">
 <p>To create a security group, first make sure the left-hand side vertical pane is fully visible.
 Click on <em>Security&nbsp;Groups</em>, and then in the top-right corner of the central pane, click on <em>Create new Security Group</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating the creation of a new security group" src="../assets/create-security-groups/create-secgroup-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating the creation of a new security group" src="../assets/create-security-groups/create-secgroup-01_dark.png#only-dark"></a></p>
 <p>An alternative way to create a Security&nbsp;Group is by clicking the <em>Create</em> button in the top bar.</p>
 <p>Type in a <em>Name</em> for the new security group, and choose a <em>Region</em> to create it in.
 You may optionally type in a <em>Description</em> for the security group.
 Click <em>Create</em> when you are ready.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setting parameters for the new security group" src="../assets/create-security-groups/create-secgroup-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setting parameters for the new security group" src="../assets/create-security-groups/create-secgroup-02_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create a security group, use the following command:</p>
@@ -10696,8 +10696,8 @@ See <a href="#adjusting-a-permissive-default-security-group">Adjusting a permiss
 <div class="tabbed-block">
 <p>Navigate to the <em>Security&nbsp;Groups</em> page.
 Click on the <code>default</code> security group and select the <em>Rules</em> tab to view its rules.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of rules in the default security group" src="../assets/create-security-groups/default-rules_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of rules in the default security group" src="../assets/create-security-groups/default-rules_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>View the details of the <code>default</code> security group using the following command:</p>
@@ -10741,8 +10741,8 @@ Click on the <code>default</code> security group and select the <em>Rules</em> t
 <div class="tabbed-block">
 <p>Click each of the<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.53 0 10 4.47 10 10s-4.47 10-10 10S2 17.53 2 12 6.47 2 12 2m5 5h-2.5l-1-1h-3l-1 1H7v2h10zM9 18h6a1 1 0 0 0 1-1v-7H8v7a1 1 0 0 0 1 1"></path></svg></span> buttons on the right-hand side of the <strong>IPv4 ingress</strong> and also of the <strong>IPv6 ingress</strong> rows.</p>
 <p>Your <code>default</code> or newly created security group rules will now look like the following example.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of default ingress rules" src="../assets/create-security-groups/default-rules-egress_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="List of default ingress rules" src="../assets/create-security-groups/default-rules-egress_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To view the rules, use the following command:</p>
@@ -10818,15 +10818,15 @@ A pane named <em>Create a Security Group Rule</em> will slide over from the righ
 <p>For the IPv4 ingress SSH rule, make sure you set <em>Protocol</em> to <em>TCP</em>, <em>Direction</em> to <em>Ingress</em>, and <em>Ether&nbsp;Type</em> to <em>IPv4</em>.
 Then, set <em>From</em> to <em>Network/IP</em> and, in the <em>Custom&nbsp;CIDR</em> text box below, type in either the IPv4 address of your client host or the CIDR of your client subnet.</p>
 <p>To create the new rule, click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv4 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv4_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv4 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv4_dark.png#only-dark"></a></p>
 <p>You may work similarly for the IPv6 ingress SSH rule;
 just be sure to set <em>Ether&nbsp;Type</em> to <em>IPv6</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv6 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv6_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create ingress rule for IPv6 SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh-ipv6_dark.png#only-dark"></a></p>
 <p>After you create the two ingress rules for SSH, you will see them listed in the security group’s <em>Rules</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New ingress rules for SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="New ingress rules for SSH connections" src="../assets/create-security-groups/default-rules-ingress-ssh_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create this rule for IPv4 client connections, use the following command:</p>
@@ -10861,22 +10861,22 @@ To create an ingress rule for IPv4 connections to 80/TCP, set <em>Protocol</em>,
 Then, in each of the two <em>Port range</em> text boxes, type in <code>80</code>.
 This time, leave <em>CIDR</em> empty, essentially allowing incoming traffic from any IPv4 client.
 Click the <em>Create</em> button to instantiate the new rule.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv4 connections to 80/TCP" src="../assets/create-security-groups/default-rules-ingress-http-ipv4_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv4 connections to 80/TCP" src="../assets/create-security-groups/default-rules-ingress-http-ipv4_dark.png#only-dark"></a></p>
 <p>The same for the ingress rule for IPv4 connections to 443/TCP.
 The only difference is in the <em>Port range</em> text boxes;
 in each of the two, you should now type <code>443</code>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv4 connections to 443/TCP" src="../assets/create-security-groups/default-rules-ingress-https-ipv4_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv4 connections to 443/TCP" src="../assets/create-security-groups/default-rules-ingress-https-ipv4_dark.png#only-dark"></a></p>
 <p>Just like you did for incoming IPv4 connections, create a new ingress rule for IPv6 clients connecting to 80/TCP…</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv6 connections to 80/TCP" src="../assets/create-security-groups/default-rules-ingress-http-ipv6_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv6 connections to 80/TCP" src="../assets/create-security-groups/default-rules-ingress-http-ipv6_dark.png#only-dark"></a></p>
 <p>…and a new ingress rule for IPv6 clients connecting to 443/TCP.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv6 connections to 443/TCP" src="../assets/create-security-groups/default-rules-ingress-https-ipv6_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new ingress rule for IPv6 connections to 443/TCP" src="../assets/create-security-groups/default-rules-ingress-https-ipv6_dark.png#only-dark"></a></p>
 <p>When you are done creating the new ingress rules, you will see them all listed in the <em>Rules</em> tab of the <code>default</code> security group.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All new rules regarding incoming connections to 80/TCP and 443/TCP" src="../assets/create-security-groups/default-rules-ingress-new_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All new rules regarding incoming connections to 80/TCP and 443/TCP" src="../assets/create-security-groups/default-rules-ingress-new_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>This time don’t specify <code>--remote-ip</code>, to allow traffic from <em>all</em> IPv4 and IPv6 sources:</p>
@@ -10952,14 +10952,14 @@ We recommend creating and using a new security group (other than the <code>defau
 <div class="tabbed-block">
 <p>To check how your <code>default</code> security group is configured, click on it and select the <em>Rules</em> tab to view its rules.
 If you have an old, permissive <code>default</code> group, the rules should look like this:</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rules of an old permissive security group" src="../assets/create-security-groups/ruleset-ingress-permissive_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rules of an old permissive security group" src="../assets/create-security-groups/ruleset-ingress-permissive_dark.png#only-dark"></a></p>
 <p>The ingress rules with the remote access filters of <code>::/0</code> and <code>0.0.0.0/0</code> mean that incoming traffic from <em>all</em> sources is allowed.</p>
 <p>To use the <code>default</code> group, remove the two ingress rules that allow all incoming traffic.
 Click on the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.53 0 10 4.47 10 10s-4.47 10-10 10S2 17.53 2 12 6.47 2 12 2m5 5h-2.5l-1-1h-3l-1 1H7v2h10zM9 18h6a1 1 0 0 0 1-1v-7H8v7a1 1 0 0 0 1 1"></path></svg></span> button on the right-hand side for <strong>both ingress</strong> rule rows.</p>
 <p>Your <code>default</code> or newly created security group rules will now look like the following.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rules of a permissive security group gone forbidding" src="../assets/create-security-groups/ruleset-ingress-forbidding_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rules of a permissive security group gone forbidding" src="../assets/create-security-groups/ruleset-ingress-forbidding_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To view the rules, use the following command:</p>

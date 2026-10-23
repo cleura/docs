@@ -10578,56 +10578,56 @@
 <p>In the left vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, expand the <em>Marketplace</em> category and click on <em>Discover Apps and Services</em>.
 In the central pane, you will see all available applications and services.
 Locate the <em>Bareos</em> box and click the <em>View</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Bareos application" src="../assets/new-bareos/bareos-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Bareos application" src="../assets/new-bareos/bareos-01_dark.png#only-dark"></a></p>
 <p>You will see the <em>Bareos</em> information page, where you can learn more about its features, and obtain pricing information.
 Click the <em>Deploy this App</em> button to start the deployment process.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Bareos deployment process" src="../assets/new-bareos/bareos-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Bareos deployment process" src="../assets/new-bareos/bareos-02_dark.png#only-dark"></a></p>
 <p>The Bareos application is hosted on a <a href="../../../openstack/nova/new-server/">Nova VM</a>, so now you may select a region, a name, a flavor, a public network, a keypair, and a security group for it.
 Regarding the security group, <a href="../../../openstack/neutron/create-security-groups/">make sure it includes a rule</a> allowing incoming TCP connections to port 80.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Bareos deployment" src="../assets/new-bareos/bareos-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Bareos deployment" src="../assets/new-bareos/bareos-03_dark.png#only-dark"></a></p>
 <p>Read and agree to the <em>Terms and Conditions.</em>
 When you are ready, click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the terms and conditions before deploying" src="../assets/new-bareos/bareos-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the terms and conditions before deploying" src="../assets/new-bareos/bareos-04_dark.png#only-dark"></a></p>
 <p>The deployment takes some minutes to complete.
 To check how it is going, expand the Marketplace category in the vertical pane on the left and click <em>Provisioned Apps</em>.
 In the central pane, watch the Bareos Heat stack row.
 The animated icon at the left marks the deployment progress.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-bareos/bareos-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-bareos/bareos-05_dark.png#only-dark"></a></p>
 <p>When the deployment is complete, you will see a check mark in a circle.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bareos is deployed" src="../assets/new-bareos/bareos-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bareos is deployed" src="../assets/new-bareos/bareos-06_dark.png#only-dark"></a></p>
 <h2 id="logging-into-the-bareos-dashboard">Logging into the Bareos dashboard</h2>
 <p>You must know the URL of Bareos and the password automatically generated for the <code>administrator</code> user.
 For that, make sure you are in the <em>Provisioned Apps</em> pane.
 Click on the Bareos row to expand it, and select the <em>Stack Output</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get the URL and the administrator user password" src="../assets/new-bareos/bareos-dashboard-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get the URL and the administrator user password" src="../assets/new-bareos/bareos-dashboard-01_dark.png#only-dark"></a></p>
 <p>Get a pop-up window revealing the URL of the particular Bareos deployment.
 Click the icon in the <em>Action</em> column of the <em>harbor_webui_url</em> row, then click the <em>Copy Output!</em> button.
 Paste that into a new text editor window, but don’t save it in a new file.
 Instead, we recommend you create a new entry in your password manager of choice and use the URL there.
 Close the pop-up window by clicking on the <em>Back</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application URL" src="../assets/new-bareos/bareos-dashboard-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the application URL" src="../assets/new-bareos/bareos-dashboard-02_dark.png#only-dark"></a></p>
 <p>In the <em>webui_credentials</em> row, click the icon in the <em>Action</em> column.
 A pop-up window appears.
 Click the <em>Copy Output!</em> button to copy the content of the <em>Output</em> box to the clipboard.
 Paste that into a new text editor window.
 Move the user name (<code>administrator</code>) and the password into the password manager entry you just created.
 Again, the pop-up window by clicking on the <em>Back</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the user name and password to the clipboard" src="../assets/new-bareos/bareos-dashboard-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy the user name and password to the clipboard" src="../assets/new-bareos/bareos-dashboard-03_dark.png#only-dark"></a></p>
 <p>Using your favorite web browser, navigate to your Bareos deployment’s URL.
 The Bareos login page appears.
 Type in the user name (<code>administrator</code>), paste the password from your password manager, and click the <em>Login</em> button below.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Bareos login page" src="../assets/new-bareos/bareos-dashboard-04.png"></a></p>
 <p>You are directed to the Bareos main page.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Bareos main page" src="../assets/new-bareos/bareos-dashboard-05.png"></a></p>
 <p>On a separate browser window or tab, navigate to the <a href="https://www.bareos.com/learn/documentation/">Bareos documentation page</a> to learn how to use your new self-hosted backup and data recovery service.</p>
 
 
