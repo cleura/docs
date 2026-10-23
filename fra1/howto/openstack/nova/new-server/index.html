@@ -10629,24 +10629,24 @@ If you prefer to work with the OpenStack CLI, be sure to <a href="../../../getti
 <div class="tabbed-block">
 <p>On the top right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, click the <em>Create</em> button.
 A new pane titled <em>Create</em> slides into view.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new Cleura&nbsp;Cloud object" src="../assets/new-server/shot-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new Cleura&nbsp;Cloud object" src="../assets/new-server/shot-01_dark.png#only-dark"></a></p>
 <p>Notice all these rounded boxes on that pane, each for defining, configuring, and instantiating a different Cleura&nbsp;Cloud object.
 Go ahead and click the <em>Server</em> box.</p>
 <p>Another pane, titled <em>Create a Server</em>, slides over.
 At the top, enter a name for the new server and select an available region.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in server name and select region" src="../assets/new-server/shot-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in server name and select region" src="../assets/new-server/shot-02_dark.png#only-dark"></a></p>
 <p>Set the <em>Connect to</em> parameter to <em>Network</em>.
 Select at least one available network to attach the new server to.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attach server to a network, and optionally connect a floating IP to server" src="../assets/new-server/shot-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Attach server to a network, and optionally connect a floating IP to server" src="../assets/new-server/shot-03_dark.png#only-dark"></a></p>
 <p>If that network is dual-stack or has one IPv4-based subnet, you may want the server to be publicly accessible via an IPv4 address.
 In that case, make sure to activate the <em>Connect&nbsp;a&nbsp;floating&nbsp;IP&nbsp;to&nbsp;the&nbsp;server</em> switch.
 Then, use the dropdown menu below to set the <em>Create&nbsp;External&nbsp;IP&nbsp;on</em> parameter to the network you have already attached the server to.</p>
 <p>Now, pay attention to the <em>Server profile</em> parameter.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select server profile" src="../assets/new-server/shot-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select server profile" src="../assets/new-server/shot-04_dark.png#only-dark"></a></p>
 <p>From the corresponding dropdown menu, you must select a profile.
 Currently, the following profiles are available:</p>
 <ul>
@@ -10664,8 +10664,8 @@ Currently, the following profiles are available:</p>
 <p>Some profiles may not be available in all regions.
 For now, choose the <em>Generic</em> profile, which is available in any region.</p>
 <p>In the <em>Boot source</em> section below, click the dropdown menu on the left and make sure you select <em>Image</em>, so you can choose one of the readily available OS images to boot the new server from.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select boot source and image" src="../assets/new-server/shot-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select boot source and image" src="../assets/new-server/shot-05_dark.png#only-dark"></a></p>
 <p>To pick a specific image, click on the dropdown menu on the right.
 In this example, we have chosen <em>ubuntu</em> in general and <em>Ubuntu 24.04 Noble Numbat x86_64</em> in particular.</p>
 <p>Next, notice that the <em>Boot Target</em> is preselected for you.
@@ -10675,8 +10675,8 @@ Specifically:</p>
 <li>for the <em>Generic</em> and <em>High CPU</em> profiles, the boot target is <em>Volume</em>, and</li>
 <li>for the <em>Low Latency Disk</em> profile, the boot target is <em>Ephemeral</em>.</li>
 </ul>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boot target, volume, and volume size" src="../assets/new-server/shot-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boot target, volume, and volume size" src="../assets/new-server/shot-06_dark.png#only-dark"></a></p>
 <p>For the server’s CPU core count and memory, set the <a href="../../../../reference/services/flavors/"><em>Flavor</em></a> accordingly.
 We suggest selecting a flavor that specifies 1 CPU core and 1 GiB of RAM.</p>
 <p>Note that the estimated monthly cost changes depending on the chosen flavor.
@@ -10689,8 +10689,8 @@ You may leave the root device size unchanged or increase it slightly above the d
 Disable the <em>Delete&nbsp;on&nbsp;termination</em> option if you want this kind of flexibility.
 On the other hand, if you want your root volume to be automatically deleted when the server is deleted, the <em>Delete&nbsp;on&nbsp;termination</em> option is already enabled for you.
 In any case, use this option with caution.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boot target, volume, and volume size" src="../assets/new-server/shot-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boot target, volume, and volume size" src="../assets/new-server/shot-07_dark.png#only-dark"></a></p>
 <p>Also, notice the <em>Storage classes (types)</em> parameter, which actually deals with <a href="../../../../reference/services/volumes/">volume types</a>.
 By default, this parameter is set to <em>cbs</em>.</p>
 <p>Next, you may choose to leave the <em>Recovery&nbsp;service</em> option enabled.
@@ -10701,31 +10701,31 @@ that means that each snapshot will be kept for 10 days, and only then deleted au
 If you do, you will not be able to manually delete snapshots before the retention period ends.
 You also won’t be able to delete the server volume until all immutable snapshots are deleted.</p>
 <p>Please be aware that enabling the recovery service increases the server’s estimated monthly cost (again, it is displayed in the rectangular area at the top).</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recovery service option" src="../assets/new-server/shot-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Recovery service option" src="../assets/new-server/shot-08_dark.png#only-dark"></a></p>
 <p>To control network access to the server, use the dropdown menu to the right of <a href="../../neutron/create-security-groups/"><em>Security Groups</em></a> and choose one.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose a security group" src="../assets/new-server/shot-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose a security group" src="../assets/new-server/shot-09_dark.png#only-dark"></a></p>
 <p>If you already have one or more <a href="../managing-keypairs/">keypairs</a> in your Cleura&nbsp;Cloud account, you can now select a public key to be included in the <code>~/.ssh/authorized_keys</code> file of the server’s default user.
 (For the image you have selected, that would be the <code>ubuntu</code> user.)
 That way, you can securely log in remotely via SSH without typing a password.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Indicate an existing keypair" src="../assets/new-server/shot-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Indicate an existing keypair" src="../assets/new-server/shot-10_dark.png#only-dark"></a></p>
 <p>In case there are no keypairs to choose from, activate the <em>Set&nbsp;password</em> option and set a password for the default user account (<code>ubuntu</code>).</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Optionally set a password for the default user account" src="../assets/new-server/shot-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Optionally set a password for the default user account" src="../assets/new-server/shot-11_dark.png#only-dark"></a></p>
 <p>A configuration script is automatically prepared based on the choices you have already made.
 That script runs during boot and performs housekeeping tasks like creating user accounts, enabling acceptable authentication methods, and configuring remote package repositories.
 Click on <em>Advanced Options</em> to see the default script.
 You can also optionally enable the <em>Upgrade packages</em> option, so it applies any available package upgrades during system boot.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Default server configuration script and user data propagation method" src="../assets/new-server/shot-12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Default server configuration script and user data propagation method" src="../assets/new-server/shot-12_dark.png#only-dark"></a></p>
 <p>Regarding the <em>User-data propagation method</em> above, notice that the <em>Use&nbsp;metadata&nbsp;service</em> is pre-selected for you.
 For more on what this is and why you might want to select the <em>Use&nbsp;configuration&nbsp;drive</em> method, please read our guide on <a href="../config-drive/">launching a server with a configuration drive</a>.</p>
 <p>It is now time to create your Cleura&nbsp;Cloud server.
 Click the <em>Create</em> button, and the new server will be readily available in a few seconds.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiate server creation process" src="../assets/new-server/shot-13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiate server creation process" src="../assets/new-server/shot-13_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>An <code>openstack</code> command for creating a server may look like this:</p>
@@ -10838,8 +10838,8 @@ First, create the floating IP:</p>
 <div class="tabbed-block">
 <p>At any time, you can view all servers and see detailed information for each one.
 Expand the left-hand side vertical pane, click <em>Compute</em>, then <em>Servers</em>, and, in the central pane, select the region and the server you want.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View server details" src="../assets/new-server/shot-14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View server details" src="../assets/new-server/shot-14_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To see all available servers in the region, type:</p>
@@ -10858,12 +10858,12 @@ Expand the left-hand side vertical pane, click <em>Compute</em>, then <em>Server
 <p>While viewing your server’s information, you can find its IPv6 or public IPv4 address (e.g., in the <em>Addresses</em> tab) and connect remotely via SSH.
 Alternatively, you may launch a web console and log in.
 Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right of the server row, and from the pop-up menu that appears, select <em>Remote Console</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Launch remote console" src="../assets/new-server/shot-15_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Launch remote console" src="../assets/new-server/shot-15_dark.png#only-dark"></a></p>
 <p>A new window pops up, and that’s your web console to your Cleura&nbsp;Cloud server.
 Please note that this window cannot be resized, but you can open it in a new browser window or tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View and use server console" src="../assets/new-server/shot-16_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View and use server console" src="../assets/new-server/shot-16_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>You may have access to the web console of your server, and you need the corresponding URL for it:</p>

@@ -10792,24 +10792,24 @@ On the top right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, click
 A new <em>Create</em> pane slides into view from the right-hand side of the browser window.
 You will notice several rounded boxes on that pane, each for defining, configuring, and instantiating a different Cleura&nbsp;Cloud object.
 Go ahead and click the <em>Load Balancer</em> box.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new object" src="../assets/shot-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new object" src="../assets/shot-01_dark.png#only-dark"></a></p>
 <p>A new <em>Create a Load Balancer</em> pane slides over.
 At the top, type in a name for the new load balancer and select one of the available regions.
 Optionally, type in a description.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name, region, and description for the new LB" src="../assets/shot-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name, region, and description for the new LB" src="../assets/shot-02_dark.png#only-dark"></a></p>
 <p>In the same pane, scroll down a bit if you have to, and activate the <em>Subnet</em> radio button.
 Then, from the <em>Subnet</em> dropdown menu below, select an appropriate subnet to put behind the new load balancer.
 In our example, the two test servers are on the <code>subnet-fra1</code> subnet, which is in the <code>network-fra1</code> internal network.
 Click <em>Create</em> to instantiate the new load balancer.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a subnet for the new LB" src="../assets/shot-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select a subnet for the new LB" src="../assets/shot-03_dark.png#only-dark"></a></p>
 <p>The creation process starts and, unless something goes wrong, finishes successfully in a minute or so.
 To view the load balancer, make sure the left-hand side vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel is fully visible, click the <em>Networking</em> category to expand it, and then click <em>Load Balancers.</em>
 In the main pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, select the new load balancer, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right, and from the pop-up menu that appears, select <em>View details.</em></p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View the newly created LB" src="../assets/shot-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="View the newly created LB" src="../assets/shot-04_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create your load balancer, type something like this:</p>
@@ -10868,23 +10868,23 @@ The load balancer you instantiated has no listener, so let us see how you can eq
 Click the <em>Listeners</em> tab and notice the message:
 “No Listeners for this LoadBalancer”.
 Time to create one, so click <em>Create a Listener.</em></p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a listener" src="../assets/shot-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a listener" src="../assets/shot-05_dark.png#only-dark"></a></p>
 <p>From the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel, a <em>Create a Listener</em> pane slides over.
 Type in a name for the new listener — and optionally a description.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name and description for the new listener" src="../assets/shot-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set name and description for the new listener" src="../assets/shot-06_dark.png#only-dark"></a></p>
 <p>Further down, in the <em>Protocol</em> dropdown menu, select the protocol the listener will know about.
 Since you are setting up a TCP load balancer, the listener protocol must also be TCP.
 Also, enter the listening port.
 The load balancer will redirect connections to a couple of servers that listen on port 61234/TCP, so it makes sense — though it is not necessary — for the load balancer to use the same listening port.
 Since you have not yet defined a pool, ignore the <em>Default pool</em> dropdown menu for now.
 Instead, go ahead and click <em>Create.</em></p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select protocol and set port" src="../assets/shot-07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select protocol and set port" src="../assets/shot-07_dark.png#only-dark"></a></p>
 <p>The listener will be created in no time, and you will be able to see its characteristics in the <em>Listeners</em> tab of your load balancer detailed view.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Listener successfully created" src="../assets/shot-08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Listener successfully created" src="../assets/shot-08_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Create a listener for your load balancer like this:</p>
@@ -10948,24 +10948,24 @@ For our load balancer to work, we must create a pool and explicitly list its mem
 <div class="tabbed-block">
 <p>With the load balancer details expanded, click the <em>Pools</em> tab.
 Notice the message “No pools for this LoadBalancer”, so click <em>Create a Pool.</em></p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a pool" src="../assets/shot-09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create a pool" src="../assets/shot-09_dark.png#only-dark"></a></p>
 <p>A new <em>Create a Pool</em> pane slides over.
 First, type in a name for the new pool.
 For the <em>Algorithm</em>, be sure to select <em>ROUND_ROBIN</em>.
 Since you are configuring a TCP load balancer, set the <em>Protocol</em> to <em>TCP</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in name, set algorithm and protocol" src="../assets/shot-10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Type in name, set algorithm and protocol" src="../assets/shot-10_dark.png#only-dark"></a></p>
 <p>A little further down the pane, there is the <em>Listener</em> dropdown menu; select the one you created in the previous step.
 Leave the <em>Session persistence</em> parameter as is, then click <em>Create</em> to create your pool.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select listener, create pool" src="../assets/shot-11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select listener, create pool" src="../assets/shot-11_dark.png#only-dark"></a></p>
 <p>The pool is instantaneously available; as you can see, it has zero members and one listener (the one you created in the previous step).</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zero members, one listener" src="../assets/shot-12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zero members, one listener" src="../assets/shot-12_dark.png#only-dark"></a></p>
 <p>Notice that the listener already knows about the new pool, even though you did not explicitly mention it.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The listener knows" src="../assets/shot-13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The listener knows" src="../assets/shot-13_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create a pool named <code>mylb-pool</code> that distributes incoming TCP connections to its members in a round-robin fashion from the listener named <code>mylb-listener</code>, type this command:</p>
@@ -11020,23 +11020,23 @@ Leave the <em>Session persistence</em> parameter as is, then click <em>Create</e
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>In the detailed view of your load balancer, go to the <em>Pools</em> tab and click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 5h14v2H7zm0 8v-2h14v2zM4 4.5A1.5 1.5 0 0 1 5.5 6 1.5 1.5 0 0 1 4 7.5 1.5 1.5 0 0 1 2.5 6 1.5 1.5 0 0 1 4 4.5m0 6A1.5 1.5 0 0 1 5.5 12 1.5 1.5 0 0 1 4 13.5 1.5 1.5 0 0 1 2.5 12 1.5 1.5 0 0 1 4 10.5M7 19v-2h14v2zm-3-2.5A1.5 1.5 0 0 1 5.5 18 1.5 1.5 0 0 1 4 19.5 1.5 1.5 0 0 1 2.5 18 1.5 1.5 0 0 1 4 16.5"></path></svg></span> icon.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Populate the pool" src="../assets/shot-14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Populate the pool" src="../assets/shot-14_dark.png#only-dark"></a></p>
 <p>A new pane titled <em>Modify Pool Members</em> appears, listing all the servers that share the same region with the load balancer.
 In our example, there are three servers.
 We created <code>srv-lbaas-1</code> and <code>srv-lbaas-2</code> to test the load balancer, so now we click on the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"></path></svg></span> icons to add them to the pool.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add members" src="../assets/shot-15_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add members" src="../assets/shot-15_dark.png#only-dark"></a></p>
 <p>You may have noticed that the listening port of each server we added is 80, but we want port 61234.
 To change a server’s listening port, click the corresponding <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5H5v14zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M7 14.94l6.06-6.06 2.06 2.06L9.06 17H7z"></path></svg></span> icon.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify ports" src="../assets/shot-16_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify ports" src="../assets/shot-16_dark.png#only-dark"></a></p>
 <p>To confirm the changes, click the <em>Update</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apply changes to pool" src="../assets/shot-17_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apply changes to pool" src="../assets/shot-17_dark.png#only-dark"></a></p>
 <p>At this point, the load balancer should have its listener plus a pool with two members.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pool is populated" src="../assets/shot-18_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pool is populated" src="../assets/shot-18_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Both our test servers are in the <code>subnet-fra1</code> subnet;
@@ -11122,23 +11122,23 @@ To make the load balancer reachable from anywhere, assign it a floating IP.</p>
 <div class="tabbed-block">
 <p>While viewing your load balancer, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon on the right.
 From the pop-up menu, select <em>Modify Load Balancer</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify load balancer" src="../assets/shot-19_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modify load balancer" src="../assets/shot-19_dark.png#only-dark"></a></p>
 <p>The <em>Modify Load Balancer</em> pane appears.
 For the <em>Floating IP</em> option, select <em>Create and attach IP</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create and attach floating IP" src="../assets/shot-20_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create and attach floating IP" src="../assets/shot-20_dark.png#only-dark"></a></p>
 <p>A new pane slides over, named <em>Create a Floating IP</em>.
 For the <em>Region</em> parameter, select the load balancer’s region.
 For the <em>Assign to</em> parameter, make sure you choose <em>Load Balancer</em>.
 In our example, there’s only one load balancer in our region, so the <em>Assign To</em> parameter is already set for us.
 To finalize the assignment, click the <em>Create and Assign</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configure attachment" src="../assets/shot-21_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configure attachment" src="../assets/shot-21_dark.png#only-dark"></a></p>
 <p>As you may see, your load balancer now has a floating IP.
 You can now use that to test the balancer and make sure it works as expected.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Floating IP attached to load balancer" src="../assets/shot-22_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Floating IP attached to load balancer" src="../assets/shot-22_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>First, create a new floating IP:</p>
@@ -11227,24 +11227,24 @@ Of course, when an inaccessible service becomes accessible again, the load balan
 <p>In the detailed view of your load balancer, pull up the <em>Pools</em> tab.
 There is a “0” in the <em>Health Monitor</em> column;
 that’s because the pool has no health monitor yet.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="There is no health monitor" src="../assets/shot-23_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="There is no health monitor" src="../assets/shot-23_dark.png#only-dark"></a></p>
 <p>To add a health monitor, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5H5v14zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M7 14.94l6.06-6.06 2.06 2.06L9.06 17H7z"></path></svg></span> icon.
 A pane titled <em>Modify Pool</em> slides over.
 Scroll down if needed, and stop when the <em>Health Monitor</em> section is fully visible.
 You will see a message saying “No health monitor created”;
 click <em>Create a Healthmonitor</em> to create one.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new health monitor" src="../assets/shot-24_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Create new health monitor" src="../assets/shot-24_dark.png#only-dark"></a></p>
 <p>Pick a name for the new health monitor, and set its type to TCP.
 This is the connection protocol used to determine whether pool member services are accessible.
 Finalize your choices with a click on the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define health monitor characteristics" src="../assets/shot-25_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Define health monitor characteristics" src="../assets/shot-25_dark.png#only-dark"></a></p>
 <p>You will then see that in the <em>Health Monitor</em> column there is a “1” — and that means the monitor is active.
 To get real-time information about the pool members’ operating status, click on “1”.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check members operating status" src="../assets/shot-26_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check members operating status" src="../assets/shot-26_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create a health monitor for pool <code>mylb-pool</code> of load balancer <code>mylb</code>, type something like the following:</p>
@@ -11322,8 +11322,8 @@ During our testing, we killed <code>ncat</code> running on <code>srv-lbaas-1</co
 <p>In the detailed view of your load balancer, pull up the <em>Pools</em> tab and click anywhere on its row.
 After a second or two, you will see information regarding all pool members.
 In the <em>Operating Status</em> column, there is the status of each pool member.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Operating status of all pool members" src="../assets/shot-27_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Operating status of all pool members" src="../assets/shot-27_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To check the operating status of any of the pool members of your load balancer, type something like this:</p>

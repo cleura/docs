@@ -10578,53 +10578,53 @@
 <p>In the left vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, expand the <em>Marketplace</em> category and click on <em>Discover Apps and Services</em>.
 In the central pane, you will see all available applications and services.
 Locate the <em>Keycloak</em> box and click the <em>View</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Keycloak application" src="../assets/new-keycloak/keycloak-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select the Keycloak application" src="../assets/new-keycloak/keycloak-01_dark.png#only-dark"></a></p>
 <p>You will see the <em>Keycloak</em> information page, where you can learn more about its features, and obtain pricing information.
 Click the <em>Deploy this App</em> button to start the deployment process.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Keycloak deployment process" src="../assets/new-keycloak/keycloak-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start the Keycloak deployment process" src="../assets/new-keycloak/keycloak-02_dark.png#only-dark"></a></p>
 <p>The Keycloak application is hosted on a <a href="../../../openstack/nova/new-server/">Nova VM</a>, so now you may select a region, a name, a flavor, a public network, a keypair, and a security group for it.
 Regarding the security group, <a href="../../../openstack/neutron/create-security-groups/">make sure it includes a rule</a> allowing incoming TCP connections to port 8080.</p>
 <p>Optionally, select one of the available Keycloak versions.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Keycloak deployment" src="../assets/new-keycloak/keycloak-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Specify the characteristics of the particular Keycloak deployment" src="../assets/new-keycloak/keycloak-03_dark.png#only-dark"></a></p>
 <p>Then, read and agree to the <em>Terms and Conditions.</em>
 When you are ready, click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, and click the Create button" src="../assets/new-keycloak/keycloak-04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Read and agree to the Terms and Conditions, and click the Create button" src="../assets/new-keycloak/keycloak-04_dark.png#only-dark"></a></p>
 <p>The deployment takes some minutes to complete.
 To check how it is going, expand the <em>Marketplace</em> category in the vertical pane on the left and click <em>Provisioned Apps</em>.
 In the central pane, watch the Keycloak Heat stack row.
 The animated icon at the left marks the deployment progress.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-keycloak/keycloak-05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Check the deployment progress" src="../assets/new-keycloak/keycloak-05_dark.png#only-dark"></a></p>
 <p>When the deployment is complete, you will see a check mark in a circle.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keycloak is deployed" src="../assets/new-keycloak/keycloak-06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keycloak is deployed" src="../assets/new-keycloak/keycloak-06_dark.png#only-dark"></a></p>
 <h2 id="logging-into-the-keycloak-dashboard">Logging into the Keycloak dashboard</h2>
 <p>You need the administrator’s (<code>admin</code>) predefined password and the URL of your Keycloak instance.
 For that, make sure you are in the <em>Provisioned Apps</em> pane.
 Click on the Keycloak row to expand it, and select the <em>Stack Output</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get default credentials and URL" src="../assets/new-keycloak/keycloak-dashboard-01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Get default credentials and URL" src="../assets/new-keycloak/keycloak-dashboard-01_dark.png#only-dark"></a></p>
 <p>We recommend you create a new entry in your password manager and populate all necessary fields with values from the corresponding output keys.</p>
 <p>For the preset password, click the icon in the <em>Action</em> column of the <em>admin_credentials</em> row.
 A pop-up window appears.
 Click the <em>Copy Output!</em> button to copy all data below <em>Output</em> into the clipboard.
 Temporarily paste that data into a text editor, and use the password for your password manager entry.
 When ready, click the <em>Back</em> button to close the window.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's password" src="../assets/new-keycloak/keycloak-dashboard-02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the administrator's password" src="../assets/new-keycloak/keycloak-dashboard-02_dark.png#only-dark"></a></p>
 <p>Similarly, get the URL to your Keycloak instance from the <em>keycloak_url</em> row.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the URL to Keycloak" src="../assets/new-keycloak/keycloak-dashboard-03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reveal the URL to Keycloak" src="../assets/new-keycloak/keycloak-dashboard-03_dark.png#only-dark"></a></p>
 <p>Using your favorite web browser, navigate to your Keycloak deployment’s URL.
 The Keycloak Sign-in page appears.
 Use the default username (<code>admin</code>) and password from your password manager, and click the <em>Sign in</em> button.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Keycloak login page" src="../assets/new-keycloak/keycloak-dashboard-04.png"></a></p>
 <p>The Keycloak welcome page appears.</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Keycloak page" src="../assets/new-keycloak/keycloak-dashboard-05.png"></a></p>
 <p>We recommend you start with the official <a href="https://www.keycloak.org/guides">Keycloak guides</a> page to learn how to use your new identity and access management service.</p>
 
 

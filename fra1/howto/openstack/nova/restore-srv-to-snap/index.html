@@ -10557,39 +10557,39 @@ Here is how you can do that.</p>
 From the left-hand side vertical pane, choose Compute → <a href="https://cleura.cloud/compute/servers">Servers</a>.
 In the central pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, locate the server of interest.
 Click its row to get all server details, then go to the <em>Recovery Service</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Recovery Service tab of the server of interest" src="../assets/rest-srv-to-snap/recovery-service-tab_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="The Recovery Service tab of the server of interest" src="../assets/rest-srv-to-snap/recovery-service-tab_dark.png#only-dark"></a></p>
 <p>Notice the <em>Backing volume</em> and its ID.
 Click the ID, and in the pop-up window that appears, select <em>View&nbsp;Details</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume and its ID" src="../assets/rest-srv-to-snap/backing-volume-and-id_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume and its ID" src="../assets/rest-srv-to-snap/backing-volume-and-id_dark.png#only-dark"></a></p>
 <p>A new pop-up window appears, displaying details about the server volume.
 Select the <em>Recovery&nbsp;Service</em> tab.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume details" src="../assets/rest-srv-to-snap/backing-volume-details_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume details" src="../assets/rest-srv-to-snap/backing-volume-details_dark.png#only-dark"></a></p>
 <p>You now see all available volume snapshots.
 You may restore the server to any of those, so click the <em>Restore</em> option for a specific snapshot.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume snapshot list" src="../assets/rest-srv-to-snap/backing-volume-recovery-service_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Backing volume snapshot list" src="../assets/rest-srv-to-snap/backing-volume-recovery-service_dark.png#only-dark"></a></p>
 <p>A new window named <em>Restore Snapshot</em> appears.</p>
 <p>If the snapshot you are about to restore comes from a boot volume, as in the example here, you can only restore it to a <strong>new</strong> volume.</p>
 <p>You can restore a snapshot to an existing volume only when the snapshot comes from a non-boot volume <strong>and</strong> is the newest.</p>
 <p>To restore the selected snapshot, click the <em>Restore</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to restore the selected snapshot" src="../assets/rest-srv-to-snap/restore-selected-snapshot_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="About to restore the selected snapshot" src="../assets/rest-srv-to-snap/restore-selected-snapshot_dark.png#only-dark"></a></p>
 <p>Restoring a snapshot may take some time, but in many cases the operation completes after a few seconds.
 Check the messages at the bottom of the window for the latest restore jobs.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Snapshot restoration complete" src="../assets/rest-srv-to-snap/restore-complete_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Snapshot restoration complete" src="../assets/rest-srv-to-snap/restore-complete_dark.png#only-dark"></a></p>
 <p>To see the new snapshot, from the left-hand side vertical pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, choose Storage → <a href="https://cleura.cloud/storage/volumes">Volumes</a>.</p>
 <p>You can spot the new volume by looking at the <em>name</em> column;
 its name is prefixed by “Restored” and immediately followed by the ID of the original volume.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All volumes, including one created from a snapshot" src="../assets/rest-srv-to-snap/all-volumes_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="All volumes, including one created from a snapshot" src="../assets/rest-srv-to-snap/all-volumes_dark.png#only-dark"></a></p>
 <p>You can now create a server from the new volume.
 Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the left of the volume row, select <em>Create Server</em>, and work as you usually would while <a href="../new-server/">creating a new server</a>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a server from the new volume" src="../assets/rest-srv-to-snap/volume-restored-create-server_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a server from the new volume" src="../assets/rest-srv-to-snap/volume-restored-create-server_dark.png#only-dark"></a></p>
 
 
 

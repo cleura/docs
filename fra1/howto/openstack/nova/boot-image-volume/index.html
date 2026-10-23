@@ -10710,8 +10710,8 @@ We generally recommend boot-from-volume servers, since they offer more flexibili
 To verify that a particular server is of that type, you can go to the Cleura&nbsp;Cloud Management&nbsp;Panel, locate the server, and expand its detailed view.
 Go to the <em>Details</em> tab and pay attention to the <em>Boot Target</em> field.
 If this is a boot-from-image server, it will say <em>Ephemeral Disk</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checking the boot target of a server" src="../assets/bfi-to-bfv/ephemeral_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checking the boot target of a server" src="../assets/bfi-to-bfv/ephemeral_dark.png#only-dark"></a></p>
 <p>Whenever you decide to move a boot-from-image server between regions, you will discover that you cannot do so.
 You can, however, convert it to a boot-from-volume server, and then move it.
 Below, we show how to perform the conversion using the OpenStack CLI.</p>
@@ -10735,12 +10735,12 @@ Log in to your Cleura&nbsp;Cloud account if you have to.</p>
 The main pane shows all supported Cleura&nbsp;Cloud regions.
 Expand the region with the boot-from-image server you want to convert.
 Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon to the right of the server row, and from the pop-up menu that appears, select <em>Stop Server</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stopping server" src="../assets/bfi-to-bfv/shot01_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stopping server" src="../assets/bfi-to-bfv/shot01_dark.png#only-dark"></a></p>
 <p>A pop-up window appears, asking if you want to stop the server.
 Confirm by clicking on the button labeled <em>Yes, Stop</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server shutdown" src="../assets/bfi-to-bfv/are-you-really-really-sure_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server shutdown" src="../assets/bfi-to-bfv/are-you-really-really-sure_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Assuming your boot-from-image server is named <code>ephemeral_eyjolfur</code>, shut it down by typing the following:</p>
@@ -10761,13 +10761,13 @@ Confirm by clicking on the button labeled <em>Yes, Stop</em>.</p>
 <div class="tabbed-block">
 <p>When the server is shut off, click its row to open the detailed view, then go to the <em>Snapshots</em> tab.
 There, click the button labeled <em>Create a Snapshot</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a snapshot" src="../assets/bfi-to-bfv/shot02_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a snapshot" src="../assets/bfi-to-bfv/shot02_dark.png#only-dark"></a></p>
 <p>A pop-up window appears where you must enter a name for the snapshot.
 You must also be explicit regarding the operation you are about to perform, so activate the switch to the left of the corresponding question.
 When you are ready, click the button labeled <em>Create</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming snapshot creation" src="../assets/bfi-to-bfv/shot03_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming snapshot creation" src="../assets/bfi-to-bfv/shot03_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To take a snapshot of the server, all you have to do is type something like the following:</p>
@@ -10823,16 +10823,16 @@ To make sure the snapshot has been successfully created, type:</p>
 <p>After a few seconds, the snapshot will be created and listed in the <em>Snapshots</em> tab.
 Before you proceed, take note of its size.
 At the right-hand side of the snapshot row, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V288c0 44.2 100.3 80 224 80s224-35.8 224-80zm0-77.8V80c0-44.2-100.3-80-224-80S0 35.8 0 80v48c0 44.2 100.3 80 224 80s224-35.8 224-80m-49.5 261.8C351.6 406.5 289.9 416 224 416s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V432c0 44.2 100.3 80 224 80s224-35.8 224-80v-66.2c-14.8 9.8-31.8 17.7-49.5 24"></path></svg></span> icon to create a new volume from the snapshot you just created.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating volume from snapshot" src="../assets/bfi-to-bfv/shot04_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating volume from snapshot" src="../assets/bfi-to-bfv/shot04_dark.png#only-dark"></a></p>
 <p>A new vertical pane will slide over from the right-hand side of the Cleura&nbsp;Cloud Management&nbsp;Panel.
 Type in a name for the new volume, and choose a volume size <strong>bigger</strong> than the snapshot size.
 Then type a description for the new volume.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Typing in name, size, and description" src="../assets/bfi-to-bfv/shot05_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Typing in name, size, and description" src="../assets/bfi-to-bfv/shot05_dark.png#only-dark"></a></p>
 <p>Scroll down a bit if you have to, and click the <em>Create</em> button.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Starting volume creation" src="../assets/bfi-to-bfv/shot06_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Starting volume creation" src="../assets/bfi-to-bfv/shot06_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Before creating a volume from the snapshot you just created, jot down its size like this:</p>
@@ -10896,8 +10896,8 @@ You will see the volume you created in the previous step.</p>
 That is expected.</p>
 <p>Then, notice that the volume is bootable.
 That is also expected.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing new volume" src="../assets/bfi-to-bfv/shot07_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing new volume" src="../assets/bfi-to-bfv/shot07_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To view all details regarding the volume you just created from the boot-from-image server snapshot, type the following:</p>
@@ -10965,12 +10965,12 @@ That is also expected.</p>
 <div class="tabbed-block">
 <p>Go to the servers view by selecting <em>Compute</em> → <a href="https://cleura.cloud/compute/servers"><em>Servers</em></a>, and locate the boot-from-image server.
 Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon to the right of the server row, and from the pop-up menu that appears, select <em>Delete Server</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deleting server" src="../assets/bfi-to-bfv/shot08_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deleting server" src="../assets/bfi-to-bfv/shot08_dark.png#only-dark"></a></p>
 <p>A window titled <em>About to delete a server</em> appears, asking whether you wish to proceed with the deletion.
 Click the button labeled <em>Yes, Delete</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server deletion" src="../assets/bfi-to-bfv/shot09_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirming server deletion" src="../assets/bfi-to-bfv/shot09_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>Since you have a snapshot and a volume of your server, you can now delete it:</p>
@@ -10986,22 +10986,22 @@ Click the button labeled <em>Yes, Delete</em>.</p>
 <div class="tabbed-block">
 <p>Now, go back to your volumes by selecting <em>Storage</em> → <a href="https://cleura.cloud/storage/volumes"><em>Volumes</em></a>.
 Tick the volume you created a bit earlier, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5m-5.5 0A1.5 1.5 0 0 0 5 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 8 12a1.5 1.5 0 0 0-1.5-1.5m11 0A1.5 1.5 0 0 0 16 12a1.5 1.5 0 0 0 1.5 1.5A1.5 1.5 0 0 0 19 12a1.5 1.5 0 0 0-1.5-1.5"></path></svg></span> icon at the right of the volume row, and from the pop-up menu that appears, select <em>Create Server</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new server" src="../assets/bfi-to-bfv/shot10_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a new server" src="../assets/bfi-to-bfv/shot10_dark.png#only-dark"></a></p>
 <p>A vertical pane slides over from the right side of the Cleura&nbsp;Cloud Management&nbsp;Panel, titled <em>Create a Server</em>.
 Type in a name for the new server.
 Notice that the server region is pre-selected and matches the region where the volume resides.
 The server’s boot source is also pre-selected as the volume itself.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Naming the server" src="../assets/bfi-to-bfv/shot11_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Naming the server" src="../assets/bfi-to-bfv/shot11_dark.png#only-dark"></a></p>
 <p>Scroll down a bit if you have to.
 Note the <em>Boot Target</em>, which should be <em>Volume</em>.
 Consider leaving the <a href="../../../../background/recovery-service/"><em>Recovery service</em></a> option enabled.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keeping the recovery service enabled" src="../assets/bfi-to-bfv/shot12_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Keeping the recovery service enabled" src="../assets/bfi-to-bfv/shot12_dark.png#only-dark"></a></p>
 <p>To create the new server, scroll to the bottom and click the button labeled <em>Create</em>.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating server creation" src="../assets/bfi-to-bfv/shot13_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Initiating server creation" src="../assets/bfi-to-bfv/shot13_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>To create your new boot-from-volume server (<code>eyjolfur</code>), using the volume (<code>ephemeral_eyjolfur_vol</code>) you got from the snapshot (<code>ephemeral_eyjolfur_snap</code>) of the old boot-from-image server (<code>ephemeral_eyjolfur</code>), type something like the following:</p>
@@ -11028,8 +11028,8 @@ In the main pane of the Cleura&nbsp;Cloud Management&nbsp;Panel, go to the regio
 Select the server and click on its row to see all its characteristics.
 In the <em>Details</em> tab, you will notice, among other things, that it has one attached volume;
 that would be the one you created from the snapshot you created from the old boot-from-image server.</p>
-<p>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing the new boot-from-volume server" src="../assets/bfi-to-bfv/shot14_light.png#only-light"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Viewing the new boot-from-volume server" src="../assets/bfi-to-bfv/shot14_dark.png#only-dark"></a></p>
 </div>
 <div class="tabbed-block">
 <p>You may see all details regarding the new boot-from-volume server by typing something like the following:</p>
