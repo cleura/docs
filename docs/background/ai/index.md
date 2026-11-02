@@ -34,8 +34,9 @@ When you use the API, it
 * keeps only metadata for billing.
 
 Model usage is recorded on a per-request basis, rather than by tracking resource allocation over time.
-Even though multiple customers may be utilising the same model instance, security layers always guarantee complete request isolation.
-No crosstalk between concurrent requests is possible, and no data containing the content of any request is ever stored after the request has been completed.
+Multiple customers may use the same model instance, but security layers are in place to ensure complete request isolation.
+
+This prevents crosstalk between concurrent requests, and no data containing the content of any request is ever stored after the request has been completed.
 
 Models load on GPUs based on usage patterns to reduce wait times.
 
