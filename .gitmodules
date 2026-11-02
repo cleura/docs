@@ -1,9 +1,11 @@
 [submodule "submodules/launch-pad"]
 	path = submodules/launch-pad
-	url = ../launch-pad
+	url = https://github.com/cleura/launch-pad
+	branch = main
 [submodule "submodules/cleura-skills"]
 	path = submodules/cleura-skills
-	url = ../skills
+	url = https://github.com/cleura/skills
+	branch = main
 [submodule "submodules/cleura-cli"]
 	path = submodules/cleura-cli
 	url = https://github.com/cleura/cleura-cli
