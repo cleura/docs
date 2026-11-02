@@ -1,10 +1,7 @@
 ---
 nav:
   - index.md
-  - "Reviewing models": models.md
-  - playground.md
   - api-keys.md
   - openwebui.md
   - stt.md
-  - token-usage.md
 title: "AI"
