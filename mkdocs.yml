@@ -18,6 +18,7 @@ extra:
   api_region: "FIXME"
   brand: "Cleura Cloud"
   brand_ai: "Cleura AI Services"
+  brand_ai_inference_dashboard: "Cleura AI Inference Dashboard"
   brand_compliant: "Cleura Compliant Cloud"
   brand_container_orchestration: "Gardener in Cleura Cloud"
   brand_domain: "citycloud.com"
