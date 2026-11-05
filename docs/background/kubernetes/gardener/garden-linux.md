@@ -3,7 +3,7 @@ description: Gardener runs its worker and control plane nodes on Garden Linux.
 ---
 # Garden Linux
 
-In a {{k8s_management_service}} cluster, worker nodes run [Garden Linux](https://gardenlinux.io), which is a [Linux distribution](https://en.wikipedia.org/wiki/Linux_distribution) based on [Debian GNU/Linux](https://www.debian.org/).
+In a {{k8s_management_service}} cluster, worker nodes run [Garden Linux](https://docs.gardenlinux.org/), which is a [Linux distribution](https://en.wikipedia.org/wiki/Linux_distribution) based on [Debian GNU/Linux](https://www.debian.org/).
 
 ## Version scheme
 
