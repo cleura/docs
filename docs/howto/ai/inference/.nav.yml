@@ -1,0 +1,11 @@
+---
+nav:
+  - index.md
+  - api-keys.md
+  - dashboard.md
+  - playground.md
+  - models.md
+  - openwebui.md
+  - api-token-usage.md
+  - stt.md
+title: AI Inference
