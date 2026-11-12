@@ -1,12 +1,12 @@
 ---
-description: On-demand LLMs currently offered by Cleura AI
+description: LLMs currently offered by Cleura AI
 ---
-# On-demand models
+# Available models
 
 ??? note "Invite-only access"
     Access to {{brand_ai}} is currently invite-only.
 
-{{brand_ai}} currently offers 8 on-demand models.
+{{brand_ai}} currently offers 8 models.
 
 | Model                       | Developed by                  | Designed for                                                         |
 |---------------------------|-----------------------------|--------------------------------------------------------------------|
