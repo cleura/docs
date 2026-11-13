@@ -10,7 +10,7 @@ edit_uri: ./edit/main/docs
 extra:
   academy: "Cleura Cloud Academy"
   academy_domain: "academy.cleura.cloud"
-  ai_api_domain: "ai.cleura.cloud"
+  ai_inference_api_domain: "ai.cleura.cloud"
   analytics:
     domain: docs.cleura.cloud
     provider: plausible
@@ -19,6 +19,7 @@ extra:
   brand: "Cleura Cloud"
   brand_ai: "Cleura AI Services"
   brand_ai_inference_dashboard: "Cleura AI Inference Dashboard"
+  brand_ai_inference_service: "Cleura AI Inference Service"
   brand_compliant: "Cleura Compliant Cloud"
   brand_container_orchestration: "Gardener in Cleura Cloud"
   brand_domain: "citycloud.com"

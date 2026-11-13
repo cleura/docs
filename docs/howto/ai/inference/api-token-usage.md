@@ -6,7 +6,7 @@ description: How to monitor API and token usage in the Cleura AI Inference Dashb
 ??? note "Invite-only access"
     Access to {{brand_ai}} is currently invite-only.
 
-To monitor API and token usage, log into the [{{brand_ai_inference_dashboard}}](https://{{ai_api_domain}}) with an Admin [API key](api-keys.md).
+To monitor API and token usage, log into the [{{brand_ai_inference_dashboard}}](https://{{ai_inference_api_domain}}) with an Admin [API key](api-keys.md).
 
 In the left-hand pane, click *API Usage*.
 The main pane shows this month's usage, with the *Requests* metric selected and charted per day.

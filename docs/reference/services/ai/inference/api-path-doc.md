@@ -11,14 +11,14 @@ Here you may find information on the API documentation and endpoints, and a list
 
 ## API documentation and API endpoints
 
-All links to the API documentation and API endpoint URLs are at the [{{brand_ai}} Gateway](https://{{ai_api_domain}}/swagger) page.
+All links to the API documentation and API endpoint URLs are at the [{{brand_ai}} Gateway](https://{{ai_inference_api_domain}}/swagger) page.
 
 ## OpenAI compatible API paths and documentation
 
 | Path                       | URL                                                 | Documentation                                                                                                            |
 |----------------------------|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `/v1/models`               | `https://{{ai_api_domain}}/v1/models`               | [models](https://developers.openai.com/api/reference/resources/models)                                                   |
-| `/v1/chat/completions`     | `https://{{ai_api_domain}}/v1/chat/completions`     | [chat completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions)                  |
-| `/v1/completions`          | `https://{{ai_api_domain}}/v1/completions`          | [completions](https://developers.openai.com/api/reference/resources/completions)                                         |
-| `/v1/embeddings`           | `https://{{ai_api_domain}}/v1/embeddings`           | [embeddings](https://developers.openai.com/api/reference/resources/embeddings/methods/create)                            |
-| `/v1/audio/transcriptions` | `https://{{ai_api_domain}}/v1/audio/transcriptions` | [transcriptions](https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create) |
+| `/v1/models`               | `https://{{ai_inference_api_domain}}/v1/models`               | [models](https://developers.openai.com/api/reference/resources/models)                                                   |
+| `/v1/chat/completions`     | `https://{{ai_inference_api_domain}}/v1/chat/completions`     | [chat completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions)                  |
+| `/v1/completions`          | `https://{{ai_inference_api_domain}}/v1/completions`          | [completions](https://developers.openai.com/api/reference/resources/completions)                                         |
+| `/v1/embeddings`           | `https://{{ai_inference_api_domain}}/v1/embeddings`           | [embeddings](https://developers.openai.com/api/reference/resources/embeddings/methods/create)                            |
+| `/v1/audio/transcriptions` | `https://{{ai_inference_api_domain}}/v1/audio/transcriptions` | [transcriptions](https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create) |

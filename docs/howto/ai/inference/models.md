@@ -6,7 +6,7 @@ description: How to review available models, create aliases, and view requests
 ??? note "Invite-only access"
     Access to {{brand_ai}} is currently invite-only.
 
-To review all currently available models, log into the [{{brand_ai_inference_dashboard}}](https://{{ai_api_domain}}) with an Admin [API key](api-keys.md).
+To review all currently available models, log into the [{{brand_ai_inference_dashboard}}](https://{{ai_inference_api_domain}}) with an Admin [API key](api-keys.md).
 
 In the left-hand pane, click *Models*.
 A list of every available model appears in the main pane.

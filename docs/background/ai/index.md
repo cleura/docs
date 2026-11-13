@@ -12,7 +12,7 @@ description: Cleura AI lets organisations use large language models or speech re
 Large Language Models ([LLMs](https://en.wikipedia.org/wiki/Large_language_model)) represent a specific subset of artificial intelligence ([AI](https://en.wikipedia.org/wiki/Artificial_intelligence)), focused on processing and generating human language.
 Unlike broader AI systems that may handle computer vision, robotics, or general pattern recognition, LLMs specialise in text-based tasks including natural language "understanding", generation, translation, and reasoning.
 
-The {{brand_ai}} Inference service gives you access to these models.
+The {{brand_ai_inference_service}} gives you access to these models.
 You control data location and legal rules.
 
 {{brand_ai}} falls into the broader category of AI-as-a-Service offerings.
@@ -21,7 +21,7 @@ At the same time, {{brand_ai}} is compliant with data sovereignty requirements, 
 
 ## Shared capacity
 
-The {{brand_ai}} Inference service uses shared model instances.
+The {{brand_ai_inference_service}} uses shared model instances.
 When you use the API, it
 
 * checks your API key and model access,
@@ -40,7 +40,7 @@ Models load on GPUs based on usage patterns to reduce wait times.
 
 ## API access and authentication
 
-{{brand_ai}} provides an [OpenAI](https://en.wikipedia.org/wiki/OpenAI)-compatible API, accessible through standard HTTPS endpoints.
+{{brand_ai_inference_service}} provides an [OpenAI](https://en.wikipedia.org/wiki/OpenAI)-compatible API, accessible through standard HTTPS endpoints.
 Customer authentication uses API keys generated and managed via the {{gui}}.
 
 OpenAI-compatible API keys have:
