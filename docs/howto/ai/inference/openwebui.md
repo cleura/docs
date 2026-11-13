@@ -26,13 +26,13 @@ A window labeled *Add Connection* pops up.
 ![Add new API connection](../assets/openwebui-add-connection_dark.png#only-dark)
 
 * Set *Connection Type* to *External*.
-* Set *URL* to `https://{{ai_api_domain}}/v1`.
+* Set *URL* to `https://{{ai_inference_api_domain}}/v1`.
 * Set *Auth* to *Bearer*.
 
 In the text field right of *Bearer*, paste your API key's bearer token.
 Then, click the *Save* button.
 
-The *Add Connection* window closes, and below the *Manage OpenAI API Connections* list you see that `https://{{ai_api_domain}}/v1` is included.
+The *Add Connection* window closes, and below the *Manage OpenAI API Connections* list you see that `https://{{ai_inference_api_domain}}/v1` is included.
 
 ![Add new API connection](../assets/openwebui-connection-added_light.png#only-light)
 ![Add new API connection](../assets/openwebui-connection-added_dark.png#only-dark)

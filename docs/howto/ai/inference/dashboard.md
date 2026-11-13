@@ -6,7 +6,7 @@ description: How to access the Cleura AI Inference Dashboard
 ??? note "Invite-only access"
     Access to {{brand_ai}} is currently invite-only.
 
-To log into the [{{brand_ai_inference_dashboard}}](https://{{ai_api_domain}}), you need either a User or an Admin [API key](api-keys.md).
+To log into the [{{brand_ai_inference_dashboard}}](https://{{ai_inference_api_domain}}), you need either a User or an Admin [API key](api-keys.md).
 
 ![Logging into the {{brand_ai_inference_dashboard}}](../assets/ai-dashboard-login_light.png#only-light)
 ![Logging into the {{brand_ai_inference_dashboard}}](../assets/ai-dashboard-login_dark.png#only-dark)
