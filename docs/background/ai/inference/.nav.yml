@@ -1,5 +1,6 @@
 ---
 nav:
   - parameters.md
+  - prompts.md
   - tokens.md
 title: AI Inference
