@@ -10,14 +10,16 @@ edit_uri: ./edit/main/docs
 extra:
   academy: "Cleura Cloud Academy"
   academy_domain: "academy.cleura.cloud"
-  ai_api_domain: "ai.cleura.cloud"
+  ai_inference_api_domain: "ai.cleura.cloud"
   analytics:
     domain: docs.cleura.cloud
     provider: plausible
   api_domain: "citycloud.com"
   api_region: "Fra1"
   brand: "Cleura Cloud"
-  brand_ai: "Cleura AI"
+  brand_ai: "Cleura AI Services"
+  brand_ai_inference_dashboard: "Cleura AI Inference Dashboard"
+  brand_ai_inference_service: "Cleura AI Inference Service"
   brand_compliant: "Cleura Compliant Cloud"
   brand_container_orchestration: "Gardener in Cleura Cloud"
   brand_domain: "citycloud.com"
@@ -98,7 +100,7 @@ plugins:
         'background/disaster-recovery.md': 'background/recovery-service.md'
         'howto/account-billing/change-billing-data.md': 'howto/account-billing/change-account-data.md'
         'reference/ai/index.md': 'reference/services/ai/index.md'
-        'reference/ai/llms.md': 'reference/services/ai/llms.md'
+        'reference/ai/llms.md': 'reference/services/ai/inference/llms.md'
         'reference/dns/index.md': 'reference/services/dns/index.md'
         'reference/features/compliant.md': 'reference/services/features/compliant.md'
         'reference/features/index.md': 'reference/services/features/index.md'

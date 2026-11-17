@@ -5,6 +5,7 @@ default:
     - pip install tox
 
 variables:
+  GIT_DEPTH: 0
   GIT_SUBMODULE_STRATEGY: recursive
 
 stages:
