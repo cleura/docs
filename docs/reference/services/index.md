@@ -15,7 +15,7 @@ This section provides reference information on the services available in {{brand
 
 * The **[Images](images/index.md)** reference lists the public Glance images that provide operating systems for your servers.
 
-* The **[{{brand_ai}}](ai/index.md)** reference documents our AI services' API endpoints and [on-demand models](ai/llms.md).
+* The **[{{brand_ai}}](ai/index.md)** reference documents our AI services' API endpoints and [on-demand models](ai/inference/llms.md).
 
 * The **[DNS servers](dns/index.md)** reference offers clarifications regarding the physical locations of the name servers used by Designate.
 

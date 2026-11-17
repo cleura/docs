@@ -6,7 +6,7 @@ nav:
   - "Object storage": object-storage.md
   - Backup: baas.md
   - "Recovery service": recovery-service.md
-  - AI: ai
+  - AI Services: ai
   - kubernetes
   - Marketplace: marketplace.md
   - "Well-Architected Framework": waf
