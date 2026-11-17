@@ -1,0 +1,7 @@
+---
+nav:
+  - parameters.md
+  - prompts.md
+  - embeddings.md
+  - tokens.md
+title: AI Inference
