@@ -5,3 +5,6 @@ nav:
   - Containers: containers.md
   - Heat: heat.md
   - OpenTofu: tf.md
+#  - AI Services:
+#      - ai/index.md
+#      - Inference: ai/inference/
