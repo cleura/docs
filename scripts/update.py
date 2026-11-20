@@ -220,7 +220,7 @@ def update_llms_md(table: str, path: str) -> None:
 
     summary = (
         "{{brand_ai}} currently offers "
-        f"{model_count} on-demand models."
+        f"{model_count} models."
     )
 
     try:
@@ -286,8 +286,8 @@ def update_llms_md(table: str, path: str) -> None:
 
 @register_handler(".md")
 def handle_llms(path: str) -> None:
-    """Handle ``docs/reference/services/ai/llms.md``."""
-    if not path.endswith("services/ai/llms.md"):
+    """Handle ``docs/reference/services/ai/inference/llms.md``."""
+    if not path.endswith("services/ai/inference/llms.md"):
         return
 
     key = api_key()
