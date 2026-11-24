@@ -7,3 +7,4 @@ linkchecker-out.*
 .ai/
 http.server.*
 public/
+__pycache__
