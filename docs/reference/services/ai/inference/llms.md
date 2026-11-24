@@ -6,7 +6,7 @@ description: LLMs currently offered by Cleura AI
 ??? note "Invite-only access"
     Access to {{brand_ai}} is currently invite-only.
 
-{{brand_ai}} currently offers 15 models.
+{{brand_ai}} currently offers 16 models.
 
 | Model                       | Developed by                  | Designed for                                                         |
 |-----------------------------|-------------------------------|----------------------------------------------------------------------|
@@ -20,8 +20,9 @@ description: LLMs currently offered by Cleura AI
 | `laya`                      | Convai Innovations            | Fast, calibrated text classification                                 |
 | `mistral-small-4-119b-2603` | Mistral AI                    | Complex reasoning, multimodal, agentic tasks                         |
 | `qwen3`                     | Alibaba Cloud                 | Complex reasoning, multimodal, agentic tasks                         |
-| `qwen3-embedding-8b`        | Alibaba Cloud                 | Text embeddings, ranking                                             |
-| `qwen3-vl-embedding-8b`     | Alibaba Cloud                 | Vision and text embeddings, ranking                                  |
+| `qwen3-embedding-8b`        | Alibaba Cloud                 | Retrieval-augmented generation (RAG) and search                      |
+| `qwen3-vl-embedding-8b`     | Alibaba Cloud                 | Retrieval-augmented generation (RAG) and search                      |
+| `qwen3-vl-reranker-8b`      | Alibaba Cloud                 | Retrieval-augmented generation (RAG) and search                      |
 | `qwen3.6-35b-a3b-fp8`       | Alibaba Cloud                 | Code generation, agentic tasks                                       |
 | `qwen3.8-27b`               | Alibaba Cloud                 | Complex reasoning, multimodal, agentic tasks                         |
 | `whisper-large-v3`          | OpenAI                        | Speech recognition and translation                                   |

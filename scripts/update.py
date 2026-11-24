@@ -86,6 +86,10 @@ DEVELOPER_PATTERNS: list[tuple[re.Pattern, str]] = [
 # fall back to a description derived from architecture modalities.
 DESIGN_PATTERNS: list[tuple[re.Pattern, str]] = [
     (
+        re.compile(r"embed|rank"),
+        "Retrieval-augmented generation (RAG) and search",
+    ),
+    (
         re.compile(r"kb-whisper"),
         "Speech recognition and translation "
         "(fine-tuned for Nordic languages)",
@@ -93,14 +97,6 @@ DESIGN_PATTERNS: list[tuple[re.Pattern, str]] = [
     (
         re.compile(r"qwen3\.8"),
         "Complex reasoning, multimodal, agentic tasks",
-    ),
-    (
-        re.compile(r"qwen3-embedding"),
-        "Text embeddings, ranking",
-    ),
-    (
-        re.compile(r"qwen3-vl-embedding"),
-        "Vision and text embeddings, ranking",
     ),
     (
         re.compile(r"qwen3\.6"),
@@ -245,9 +241,11 @@ def render_llms_table(models: list[dict]) -> str:
     header = "| " + " | ".join(
         col.ljust(widths[i]) for i, col in enumerate(TABLE_COLUMNS)
     ) + " |"
+    # Add 2 to each width so the separator row is as wide as the header
+    # and body cells, which include the surrounding spaces.
     sep = (
         "|"
-        + "|".join("-" * widths[i] for i in range(len(TABLE_COLUMNS)))
+        + "|".join("-" * (widths[i] + 2) for i in range(len(TABLE_COLUMNS)))
         + "|"
     )
     body_lines = []
