@@ -50,7 +50,27 @@ DEVELOPER_PATTERNS: list[tuple[re.Pattern, str]] = [
         "Alibaba Cloud",
     ),
     (
-        re.compile(r"whisper|gpt"),
+        re.compile(r"glm"),
+        "Zhipu AI",
+    ),
+    (
+        re.compile(r"deepseek"),
+        "DeepSeek",
+    ),
+    (
+        re.compile(r"mistral"),
+        "Mistral AI",
+    ),
+    (
+        re.compile(r"laya"),
+        "Convai Innovations",
+    ),
+    (
+        re.compile(r"gpt"),
+        "OpenAI",
+    ),
+    (
+        re.compile(r"whisper"),
         "OpenAI",
     ),
     (
@@ -71,24 +91,56 @@ DESIGN_PATTERNS: list[tuple[re.Pattern, str]] = [
         "(fine-tuned for Nordic languages)",
     ),
     (
-        re.compile(r"qwen3\.6"),
-        "Code generation, agentic tasks",
+        re.compile(r"qwen3\.8"),
+        "Complex reasoning, multimodal, agentic tasks",
     ),
     (
         re.compile(r"qwen3-embedding"),
         "Text embeddings, ranking",
     ),
     (
+        re.compile(r"qwen3-vl-embedding"),
+        "Vision and text embeddings, ranking",
+    ),
+    (
+        re.compile(r"qwen3\.6"),
+        "Code generation, agentic tasks",
+    ),
+    (
+        re.compile(r"qwen3"),
+        "Complex reasoning, multimodal, agentic tasks",
+    ),
+    (
+        re.compile(r"qwen"),
+        "Complex reasoning, multimodal, agentic tasks",
+    ),
+    (
+        re.compile(r"laya"),
+        "Fast, calibrated text classification",
+    ),
+    (
         re.compile(r"whisper"),
         "Speech recognition and translation",
     ),
     (
-        re.compile(r"qwen|gemma"),
+        re.compile(r"gpt|eurollm"),
+        "Complex reasoning",
+    ),
+    (
+        re.compile(r"glm"),
+        "Document understanding, OCR",
+    ),
+    (
+        re.compile(r"gemma"),
         "Complex reasoning, multimodal, agentic tasks",
     ),
     (
-        re.compile(r"gpt|eurollm"),
-        "Complex reasoning",
+        re.compile(r"deepseek"),
+        "Complex reasoning, multimodal, agentic tasks",
+    ),
+    (
+        re.compile(r"mistral"),
+        "Complex reasoning, multimodal, agentic tasks",
     ),
 ]
 
