@@ -6,6 +6,6 @@ nav:
   - flavors
   - volumes
   - images
-  - AI Services: ai
+  - AI: ai
   - DNS: dns
   - versions
